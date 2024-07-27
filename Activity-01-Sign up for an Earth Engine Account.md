@@ -37,6 +37,7 @@ Click **Continue to Summary** and confirm the account as shown below.
 
 After the confirmation (note, this may take about 30sec or more/less to complete so please exercise patience), you will see the Code Editor as shown below. 
 
+![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)
 
 
 This means that your registration is successful and you can now start to explore the Code Editor.
