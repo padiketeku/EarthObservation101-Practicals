@@ -27,11 +27,10 @@ Use this [link](https://code.earthengine.google.com/register) to sign up for Ear
 Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click Next 
 ![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
 
-![Fig-3-GettingStartedUsingGEE](https://github.com/user-attachments/assets/f1a4cd9d-1a50-4016-b464-4d91f6f5d209)
-
-
 Another pages for the registration pops up, complete this as shown below. Keep the Project-ID to default.
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below.
+![Fig-3-GettingStartedUsingGEE](https://github.com/user-attachments/assets/f1a4cd9d-1a50-4016-b464-4d91f6f5d209)
+
 
 
 
