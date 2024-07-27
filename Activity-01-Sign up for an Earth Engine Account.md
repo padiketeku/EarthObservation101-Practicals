@@ -25,6 +25,7 @@ Use this [link](https://code.earthengine.google.com/register) to sign up for Ear
 ![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1)
 
 Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click Next 
+![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
 
 
 
