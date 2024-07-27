@@ -29,7 +29,8 @@ Click **Register Noncommercial or Commercial Cloud project** and fill out the fo
 
 Another pages for the registration process pops up, complete this as shown below. Keep the Project-ID to default.
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below.
-![Fig-3-GettingStartedUsingGEE](https://github.com/user-attachments/assets/f1a4cd9d-1a50-4016-b464-4d91f6f5d209)
+
+![Fig-3B-GettingStartedUsingGEE](https://github.com/user-attachments/assets/07b8c14c-49fb-42df-ba43-2bb67e97993d)
 
 Click **Continue to Summary** and confirm the account as shown below.
 
