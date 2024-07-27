@@ -31,7 +31,9 @@ Another pages for the registration process pops up, complete this as shown below
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below.
 ![Fig-3-GettingStartedUsingGEE](https://github.com/user-attachments/assets/f1a4cd9d-1a50-4016-b464-4d91f6f5d209)
 
-Click **Continue to Summary** and confirm the account.
+Click **Continue to Summary** and confirm the account as shown below.
+
+![Fig-4-GettingStartedUsingGEE](https://github.com/user-attachments/assets/ac004e61-de9b-41be-8fbe-467597913ab8)
 
 
 
