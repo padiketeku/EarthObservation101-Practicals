@@ -11,8 +11,8 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 
-# Learning Outcomes
-Sign up for an Earth Engine account, if you already do not have this.
+# Learning Outcome
+Sign up for an Earth Engine account, if you do not already have this.
 
 
 # Get Earth Engine Account
@@ -27,7 +27,7 @@ Use this [link](https://code.earthengine.google.com/register) to sign up for Ear
 Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click Next 
 ![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
 
-Another pages for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
+Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below.
 
 ![Fig-3B-GettingStartedUsingGEE](https://github.com/user-attachments/assets/07b8c14c-49fb-42df-ba43-2bb67e97993d)
@@ -41,7 +41,9 @@ After the confirmation (note, this may take about 30sec or more/less to complete
 ![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)
 
 
-This means that your registration is successful and you can now start to explore the Code Editor.
+This means that your registration is successful and you can now start exploring the Code Editor. <br>
+
+**End of Activity 1**
 
 
 
