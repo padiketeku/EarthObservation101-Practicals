@@ -23,4 +23,16 @@ A mechanical remote sensing detector replicates human vision in that solar radia
 - Use the Inspector tool to understand data
 - Differentiate between pseudo-colour image, true colour image, and false colour image 
 
-### - Create a new script file
+### Create a new script file
+To start a new script, click the `Scripts` tab, **NEW** (the drop-down triangle), and select **File**. Fig. 1 shows the steps.
+
+![image](https://github.com/user-attachments/assets/53d233fa-5bdc-4d01-b716-74f0daf30fcc) |
+|:--:|
+| *Fig. 1 Selecting a new script file. *|
+
+A `Create file' window pops up for you to specify the file name. In this example, the file name is prac1002. Make sure new script files are saved to the same repository. Once the file is created you would see it (highlighted in grey) under the repository, as shown below (Fig. 2).
+
+![image](https://github.com/user-attachments/assets/fc302407-9a98-4614-b3c2-189cad342094) |
+|:--:|
+| *Fig. 2 A new script is created and visible in the repository. *|
+
