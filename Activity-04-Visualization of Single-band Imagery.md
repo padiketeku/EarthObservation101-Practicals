@@ -73,11 +73,11 @@ Assign the snippet to a variable; and call this strm_elevation, as shown below.
 ```JavaScript
 var srtm_elevation = ee.Image("USGS/SRTMGL1_003");
 ```
-Click **Run** to run the code, but nothing will be available in the `**Console**`. Print the variable.
+Click **Run** to run the code, but nothing will be available in the **`Console`**. Print the variable.
 
 ```JavaScript
 print(srtm_elevation );
 ```
-Re-run the code and pieces of information about the data will be available in the Console. You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The data type is image with data ID and version given. The bands information is crucially important for various reasons, including knowing the number of bands and band names which is useful for image visualisation purposes. The coordinate referencing system (crs and crs_transform) is given to understand how objects have been displayed in two dimensions. The dimensions show the number of pixels column-wise and row-wise. 
+Re-run the code and pieces of information about the data will be available in the **`Console`**. You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The data **type** is image with data ID and version given. The **bands** information is crucially important for various reasons, including knowing the number of bands and band names which is useful for image visualisation purposes. The coordinate referencing system (**crs** and **crs_transform**) is given to understand how objects have been displayed in two dimensions. The **dimensions** show the number of pixels column-wise and row-wise. 
 
 
