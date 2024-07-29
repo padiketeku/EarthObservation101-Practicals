@@ -106,5 +106,24 @@ print(darwinCity);
 
 
 #### Container object
-A container object, always defined using **`ee`** (meaning Earth Engine), is used to wrap a client-side JavaScript object for the efficient functioning of Google servers. All the data types discussed so far can be wrapped with ee. Earth Engine users are encouraged to use the ee wrapper to minimise computation issues. The data types discussed above can be more Earth Engine-specific if the ee precedes the data type. Examples of number, string, and list objects are shown below. 
+A container object, always defined using **`ee`** (meaning Earth Engine), is used to wrap a client-side JavaScript object for the efficient functioning of Google servers. Earth Engine users are encouraged to use the **`ee`** wrapper to minimise computation issues. The data types discussed above can be more Earth Engine-specific if the **`ee`** precedes the data type. Examples for number, string, and list objects shown below. 
+
+```JavaScript
+var age = ee.Number(55);
+print(age);
+```
+
+```JavaScript
+var country = ee.String('Ghana');
+print(country);
+```
+
+```JavaScript
+var europe = ee.List(['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia']);
+print (europe);
+```
+
+Through the **`ee`** objects, which is also the application programming interface (API), you can use Google servers for remote sensing analysis. The Earth Engine API provides many objects and methods for different levels of image analysis. In Earth Engine, click the **`Docs`** tab to view the API functions (Figure 1.14).
+
+![image](https://github.com/user-attachments/assets/e438de85-e0de-49ef-add0-507e02597abb)
 
