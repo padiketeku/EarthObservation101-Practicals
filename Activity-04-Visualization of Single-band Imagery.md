@@ -56,4 +56,4 @@ The default tab is the DESCRIPTION tab, which gives detailed information about t
 
 ### Load image into the Code Editor
 
-You can load an image from the Earth Engine Data Catalog or your own image in Earth Engine Assets (this will be discussed in a later chapter) to the Code Editor in multiple ways. In this activity, we used the image constructor (i.e., `ee.Image'), which accepts various arguments (Figure 2.6), including a string indicating the image file ID.
+You can load an image from the Earth Engine Data Catalog or your own image in Earth Engine Assets (this will be discussed in a later chapter) to the Code Editor in multiple ways. In this activity, we used the image constructor, `ee.Image', which accepts various arguments (Figure 2.6), including a string indicating the image file ID.
