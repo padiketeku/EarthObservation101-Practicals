@@ -26,7 +26,7 @@ If // precedes a code, that code is treated as a comment and will not be execute
 ![image](https://github.com/user-attachments/assets/3278e5e1-2797-4499-91fd-74f09a872432)
 
 
-Alternatively, to add a detailed comment or if you want to make a long line of code inactive you may use a forward slash and * (i.e., /*) to start the comment and at the end of the comment use * plus a forward slash (i.e., */) (Figure 1.10) .
+Alternatively, to add a detailed comment or if you want to make a long line of code inactive you may use a forward slash and * (/*) to start the comment and at the end of the comment use * plus a forward slash (*/) (Figure 1.10) .
 
 ![image](https://github.com/user-attachments/assets/a7907842-08f6-41b8-a17c-7bbd10b0a834)
 
