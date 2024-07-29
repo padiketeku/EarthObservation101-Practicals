@@ -78,6 +78,27 @@ Click **Run** to run the code, but nothing will be available in the **`Console`*
 ```JavaScript
 print(srtm_elevation );
 ```
-Re-run the code and pieces of information about the data will be available in the **`Console`**. You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The data **type** is image with data ID and version given. The **bands** information is crucially important for various reasons, including knowing the number of bands and band names which is useful for image visualisation purposes. The coordinate referencing system (**crs** and **crs_transform**) is given to understand how objects have been displayed in two dimensions. The **dimensions** show the number of pixels column-wise and row-wise. 
+Re-run the code and pieces of information about the data will be available in the **`Console`**. Fig. 7 shows the result.
 
+![image](https://github.com/user-attachments/assets/1b5a0b9e-94ff-4f92-9568-b4e4688fddff)|
+|:--:|
+| *Fig. 7. A metadata of the SRTM elevation data.*|
+
+
+You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The **data type** is image with data ID and version given. The **bands** information, including knowing the number of bands and band names, is useful for visualisation purposes. The coordinate referencing system (**crs** and **crs_transform**) is given to understand how objects have been displayed in two dimensions. The **dimensions** show the number of pixels column-wise and row-wise. The **properties** provide more details about the data, including the minimum and maximum elevation values for visualisation. Make sure you explore all items under properties. 
+
+### Visualisation of a single-band image
+
+A digital image is made of a row and column of picture elements (i.e., pixels). Each pixel has a brightness value (also known as digital number) which frequently represents the intensity of return energy recorded by the detector but may also represent temperature, land cover type, or elevation. Rather than using a multi-band (e.g., RGB) detector, it is possible that a single-band sensor can be used to collect information about the target, in which case the target will appear as a grayscale image (just as human vision from the rod cells) with brighter and darker pixels. The brighter pixels of the image have high brightness values, while darker pixels have low brightness values. 
+
+![image](https://github.com/user-attachments/assets/e6a73ffb-fa00-4983-847c-19f2de49b2fb) |
+|:--:|
+| *Fig. 8. Rows and columns of pixel brightness values for a single band gray-scale image. The remote sensing system used to generate this data is 8-bit (i.e., 28), so the brightness values can range between 0 (black pixel: lowest intensity possible), and 255 (white pixel: highest intensity possible).*|
+
+
+The single-band image can be displayed on a computer specifying/using the minimum and maximum brightness values, so all other pixel values are spread within this range to achieve a degree of contrast. The minimum and maximum pixel value can be obtained from the metadata.
+
+In this activity, we will continue to work through the NASA elevation data by displaying this to the Earth Engine base layer. 
+
+`Map.addLayer` is the method required to display a layer to the base map.
 
