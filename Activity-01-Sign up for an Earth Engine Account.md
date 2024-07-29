@@ -1,4 +1,6 @@
-# What is Google Earth Engine
+# Sign up for an Earth Engine Account
+
+## What is Google Earth Engine
 Google Earth Engine is a cloud-based platform for scientific spatial and non-spatial data analysis. It provides ready-to-use, cloud-hosted datasets and a large pool of servers. <br>
 One feature that makes Earth Engine particularly attractive is the ability to run large computations very fast by distributing them across a large pool of servers.<br>
 The ability to efficiently use cloud-hosted datasets and computation is enabled by the Earth Engine API. An API is a way to communicate with Earth Engine servers. <br>
@@ -11,11 +13,11 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 
-# Learning Outcome
-Sign up for an Earth Engine account, if you do not already have this.
+## Learning Outcome
+- Sign up for an Earth Engine account, if you do not already have this.
 
 
-# Get Earth Engine Account
+## Get Earth Engine Account
 The Google Earth Engine can be used by both non-commercial and commercial users once they sign up for an account. <br>
 This section provides a step-by-step guide to creating an account for non-commercial users only. The Earth Engine User Guide contains detailed instructions for creating an Earth Engine account. <br> Review the instructions [<u>**here**</u>](https://developers.google.com/earth-engine/guides/access) and follow the below instructions <br>
 to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. <br>
