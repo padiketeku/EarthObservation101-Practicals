@@ -28,4 +28,4 @@ The above line of code uses the JavaScript print function to command the compute
 
 ![image](https://github.com/user-attachments/assets/d53dff09-fed1-4cbe-b6ce-24baab0cc7ed) |
 |:--:|
-| *Fig.2. Use Run to run a script. The Run runs all the code in the Code Editor.* |
+| *Fig. 2. Use Run to run a script. The Run runs all the code in the Code Editor.* |
