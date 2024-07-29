@@ -32,5 +32,5 @@ Alternatively, to add a detailed comment or if you want to make a long line of c
 
 ![image](https://github.com/user-attachments/assets/a7907842-08f6-41b8-a17c-7bbd10b0a834) |
 |:--:|
-| *Fig. 2. Commenting a multiple line of code using [/*… */] * |
+| *Fig. 2. Commenting a multiple line of code using "/*… */"  *|
 
