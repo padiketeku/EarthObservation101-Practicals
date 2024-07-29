@@ -15,3 +15,9 @@ var age = 55;
 ```
 The above code is a variable (because of the **var**), the name of the variable is age, and 55 is assigned to the variable. The semicolon marks the end of the statement (think of the semicolon as a full stop for every English sentence you write). Although it is a good practice to end every variable statement with a semicolon, the code editor runs well even if this is missing. 
 
+### Comments
+In computer programming, it is a good practice to add comments to the code you write. Comments are texts given to help the developer and user of the code understand the code. Commenting on a code can be easily ignored by developers as the code can still run without the comments. However, adding useful comments to a code is strongly recommended. The comment would help you explain every line of the code and can serve as a reminder if you come back to the code in the future. In JavaScript, you can start a comment using two forward slashes (//), as shown below. 
+
+```JavaScript
+//This is a JavaScript comment
+````
