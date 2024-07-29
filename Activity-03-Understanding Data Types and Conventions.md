@@ -123,7 +123,17 @@ var europe = ee.List(['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia']);
 print (europe);
 ```
 
-Through the **`ee`** objects, which is also the application programming interface (API), you can use Google servers for remote sensing analysis. The Earth Engine API provides many objects and methods for different levels of image analysis. In Earth Engine, click the **`Docs`** tab to view the API functions (Figure 1.14).
+Through the **`ee`** objects, which is also the application programming interface (API), you can use Google servers for remote sensing analysis. The Earth Engine API provides many objects and methods for different levels of image analysis. In Earth Engine, click the **`Docs`** tab to view the API functions (Fig. 5).
 
 ![image](https://github.com/user-attachments/assets/e438de85-e0de-49ef-add0-507e02597abb)
+|:--:|
+| *Fig. 5. Earth Engine API functions. This can be found under the Docs tab.*|
+
+Each Earth Engine object contains methods and functions, which can be viewed once you click the expander arrow (Fig. 6). The details on argument (i.e., a value passed into a function) required to complete a function are also given for easy use of Earth Engine. In this example, expand **`ee.String`** and select the `ee.String(string)`. 
+
+![image](https://github.com/user-attachments/assets/ebdeb2d1-ec4c-48b7-8e1b-cb9b6848aec0)
+|:--:|
+| *Fig. 6. ee.String, an Earth Engine objects, requires to construct string variables using Google Servers.*|
+
+For this function, the argument (i.e, input value) must be a string and it returns a string. Below is a string variable for an Asian country (i.e., China). 
 
