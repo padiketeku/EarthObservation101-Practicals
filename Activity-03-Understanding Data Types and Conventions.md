@@ -59,12 +59,49 @@ Lists are defined using square brackets [ ] and are useful for holding multiple 
 var europe = ['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia'];
 print (europe);
 ```
-If you run the print command, the result appears in the **`Console`**, (Fig. 3). The expander arrow is highlighted with a red polygon. You may click this to reveal further information about the list.
+If you run the print command, the result appears in the **`Console`**, (Fig. 3). The expander arrow is highlighted with a red polygon. 
 
 ![image](https://github.com/user-attachments/assets/0eeecef3-260c-4c80-ba1f-57250470cb50) |
 |:--:|
 | *Fig. 3. List. An example of JavaScript list.*|
 
+Click the expander to reveal further information about the list. The list has five elements and each element is indexed; Sweden is 0, Latvia is 1, Portugal is 2, France is 3 and Slovakia is 4. The index shows the position of the element in the list. Note that the index of the first item is 0, not 1.
 
+![image](https://github.com/user-attachments/assets/e694112d-4e2c-4b1f-a95b-09900dae9f78)
+
+
+### Objects
+Objects in JavaScript are dictionaries of `key:value` pairs. An object (or dictionary) is declared using curly brackets { }. A value can be referenced using its key. The code below creates an object called darwinCity with some information about Darwin City in Australia. 
+
+Note a few important things about the JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put in the semicolon (;) is the command considered complete. This helps format the code to make it more readable. Also note the choice of the variable name darwinCity. The variable contains two words. The first word is in lowercase, and the first letter of the second word is capitalized. This type of naming scheme of joining multiple words into a single variable name is called “camel case.” While it is not mandatory to name your variables using this scheme, it is considered a good practice. 
+
+```JavaScript
+var darwinCity ={
+'city': 'Darwin',
+'size': 3164,
+'coordinates': [130.841782, -12.462827],
+'population': 139902
+};
+
+print(darwinCity);
+```
+The object will be printed in the Console. Make sure you expand the output. The object has four properties, and you can see that instead of a numeric index, each item has a label. This is known as the key and can be used to retrieve the value of an item
+
+![image](https://github.com/user-attachments/assets/9e8284fe-9527-4199-902b-863203f4d47d)
+|:--:|
+| *Fig. 4. A JavaScript Object. This is also known as a dictionary variable.*|
+
+The result above will be replicated if the container object is used to declare the object, as shown below.
+
+```JavaScript
+var darwinCity =ee.Dictionary{
+'city': 'Darwin',
+'size': 3164,
+'coordinates': [130.841782, -12.462827],
+'population': 139902
+};
+
+print(darwinCity);
+```
 
 
