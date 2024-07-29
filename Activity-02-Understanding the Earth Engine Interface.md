@@ -6,5 +6,5 @@ The Code Editor, through the JavaScript Application Programming Inteface (API), 
 
 ![Features of the Earthh Engine Code Editor](https://github.com/user-attachments/assets/3f465845-47dd-47c5-8d22-cb32a2304801) |
 |:--:|
-| *Fig.1 The Earth Engine User Interface* |
+| *Fig.1. The Earth Engine User Interface* |
 
