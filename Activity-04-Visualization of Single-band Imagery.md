@@ -23,3 +23,4 @@ A mechanical remote sensing detector replicates human vision in that solar radia
 - Use the Inspector tool to understand data
 - Differentiate between pseudo-colour image, true colour image, and false colour image 
 
+### - Create a new script file
