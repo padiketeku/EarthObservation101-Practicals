@@ -60,7 +60,8 @@ var europe = ['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia'];
 print (europe);
 ```
 If you run the print command, the result appears in the **`Console`**, (Fig. 3). The expander arrow is highlighted with a red polygon. You may click this to reveal further information about the list. 
-![image](https://github.com/user-attachments/assets/56d34149-bbfa-48dc-8cff-6a19b91fba04) |
+![image](https://github.com/user-attachments/assets/0eeecef3-260c-4c80-ba1f-57250470cb50) |
+
 |:--:|
 | *Fig. 3. List. An example of JavaScript list.*|
 
