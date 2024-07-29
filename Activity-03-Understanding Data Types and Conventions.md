@@ -94,12 +94,12 @@ The object will be printed in the Console. Make sure you expand the output. The 
 The result above will be replicated if the container object is used to declare the object, as shown below.
 
 ```JavaScript
-var darwinCity =ee.Dictionary{
+var darwinCity =ee.Dictionary({
 'city': 'Darwin',
 'size': 3164,
 'coordinates': [130.841782, -12.462827],
 'population': 139902
-};
+});
 
 print(darwinCity);
 ```
