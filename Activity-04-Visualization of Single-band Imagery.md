@@ -39,4 +39,17 @@ A `Create file' window pops up for you to specify the file name. In this example
 If you are not happy with a script file you created you can delete this using the delete icon highlighted with a red cross mark in Fig. 3. You can rename the file using the `Rename` command, the icon just before the delete icon.
 Click the new script file, `prac1002`, and a fresh Code Editor would be available. 
 
+### Search through the Earth Engine repository for data
 
+To find data from the Earth Engine repository for a project you would use the `Search places and datasets…` bar, shown below.
+
+![image](https://github.com/user-attachments/assets/aa0eef08-a187-48db-91d1-9f670e53bb76)
+
+The search bar can be used to search places and datasets, but in this activity, we focused on datasets, specifically images (also known as rasters in Earth Engine). For instance, if you are interested in precipitation data, you may type precipitation into the search bar to see a list of precipitation data in the repository. In this activity, we explored elevation data given by [NASA](https://science.jpl.nasa.gov/projects/srtm/) and [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm). Type SRTM into the `Search places and datasets…` bar, the result would be a list of rasters and tables data. Click **NASA SRTM Digital Elevation 30m** to view the result, as shown below (Fig. 4). Note that you must click the `BANDS` tab as it is not the default tab. Your result must be the same as the figure below.
+
+![image](https://github.com/user-attachments/assets/3459956a-164e-4aac-b53a-da5314a60309) |
+|:--:|
+| *Fig. 4. The band description of NASA SRTM digital elevation.*|
+
+
+The default tab is the DESCRIPTION tab, which gives detailed information about the data. The next tab is the BANDS tab, which lists the number of bands in the image plus other information about a band. In this example, the image has a single band, which provides global elevation data. The estimated minimum and maximum elevation values are -10 and 6500 m, respectively. The details of the **Dataset Provider** and **Data Availability** are given. 
