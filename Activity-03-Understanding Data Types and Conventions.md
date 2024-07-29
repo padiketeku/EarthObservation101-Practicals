@@ -45,5 +45,25 @@ var age = 55;
 // print the variable to the Console
 print (age);
 ``` 
+### Strings
+A string variable is created once a text value is assigned. The text is locked up either in single ' or double " quotes. Never mix them up; just select one (preferably a single quote) and be consistent. A native JavaScript string variable for an African country will be declared, as shown below.
+
+```var country = 'Ghana';
+print (country);
+```
+
+### Lists
+Lists are defined using square brackets [ ] and are useful for holding multiple values which can be of dissimilar data types. A list variable of 5 countries in Europe will be declared as:
+
+```JavaScript
+var europe = ['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia'];
+print (europe);
+```
+If you run the print command, the result appears in the **`Console`**, (Fig. 3). The expander arrow is highlighted with a red polygon to reveal further information about the list. 
+![image](https://github.com/user-attachments/assets/56d34149-bbfa-48dc-8cff-6a19b91fba04) |
+|:--:|
+| *Fig. 3. List. An example of JavaScript list. *|
+
+
 
 
