@@ -42,7 +42,7 @@ When you assign a number to a variable, as seen in the variable **age**, a numbe
 // create a variable called 'age'and assign 55 to this
 var age = 55;
 
-// print the variable to the **Console**
+// print the variable to the Console
 print (age);
 ``` 
 
