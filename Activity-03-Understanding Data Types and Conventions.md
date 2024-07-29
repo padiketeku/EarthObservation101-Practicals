@@ -21,6 +21,7 @@ In computer programming, it is a good practice to add comments to the code you w
 ```JavaScript
 // This is a JavaScript comment
 ````
+
 If // precedes a code, that code is treated as a comment and will not be executed. Thus, a comment can be used to deactivate a code. Apply // to multiple lines of code if you do not want to run the code block as shown in Fig. 1.
 
 ![image](https://github.com/user-attachments/assets/3278e5e1-2797-4499-91fd-74f09a872432) |
@@ -186,6 +187,7 @@ var slice_countryAustralia  =countryAustralia.slice(0,3);
 
 //print the result to the Console
 print(slice_countryAustralia);
+```
 
 The print command should return `Aus` to the **`Console`**.
 To conclude the session, make sure you save your scripts before exiting Earth Engine. The save icon must turn grey, as shown below, to confirm that you are good to exit the software.
@@ -194,4 +196,4 @@ To conclude the session, make sure you save your scripts before exiting Earth En
 
 
 
-```
+
