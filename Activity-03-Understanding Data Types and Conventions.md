@@ -195,5 +195,19 @@ To conclude the session, make sure you save your scripts before exiting Earth En
 ![image](https://github.com/user-attachments/assets/e1242f58-ea67-48d6-868f-b41160477986)
 
 
+### DIY
+Landsat 8 is a satellite mission that has been providing data every 16 days since 2013. If you are working on a project that requires a list of years that Landsat 8 has been in operation since 2016.
+1, Which of the functions in the `ee.List` module might be the most logical one to use in a code?
+2, Use the function in question 1 to create a list variable that prints the required Landsat 8 acquisition dates at two-year intervals. Let the name of the variable be **landsat8Years**. 
+The result should be as shown below.
+
+![image](https://github.com/user-attachments/assets/6ed49e2e-88fe-4abe-a308-5b20b7e80419)
+
+
+
+
+
+
+
 
 
