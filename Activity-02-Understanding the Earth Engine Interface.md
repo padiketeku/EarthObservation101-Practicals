@@ -8,3 +8,5 @@ The Code Editor, through the JavaScript Application Programming Inteface (API), 
 |:--:|
 | *Fig.1. The Earth Engine User Interface* |
 
+
+
