@@ -25,7 +25,7 @@ If // precedes a code, that code is treated as a comment and will not be execute
 
 ![image](https://github.com/user-attachments/assets/3278e5e1-2797-4499-91fd-74f09a872432) |
 |:--:|
-| *Fig. 1. Commenting a multiple line of code using //* |
+| *Fig. 1. Commenting a multiple line of code using //*|
 
 
 Alternatively, to add a detailed comment or if you want to make a long line of code inactive you may use a forward slash and * to start the comment and at the end of the comment use  * plus a forward slash (Fig. 2) .
