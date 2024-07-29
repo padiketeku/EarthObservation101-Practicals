@@ -106,5 +106,5 @@ print(darwinCity);
 
 
 #### Container object
-A container object, always defined using `**ee**` (meaning Earth Engine), is used to wrap a client-side JavaScript object for the efficient functioning of Google servers. The data types discussed above can be wrapped with ee. Earth Engine users are encouraged to use the ee wrapper to minimise computation issues. The data types discussed above can be more Earth Engine-specific if the ee precedes the data type. Examples of number, string, and list objects are shown below. 
+A container object, always defined using **`ee`** (meaning Earth Engine), is used to wrap a client-side JavaScript object for the efficient functioning of Google servers. All the data types discussed so far can be wrapped with ee. Earth Engine users are encouraged to use the ee wrapper to minimise computation issues. The data types discussed above can be more Earth Engine-specific if the ee precedes the data type. Examples of number, string, and list objects are shown below. 
 
