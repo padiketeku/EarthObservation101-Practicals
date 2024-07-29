@@ -13,5 +13,5 @@ In computer programming, a variable is used to store data values. In JavaScript,
 ```JavaScript
 var age = 55;
 ```
-The above code is a variable (because of the var), the name of the variable is age, and 55 is assigned to the variable. The semicolon marks the end of the statement (think of the semicolon as a full stop for every English sentence you write). Although it is a good practice to end every variable statement with a semicolon, the code editor runs well even if this is missing. 
+The above code is a variable (because of the **var**), the name of the variable is age, and 55 is assigned to the variable. The semicolon marks the end of the statement (think of the semicolon as a full stop for every English sentence you write). Although it is a good practice to end every variable statement with a semicolon, the code editor runs well even if this is missing. 
 
