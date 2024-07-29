@@ -5,9 +5,8 @@ The Google Earth Engine User Interface is supported by JavaScript programming la
 The Code Editor, through the JavaScript Application Programming Inteface (API), provide additional functionality to display results on a map, manage scripts, access reference documentation, manage tasks, and more. The Code Editor also makes it possible to share your code with other users, making it easy for others to replicate your methods while promoting collaboration and communication of project results. 
 
 ## Learning Outcomes
-• Familiarity with the Earth Engine Code Editor.
-• Familiarity with the JavaScript syntax.
-• Ability to use the Earth Engine API functions from the Code Editor
+- Familiarity with the Earth Engine Code Editor.
+- Ability to use the Earth Engine API functions from the Code Editor
 
 ## The Earth Engine Interface
 Fig.1 shows the Earth Engine User Interface; familiarise yourself with the various panes and widgets. The features are thoroughly covered in the book.
