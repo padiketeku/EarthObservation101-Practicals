@@ -5,7 +5,7 @@ Light, mainly from the sun, is used by remote sensing detectors, including the h
 
 ![image](https://github.com/user-attachments/assets/aef50f75-2c68-44b0-8660-82b7abee7886) |
 |:--:|
-| *The human eye as a natural remote sensing detector through the cone and rod cells of the retina. The blue cone cell, green cone cells, and red cone cells give humans colour vision. The rod cells are only turned on at night or in a poor lighting environment to visualise objects in a black-white range.*|
+| *Fig.1 The human eye as a natural remote sensing detector through the cone and rod cells of the retina. The blue cone cell, green cone cells, and red cone cells give humans colour vision. The rod cells are only turned on at night or in a poor lighting environment to visualise objects in a black-white range.*|
 
 A mechanical remote sensing detector replicates human vision in that solar radiation with a wavelength ranging between 400-700 nm is employed for humans to capture objects in RGB and/or a mixture of the RGB. 
 
@@ -24,15 +24,19 @@ A mechanical remote sensing detector replicates human vision in that solar radia
 - Differentiate between pseudo-colour image, true colour image, and false colour image 
 
 ### Create a new script file
-To start a new script, click the `Scripts` tab, **NEW** (the drop-down triangle), and select **File**. Fig. 1 shows the steps.
+To start a new script, click the `Scripts` tab, **NEW** (the drop-down triangle), and select **File**. Fig. 2 shows the steps.
 
 ![image](https://github.com/user-attachments/assets/53d233fa-5bdc-4d01-b716-74f0daf30fcc) |
 |:--:|
-| *Fig. 1 Selecting a new script file. *|
+| *Fig. 2. Selecting a new script file.*|
 
-A `Create file' window pops up for you to specify the file name. In this example, the file name is prac1002. Make sure new script files are saved to the same repository. Once the file is created you would see it (highlighted in grey) under the repository, as shown below (Fig. 2).
+A `Create file' window pops up for you to specify the file name. In this example, the file name is prac1002. Make sure new script files are saved to the same repository. Once the file is created you would see it (highlighted in grey) under the repository, as shown below (Fig. 3).
 
-![image](https://github.com/user-attachments/assets/fc302407-9a98-4614-b3c2-189cad342094) |
+![image](https://github.com/user-attachments/assets/672e686f-1491-4200-937a-3482a5bd75e1) |
 |:--:|
-| *Fig. 2 A new script is created and visible in the repository. *|
+| *Fig. 3. A new script is created and visible in the repository.*|
+
+If you are not happy with a script file you created you can delete this using the delete icon highlighted with a red cross mark in Fig. 3. You can rename the file using the `Rename` command, the icon just before the delete icon.
+Click the new script file, `prac1002`, and a fresh Code Editor would be available. 
+
 
