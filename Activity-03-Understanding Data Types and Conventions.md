@@ -137,3 +137,34 @@ Each Earth Engine object contains methods and functions, which can be viewed onc
 
 For this function, the argument (i.e, input value) must be a string and it returns a string. Below is a string variable for an Asian country (i.e., China). 
 
+```JavaScript
+
+//create a variable for an Asian country
+var asian_country = ee.String('China');
+
+//print the result to the Console
+print(asian_country);
+```
+
+How do you know that the input variable is a string? You are right, China is in single quote If you run the code, a string object namely `China` is printed to the **`Console`**.
+The `ee.String` has many methods, including `aside (func, var_args)`, `slice (start, end)`, `toLowerCase ()`, etc. The methods have either blank or fill parenthesis. The methods with blank parenthesis (e.g., `length ( )` ) require no input values whereas the other methods require input values to be passed into them. In this first example, we would apply length () to determine the number of letters in the name China. If you click `length ()`, what is the data type of the return variable? That is correct, an integer is given as the return variable.
+
+![image](https://github.com/user-attachments/assets/ff96f802-0e62-4aec-a49a-46e72a6a4f22)
+|:--:|
+| *Fig. 7.ee.String.length. This method does not require an input argument.*|
+
+To use `length ()`, we would build on the above string variable for an Asian country, as shown below. Pay attention to code lines 8 and 9; also, take note of a variation of the use of // 
+
+```JavaScript
+
+//create a variable for an Asian country
+var asian_country = ee.String('China');
+
+//print the result to the Console
+//print(asian_country); // is placed infront of the `print` to prevent the print commenad from running
+
+//number of letters in the name of the country
+var num_of_letters = asian_country .length();
+print(num_of_letters); //this prints the result to the Console
+```
+
