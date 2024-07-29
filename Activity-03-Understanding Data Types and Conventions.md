@@ -34,3 +34,16 @@ Alternatively, to add a detailed comment or if you want to make a long line of c
 |:--:|
 | *Fig. 2. Commenting a multiple line of code *|
 
+## Basic JavaScript Data Types
+
+### Numbers
+When you assign a number to a variable, as seen in the variable **age**, a number variable is created. If you print the variable age, the value stored in the variable will be printed to the Console.
+```JavaScript
+// create a variable called 'age'and assign 55 to this
+var age = 55;
+
+// print the variable to the `**Console**`
+print (age);
+``` 
+
+
