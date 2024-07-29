@@ -53,3 +53,5 @@ The search bar can be used to search places and datasets, but in this activity, 
 
 
 The default tab is the DESCRIPTION tab, which gives detailed information about the data. The next tab is the BANDS tab, which lists the number of bands in the image plus other information about a band. In this example, the image has a single band, which provides global elevation data. The estimated minimum and maximum elevation values are -10 and 6500 m, respectively. The details of the **Dataset Provider** and **Data Availability** are given. 
+
+### Load image into the Code Editor
