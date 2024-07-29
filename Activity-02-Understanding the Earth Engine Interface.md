@@ -24,7 +24,7 @@ Copy the following code snippet into the Code Editor.
 ```JavaScript
 print ('Hello World')
 ```
-The above line of code uses the JavaScript print function to command the computer to print “Hello World”. Once you enter the code, click `Run`. The output will be displayed to the upper right-hand pane under the `** Console**` tab (Figure 1.3). Throughout this book, a code will appear distinctively, as shown above. Feel free to copy, paste, and run a code in the Code Editor.
+The above line of code uses the JavaScript print function to command the computer to print “Hello World”. Once you enter the code, click `Run`. The output will be displayed to the upper right-hand pane under the **`Console`** tab (Figure 1.3). Throughout this book, a code will appear distinctively, as shown above. Feel free to copy, paste, and run a code in the Code Editor.
 
 ![image](https://github.com/user-attachments/assets/d53dff09-fed1-4cbe-b6ce-24baab0cc7ed) |
 |:--:|
