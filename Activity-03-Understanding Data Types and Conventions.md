@@ -19,5 +19,8 @@ The above code is a variable (because of the **var**), the name of the variable 
 In computer programming, it is a good practice to add comments to the code you write. Comments are texts given to help the developer and user of the code understand the code. Commenting on a code can be easily ignored by developers as the code can still run without the comments. However, adding useful comments to a code is strongly recommended. The comment would help you explain every line of the code and can serve as a reminder if you come back to the code in the future. In JavaScript, you can start a comment using two forward slashes (//), as shown below. 
 
 ```JavaScript
-//This is a JavaScript comment
+// This is a JavaScript comment
 ````
+If // precedes a code, that code is treated as a comment and will not be executed. Thus, a comment can be used to deactivate a code. Apply // to multiple lines of code if you do not want to run the code block as shown in Fig. 1.
+
+![image](https://github.com/user-attachments/assets/3278e5e1-2797-4499-91fd-74f09a872432)
