@@ -56,4 +56,28 @@ The default tab is the DESCRIPTION tab, which gives detailed information about t
 
 ### Load image into the Code Editor
 
-You can load an image from the Earth Engine Data Catalog or your own image in Earth Engine Assets (this will be discussed in a later chapter) to the Code Editor in multiple ways. In this activity, we used the image constructor, `ee.Image`, which accepts various arguments (Figure 2.6), including a string indicating the image file ID.
+You can load an image from the Earth Engine Data Catalog or your own image in Earth Engine Assets (this will be discussed in a later chapter) to the Code Editor in multiple ways. In this activity, we used the image constructor, `ee.Image`, which accepts various arguments (Fig. 5), including a string indicating the image file ID.
+
+![image](https://github.com/user-attachments/assets/9a23a3c4-a9d3-44e4-9bb7-bdfef27e1e7a) |
+|:--:|
+| *Fig. 5. The image constructor and the valid arguments.*|
+
+We continued to use the NASA elevation data by copying the collection snippet (Fig. 6). Return to the Code Editor and paste the snippet. 
+
+![image](https://github.com/user-attachments/assets/28c5d1e9-9a29-42b9-b9b3-c7b29de0668c) |
+|:--:|
+| *Fig. 6. The image constructor to retrieve the SRTM data.*|
+
+Assign the snippet to a variable; and call this strm_elevation, as shown below.
+
+```JavaScript
+var srtm_elevation = ee.Image("USGS/SRTMGL1_003");
+```
+Click **Run** to run the code, but nothing will be available in the `**Console**`. Print the variable.
+
+```JavaScript
+print(srtm_elevation );
+```
+Re-run the code and pieces of information about the data will be available in the Console. You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The data type is image with data ID and version given. The bands information is crucially important for various reasons, including knowing the number of bands and band names which is useful for image visualisation purposes. The coordinate referencing system (crs and crs_transform) is given to understand how objects have been displayed in two dimensions. The dimensions show the number of pixels column-wise and row-wise. 
+
+
