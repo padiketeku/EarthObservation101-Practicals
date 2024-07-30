@@ -76,7 +76,7 @@ var srtm_elevation = ee.Image("USGS/SRTMGL1_003");
 Click **Run** to run the code, but nothing will be available in the **`Console`**. Print the variable.
 
 ```JavaScript
-print(srtm_elevation );
+print(srtm_elevation);
 ```
 Re-run the code and pieces of information about the data will be available in the **`Console`**. Fig. 7 shows the result.
 
@@ -100,5 +100,128 @@ The single-band image can be displayed on a computer specifying/using the minimu
 
 In this activity, we will continue to work through the NASA elevation data by displaying this to the Earth Engine base layer. 
 
-`Map.addLayer` is the method required to display a layer to the base map.
+`Map.addLayer` API (Fig.9) is the required to display a layer to the base map.
+
+![image](https://github.com/user-attachments/assets/3ed6a36e-7890-485c-999c-42f869c0aab7) |
+|:--:|
+| *Fig. 7. The Map.addLayer API.*|
+
+
+The `Map.addLayer` is the work horse for data visualisation and requires an Earth Engine object as an argument. The other arguments are optional, and the function returns a new map layer. In this example, for the optional arguments we specified the **visParams** and **name** to the achieve the code below. Through the **visParams** the range of pixel value is specified, so the computer can display the image features in a range of black and white (i.e., grayscale).
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: -10,
+max: 6500 //the min-max gives the data range: values were sourced from the image properties
+},
+
+//name of the layer
+'STRM Elevation 1'
+);
+```
+Click **Run** to run the script; you may need to zoom out the base map to see the grayscale image of the elevation data. Darker pixels connote low elevation while lighter pixels mean high elevation areas. In the base map panel find the layer name under the widget **Layers**. This is a global data but zoom in on Australia and identify the high elevation areas. 
+It is possible to have an image with low contrast, so you might need to manipulate a grayscale image for visual enhancement. You can do this by changing the transparency or contrast of the image or applying a colour palette (aka look up table) to groups of pixels. The transparency of the image can be modified manually or programmatically. For the manual approach, hover the mouse over the **Layers** widget and you will see a slider by the layer name. Slide the slider to see how the transparency of the map layer changes in the base map. Programmatically, you can alter the layer transparency, as shown below. The code is similar to the one above, but the ‘shown’ and ‘opacity’ arguments are now specified. Also, a new layer name is specified (i.e., ‘SRTM Elevation 2’).
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: -10,
+max: 6500 //the min-max gives the data range: values were sourced from the image properties
+},
+
+//name of the layer
+'STRM Elevation 2',
+1, //it is a boolean: 1=show map layer, and specify 0 if you do not want to dsiplay the map layer
+0.7 //opacity value; this ranges between 0 (transparent) and 1(opaque)
+);
+```
+The opacity value is set to 0.7. You will have two map layers in the **Layers** manager, uncheck the bottom layer to evaluate the impact of the new opacity value. 
+Contrast enhancement. We will focus on Australia to explain min-max contrast enhancement. The data shows that in Australia the highlands are concentrated in south-east. However, the contrast is low for west Australia. This is possible if the data is naturally skewed to a range. To improve image contrast, you must specify the min-max values to this natural range capturing the more useful information while leveraging the dynamic range of the computer. Specifying the natural range of the data so is stretched to align with the dynamic range of the computer is referred to as *min-max contrast enhancement*. To do this, change the min-max values to 0 and 1000, respectively, as Australia is generally flat. Label the layer ‘SRTM Elevation 3’. The code snippet is shown below.
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: 0,
+max: 1000 //range specified to suit a region of interest (Australia in this case)
+},
+
+//name of the layer
+'STRM Elevation 3'
+);
+```
+
+The image contrast is enhanced, revealing the variability in elevation, especially in West Australia. The result can be seen below. 
+
+![image](https://github.com/user-attachments/assets/b8628737-db0d-4c8b-a44f-9025154134a2) |
+|:--:|
+| *Fig. 8. The NASA SRTM elevation data of Australia. This image is enhanced using the min-max contrast method. The darker pixels are low elevation while the brighter pixels are high elevation.*|
+
+Compare this result (Fig. 8) and the ‘SRTM Elevation 1’ layer to describe the impact of contrast enhancement.
+
+### Create a pseudo-colour image
+The human eye is more sensitive to features displayed in RGB than black/white. To visually enhance a grey-scale image, the native colour can be manipulated using RGB palette to produce a **pseudocolour image**. A pseudocolour image is a single band but a brightness value is sent to three different lookup tables (i.e., RGB palette), usually resulting in a rainbow colour (violet, indigo, blue, green, yellow, orange and red). This is achieved by slicing up the pixels of the single-band image into user defined groups and assigning unique RGB to each group of pixels (Fig. 9). 
+
+![image](https://github.com/user-attachments/assets/e8ab05f5-8b89-4085-8f72-ea0676417ad7) |
+|:--:|
+| *Fig. 9. Steps to produce a pseudocolour image. The input grayscale image is sliced up into groups with each group assigned to a discrete colour to produce a pseudocolour image.*|
+
+In Earth Engine, a colour palette is specified to produce the pseudocolour image. The following code specifies a palette with three colours (i.e., RGB). The output image would be interpreted as low elevation being blue and red for high elevation. 
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: 0,
+max: 1000, //range specified to suit a region of interest (Australia in this case)
+palette:['blue','green', 'red']// assigning a palette; low elevation areas would be blue while high elevation would be red
+},
+
+//name of the layer
+'STRM Elevation 4'
+);
+```
+Run the above code to produce the pseudocolour image below. Note that we have zoomed in on Australia for emphasis. You can zoom in on any continent or country of your preference.
+
+![image](https://github.com/user-attachments/assets/828999d7-b87c-408f-b437-05d267da6f63) |
+|:--:|
+| *Fig. 10. A pseudocolour image displaying the NASA SRTM elevation data. The region of interest is Australia. The blue pixels are low elevation areas and red pixels are high elevation areas. Green is the middle range of elevation values.*|
+
+Zoom in on Australia, you may notice that high-elevation areas are in red while low-elevation areas are in blue.
+
+****The Inspector Tool
+You can further explore the displayed map layer using the `Inspector` tool, the tab left to the **`Console`** tab. When you are in the `Inspector` tab, click anywhere of the map or a region of interest to view information on the selected location: Point, Pixels and Objects (Figure 2.14). Note that your selected location may be different to the one used in this book, so it is OK if your result is not same as reported here. 
+
+![image](https://github.com/user-attachments/assets/398c5b33-4dfe-48e7-ba4e-16fd1367b830) |
+|:--:|
+| *Fig. 11. The Inspector tool reporting elevation data about a selected location.*|
+
+**Point** provides the longitude and latitude of the cursor location (i.e., your ROI) plus the zoom level and scale of the displayed map layer. **Pixels** gives attributes about the pixel, and in this example, if you expand the arrow, the layer name (including the data type and number of bands) and the elevation of the selected location are displayed. **Objects** provides data about the source dataset.
+
+### DIY
+Using the NASA SRTM data, produce a pseudocolour image with a rainbow palette: violet, indigo, blue, green, yellow, orange, and red. Compare your result with the one in Fig. 10 and share your observation on the discussion forum.
+
+## Conclusion
+Up to this point, you have learned about single-band image visualisation, including enhancement techniques such as modifying transparency, min-max contrast stretching, and pseudocolour image. Next activity, we will focus on the visualisation of a multi-band image using a true colour band combination and a false colour band combination.
+
+
+
+
+
+
 
