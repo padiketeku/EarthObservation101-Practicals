@@ -9,6 +9,7 @@ Light, mainly from the sun, is used by remote sensing detectors, including the h
 
 A mechanical remote sensing detector replicates human vision in that solar radiation with a wavelength ranging between 400-700 nm is employed for humans to capture objects in RGB and/or a mixture of the RGB. 
 
+
 ## Learning Outcomes
 - Create a new script file
 - Search through the Earth Engine repository for data
