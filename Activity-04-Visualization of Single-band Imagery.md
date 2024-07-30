@@ -3,6 +3,7 @@
 ## Introduction
 Light, mainly from the sun, is used by remote sensing detectors, including the human eye, to create pictures of the environment. In Remote Sensing, light, which is electromagnetic radiation, is described using a range of wavelengths referred to as a band. Solar radiation and the cone and rod cells of the human eye make objects in our environment visible to us. The human eye has blue, green, and red cone cells making us see objects around us as red, green, blue (RGB), or a mixture of the RGB in a good lighting condition. At night or in a low-lighting environment, the rod cells are more active, and thus, we see objects in shades of black and white (i.e., greyscale). 
 
+
 ![image](https://github.com/user-attachments/assets/aef50f75-2c68-44b0-8660-82b7abee7886) |
 |:--:|
 | *Fig.1 The human eye as a natural remote sensing detector through the cone and rod cells of the retina. The blue cone cell, green cone cells, and red cone cells give humans colour vision. The rod cells are only turned on at night or in a poor lighting environment to visualise objects in a black-white range.*|
@@ -16,7 +17,8 @@ A mechanical remote sensing detector replicates human vision in that solar radia
 - Load an image into the Code Editor
 - Visualisation of images
 - Use the Inspector tool to understand data
-- Differentiate between pseudo-colour image, true colour image, and false colour image 
+- Differentiate between pseudo-colour image, true colour image, and false colour image
+  
 
 ### Create a new script file
 To start a new script, click the `Scripts` tab, **NEW** (the drop-down triangle), and select **File**. Fig. 2 shows the steps.
@@ -27,12 +29,14 @@ To start a new script, click the `Scripts` tab, **NEW** (the drop-down triangle)
 
 A `Create file' window pops up for you to specify the file name. In this example, the file name is prac1002. Make sure new script files are saved to the same repository. Once the file is created you would see it (highlighted in grey) under the repository, as shown below (Fig. 3).
 
+
 ![image](https://github.com/user-attachments/assets/672e686f-1491-4200-937a-3482a5bd75e1) |
 |:--:|
 | *Fig. 3. A new script is created and visible in the repository.*|
 
 If you are not happy with a script file you created you can delete this using the delete icon highlighted with a red cross mark in Fig. 3. You can rename the file using the `Rename` command, the icon just before the delete icon.
 Click the new script file, `prac1002`, and a fresh Code Editor would be available. 
+
 
 ### Search through the Earth Engine repository for data
 
@@ -48,6 +52,7 @@ The search bar can be used to search places and datasets, but in this activity, 
 
 
 The default tab is the DESCRIPTION tab, which gives detailed information about the data. The next tab is the BANDS tab, which lists the number of bands in the image plus other information about a band. In this example, the image has a single band, which provides global elevation data. The estimated minimum and maximum elevation values are -10 and 6500 m, respectively. The details of the **Dataset Provider** and **Data Availability** are given. 
+
 
 ### Load image into the Code Editor
 
@@ -81,6 +86,7 @@ Re-run the code and pieces of information about the data will be available in th
 
 
 You may need to click the expander arrows to explore the full metadata (i.e., information given about the data). The **data type** is image with data ID and version given. The **bands** information, including knowing the number of bands and band names, is useful for visualisation purposes. The coordinate referencing system (**crs** and **crs_transform**) is given to understand how objects have been displayed in two dimensions. The **dimensions** show the number of pixels column-wise and row-wise. The **properties** provide more details about the data, including the minimum and maximum elevation values for visualisation. Make sure you explore all items under properties. 
+
 
 ### Visualisation of a single-band image
 
@@ -166,6 +172,7 @@ The image contrast is enhanced, revealing the variability in elevation, especial
 
 Compare this result (Fig. 8) and the ‘SRTM Elevation 1’ layer to describe the impact of contrast enhancement.
 
+
 ### Create a pseudo-colour image
 The human eye is more sensitive to features displayed in RGB than black/white. To visually enhance a grey-scale image, the native colour can be manipulated using RGB palette to produce a **pseudocolour image**. A pseudocolour image is a single band but a brightness value is sent to three different lookup tables (i.e., RGB palette), usually resulting in a rainbow colour (violet, indigo, blue, green, yellow, orange and red). This is achieved by slicing up the pixels of the single-band image into user defined groups and assigning unique RGB to each group of pixels (Fig. 9). 
 
@@ -208,8 +215,10 @@ You can further explore the displayed map layer using the `Inspector` tool, the 
 
 **Point** provides the longitude and latitude of the cursor location (i.e., your ROI) plus the zoom level and scale of the displayed map layer. **Pixels** gives attributes about the pixel, and in this example, if you expand the arrow, the layer name (including the data type and number of bands) and the elevation of the selected location are displayed. **Objects** provides data about the source dataset.
 
+
 ### DIY
 Using the NASA SRTM data, produce a pseudocolour image with a rainbow palette: violet, indigo, blue, green, yellow, orange, and red. Compare your result with the one in Fig. 10 and share your observation on the discussion forum.
+
 
 ## Conclusion
 Up to this point, you have learned about single-band image visualisation, including enhancement techniques such as modifying transparency, min-max contrast stretching, and pseudocolour image. Next activity, we will focus on the visualisation of a multi-band image using a true colour band combination and a false colour band combination.
