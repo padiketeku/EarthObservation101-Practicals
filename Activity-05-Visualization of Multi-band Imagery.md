@@ -72,3 +72,59 @@ max:1},
 
 
 To explain the above code, the **lsat9** is the image to display while for the visualisation parameters the bands were defined in the order of RGB channels (B4, B3, B2, respectively) as this corresponds to the natural colour vision of humans if for example we look down at the objects from an aircraft 300 m aloft. The reflectance value range between 0 and 1, and you might be able to find the range of values using the Inspector tool. Unlike a single-band image, a palette is not required as the computer, by default, assigns red to B4, green to B3, and blue to B2. The layer name is specified as “True Colour Composite 1”. Run this code and explore the image displayed in the base map environment. Navigate to different surface types, including vegetation, water, and built-up areas. You might observe that the image scene has low contrast, and this is because the default reflectance range specified does not match the actual range of reflectance recorded by the sensor. You can correct this by modifying the min-max values. A trial and error method can be employed to achieve the optimal range, but in this activity, given the image acquisition date aligns with a dry season of the region of interest, the reflectance values, especially for vegetation, are envisaged to be low. Thus, we can edit the code, as shown below. 
+
+```JavaScript
+Map.addLayer(lsat9,{
+bands: ['B4', 'B3', 'B2'],
+min:0,
+max:0.3},
+'True Colour Composite 2');
+```
+
+The min-max values and the layer name were modified. Run the code and compare the two layers in the layer manager. The second layer was more visually enhanced as the contrast improved.
+
+
+![image](https://github.com/user-attachments/assets/5ebf5a07-87c0-4da7-a489-c1fa51b7ae52) |
+|:--:|
+| *Fig. 2. A true colour composite of a Landsat 9 image (B4, B3, B2). The left image has a default range (not enhanced) while the right image is enhanced modifying the min-max values.*|
+
+
+
+### Produce a false colour composite
+
+To utilise the many capabilities of remote sensing, we cannot only rely on the light visible to the human eye (i.e., RGB light). Remote sensing detectors employ infrared light, which provides detailed and unique information about the environment, but unfortunately, this light is invisible to the human eye. Using computers, we can visualise infrared information about our environment through a technique known as false colour composite. False colour composite is a deviation from the display of features to match how humans see the features in real world. The false colour composite is carried out to leverage infrared information. Thus, a false colour composite always includes an infrared band, and a multitude of this composite can be produced. However, a standard or commonly used false colour composite is assigning the sensor’s green channel to blue, red channel to green, and near-infrared channel to red, as shown below. 
+
+
+![image](https://github.com/user-attachments/assets/4cddcb75-bf8b-41e7-870a-9d01566599df) |
+|:--:|
+| *Fig. 3. A standard false colour band combination.*|
+
+
+
+The standard false colour composite is usually produced to visually discriminate different types of vegetation features in the image, as vegetation is highly responsive to near-infrared light. The rationale for constructing a false colour composite should be focused on the surface type you aim to emphasise. To produce a standard false colour composite for the Landsat 9 data, you must assign B5 to red, B4 to green, and B3 to blue. This code is given below.
+
+```JavaScript
+Map.addLayer(lsat9,{
+bands: ['B4', 'B3', 'B2'],
+min:0,
+max:0.3},
+'True Colour Composite 2');
+```
+
+```JavaScript
+
+//a false colour composite
+Map.addLayer(lsat9,{
+bands: ['B5', 'B4', 'B3'],
+min:0,
+max:0.3},
+'False Colour Composite');
+```
+
+The code, if run, produces the following image with predominant shades of red suggesting that the scene is covered by different types or conditions of vegetation. Darker red pixels show low reflectance vegetation while the lighter red pixels show high reflectance.
+
+
+![image](https://github.com/user-attachments/assets/8876a117-dcbe-4df1-bdd6-01de7b6b6315) |
+|:--:|
+| *Fig. 4. False colour composite of Landsat 9 (B5, B4, B3).*|
+
