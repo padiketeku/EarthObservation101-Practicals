@@ -51,5 +51,7 @@ print(lsat);
 Although a multispectral imagery would contain more than three bands, the computer can display a maximum of three bands at a time. The bands of the image can be displayed to reflect human vision in that we would perceive features in their natural colours. For example, if you look down on features from an airborne vehicle, the colours in which you see these features in real life would be presented in a true colour display. And this image visualisation method is referred to as true colour composite. In true colour composite, humans would see a healthy vegetation as green, soil might be reddish/brownish etc. This is because the true colour composite displays the light visible to humans. It is *true* colour composite because the image from the red channel of the mechanical sensor is assigned red, the green channel is assigned green, and the blue channel is assigned blue (Fig. 1).
 
 
+
+
 ![image](https://github.com/user-attachments/assets/f00db0a8-3e00-401d-9b88-6e257bfb4584)
 
