@@ -35,7 +35,7 @@ The image is also made of eleven standard bands (B1-B11), but in this activity, 
 
 ### Select image bands
 
-It is not always that all the image bands are required for a project. Thus, the `ee.Image.select()` method can be used to select relevant bands only. In this activity, we used this method to select `B2, B3, B4, B5, B6, and B7`. The below code selects the bands, but keeps the same variable name (lsat9). This means that lsat9 was updated to contain 6 bands rather than 17, and thus further use of lsat9 shows only 6 bands.
+It is not always that all the image bands are required for a project. Thus, the `ee.Image.select()` method can be used to select relevant bands only. In this activity, we used this method to select `B2, B3, B4, B5, B6, B7`. The below code selects the bands, but keeps the same variable name (lsat9). This means that lsat9 was updated to contain 6 bands rather than 17, and thus further use of lsat9 shows only 6 bands.
 
 ```JavaScript
 //select image bands
@@ -45,4 +45,11 @@ var lsat9 = lsat9.select('B2', 'B3', 'B4', 'B5', 'B6', 'B7');
 print(lsat);
 ```
 
+
+### Produce a true colour composite
+
+Although a multispectral imagery would contain more than three bands, the computer can display a maximum of three bands at a time. The bands of the image can be displayed to reflect human vision in that we would perceive features in their natural colours. For example, if you look down on features from an airborne vehicle, the colours in which you see these features in real life would be presented in a true colour display. And this image visualisation method is referred to as true colour composite. In true colour composite, humans would see a healthy vegetation as green, soil might be reddish/brownish etc. This is because the true colour composite displays the light visible to humans. It is *true* colour composite because the image from the red channel of the mechanical sensor is assigned red, the green channel is assigned green, and the blue channel is assigned blue (Fig. 1).
+
+
+![image](https://github.com/user-attachments/assets/f00db0a8-3e00-401d-9b88-6e257bfb4584)
 
