@@ -69,3 +69,6 @@ min:0,
 max:1},
 'True Colour Composite 1');
 ```
+
+
+To explain the above code, the **lsat9** is the image to display while for the visualisation parameters the bands were defined in the order of RGB channels (B4, B3, B2, respectively) as this corresponds to the natural colour vision of humans if for example we look down at the objects from an aircraft 300 m aloft. The reflectance value range between 0 and 1, and you might be able to find the range of values using the Inspector tool. Unlike a single-band image, a palette is not required as the computer, by default, assigns red to B4, green to B3, and blue to B2. The layer name is specified as “True Colour Composite 1”. Run this code and explore the image displayed in the base map environment. Navigate to different surface types, including vegetation, water, and built-up areas. You might observe that the image scene has low contrast, and this is because the default reflectance range specified does not match the actual range of reflectance recorded by the sensor. You can correct this by modifying the min-max values. A trial and error method can be employed to achieve the optimal range, but in this activity, given the image acquisition date aligns with a dry season of the region of interest, the reflectance values, especially for vegetation, are envisaged to be low. Thus, we can edit the code, as shown below. 
