@@ -19,7 +19,7 @@ We would load the image into the Code Editor using the script below.
 //load in the Landsat 9 image using ee.Image()
 var lsat9 = ee.Image('LANDSAT/LC09/C02/T1_TOA/LC09_104069_20230511');
 ```
-What is the name of the variable? You are right it is lsat9. Print this variable to the `**Console**` to explore the metadata of the image. In the Console, click the small triangle icon to expand and reveal the information associated with the data. Your result should be as shown below (Figure 3.1). 
+What is the name of the variable? You are right it is lsat9. Print this variable to the **`Console`** to explore the metadata of the image. In the Console, click the small triangle icon to expand and reveal the information associated with the data. Your result should be as shown below (Figure 3.1). 
 
 ![image](https://github.com/user-attachments/assets/d9ef9a3e-1056-4529-96cf-113b0ce7221e)|
 
