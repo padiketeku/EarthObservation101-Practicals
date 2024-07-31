@@ -53,5 +53,22 @@ Although a multispectral imagery would contain more than three bands, the comput
 
 
 
-![image](https://github.com/user-attachments/assets/f00db0a8-3e00-401d-9b88-6e257bfb4584)
+![image](https://github.com/user-attachments/assets/f00db0a8-3e00-401d-9b88-6e257bfb4584) |
+|:--:|
+| *Fig. 1. True colour composite.*|
 
+
+
+For Landsat 8 and 9 the image captured using blue light is band 2 (B2), green light is band 3 (B3), and red light is band 4 (B4). More information on the bands of the Landsat family might be found [here](https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites). To construct a true colour composite for Landsat 9 data, you would assign B4 to the red channel, B3 to the green channel and B2 to the blue channel. The code below produces a true colour composite of our chosen image data. 
+
+
+```JavaScript
+Map.addLayer(lsat9,{
+bands: ['B4', 'B3', 'B2'],
+min:0,
+max:1},
+'True Colour Composite 1');
+```
+
+
+```
