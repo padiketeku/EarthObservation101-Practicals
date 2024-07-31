@@ -69,6 +69,3 @@ min:0,
 max:1},
 'True Colour Composite 1');
 ```
-
-
-```
