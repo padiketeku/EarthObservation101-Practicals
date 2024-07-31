@@ -15,7 +15,7 @@ Landsat provides free-to-use satellite imagery for the public. The mission has e
 We would load the image into the Code Editor using the script below.
 
 ### Load a multispectral image 
-```JavaScript`
+```JavaScript
 //load in the Landsat 9 image using ee.Image()
 var lsat9 = ee.Image('LANDSAT/LC09/C02/T1_TOA/LC09_104069_20230511');
 ```
