@@ -128,3 +128,17 @@ The code, if run, produces the following image with predominant shades of red su
 |:--:|
 | *Fig. 4. False colour composite of Landsat 9 (B5, B4, B3).*|
 
+
+## DIY 
+A Landsat 8 image file is given as: 
+`LANDSAT/LC08/C02/T1_TOA/LC08_094074_20220611`. 
+1, Load the image and select the first seven bands. 
+2, Print your variable to the Console and explore the image properties. What is the image acquisition date and the percentage of cloud cover?
+3, If the range of reflectance is 0 and 0.5, produce a true colour composite (TCC) image and a standard false colour (FCC) image. 
+4, Explain why the colour of the ocean water in TCC and FCC appear similar or different.
+
+## Conclusion
+
+In this chapter, we have learned about true colour composite and false composite images. Landsat 8 and 9 images were explored to explain the difference between true colour and false colour images. Although a single-date multispectral image was explored in this activity, the use of multi-temporal images is not uncommon. In the next chapter, we will work with a stack of images collected at different times.
+
+
