@@ -194,15 +194,53 @@ The lines of code to produce the spectral response curves have been added to the
 ```JavaScript
 //create the reflectance chart
 var spectralCurve = ui.Chart.image.regions({
-image: sen2sr_mean,
-regions: featureCollection,
-reducer: ee.Reducer.mean(),
-scale: 10,
-seriesProperty: 'label});
+image: sen2sr_mean, //the image to provide the reflectance data
+regions: featureCollection, //the regions within the image to sample from
+reducer: ee.Reducer.mean(), //this computes mean reflectance for the y-aixs
+scale: 10, //the pixel size in metres
+seriesProperty: 'label}); //use the lable property we defined usingthe geometry tool
 
 //print the chart to the Console
 print(spectralCurve)
 ```
+
+Given this is a chart, you need to print it to the **`Console`** using the print command. Make sure your Console has enough space to accommodate the chart. Your result in the **`Console`** should be similar to the one below.  You might have to click the expander icon, highlighted in Figure 4.15, to open the chart in a new tab for a better view of the chart.
+
+
+![image](https://github.com/user-attachments/assets/e24df55d-c170-4b65-9815-3e08e8884ab5)
+|:--:|
+| *Fig. 5. . A spectral response curve for a Sentinel-2 Level-2A image. The curves for water, urban, crop fields and a riparian forest are given. The x-axis shows the spectral bands, while the y—axis shows the mean reflectance values. This plot needs further improvements, which will be made by updating the chart.*|
+
+
+It is important to assess your charts and maps to be sure they make sense. The x-axis is the spectral bands, labelled as “Band”, and the y-axis is the mean spectral reflectance, labelled as “Band mean”. The figure caption is “Image band values in 4 regions”. These are default labels and must be edited if they do not make sense. Also, on the x-axis the bands are not in correct order. We would need to edit the code to obtain a standard spectral reflectance curve, which is more intuitive and interpretable. Rather than using the band names, we would specify the actual wavelength for the bands to be on the x-axis. Identify the centre wavelength for the Sentinel-2 bands from this [link](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi/resolutions/spatial). We defined a new variable for the wavelengths and another variable to edit default labels and the colours for the curves. The new/additional lines of code to edit the spectral response curves for a more intuitive one is shown below. 
+
+### Edit the spectral response curve
+
+```JavaScript
+//create a list of wavelengths (in nanometer), which corresponds to the Senetinel-2 bands used
+var wavelengths = [490,560,665,705,740,783, 842,1610];
+
+//create a variable that edits the x-and-y-axes labels, title, and the colour of the curves
+var editChart = {
+title: 'A spectral resposne cuve'
+hAxis: {title:},
+vAxis: {title:},
+lineWidth: 1,
+pointSize: 4,
+series: {
+0:{color: 'blue'}
+1:{color: 'magenta'}
+2:{color: 'green'}
+3:{color: 'purple'}
+}
+};
+
+```
+
+
+The print command produces two charts to the Console, but we would focus on the second (or bottom) chart which is an improvement over the initial chart. If you expand the bottom chart, your result may be similar to the one in the figure below.
+
+
 
 
 
