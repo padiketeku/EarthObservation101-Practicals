@@ -43,7 +43,7 @@ Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Lev
 
 Fig. 2 shows the Sentinel-2 band name, description, resolution, and centre wavelength. For example, the B1 describes a centre wavelength of 443.9 nm for S2A and 442.3 nm for S2B, which measures atmospheric aerosols. The pixel size for this band is 60 m. The pixel reflectance value for the thirteen bands are scaled using a factor of 0.0001.
 
-Go back to **RASTERS** and click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A for the bottom of the atmosphere data. Make sure you select the BANDS tab; your results should be as Fig. 3. If you need to use this data, you would have to click IMPORT (see Fig. 3) to import a code into the Code Editor that will retrieve all the Sentinel-2A images in the catalogue. Alternatively, copy the snippet ee.ImageCollection("COPERNICUS/S2_SR") (Fig. 3) and use this in the Code Editor. 
+Go back to **RASTERS** and click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A for the bottom of the atmosphere data. Make sure you select the BANDS tab; your results should be as Fig. 3. If you need to use this data, you would have to click IMPORT (see Fig. 3) to import a code into the Code Editor that will retrieve all the Sentinel-2A images in the catalogue. Alternatively, copy the snippet ee.ImageCollection("COPERNICUS/S2_SR_Harmonize") (Fig. 3) and use this in the Code Editor. 
 
 
 ![image](https://github.com/user-attachments/assets/056bd765-b081-4b19-86a9-f9d964b5effa)
