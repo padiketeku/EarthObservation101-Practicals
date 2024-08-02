@@ -144,9 +144,65 @@ If you run the code your result might be similar to Fig. 3 below.
 | *Fig. 3. A Sentinel-2 Level-2A image clipped to a region of interest.*|
 
 
+### Feature collection- create polygons for surface types
+
+
+In exploring the image, you can see many features including trees interspersed with bare soils. We would limit the analysis to these surface types: water, urban, crop field, and riparian forest. We must create a polygon for each surface type. Again, we used the geometry tools. Hover your mouse over the **Geometry Imports**, click ‘new layer’, select the polygon geometry (aka “draw a shape”) and define a polygon over water pixels. In the Code Editor rename the "geometry" to "water". For spectral response curves, a feature is required. Thus, change the geometry you have created to a feature by clicking on the cog icon (![image](https://github.com/user-attachments/assets/806efca7-d1f5-4357-9a8e-42311a18e139)) next to **water** under **Geometry Imports**. A **Configure geometry import** window immediately pops up (Fig. 4), similar to the figure below.
 
 
 
+![image](https://github.com/user-attachments/assets/7532515a-5465-4d1d-8816-9d088fb11090)
+|:--:|
+| *Fig. 4. Edit layer properties window.*|
+
+
+
+Note that the colour assigned to your surface type might be different to the one used here. But you can change the colour using colour editor (Fig. 4). A feature collection, stacking features together, is required for the spectral response curve. Thus, change the **'Import as'** from **'Geometry'** to **'FeatureCollection'** using the dropdown triangle. This makes it possible to edit the properties. Click the '+ property' and define Property as 'label' and ‘value’ as the name of the class (e.g. water, urban, forest). Be consistent in the use of upper and lower cases, while typing into ‘value’. When done the **Configure geometry import** is updated as follows. 
+
+
+![image](https://github.com/user-attachments/assets/d2afd36b-83fa-4afd-8dd9-099b80b6d994)
+
+
+
+You can use the colour palette to edit the colour for a surface type. Finally, click OK to save the changes. Repeat the steps to creating a feature collection using the geometry tool to create feature collection for the remaining surface types. Remember you create a new geometry by clicking the **“+new layer”** in **Geometry Imports**. Also, make sure you save your changes. At the end, you should have the features for the surface types defined as follows (Fig. 5). Water is blue, urban is cyan, crop field is green, and riparian forest is red.
+
+![image](https://github.com/user-attachments/assets/ebba018e-6323-41a5-95d9-e03b1fb3e884)
+|:--:|
+| *Fig. 5. Features created for surface types using the geometry tool.*|
+
+## Merge the feature collections
+We have four feature collection items; we would merge them into a single feature collection. This gives us a feature collection of feature collections. A line of code for this feature collection was then added to the existing code.
+
+```JavaScript
+//merge the feature collections
+var featureCollection = water.merge(urban).merge(field).merge(forest);
+```
+
+### Produce spectral response curves
+
+To do this, we used the `ui.Chart.image.regions` (Fig. 6). To explain this algorithm, the ui = user interface, Chart.image means you want to create a chart from an image, while there are many methods including histogram the one required for a spectral response curve is the **regions**. Hence, we used `ui.Chart.image.regions`, which extracts and plots the value of each band in one or more regions. The x-axis would be the band name, and y-axis would be reflectance.
+
+
+![image](https://github.com/user-attachments/assets/d9189c13-427e-4d51-a96d-8019f61c7df9)
+|:--:|
+| *Fig. 5. Details on the method useful for creating spectral response curves.*|
+
+
+The lines of code to produce the spectral response curves have been added to the existing, which is now as shown below.
+
+
+```JavaScript
+//create the reflectance chart
+var spectralCurve = ui.Chart.image.regions({
+image: sen2sr_mean,
+regions: featureCollection,
+reducer: ee.Reducer.mean(),
+scale: 10,
+seriesProperty: 'label});
+
+//print the chart to the Console
+print(spectralCurve)
+```
 
 
 
