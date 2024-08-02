@@ -55,7 +55,7 @@ Go back to **RASTERS** and click Harmonized Sentinel-2 MSI: MultiSpectral Instru
 In this activity, we copied the snippet and assigned to a variable sen2sr as shown below.
 
 ```JavaScript
-var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 ```
 
 The `ee.ImageCollection`, as the name suggests, creates a collection of all the Sentinel-2 bottom-of-atmosphere images, including both satellite 1A and 1B observations. Given Sentinel-2 data has been available since 2015 and the sensor has a repeat cycle of 5-10 days, you should be keen to know the total number of Sentinel-2A images available with the Earth Engine repository. You can do this by exploring the metadata using the `print` command, as shown below.
@@ -115,4 +115,70 @@ To filter a collection by date, varied methods can be used. In this activity we 
 
 The `filterDate` requires two string arguments, which are a **start date** and **end date**. For start date we specified **‘2022-01-01’** and end date is **‘2023-12-31’**. Next, filter the collection using the ROI. This is done using the `filterBounds`, which requires **geometry** as the only input argument (Fig. 5). Using these pieces of information, we can modify the code to be as shown below.
 
+```JavaScript
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 
+//call the image collection and keep the same variable name; you may rename the variable if you want
+var sen2sr = sen2sr
+
+//filter by the study peeriod
+.filterDate(‘2022-01-01’, ‘2023-12-31’)
+
+//filter by region of interest
+.filterBounds(roiDarwin);
+
+//print the collection to the Console
+print(sen2sr);
+```
+
+
+If you run this code, the image collection would now be printed to the **`Console`** with no error message. <br>
+How many images in the collection now? You are right, we have 603 images to work with now. Expand the collection and the **features** to view the list of images. The id for the first image is 0; there are 23 bands in each image, and 81 objects for the properties. Explore the list of bands with a focus on those designated with B*. Note that there is no B10 as this band measures cirrus cloud. Also, explore the image properties paying attention to the CLOUD_COVERAGE_ASSESSMENT as this shows the amount of cloud cover present in the image scene. The CLOUD_COVERAGE_ASSESSMENT of the first image is 90%, as shown below.
+
+
+![image](https://github.com/user-attachments/assets/860eaff6-030d-4678-b3ee-1fee5e85b2a6)
+|:--:|
+| *Fig. 6. A metadata of a Sentinel-2 image collection with focus on the amount of cloud cover pixels.*|
+
+
+Cloud cover in optical images is a major problem for satellite optical remote sensing as cloud cover pixels cannot participate in analysis. So, you might need to filter the collection for images that have low or zero cloud cover pixels. We used the `ee.Filter.lte` to achieve this (Fig. 7). The **lt** means *less than*; **gt** is used for *greater than*, and **eq** is used for *equal to*. 
+
+
+![image](https://github.com/user-attachments/assets/02fde5b1-256e-4bf5-b3b1-d9d5edb309ac)
+|:--:|
+| *Fig. 7. A filter object to filter a collection using the metadata. This variant specifies a value to the selected metadata to be less than a threshold.*|
+
+
+In this activity, we are interested in images with cloud cover pixels no more than 10%. We used the `ee.Filter.lte` as the *lte* means less than or equal to. The method requires two input arguments name and value. The **name** argument requires the name of the metadata you want to use, and **value** gives you the chance to specify a number. The name of the metadata is CLOUD_COVERAGE_ASSESSMENT and the value to specify is 10. Thus, the code would be modified as shown below. The new line of code added is the **filter by cloud cover percentage**.
+
+```JavaScript
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
+
+//call the image collection and keep the same variable name; you may rename the variable if you want
+var sen2sr = sen2sr
+
+//filter by the study peeriod
+.filterDate(‘2022-01-01’, ‘2023-12-31’)
+
+//filter by region of interest
+.filterBounds(roiDarwin)
+
+//filter by cloud cover percentage
+.filter(ee.Filter.lte('CLOUD_COVERAGE_ASSESSMENT', 10));
+
+//print the collection to the Console
+print(sen2sr);
+```
+
+
+You should see in the **`Console`** that the number of elements is now lower (Fig. 8). We now have 163 images in the collection. If the geometry you used was significantly different to the one used in this practical, then expect to see a different result.
+
+
+![image](https://github.com/user-attachments/assets/9a4d75b8-c467-49a1-8a2a-493577abd9b2)
+|:--:|
+| *Fig. 8. The number of images in a Sentinel-2 collection after applying cloud coverage assessment.*|
+
+
+Now that we have the right images in the collection, in the next activity, we will create the spectral reflectance curves for the major surface types. 
+
+**The End**
