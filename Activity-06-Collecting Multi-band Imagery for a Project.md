@@ -15,3 +15,13 @@ At the end of the session, you should be able to:
 - Define a region of interest 
 - Filter image collection
 - Visualise image collection
+
+
+## Activity Begins
+
+### Use Data in Earth Engine
+
+Once you have created a new script file, the **Search place and datasets…** bar, shown below, is available to explore the data catalogue for data. 
+
+
+![image](https://github.com/user-attachments/assets/80bcc647-a5bd-4852-971f-057cc0277332)
