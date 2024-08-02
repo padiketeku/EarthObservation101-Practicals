@@ -41,3 +41,28 @@ Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Lev
 |:--:|
 | *Fig. 2. The Sentinel-2 bands, including quality assessment layers.*|
 
+
+Fig. 2 shows the Sentinel-2 band name, description, resolution, and centre wavelength. For example, the B1 describes a centre wavelength of 443.9 nm for S2A and 442.3 nm for S2B, which measures atmospheric aerosols. The pixel size for this band is 60 m. The pixel reflectance value for the thirteen bands are scaled using a factor of 0.0001.
+
+Go back to **RASTERS** and click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A for the bottom of the atmosphere data. Make sure you select the BANDS tab; your results should be as Fig. 3. If you need to use this data, you would have to click IMPORT (see Fig. 3) to import a code into the Code Editor that will retrieve all the Sentinel-2A images in the catalogue. Alternatively, copy the snippet ee.ImageCollection("COPERNICUS/S2_SR") (Fig. 3) and use this in the Code Editor. 
+
+
+![image](https://github.com/user-attachments/assets/056bd765-b081-4b19-86a9-f9d964b5effa)
+|:--:|
+| *Fig. 3. Import the Sentinel-2 Level-2A imagery.*|
+
+
+In this activity, we copied the snippet and assigned to a variable sen2sr as shown below.
+
+```JavaScript
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+```
+
+The `ee.ImageCollection`, as the name suggests, creates a collection of all the Sentinel-2 bottom-of-atmosphere images, including both satellite 1A and 1B observations. Given Sentinel-2 data has been available since 2015 and the sensor has a repeat cycle of 5-10 days, you should be keen to know the total number of Sentinel-2A images available with the Earth Engine repository. You can do this by exploring the metadata using the `print` command, as shown below.
+
+```JavaScript
+//print the collection to the Console
+print(sen2sr);
+```
+
+Run the print command. You may receive an error message, which suggests there are more than 5000 images in the collection. In Earth Engine, the maximum number of elements you can print to the **`Console`** is 5000. 
