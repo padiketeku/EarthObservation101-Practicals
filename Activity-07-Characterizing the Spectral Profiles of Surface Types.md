@@ -75,6 +75,7 @@ Run the code and explore the result in the Console, take note of the bands and t
 | *Fig. 1. TThe range of pixel values for a mean Sentinel-2 Level-2A image.*|
 
 
+### Visualise the image
 You now have a single image to produce spectral response curves, but before you start, you would want to visualise this image to identify the major surface types in the image.
 Ideally, you would prefer to display the image to your study area. Thus, you must first set the centre of the map to the coordinates of your study area (i.e., ROI). When you expand the coordinates of the ROI under Imports , as shown below, you might be able to select one of these coordinates to use. An example is highlighted in red. We would use this coordinate.
 
@@ -91,4 +92,54 @@ The `Map.setCenter` (Fig. 2) is used to centre the map view.
 
 
 Three number arguments are required to run this method: longitude, latitude, and zoom. The zoom level ranges from 0 to 24. To visualise a true colour composite of the image the code should be as shown below. 
+
+```JavaScript
+//first, centre the map to the coodinates of the region of interest
+Map.setCenter(130.955, -12.240, 9); //the first tow inputs are the coordinates and the third is zoom level
+
+//visualise a true colour composite of the average image
+Map.addLayer(sen2sr_mean, {
+min:0,
+max:3000,
+bands:['B4','B3','B2'],
+});
+```
+
+When you display your layer over the base map, make sure you turn off the ROI polygon for improved image visualisation. You turn off the ROI polygon by hovering your mouse over the **Geometry Imports** and untick the box to the geometry name.
+
+
+### Clip an image to a region of interest (ROI)
+
+Through the visualisation, you can see that your ROI is just a fraction of the image. To confine your analysis to your ROI, you must clip the image to the ROI. In the **Docs** tab, locate the image object and the clip method under this object, as shown below.
+
+
+![image](https://github.com/user-attachments/assets/07d91ff6-a8a6-49be-9311-bb464a5afeb5)
+
+
+The clip method requires a geometry as an input argument. The ROI polygon is the input Additionally, the image comprises 23 bands, so you would like to select the relevant bands to investigate the surface types. In this activity, we explored B2, B3, B4, B5, B6, B7, B8, and B11. The code thus becomes:
+
+```JavaScript
+
+//select the required bands and clip image to ROI
+var sen2sr_mean= sen2sr_mean.select('B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8','B11' ).clip(roiDarwin); 
+
+//first, centre the map to the coodinates of the region of interest
+Map.setCenter(130.955, -12.240, 9); //the first tow inputs are the coordinates and the third is zoom level
+
+//visualise a true colour composite of the average image
+Map.addLayer(sen2sr_mean, {
+min:0,
+max:3000,
+bands:['B4','B3','B2'],
+});
+```
+
+
+
+
+
+
+
+
+
 
