@@ -134,6 +134,12 @@ bands:['B4','B3','B2'],
 });
 ```
 
+If you run the code your result might be similar to Figure 4.11 below.
+
+
+
+
+![image](https://github.com/user-attachments/assets/03a57bab-6b46-40c6-923c-5b63ab580efe)
 
 
 
