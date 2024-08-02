@@ -134,12 +134,14 @@ bands:['B4','B3','B2'],
 });
 ```
 
-If you run the code your result might be similar to Figure 4.11 below.
+If you run the code your result might be similar to Fig. 3 below.
 
 
 
 
-![image](https://github.com/user-attachments/assets/03a57bab-6b46-40c6-923c-5b63ab580efe)
+![image](https://github.com/user-attachments/assets/03a57bab-6b46-40c6-923c-5b63ab580efe) 
+|:--:|
+| *Fig. 3. A Sentinel-2 Level-2A image clipped to a region of interest.*|
 
 
 
