@@ -14,7 +14,6 @@ At the end of the session, you should be able to:
 - Explain image collection
 - Define a region of interest 
 - Filter image collection
-- Visualise image collection
 
 
 ## Activity Begins
