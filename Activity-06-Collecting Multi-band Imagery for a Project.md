@@ -66,3 +66,53 @@ print(sen2sr);
 ```
 
 Run the print command. You may receive an error message, which suggests there are more than 5000 images in the collection. In Earth Engine, the maximum number of elements you can print to the **`Console`** is 5000. 
+
+
+![image](https://github.com/user-attachments/assets/b8ec4020-c397-4f52-83ff-68a9270c2fa1)
+
+
+
+
+Well, in many cases, you do not need all of the images in the image collection for a project. Thus, to avoid receiving this error message associated with printing such a large image collection to the Console is to filter the image. In filtering you select only the images you require. To retrieve the right images, you may filter the collection by date, region of interest, cloud coverage, and other image properties. Given that the analyst would almost always have a region of interest, we defined a region of interest using the drawing tools. The drawing tool is identifiable by the icons below.
+
+
+![image](https://github.com/user-attachments/assets/93de6d68-5e93-40e3-bf8b-62a4c160df60)
+
+
+
+The first icon from the left is not for drawing but for panning. Also, useful when you want to stop drawing or delete a geometry. The second icon is required for creating a point ROI, the third icon is required for a line ROI, the fourth icon is for creating polygons, and the fifth icon is for creating a square/rectangular ROI. We used the fourth icon to create a polygon ROI. Assuming Darwin, which is at the top end of Northern Australia is the study area you would navigate to the map of Australia and identify Darwin (at the top end of Northern Australia). Once you find Darwin, click on the polygon icon. Immediately, the **geometry** and **Polygon drawing** widgets become active; this is shown below.
+
+
+![image](https://github.com/user-attachments/assets/eade8550-b0fe-477e-8fa6-e8d41146d4f2)
+
+
+Also, in the **Code Editor**, a new variable for the geometry is added to the Imports items. The name of the variable is given a default name **geometry**, you can change this variable name. In this case, rename the variable to **roiDarwin**. The polygon tool is active, define a polygon for Darwin, as shown below. Note that the size of your polygon might be different to the one used in this activity.
+
+
+![image](https://github.com/user-attachments/assets/f7736f3f-7166-49fd-8dac-6add7506151a)
+|:--:|
+| *Fig. 4. A polygon defined over Darwin, Northern Australia, using the geometry tool.*|
+
+
+If you are not happy with a geometry you created you can delete this by selecting the hand icon and clicking this geometry once; the Editing widget would pop up, as shown below.
+
+![image](https://github.com/user-attachments/assets/a4b3ce69-5329-46cb-b591-1c0a11e26b1f)
+
+
+
+Now click **Delete** to remove the geometry as you do not need it. 
+Once you have defined an ROI for your study area and know the period you want to investigate, you can go back to the code and filter the collection. This might be a solution to the error message regarding printing all the elements in the image collection to the **`Console`**.
+To filter a collection by date, varied methods can be used. In this activity we used `filterDate()`. Remember, you can find this method and the arguments required in the Docs tab as shown below. The `filterDate()` is highlighted with a red polygon.
+
+
+
+
+![image](https://github.com/user-attachments/assets/46f7d93f-0cd3-470d-9e76-2163db71f21e)
+|:--:|
+| *Fig. 5. The Docs tab showing the filterDate() method for an image collection.*|
+
+
+
+The `filterDate` requires two string arguments, which are a **start date** and **end date**. For start date we specified **‘2022-01-01’** and end date is **‘2023-12-31’**. Next, filter the collection using the ROI. This is done using the `filterBounds`, which requires **geometry** as the only input argument (Fig. 5). Using these pieces of information, we can modify the code to be as shown below.
+
+
