@@ -198,7 +198,7 @@ image: sen2sr_mean, //the image to provide the reflectance data
 regions: featureCollection, //the regions within the image to sample from
 reducer: ee.Reducer.mean(), //this computes mean reflectance for the y-aixs
 scale: 10, //the pixel size in metres
-seriesProperty: 'label}); //use the lable property we defined usingthe geometry tool
+seriesProperty: 'label'}); //uses the lable property we defined using the geometry tool
 
 //print the chart to the Console
 print(spectralCurve)
@@ -209,7 +209,7 @@ Given this is a chart, you need to print it to the **`Console`** using the print
 
 ![image](https://github.com/user-attachments/assets/e24df55d-c170-4b65-9815-3e08e8884ab5)
 |:--:|
-| *Fig. 5. . A spectral response curve for a Sentinel-2 Level-2A image. The curves for water, urban, crop fields and a riparian forest are given. The x-axis shows the spectral bands, while the y—axis shows the mean reflectance values. This plot needs further improvements, which will be made by updating the chart.*|
+| *Fig. 5. A spectral response curve for a Sentinel-2 Level-2A image. The curves for water, urban, crop fields and a riparian forest are given. The x-axis shows the spectral bands, while the y—axis shows the mean reflectance values. This plot needs further improvements, which will be made by updating the chart.*|
 
 
 It is important to assess your charts and maps to be sure they make sense. The x-axis is the spectral bands, labelled as “Band”, and the y-axis is the mean spectral reflectance, labelled as “Band mean”. The figure caption is “Image band values in 4 regions”. These are default labels and must be edited if they do not make sense. Also, on the x-axis the bands are not in correct order. We would need to edit the code to obtain a standard spectral reflectance curve, which is more intuitive and interpretable. Rather than using the band names, we would specify the actual wavelength for the bands to be on the x-axis. Identify the centre wavelength for the Sentinel-2 bands from this [link](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi/resolutions/spatial). We defined a new variable for the wavelengths and another variable to edit default labels and the colours for the curves. The new/additional lines of code to edit the spectral response curves for a more intuitive one is shown below. 
@@ -217,31 +217,60 @@ It is important to assess your charts and maps to be sure they make sense. The x
 ### Edit the spectral response curve
 
 ```JavaScript
-//create a list of wavelengths (in nanometer), which corresponds to the Senetinel-2 bands used
+
+//create a list of wavelengths (in nanometer), which corresponds to the Sentinel-2 bands used
 var wavelengths = [490,560,665,705,740,783, 842,1610];
 
 //create a variable that edits the x-and-y-axes labels, title, and the colour of the curves
 var editChart = {
-title: 'A spectral resposne cuve'
-hAxis: {title:},
-vAxis: {title:},
-lineWidth: 1,
-pointSize: 4,
-series: {
-0:{color: 'blue'}
-1:{color: 'magenta'}
-2:{color: 'green'}
-3:{color: 'purple'}
+title: 'A spectral response cuve from a Sentinel-2 image' //this is the title of the chart
+hAxis: {title:'Wavelength (nanometer)'},//the horizontal axis title
+vAxis: {title:'Reflectance'},//the vertical axis title
+lineWidth: 1,//width or thicknes of the curves
+pointSize: 4,//displays the reflectance values using a point, and the size of this point 4
+series: {//edits the colour of the curves
+0:{color: 'blue'},//blue trace for water
+1:{color: 'magenta'},//magenta trace for urban
+2:{color: 'green'},//green trace for crop fields
+3:{color: 'purple'},//purple trace for riparian forest
 }
 };
 
 ```
 
+  - Reproduce the spectral response curves
 
-The print command produces two charts to the Console, but we would focus on the second (or bottom) chart which is an improvement over the initial chart. If you expand the bottom chart, your result may be similar to the one in the figure below.
+```JavaScript
+var spectralCurve2 = ui.Chart.image.regions({
+image: sen2sr_mean,//the image to provide the reflectance data
+regions: featureCollection,//the regions within the image to sample from
+reducer: ee.Reducer.mean(),//this computes mean reflectance for the y-aixs
+scale: 10, //the pixel size in metres
+seriesProperty: 'label',//uses the label property we defined using the geometry tool
+xLabels:wavelengths,//defines the wavelengths on the x-axis
+}).setOptions(editChart);//a method to edit the chart object created earlier
+
+//print the chart to the Console
+print(spectralCurve2);
+```
+
+
+The print command produces two charts to the **`Console`**, but we would focus on the second (or bottom) chart which is an improvement over the initial chart. If you expand the bottom chart, your result may be similar to the one in the figure below.
 
 
 
+![image](https://github.com/user-attachments/assets/1f20b22b-11ec-4c97-a46e-adb14abafd3f) |
+|:--:|
+| *Fig. 6. Spectral response curves for water, urban, crop fields and a riparian forest. Sentinel-2 Bottom of Atmosphere product was used, the centre wavelengths for only band 2 (blue light), band 3 (green light), band 4 (red light), band 5 (red edge), band 6 (red edge), band 7 (red edge), band 8 (near-infrared), and band 11 (shortwave infrared) were used. You might find the centre wavelengths in [HERE](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi/resolutions/spatial).*|
+
+
+
+In the top right corner, you have the options to download the chart as a CSV, SVG or PNG file.
+
+### Interpret the spectral response curves
+
+
+It is important to interpret your result. The urban cover shows the highest reflectance for all the light employed. This makes sense as built-up areas comprise a mixture of materials. Water generally has low reflectance with the highest reflectance observed for green light. The green reflectance for water is even higher than green reflectance for crop field and riparian forest. This is not surprising as it was evident in the imagery. Could this be that the water pixels selected had significant amount of photosynthetic materials? Crop fields and forest showed similar spectral profile, which matches textbook example of a healthy vegetation in that NIR is the peak reflectance while the reflectance decreases with increasing wavelengths. The crop field shows higher reflectance across all bands. 
 
 
 
