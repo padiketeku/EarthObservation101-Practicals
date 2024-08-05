@@ -261,7 +261,7 @@ The print command produces two charts to the **`Console`**, but we would focus o
 
 ![image](https://github.com/user-attachments/assets/1f20b22b-11ec-4c97-a46e-adb14abafd3f) |
 |:--:|
-| *Fig. 6. Spectral response curves for water, urban, crop fields and a riparian forest. Sentinel-2 Bottom of Atmosphere product was used, the centre wavelengths for only band 2 (blue light), band 3 (green light), band 4 (red light), band 5 (red edge), band 6 (red edge), band 7 (red edge), band 8 (near-infrared), and band 11 (shortwave infrared) were used. *|
+| *Fig. 6. Spectral response curves for water, urban, crop fields and a riparian forest. Sentinel-2 Bottom of Atmosphere product was used, the centre wavelengths for only band 2 (blue light), band 3 (green light), band 4 (red light), band 5 (red edge), band 6 (red edge), band 7 (red edge), band 8 (near-infrared), and band 11 (shortwave infrared) were used.*|
 
 
 
