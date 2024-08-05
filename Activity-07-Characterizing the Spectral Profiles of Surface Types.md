@@ -255,15 +255,6 @@ print(spectralCurve2);
 ```
 
 
-## DIY
-
-
-from the Earth Engine catalogue 
-
-The print command produces two charts to the **`Console`**, but we would focus on the second (or bottom) chart which is an improvement over the initial chart. If you expand the bottom chart, your result may be similar to the one in the figure below.
-
-
-
 ![image](https://github.com/user-attachments/assets/1f20b22b-11ec-4c97-a46e-adb14abafd3f) |
 |:--:|
 | *Fig. 6. Spectral response curves for water, urban, crop fields and a riparian forest. Sentinel-2 Bottom of Atmosphere product was used, the centre wavelengths for only band 2 (blue light), band 3 (green light), band 4 (red light), band 5 (red edge), band 6 (red edge), band 7 (red edge), band 8 (near-infrared), and band 11 (shortwave infrared) were used.*|
@@ -279,3 +270,20 @@ It is important to interpret your result. The urban cover shows the highest refl
 
 
 
+## DIY
+
+
+Below is a Sentinel-2 Bottom of Atmosphere image ID obtained from the Earth Engine catalogue
+**`COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL`** <br>
+
+Using this image,
+1, construct spectral response curves for the following surface types
+- water
+- crop fields
+- urban
+- forest
+
+2, Explain the variations in spectral characteristics between the surface types
+
+
+**The End**
