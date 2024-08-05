@@ -40,10 +40,10 @@ At the end of this activity, you should be able to: <br>
 Thermal remote sensing has a wide application areas, including archaeology (e.g., https://weather.ndc.nasa.gov/archeology/chaco_compare.html), drought monitoring (e.g., https://lpdaac.usgs.gov/resources/data-action/two-sensors-are-greater-one-observing-drought-smap-and-modis/), and urban heat islands. 
 
 In this practical you are required to use publicly available satellite imagery to confirm this hypothesis by exploring the relationship between vegetation and temperature. The region of interest is given by the list of coordinates below. <br>
-[142.06594410835254,-17.94898241151206,
-145.38930836616504,-17.94898241151206,
-145.38930836616504,-16.005194143426337,
-142.06594410835254,-16.005194143426337,
+[142.06594410835254,-17.94898241151206, <br>
+145.38930836616504,-17.94898241151206, <br>
+145.38930836616504,-16.005194143426337, <br>
+142.06594410835254,-16.005194143426337, <br>
 142.06594410835254,-17.94898241151206]
 
 Also, you are required to restrict the analysis to September 2021 as the study area is on record for experiencing extremely high temperatures on this date.
