@@ -15,7 +15,7 @@ Temperature is an environmental parameter useful for the monitoring of the biosp
 The materials we see in our environments, such as rocks, vegetation, buildings do not emit all the absorbed radiation as a theoretical blackbody (absorbs all incident radiation and emits all radiation) would. Surface types emit a fraction of the radiation emitted by a blackbody at the equivalent temperature. The fraction is called `emissivity` (ε); which ranges between 0 and 1. The imaginary blackbody has an emissivity of 1, while real-world materials have emissivity less than 1. The temperature a remote sensing detector records is not only driven by the **temperature** of the object but also **emissivity**.
 
 
-E =  εσ<sup> 4</sup>T  (Stefan-Boltzmann Law); 
+E =  εσ<sup> T</sup>4  (Stefan-Boltzmann Law); 
 
 where E = total energy radiated per unit surface area of a black body across all wavelengths per unit time, σ =  Stefan-Boltzmann Constant of 5.6697 x 10-8 W m-2 K-4, and T = absolute temperature (K). 
 
