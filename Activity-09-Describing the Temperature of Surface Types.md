@@ -166,11 +166,16 @@ print(daytimeTemp, "daytimeTemp_rescaled")
 Map.addLayer( daytimeTemp,{min:10, max:45, palette:['blue', 'peachpuff', 'yellow', 'orange', 'red']}, 'daytimeLST')
 ```
 
-![image](https://github.com/user-attachments/assets/2f384da7-7111-4f1d-8808-e0cd646284a6)
+![image](https://github.com/user-attachments/assets/2f384da7-7111-4f1d-8808-e0cd646284a6) |
+|:--:|
+| *Fig. 1. MODIS land surface temperature map of Australia for Sep 2021. Shades of blue show low temperature areas, while red pixels show hot areas. Other pixels fall between this range.*|
 
 
 
-Task: Describe the spatial distribution of Australia's temperature on this date
+
+
+
+**`Task`**: Describe the spatial distribution of Australia's temperature on this date
 
 
 
