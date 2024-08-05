@@ -1,6 +1,6 @@
 # Activity 9: Describing the Temperature of Surface Types
 
-In this practical, you will explore MODIS land surface temperature (LST) to understand temperature of surface types. Also, you will explore the relationship between temperature and vegetation by plotting MODIS NDVI against MODIS LST. The MODIS NDVI will be derived from the surface reflectance product.
+In this practical, you will explore MODIS land surface temperature (LST) to understand temperature of surface types. Also, you will explore the relationship between temperature and vegetation by plotting MODIS NDVI against MODIS LST. The MODIS NDVI will be derived from the surface reflectance product. The hypothesis behind this activity is that high vegetation areas can be shady and would have lower temperatures compared to deserts or low vegetation areas. 
 Assumes knowledge of previous actvities and that you can create spectral indices, including NDVI.
 
 ## Introduction
@@ -39,10 +39,7 @@ At the end of this activity, you should be able to: <br>
 
 Thermal remote sensing has a wide application areas, including archaeology (e.g., https://weather.ndc.nasa.gov/archeology/chaco_compare.html), drought monitoring (e.g., https://lpdaac.usgs.gov/resources/data-action/two-sensors-are-greater-one-observing-drought-smap-and-modis/), and urban heat islands. 
 
-Hypothesis
-High vegetation areas can be shady and would have lower temperatures compared to deserts or low vegetation areas. 
-
-In this practical you are required to use publicly available satellite imagery to confirm this hypothesis by exploring the relationship between vegetation and temperature. The region of interest is given by the list of coordinates below.
+In this practical you are required to use publicly available satellite imagery to confirm this hypothesis by exploring the relationship between vegetation and temperature. The region of interest is given by the list of coordinates below. <br>
 [142.06594410835254,-17.94898241151206,
 145.38930836616504,-17.94898241151206,
 145.38930836616504,-16.005194143426337,
