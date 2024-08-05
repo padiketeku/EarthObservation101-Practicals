@@ -316,10 +316,44 @@ Your result may be as shown below <br>
 This result means that there was a strong negative correlation between temperature and NDVI. Does this make sense? Does this confirm the hypothesis? Post your comments to the forum. Alternatively, share your thoughts in class.
 
 
+#### Scatter Plot
 
 
+We can graphically support this result through a scatter plot.
+
+```JavaScript
+
+//plot a scatterplot of NDVI against temperature and print the result to the Console
+var scatterPlot = ui.Chart.feature.byFeature(sample, 'NDVI', 'daytimeLST')
+  .setChartType('ScatterChart')
+  .setOptions({ pointSize: 2, pointColor: 'blue', width: 300, height: 300, titleX: 'NDVI', titleY: 'Temperature (C)' })
+   
+print(scatterPlot) 
+
+```
+
+The scatter plot is shown below.
+
+![image](https://github.com/user-attachments/assets/744866a9-a8c0-48f9-a5af-6d03a2be87dc) |
+|:--:|
+| *Fig. 4. A scatter plot showing the relationship between temperature and NDVI.*|
 
 
+## DIY
+
+
+Produce a scatter plot explaining the relationship between temperature and NDVI (use MODIS LST and MODIS surface reflectance products) for the region of interest below. Limit the temporal scale to December 2019 (a meteorological drought year in Australia).
+
+[150.765,-33.88876442217107, 150.998,-33.889,
+150.998,-33.692,150.765,-33.693,
+150.765,-33.889]
+
+Given the correlation test and scatter plot, explain your results in plain English. Post this to the discussion forum.
+
+
+## Conclusion
+
+In this chapter, we have explored the concepts of thermal remote sensing through an activity that demonstrates the use of MODIS products, including land surface temperature and surface reflectance, to test the relationship between temperature and vegetation. Through this activity, students can create image histograms, scatter plots and perform correlation between bands
 
 
 
