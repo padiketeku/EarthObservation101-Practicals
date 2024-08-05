@@ -15,6 +15,9 @@
 
 
 
+|:--:|
+| *Fig. 2. A histogram for an NDVI layer.*|
+
 
 ## DIY
 
