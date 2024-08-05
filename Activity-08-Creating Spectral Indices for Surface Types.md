@@ -15,3 +15,9 @@
 
 ## Activity Begins
 
+
+
+
+
+|:--:|
+| *Fig. 1. TThe range of pixel values for a mean Sentinel-2 Level-2A image.*|
