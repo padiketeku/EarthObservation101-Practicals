@@ -264,4 +264,67 @@ Your result should be similar to the one below.
 | *Fig. 3. NDVI layer of the study area.*|
 
 
+## Image Correlation
+
+
+Now that we have the LST and NDVI layers for the study area, we can determine the correlation between temperature and vegetation. To do this, firstly merge the temperature and NDVI layers to have a single image with two bands, rather than two separate images.
+
+### Merge the temperature and NDVI layers
+
+```JavaScript
+var temp_ndvi = daytimeTemp.addBands(ndvi)
+print(temp_ndvi)
+```
+
+
+### Determine the correlation between NDVI and temperature
+
+
+```JavaScript
+
+//sample data for the correlation test, in this case we are sampling no more than 5000 features to avoid breaching the Earth Engine limit.  
+var sample = temp_ndvi.sample({region:roi, numPixels: 5000})
+
+//print the variable to the Console and identify the number of features available for the correlation test
+print(sample, 'sample')
+
+```
+
+#### Start the correlation by first calling the required method
+
+```JavaScript
+var correl = ee.Reducer.pearsonsCorrelation();
+```
+
+```JavaScript
+
+//Correlation test- choose the two properties for the analysis 
+var correlation = sample.reduceColumns(correl, ['daytimeLST', 'NDVI'])
+
+//print the correlation results to the Console
+print(correlation, 'Correlation Results')
+
+```
+
+Your result may be as shown below <br>
+
+**Correlation: -0.87; p-value: 0**
+
+
+#### Interpret Correlation
+
+This result means that there was a strong negative correlation between temperature and NDVI. Does this make sense? Does this confirm the hypothesis? Post your comments to the forum. Alternatively, share your thoughts in class.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
