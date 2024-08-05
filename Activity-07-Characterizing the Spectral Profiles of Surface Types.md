@@ -273,15 +273,17 @@ It is important to interpret your result. The urban cover shows the highest refl
 ## DIY
 
 
-Below is a Sentinel-2 Bottom of Atmosphere image ID obtained from the Earth Engine catalogue
+Below is a Sentinel-2 Bottom of Atmosphere image ID obtained from the Earth Engine catalogue <br>
+
 **`COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL`** <br>
 
-Using this image,
+Using this image, <br>
+
 1, construct spectral response curves for the following surface types
 - water
 - crop fields
 - urban
-- forest
+- forest <br>
 
 2, Explain the variations in spectral characteristics between the surface types
 
