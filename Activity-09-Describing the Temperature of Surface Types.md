@@ -179,16 +179,89 @@ Map.addLayer( daytimeTemp,{min:10, max:45, palette:['blue', 'peachpuff', 'yellow
 
 
 
+
 ## MODIS Surface Reflectance
 
 
+This is another MODIS global data that provides surface reflectance from channels including red and near-infrared. A pixel size is approximately 0.5 km. We would use this data to compute NDVI to evaluate vegetation conditions. 
+
+
+### Explore the MODIS surface reflectance product
+
+Click the surface reflectance collection in *Imports* of the **Code Editor**; in the **`Console`** explore BANDS. There are seven surface reflectance bands. Make a list of these bands, including the wavelengths. Which bands would be RED and NIR for NDVI computation?
+
+### Filter the surface reflectance data
+
+```JavaScript
+var sr = sr.filterDate('2021-09-01', '2021-09-30') // filter by date
+//select bands required for the computation of NDVI
+.select(["sur_refl_b01", "sur_refl_b02"])
+
+//select first image in the pack
+.mean()
+
+//print the variable to the Console
+print(sr, 'SR1')
+```
+
+### Match the scale and projection to the LST data
+
+The pixel size for the reflectance data is 0.5km, so to compare this data with the temperature we would have to make the pixel size 1km.
+
+```JavaScript
+var sr = sr.reproject({crs:'EPSG:4326', scale:1000.0})
+print(sr, 'SR')
+```
+
+### Selecting bands and compute NDVI
+
+There are more bands than we need to compute the NDVI, so let’s select the required bands for NDVI.
+
+```JavaScript
+//select the red and nir bands to compute NDVI
+var red = sr.select("sur_refl_b01")
+var nir = sr.select("sur_refl_b02")
+print(red, ' red')
+
+//compute NDVI. take note of this method of computing NDVI
+var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
+
+```
+
+
+### Visualisation
+
+You may like to visualise the NDVI layer, but the problem is that this is global data and you may run out of space. It is ideal to clip this layer to your region of interest, use the clip() function to resize. Before we do this let’s use a histogram to see the range of NDVI values.
+
+
+#### Image Histogram
+
+
+```JavaScript
+
+//plot a histogram for the NDVI layer. region is the region of interest, so specify the geometry
+var chartNDVI =ui.Chart.image.histogram({image:ndvi, region: roi})
+print (chartNDVI, ' HistogramNDVI')
+
+```
+
+![image](https://github.com/user-attachments/assets/4ae3c699-ba1c-43ba-b74e-bc71824e1d4d) |
+|:--:|
+| *Fig. 2. A histogram for an NDVI layer.*|
+
+```JavaScript
+
+//display NDVI layer of the study area for visualisation
+Map.addLayer(ndvi.clip(roi), {min:0, max:0.5, palette:['darkred', 'peachpuff','yellow', 'green']}, " NDVI")
+```
+
+Your result should be similar to the one below.
 
 
 
-
-
-
-
+![image](https://github.com/user-attachments/assets/5705db71-f8b1-4527-8147-9705c5a348e9) |
+|:--:|
+| *Fig. 3. NDVI layer of the study area.*|
 
 
 
