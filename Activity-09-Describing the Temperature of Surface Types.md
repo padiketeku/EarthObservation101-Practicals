@@ -9,6 +9,8 @@ Temperature is an environmental parameter useful for the monitoring of the biosp
 
 
 
+
+
 ## Learning Outcomes
 
 At the end of this activity, you should be able to: <br>
