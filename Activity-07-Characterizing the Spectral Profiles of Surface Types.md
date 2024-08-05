@@ -255,6 +255,11 @@ print(spectralCurve2);
 ```
 
 
+## DIY
+
+
+from the Earth Engine catalogue 
+
 The print command produces two charts to the **`Console`**, but we would focus on the second (or bottom) chart which is an improvement over the initial chart. If you expand the bottom chart, your result may be similar to the one in the figure below.
 
 
