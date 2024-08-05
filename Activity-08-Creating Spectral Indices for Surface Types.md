@@ -1,4 +1,4 @@
-# Activity 7: Creating Spectral Indices for Surface Types
+# Activity 8: Creating Spectral Indices for Surface Types
 
 
 ## Introduction
