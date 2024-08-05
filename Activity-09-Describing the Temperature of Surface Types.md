@@ -17,7 +17,7 @@ The materials we see in our environments, such as rocks, vegetation, buildings d
 
 E =  εσT<sup> 4</sup>  (Stefan-Boltzmann Law); 
 
-where E = total energy radiated per unit surface area of a black body across all wavelengths per unit time, σ =  Stefan-Boltzmann Constant of 5.6697 x 10-8 W m-2 K-4, and T = absolute temperature (K). 
+where E = total energy radiated per unit surface area of a black body across all wavelengths per unit time, σ =  Stefan-Boltzmann Constant of 5.6697 x 10-8 W m<sup> -2</sup> K<sup>- 4</sup>, and T = absolute temperature (K). 
 
 The temperature we measure in the field with thermometers is the true temperature, aka, kinetic temperature. The remote sensing system detects radiant temperature, a descriptive measure of radiation regarding the assumption that the temperature of a blackbody emits an identical amount of radiation at the same wavelength. There is a strong correlation between kinetic temperature and radiant temperature, which makes remote sensing an important technology for monitoring the temperature of surface materials. The temperature of surface materials, referred to as land surface temperature (LST), is a product from the remote sensing measurement. The remote sensing detector records radiance, which is converted to radiant temperature using Planck’s equation. The radiant temperature is converted to LST (in Kelvin) by accounting for emissivity and atmospheric effects.
 Satellite remote sensing systems that collect temperature data for public use include Landsat, Moderate-resolution Imaging Spectroradiometer (MODIS), and Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER).
