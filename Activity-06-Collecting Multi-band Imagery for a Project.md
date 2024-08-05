@@ -180,4 +180,11 @@ You should see in the **`Console`** that the number of elements is now lower (Fi
 
 Now that we have the right images in the collection, in the next activity, we will create the spectral reflectance curves for the major surface types. 
 
+
+
+## DIY
+
+You require Sentinel-2 Bottom of Atmosphere imagery with cloud coverage of no more than 5% to explore changes in vegetation water content over time. Using the same ROI used in this practical activity, find the number of Sentinel-2 images available from the  **‘2024-04-01’** to **‘2024-10-31’** for the project.
+
+
 **The End**
