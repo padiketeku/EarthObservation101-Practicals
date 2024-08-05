@@ -47,3 +47,143 @@ In this practical you are required to use publicly available satellite imagery t
 142.06594410835254,-17.94898241151206]
 
 Also, you are required to restrict the analysis to September 2021 as the study area is on record for experiencing extremely high temperatures on this date.
+
+### Search and import into the Code Editor the following MODIS products:
+- MOD11A2 - land surface temperature
+- MOD09A1 - surface reflectance
+
+### Rename the image collections and print each to the Console
+
+Your code snippet should be similar to ones below:
+
+```JavaScript 
+print(sr, 'surface reflectance')
+print(lst, 'temp')
+````
+
+## MODIS Land Surface Temperature
+
+
+### Click the LST collection and explore the metadata, take note of units and scale
+
+```JavaScript
+
+//a list of coordinates to define a region of interest
+
+var listCoords = [142.06594410835254,-17.94898241151206,
+145.38930836616504,-17.94898241151206,
+145.38930836616504,-16.005194143426337,
+142.06594410835254,-16.005194143426337,
+142.06594410835254,-17.94898241151206]
+
+```
+
+### Create a polygon to define a region of interest
+
+```JavaScript
+var roi = ee.Geometry.Polygon(listCoords)
+```
+
+### Display the ROI to the Console
+
+```JavaScript
+Map.addLayer(roi, {}, 'ROI')
+```
+
+### Filter the lst collection
+
+```JavaScript
+
+var daytimeTemp = lst
+
+// filter by date
+.filterDate('2021-09-01', '2021-09-30')
+
+//select the band
+.select('LST_Day_1km')
+
+//average of the collection
+.mean()
+
+```
+
+
+### Print the variable, expand the image in the Console, and explore the metadata
+
+
+```JavaScript
+print( daytimeTemp)
+```
+
+Question: what is the name of the band?
+
+### Rename the band name as 'daytimeLST'
+
+```JavaScript
+
+var daytimeTemp = daytimeTemp.rename('daytimeLST')
+print(daytimeTemp, ' daytimeLST')
+
+```
+
+### Display the single-band image for visualisation
+
+```JavaScript
+Map.addLayer( daytimeTemp,{}, 'daytimeLST')
+
+```
+
+### DIY
+
+Navigate to your ROI; use the Inspector tool to randomly inspect pixel values. <br>
+Questions: <br>
+- What is the range of pixel values you observed? <br>
+- What is the unit of measurement? 
+
+
+### Re-scale the pixel values and convert to Celsius
+
+You may have observed that the pixel values are large (not normal) and require re-scaling; so now let’s rescale the data and convert the unit from K to Celsius.
+
+```JavaScript
+var daytimeTemp_rescaled = daytimeTemp.multiply(0.02).subtract(273.15)
+```
+
+After re-scaling the image, the temperature values may show high precision, but we would round the values up or down to minimise precision. To be sure this transformation does not alter the spatial reference of the output data you must specify the coordinate reference system and scale. In this case, we have maintained the spatial resolution of the LST product as the scale.
+
+
+### Round the temperature values and keep the projection
+
+```JavaScript
+var daytimeTemp = daytimeTemp_rescaled.round().reproject({crs:'EPSG:4326', scale:1000.0})
+print(daytimeTemp, "daytimeTemp_rescaled")
+```
+
+
+### Display the rescaled LST as a pseudocolour image
+
+```JavaScript
+Map.addLayer( daytimeTemp,{min:10, max:45, palette:['blue', 'peachpuff', 'yellow', 'orange', 'red']}, 'daytimeLST')
+```
+
+![image](https://github.com/user-attachments/assets/2f384da7-7111-4f1d-8808-e0cd646284a6)
+
+
+
+Task: Describe the spatial distribution of Australia's temperature on this date
+
+
+
+## MODIS Surface Reflectance
+
+
+
+
+
+
+
+
+
+
+
+
