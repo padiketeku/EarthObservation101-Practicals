@@ -285,7 +285,7 @@ Using this image, <br>
 - urban
 - forest <br>
 
-2, Explain the variations in spectral characteristics between the surface types
+2, explain the variations in spectral characteristics between the surface types
 
 
 **The End**
