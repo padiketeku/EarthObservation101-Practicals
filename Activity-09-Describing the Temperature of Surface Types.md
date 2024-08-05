@@ -23,8 +23,6 @@ The temperature we measure in the field with thermometers is the true temperatur
 Satellite remote sensing systems that collect temperature data for public use include Landsat, Moderate-resolution Imaging Spectroradiometer (MODIS), and Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER).
 
 
-
-
 ## Learning Outcomes
 
 At the end of this activity, you should be able to: <br>
@@ -35,3 +33,6 @@ At the end of this activity, you should be able to: <br>
 - Perform correlation analysis
 - Produce image histograms
 - Produce image scatter plot
+
+
+## Activity Begins
