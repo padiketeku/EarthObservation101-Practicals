@@ -12,12 +12,10 @@ Spectral indices are explored to improve our understanding of the spectral chara
 At the end of the activity, you should be able to: <br>
 
 - create feature collections
-- use built-in function to compute spectral indices
-- write a user-defined function to compute spectral indices
-- visualise spectral indices layers
-- interpret spectral indices maps
-
-
+- apply built-in function to compute spectral indices
+- write and apply a user-defined function to compute spectral indices
+- visualise and interpret spectral indices layers
+  
 
 
 ## Activity Begins
