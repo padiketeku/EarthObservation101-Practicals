@@ -20,6 +20,21 @@ At the end of the activity, you should be able to: <br>
 
 ## Activity Begins
 
+Below is a Sentinel-2 Bottom of Atmosphere image ID obtained from the Earth Engine catalogue
+
+COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL
+
+Using this image,
+
+1, construct spectral response curves for the following surface types
+
+    water
+    crop fields
+    urban
+    forest
+
+2, explain the variations in spectral characteristics between the surface types
+
 
 
 
@@ -27,7 +42,14 @@ At the end of the activity, you should be able to: <br>
 |:--:|
 | *Fig. 1. TThe range of pixel values for a mean Sentinel-2 Level-2A image.*|
 
+ ### Define a variable for the imagery and print this to the Console
 
+ ```Javascript
+var s2 = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL")
+
+//print variable to the Console
+print(s2, 'Sentinel-2 data') //the second argument is an idenitifier of the variable in the Console
+```
 
 
 ## DIY
