@@ -104,6 +104,8 @@ Map.addLayer(ndvi, {min:-1, max:1}, 'NDVI layer in greyscale')
 Map.addLayer(ndvi, {min:-1, max:1, palette:[ 'purple', 'red', 'black', 'yellow', 'green']}, 'NDVI layer in pseudocolour')
 ```
 
+The figures below show the result. The figure on the left is the NDVI layer in default greyscale, brighter pixels show higher NDVI values than the darker pixels. The figure on the right is the layer manipulated to have colours, the green pixels show higher NDVI which represent healthy vegetation.
+
 
 
 ![image](https://github.com/user-attachments/assets/85a6143b-ee68-48d1-be26-c8ed4b769fcd)   ![image](https://github.com/user-attachments/assets/db3fdb89-5bb8-437f-a31a-b1fa56ec455e)
