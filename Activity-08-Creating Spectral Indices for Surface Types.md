@@ -57,13 +57,30 @@ Run and click the expander to reveal the number of bands in the image. Your Cons
 
 
 
-### Band selection
+### Select bands
 The image has 26 bands, but not all of these bands are approriate for the computation of vegetation indices. Thus, select the relevant bands.
 
 ```Javascript
 var s2 = s2.select(['B2', 'B3', 'B4','B8','B11','B12'])
 print(s2, 'Sentinel-2 with selected bands') 
 ```
+
+
+### Compute vegetation indices using built-in function
+
+The function, **normalizedDifference(bandNames)**, would be used. This function can be found under **ee.Image** in Docs.
+The function requires a lists of band names as the input. Two bands, at a time, are required in that the second band is subtracted or added to the first as shown below:
+ (first − second) / (first + second) <br>
+ The output image band is given the name is **'nd'** by default.
+
+
+```JavaScript
+var ndvi = s2 //this is the multiband image to create the ndvi layer from
+.normalizedDifference(["B8", "B4"]) //ndvi is computed
+
+print(ndvi)
+````
+
 
 ## DIY
 
