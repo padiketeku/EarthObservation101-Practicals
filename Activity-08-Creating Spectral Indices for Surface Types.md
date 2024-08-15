@@ -50,7 +50,20 @@ var s2 = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T
 //print variable to the Console
 print(s2, 'Sentinel-2 data') //the second argument is an idenitifier of the variable in the Console
 ```
+Run and click the expander to reveal the number of bands in the image. Your Console should be appear as shown in the figure below.
 
+
+![image](https://github.com/user-attachments/assets/932324de-74e4-4a81-98d1-fec6264b1970)
+
+
+
+### Band selection
+The image has 26 bands, but not all of these bands are approriate for the computation of vegetation indices. Thus, select the relevant bands.
+
+```Javascript
+var s2 = s2.select(['B2', 'B3', 'B4','B8','B11','B12'])
+print(s2, 'Sentinel-2 with selected bands') 
+```
 
 ## DIY
 
