@@ -101,7 +101,7 @@ print(ndvi)
 
 ```JavaScript
 Map.addLayer(ndvi, {min:-1, max:1}, 'NDVI layer in greyscale')
-Map.addLayer(ndvi, {min:-1, max:1, palette:['red', 'cyan', 'magenta', 'darkgreen', 'green']}, 'NDVI layer in pseudocolour')
+Map.addLayer(ndvi, {min:-1, max:1, palette:[ 'purple', 'red', 'black', 'yellow', 'green']}, 'NDVI layer in pseudocolour')
 ```
 #### Make NDWI layer
 
