@@ -124,6 +124,12 @@ var ndwi = s2 //this is the multiband image to create the ndvi layer from
 print(ndwi)
 ````
 
+**Visualise the NDWI layer in greyscale and pseudocolour** 
+
+```JavaScript
+Map.addLayer(ndwi, {min:-1, max:1}, 'NDWI layer in greyscale')
+Map.addLayer(ndwi, {min:-1, max:1, palette:[ 'purple', 'red', 'black', 'yellow', 'green']}, 'NDWI layer in pseudocolour')
+```
 
 
 
