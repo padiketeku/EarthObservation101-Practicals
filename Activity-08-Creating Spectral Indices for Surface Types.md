@@ -80,8 +80,20 @@ var ndvi = s2 //this is the multiband image to create the ndvi layer from
 
 print(ndvi)
 ````
+Expand the result in the Console, revealing the band name; this should be as the figure below:
+
+![image](https://github.com/user-attachments/assets/8d89f376-304d-4776-9c22-01b6ef61525c)
 
 
+The band name is "nd". The band can be renamed to a more meaningful name. In this case rename the band as "NDVI". To do this, re-write the code as:
+
+```JavaScript
+var ndvi = s2 //this is the multiband image to create the ndvi layer from
+.normalizedDifference(["B8", "B4"]) //ndvi is computed
+.rename("NDVI") //renames the band
+
+print(ndvi)
+````
 ## DIY
 
 
