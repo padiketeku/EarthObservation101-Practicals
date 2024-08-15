@@ -1,13 +1,13 @@
 # Activity 8: Creating Spectral Indices for Surface Types
 In this practical activity, you will explore Landsat 8 and Sentinel-2 imagey to consolidate your knowledge on spectral indices. A range of spectral indices can be computed from the imagery, but in this activity frequentyly used indices, such as the normalised difference vegetation index (NDVI), normalised difference water index (NDWI), normalized difference moisture index (NDMI), enhanced vegetation index (ENVI), soil adjusted vegetation index (SAVI), and normalised burn ratio (NBR). 
 
-NDVI = (NIR – RED) / (NIR + RED)
-NDWI = (GREEN – NIR) / (GREEN + NIR) measures open water bodies, including flooded surfaces and turbidity.
-NDMI = (NIR-SWIR) / (NIR + SWIR) measures water content in vegetation canopy
-SAVI = ((NIR - Red) / (NIR + Red + L)) x (1 + L) measures impact of the background soil line, particularly useful for areas with sparse vegetation with open bare land. L, correction factor, ranges from -1 to 1, is dependent on vegetation density. L is large for low vegetation density and low for high vegetation density.
+NDVI = (NIR – RED) / (NIR + RED) <br>
+NDWI = (GREEN – NIR) / (GREEN + NIR) measures open water bodies, including flooded surfaces and turbidity. <br>
+NDMI = (NIR-SWIR) / (NIR + SWIR) measures water content in vegetation canopy <br>
+SAVI = ((NIR - Red) / (NIR + Red + L)) x (1 + L) measures impact of the background soil line, particularly useful for areas with sparse vegetation with open bare land. L, correction factor, ranges from -1 to 1, is dependent on vegetation density. L is large for low vegetation density and low for high vegetation density. <br>
 EVI = 2.5 * ((NIR – RED) / ((NIR) + (C1 * RED) – (C2 * BLUE) + L)) proposed to account for atmospheric and soil effects. EVI also mitigates saturation, a major challenge for NDVI when vegetation is dense.
 EVI is usually associated with MODIS, but can be derived from other satellite imagery, too. The EVI parameters for MODIS are: C1=6, C2=7.5, and L=1
-EVI is normalised to –1 to 1, it varies between 0.2 and 0.8 for healthy vegetation. 
+EVI is normalised to –1 to 1, it varies between 0.2 and 0.8 for healthy vegetation. <br>
 NBR = (NIR – SWIR) / (NIR + SWIR). This measures post-fire scars, and relevant for the analysis of burn severity and the detection of active vegetation post-fire.
 
 
