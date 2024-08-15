@@ -73,6 +73,8 @@ The function requires a lists of band names as the input. Two bands, at a time, 
  (first − second) / (first + second) <br>
  The output image band is given the name is **'nd'** by default.
 
+#### Make NDVI layer
+
 
 ```JavaScript
 var ndvi = s2 //this is the multiband image to create the ndvi layer from
@@ -94,6 +96,20 @@ var ndvi = s2 //this is the multiband image to create the ndvi layer from
 
 print(ndvi)
 ````
+
+#### Make NDWI layer
+
+```JavaScript
+var ndwi = s2 //this is the multiband image to create the ndvi layer from
+.normalizedDifference(["B8", "B12"]) //ndwi is computed
+.rename("NDWI") //renames the band
+
+print(ndvi)
+````
+
+
+
+
 ## DIY
 
 
