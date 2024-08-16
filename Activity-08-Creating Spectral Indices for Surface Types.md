@@ -150,7 +150,7 @@ print(ndwi)
 
 ```JavaScript
 Map.addLayer(ndwi, {min:-1, max:1}, 'NDWI layer in greyscale')
-Map.addLayer(ndwi, {min:-1, max:1, palette:[ 'red', 'magenta', 'green', 'blue', 'purple']}, 'NDWI layer in pseudocolour')
+Map.addLayer(ndwi, {min:-1, max:1, palette:[ 'red', 'green', 'yellow', 'blue', 'darkblue']}, 'NDWI layer in pseudocolour')
 ```
 The figures below show the result for greyscale and pseudocolour, respectively:
 
