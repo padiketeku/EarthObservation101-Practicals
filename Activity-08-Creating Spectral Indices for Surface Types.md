@@ -43,14 +43,19 @@ COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL
 
 Using this image,
 
-1, construct spectral response curves for the following surface types
+1, compute (use the built-in function) and visualise the following spectral indices: 
+    NDVI
+    NDMI
+    NBR
 
-    water
-    crop fields
-    urban
-    forest
-
-2, explain the variations in spectral characteristics between the surface types
+2, write your own function to compute the following spectral indices:
+    
+    NDVI
+    NDMI
+    NDWI
+    NBR
+    SAVI
+    EVI
 
 
 
