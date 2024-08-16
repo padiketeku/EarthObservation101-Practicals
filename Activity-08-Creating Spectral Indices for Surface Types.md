@@ -226,6 +226,12 @@ print(veg_indices)
 
 ```
 
+Your result in the Console may look like this:
+
+
+![image](https://github.com/user-attachments/assets/6ceefd10-3176-4061-a879-2f86bb397630)
+
+
 
 ## DIY
 
