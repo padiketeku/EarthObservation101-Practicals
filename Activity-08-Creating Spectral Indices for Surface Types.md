@@ -181,6 +181,13 @@ var nbr = s2
 print(nbr)
 ````
 
+Visualise the output
+
+```JavaScript
+Map.addLayer(nbr, {min:-1, max:1}, 'NBR layer in greyscale')
+Map.addLayer(nbr, {min:-1, max:1, palette:[ 'purple', 'red', 'black', 'yellow', 'green']}, 'NBR layer in pseudocolour')
+```
+
 ## DIY
 
 
