@@ -154,8 +154,10 @@ Map.addLayer(ndwi, {min:-1, max:1, palette:[ 'red', 'green', 'yellow', 'blue', '
 ```
 The figures below show the result for greyscale and pseudocolour, respectively:
 
+![image](https://github.com/user-attachments/assets/4fd6db67-b014-4196-a0b7-8ae44b6c3585)       ![image](https://github.com/user-attachments/assets/0a2d8f74-32ab-45f0-9021-3ef4c0b97baf)
 
-![image](https://github.com/user-attachments/assets/aa6dd4dc-886d-489d-8075-ad3bb55dec0c)    ![image](https://github.com/user-attachments/assets/1a7d6a39-c05e-490f-8fe8-22661de85760)
+
+
 
 
 
