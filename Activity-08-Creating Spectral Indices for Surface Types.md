@@ -198,12 +198,15 @@ The figures below show the NBR in greyscale and pseudocolour.
 
 
 ```JavaScript
+
+//select bands to be used for the computation
 var blue = s2.select(["B2"])
 var green = s2.select(["B3"])
 var red = s2.select(["B4"])
 var nir = s2.select(["B8"])
 var swir = s2.select(["B12"])
 
+//user-defined function
 var vegIndices = function(image){
 var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
 var ndmi = green.subtract(nir).divide(green.add(nir)).rename('NDMI')
@@ -212,6 +215,17 @@ return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
 }
 
 ```
+
+//apply/call the function to create additional bands (vegetation indices) to the imagery
+
+```JavaScript
+var veg_indices = vegIndice(s2)
+
+//print the result to the Console
+print(veg_indices)
+
+```
+
 
 ## DIY
 
