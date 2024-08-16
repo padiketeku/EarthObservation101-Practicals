@@ -140,7 +140,7 @@ The figures below show the result. The figure on the left is the NDVI layer in d
 
 ```JavaScript
 var ndwi = s2 //this is the multiband image to create the ndvi layer from
-.normalizedDifference(["B8", "B12"]) //ndwi is computed
+.normalizedDifference(["B3", "B8"]) //ndwi is computed
 .rename("NDWI") //renames the band
 
 print(ndwi)
@@ -171,7 +171,7 @@ Map.addLayer(s2, {bands:["B12","B8", "B4"], min:0, max:3000}, 'False Colour Comp
 
 ```JavaScript
 var nbr = s2 
-.normalizedDifference(["B12", "B8"]) //nbr is computed
+.normalizedDifference(["B8", "B12"]) //nbr is computed
 .rename("NBR") //renames the band
 
 print(nbr)
