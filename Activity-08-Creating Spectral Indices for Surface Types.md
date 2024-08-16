@@ -231,9 +231,9 @@ print(veg_indices)
 
 Using the same image as the used in the demo above, write a function that adds the following spectral indices as new bands to the original image
 
-NDWI
-SAVI
-EVI
+NDWI <br>
+SAVI <br>
+EVI 
 
 
 
