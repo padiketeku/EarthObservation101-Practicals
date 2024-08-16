@@ -194,6 +194,24 @@ The figures below show the NBR in greyscale and pseudocolour.
 ![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)    ![image](https://github.com/user-attachments/assets/50e1c6b5-f880-4685-ac35-4274807d37cb)
 
 
+### Compute vegetation indices using a user-defined function
+
+
+```JavaScript
+var blue = s2.select(["B2"])
+var green = s2.select(["B3"])
+var red = s2.select(["B4"])
+var nir = s2.select(["B8"])
+var swir = s2.select(["B12"])
+
+var vegIndices = function(image){
+var ndvi = nir.subtract(red).divide(nir.add(red))
+var ndmi = green.subtract(nir).divide(green.add(nir))
+var nbr = nir.subtract(swir).divide(nir.add(swir))
+return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
+}
+
+```
 
 ## DIY
 
