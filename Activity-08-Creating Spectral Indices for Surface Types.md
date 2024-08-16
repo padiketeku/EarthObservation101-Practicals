@@ -205,9 +205,9 @@ var nir = s2.select(["B8"])
 var swir = s2.select(["B12"])
 
 var vegIndices = function(image){
-var ndvi = nir.subtract(red).divide(nir.add(red))
-var ndmi = green.subtract(nir).divide(green.add(nir))
-var nbr = nir.subtract(swir).divide(nir.add(swir))
+var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
+var ndmi = green.subtract(nir).divide(green.add(nir)).rename('NDMI')
+var nbr = nir.subtract(swir).divide(nir.add(swir)).rename('NBR')
 return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
 }
 
