@@ -1,5 +1,5 @@
-# Activity 8: Creating Spectral Indices for Surface Types
-In this practical activity, you will explore Landsat 8 and Sentinel-2 imagey to consolidate your knowledge on spectral indices. A range of spectral indices can be computed from the imagery, but in this activity frequentyly used indices, such as the normalised difference vegetation index (NDVI), normalised difference water index (NDWI), normalized difference moisture index (NDMI), enhanced vegetation index (ENVI), soil adjusted vegetation index (SAVI), and normalised burn ratio (NBR). 
+# Activity 8: Creating Spectral Indices 
+In this activity, you will explore Landsat 8 and Sentinel-2 imagey to consolidate your knowledge on spectral indices. A range of spectral indices can be computed from the imagery, but in this activity the frequently used indices, such as the normalised difference vegetation index (NDVI), normalised difference water index (NDWI), normalized difference moisture index (NDMI), enhanced vegetation index (ENVI), soil adjusted vegetation index (SAVI), and normalised burn ratio (NBR) were explored. 
 
 **NDVI** = (NIR – RED) / (NIR + RED) <br>
 
@@ -20,7 +20,7 @@ The activity assumes knowledge of previous actvities and that you can create spe
 
 ## Introduction
 
-Spectral indices are explored to improve our understanding of the spectral characterics of environmental surface types. The environment comprise a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surafce types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to a surface than others. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
+Spectral indices are explored to improve our understanding of the spectral characteristics of environmental surface types. The environment comprise a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surafce types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to one surface than another. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
 
 
 
@@ -205,13 +205,14 @@ var green = s2.select(["B3"])
 var red = s2.select(["B4"])
 var nir = s2.select(["B8"])
 var swir = s2.select(["B12"])
-
+//2.5 * ((NIR – RED) / ((NIR) + (C1 * RED) – (C2 * BLUE) + L))  C1=6, C2=7.5, and L=1
 //user-defined function
 var vegIndices = function(image){
 var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
 var ndmi = green.subtract(nir).divide(green.add(nir)).rename('NDMI')
 var nbr = nir.subtract(swir).divide(nir.add(swir)).rename('NBR')
-return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
+var evi = ((nir.subtract(red)).divide((nir.add(C1.multiply(red)).subtract(C2.multiply(blue)).add(L)).multiply(2.5)
+return image.addBands(ndvi).addBands(ndmi).addBands(nbr).addBands(evi)
 }
 
 ```
