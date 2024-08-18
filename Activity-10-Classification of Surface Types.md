@@ -43,6 +43,9 @@ Unsupervisied classification is usually referred to as clustering as the compute
 
 #### Random sampling of pixels
 
+The pixels sampled would be used to train the classifier.
+
+
 ```JavaScript
 
 var samplePixels = s2.sample({
@@ -54,6 +57,18 @@ tileScale: 4
 
 print(samplePixels.size())
 ```
+
+#### Train the k-means clustering
+
+The algorithms takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default.
+
+```JavaScript
+var kmeanClusters = ee.Clusterer.wekaKMeans({
+nClusters: 10,
+maxIterations: 10
+})
+```
+
 
 ### Supervised classification: minimum distance classifier
 
