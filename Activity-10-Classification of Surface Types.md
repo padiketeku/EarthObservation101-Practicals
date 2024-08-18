@@ -86,16 +86,24 @@ var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model tes
 ```
 
 
-### Create the minimum distance classification model
+#### Create the minimum distance classification model
+
 Go to the `ee.Classifier` toolboox under **Docs** and select the **ee.Classifier.minimumDistance(metric, kNearest)**
 This classifier requires two input parameters: the distance metric, which you have four different types to select from. The default is the euclidean distance and this is used. The other parameter is the kNearest to specify the moving window size to use. The window size should be an odd number (e.g., 3, 5, 7, etc), the pixel size and degree of variability in the image should inform the window size. In this case, the kNearest was set to 5.
 
 
 ```JavaScript
-var minDistanceClassifier = ee.Classifier.minimumDistance(metric="euclidean", kNearest=5)
 
+var minDistanceClassifier = ee.Classifier.minimumDistance(metric="euclidean", kNearest=5) //sets up the classifier
 
+//trains the classifier 
+.train({
+  features: trainingSample,
+  classProperty: class,
+  inputProperties: s2.bandNames() //this is the predictor variables
+});
 
+```
 
 
 ## DIY
