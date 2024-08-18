@@ -23,10 +23,22 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-You are required to map the cleared-land, burnt-land, forest, farm-land, water, and mines. 
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands in a project area wants to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, includingg cleared-land, burnt-land, forest, farm-land, water, and mines. 
 
 |:--:|
 | *Fig. 2. A histogram for an NDVI layer.*|
+
+### Prepare the imagery for the task
+
+```
+var s2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL')
+
+//select the required bands
+var s2 = s2.select(['B2','B3','B4','B5','B6','B7','B8','B11', 'B12'])
+
+```
+### Unsupervised classification-
+
 
 
 
