@@ -78,6 +78,7 @@ var kmeanClusters =kmeanClusters.train(samplePixels)
 var clusters = s2.cluster(kmeanClusters)
 
 //visualise the output image
+Map.setCenter(131.3815, -12.9111, 10);
 Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']})
 ```
 
