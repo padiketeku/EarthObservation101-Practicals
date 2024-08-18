@@ -21,11 +21,22 @@ At the end of this activity, you should be able to: <br>
 
 ## Activity Begins
 
+### Task
+
+You are required to classify a
 
 
 |:--:|
 | *Fig. 2. A histogram for an NDVI layer.*|
 
+
+
+### Supervised classification: minimum distance classifier
+
+- sample surface types using point feature collections create
+
+   In real-world practice the analyst conducts field surveys to identify the various dominant surface types inn the study area.
+  designs a
 
 ## DIY
 
