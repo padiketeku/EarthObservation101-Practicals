@@ -54,14 +54,14 @@ You are required to map the cleared-land, burnt-land, forest, farm-land, water, 
 
 Next, merge the six feature collections into one big featuure collection.
 
-` ` `JavaScript
+```JavaScript
 var sampleClass = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
 
 //print the sampleClass to the Console
 
 print(sampleClass, 'Cover Types')
 
-` ` `
+```
 
 
 ### Create the minimum distance classification model
