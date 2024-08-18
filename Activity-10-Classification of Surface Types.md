@@ -99,7 +99,7 @@ var minDistanceClassifier = ee.Classifier.minimumDistance(metric="euclidean", kN
 //trains the classifier 
 .train({
   features: trainingSample,
-  classProperty: class,
+  classProperty: 'class',
   inputProperties: s2.bandNames() //this is the predictor variables
 });
 
