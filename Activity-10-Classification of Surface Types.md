@@ -55,12 +55,34 @@ You are required to map the cleared-land, burnt-land, forest, farm-land, water, 
 Next, merge the six feature collections into one big featuure collection.
 
 ```JavaScript
-var sampleClass = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
+var coverTypes = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
 
 //print the sampleClass to the Console
 
-print(sampleClass, 'Cover Types')
+print(coverTypes, 'Cover Types')
 
+```
+
+#### Sample the image using the feature collection (i.e., regions of interest)
+
+
+```JavaScript
+var sample = s2.sampleRegions({
+  collection: coverTypes, //the feature collection
+  properties: ['class'],
+  scale: 20 //pixel size for the output image
+});
+```
+
+
+#### Partition the sample into training and test sets
+
+Given the classification model must be assessed, the sampling pixels would be partitioned into training sample and test sample. Conventionally, more of the samples is required to teach the model. In this activity, 80% of the sample pixels was used for model training and the remaining 20% used for the testing of the model.
+
+```JavaScript
+coverTypes2 = sample.randomColumn() //adds a random value field to the sample and is used for the partitioning 
+var trainingSample = coverTypes2.filter('random <= 0.8') //80% of the data for model training
+var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model testing
 ```
 
 
@@ -70,7 +92,7 @@ This classifier requires two input parameters: the distance metric, which you ha
 
 
 ```JavaScript
-var minDistanceClassifier = ee.Classifier.minimumDistance(metric='euclidean', kNearest=5)
+var minDistanceClassifier = ee.Classifier.minimumDistance(metric="euclidean", kNearest=5)
 
 
 
