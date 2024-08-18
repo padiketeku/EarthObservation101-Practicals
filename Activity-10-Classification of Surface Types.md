@@ -80,7 +80,7 @@ var sample = s2.sampleRegions({
 Given the classification model must be assessed, the sampling pixels would be partitioned into training sample and test sample. Conventionally, more of the samples is required to teach the model. In this activity, 80% of the sample pixels was used for model training and the remaining 20% used for the testing of the model.
 
 ```JavaScript
-coverTypes2 = sample.randomColumn() //adds a random value field to the sample and is used for the partitioning 
+var coverTypes2 = sample.randomColumn() //adds a random value field to the sample and is used for the partitioning 
 var trainingSample = coverTypes2.filter('random <= 0.8') //80% of the data for model training
 var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model testing
 ```
