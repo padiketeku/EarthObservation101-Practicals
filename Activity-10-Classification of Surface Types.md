@@ -42,7 +42,13 @@ You are required to map the cleared-land, burnt-land, forest, farm-land, water, 
      
    - Sample clear-land, burnt-land, mines
 
-     Visualise the image as false colour combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types.
+     Visualise the image as a false colour by combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types.
+
+     After the edits, the **Geometry Imports** and base map you should be similar to the one in the figure below.
+
+
+     ![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
+
      
 
 ## DIY
