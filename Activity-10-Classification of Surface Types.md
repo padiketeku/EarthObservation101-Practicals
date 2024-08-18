@@ -37,7 +37,9 @@ var s2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T
 var s2 = s2.select(['B2','B3','B4','B5','B6','B7','B8','B11', 'B12'])
 
 ```
-### Unsupervised classification-
+### Unsupervised classification: kmean clustering
+
+Unsupervisied classification is popularly referred to as clustering as the computer is left alone to identify pixels with similar spectral characteristics and group them into one homogeneous cluster.  The analyst has two major roles to play for the computer to start clustering the pixels- the analysts specify the initial parameters and label the output spectral clusters with meaningful themes.
 
 
 
