@@ -72,6 +72,14 @@ maxIterations: 10
 var kmeanClusters =kmeanClusters.train(samplePixels)
 ```
 
+#### Apply the kmeans algorithm to the image and visualise this
+
+```JavaScript
+var clusters = s2.cluster(kmeanClusters)
+
+//visualise the output image
+Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']})
+```
 
 ### Supervised classification: minimum distance classifier
 
