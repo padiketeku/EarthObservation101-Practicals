@@ -94,7 +94,7 @@ This classifier requires two input parameters: the distance metric, which you ha
 
 ```JavaScript
 
-var minDistanceClassifier = ee.Classifier.minimumDistance(metric="euclidean", kNearest=5) //sets up the classifier
+var minDistanceClassifier = ee.Classifier.minimumDistance("euclidean", 5) //sets up the classifier
 
 //trains the classifier 
 .train({
