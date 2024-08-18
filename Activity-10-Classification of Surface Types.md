@@ -106,19 +106,6 @@ var minDistanceClassifier = ee.Classifier.minimumDistance("euclidean", 5) //sets
 ```
 
 
-#### Explore the trained classifier
-
-```JavaScript
-// Extract information about the trained classifier.
-print('Results of trained classifier', minDistanceClassifier.explain());
-
-// Get a confusion matrix and overall accuracy for the training sample.
-var trainAccuracy = minDistanceClassifier.confusionMatrix();
-print('Training error matrix', trainAccuracy);
-print('Training overall accuracy', trainAccuracy.accuracy());
-
-```
-
 #### Classify the imagery
 
 ```JavaScript
