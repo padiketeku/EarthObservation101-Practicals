@@ -42,7 +42,7 @@ You are required to map the cleared-land, burnt-land, forest, farm-land, water, 
      
    - Sample clear-land, burnt-land, mines
 
-     Visualise the image as a false colour by combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types.
+     Visualise the image as a false colour by combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types by creating point feature collection for each class. 
 
      After the edits, the **Geometry Imports** and base map you should be similar to the one in the figure below.
 
@@ -50,6 +50,26 @@ You are required to map the cleared-land, burnt-land, forest, farm-land, water, 
      ![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
 
      
+#### Merge feature collection
+
+Next, merge the six feature collections into one big featuure collection.
+
+` ` `JavaScript
+var sampleClass = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
+
+//print the sampleClass to the Console
+
+print(sampleClass, 'Cover Types')
+
+` ` `
+
+
+### Create the minimum distance classification model
+
+
+
+
+
 
 ## DIY
 
