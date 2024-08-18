@@ -23,8 +23,7 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-You are required to classify a
-
+You are required to classify cleared-land, burnt-land, forest, farm-land, water, mines, and urban areas. 
 
 |:--:|
 | *Fig. 2. A histogram for an NDVI layer.*|
