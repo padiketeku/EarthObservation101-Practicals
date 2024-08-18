@@ -67,6 +67,9 @@ var kmeanClusters = ee.Clusterer.wekaKMeans({
 nClusters: 10,
 maxIterations: 10
 })
+
+//train the cluster using the sampled pixels
+var kmeanClusters =kmeanClusters.train(samplePixels)
 ```
 
 
