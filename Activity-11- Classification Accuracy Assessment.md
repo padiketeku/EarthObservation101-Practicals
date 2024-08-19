@@ -5,7 +5,7 @@ Accuracy metrics, such as producer's accuracy, consumer's accuracy, overall accu
 
 ## Introduction
 
-Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted label can then be compared in a 2D matrix, referred to as confusion matrix, to determine the performance of the model. 
+Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted labels can then be compared in a 2D matrix, referred to as confusion matrix, to determine the performance of the model. 
 
 
 
@@ -27,11 +27,11 @@ At the end of this activity, you should be able to:
 ### Task
 1, Validate the CART classification in Activity 10, producing the following metrics to describe the accuracy of the model:
 
-a, producer's accuracy
-b, consumer's accuracy
-c, overall accuracy
-d, kappa
-e, F1-score
+a, producer's accuracy <br>
+b, consumer's accuracy <br>
+c, overall accuracy <br>
+d, kappa <br>
+e, F1-score <br>
 
 2, Compute the spatial coverage of cleared land
 
