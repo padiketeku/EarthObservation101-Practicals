@@ -205,6 +205,14 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 
 
+#### Export the classification image to Google Drive
+
+
+
+
+
+
+
 
 
 ## DIY
