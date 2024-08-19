@@ -207,7 +207,22 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 #### Export the classification image to Google Drive
 
+```JavaScript
 
+// create a visualisation parameter, where colours represent the different surafce types
+var vizParam = {min: 0, max: 5, palette: ['lightgreen', 'darkgreen', 'blue', 'purple','pink', 'magenta']};
+
+// Export the CART classification image to Google Drive
+var exportClassifiedImage= ee.Image(s2Classified);
+Export.image.toDrive({
+    image: s2Classified.visualize(vizParam), //keep colours for the cover classes
+    description: 'CART_Classification', //file name, so you can readily identify this in your Google Drive
+    scale: 20, //pixel size
+    maxPixels: 1e13 //to increase the number of pixels allowed by default
+});
+
+
+```
 
 
 
