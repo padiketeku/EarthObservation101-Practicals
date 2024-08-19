@@ -213,7 +213,19 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 
 
+![image](https://github.com/user-attachments/assets/568b74e3-4759-476b-ab02-6e86d29cbd58)
 
+
+
+Click **RUN** and a window (shown below) to initiate export pops up. Again click **RUN** to export the image to your Google Drive.
+
+
+
+![image](https://github.com/user-attachments/assets/7dd0c59e-4edd-479e-a4a5-c651ece7a938)
+
+
+
+It takes a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you  have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
 
 ## DIY
 
