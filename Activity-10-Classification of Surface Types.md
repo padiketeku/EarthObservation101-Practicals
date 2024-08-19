@@ -199,6 +199,13 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 ```
 
 
+![image](https://github.com/user-attachments/assets/6cc80708-9082-4632-bd67-5f0946d9a39e)  ![image](https://github.com/user-attachments/assets/efd45ab6-918f-45bb-ab9e-96e28e5f7d57)
+|:--:|
+| *Fig. 2. Left: unclassified Sentinel-2 imagery and Right: CART classificed image. Farmland is light-green; forest is dark-green, water is blue, burnt-land is purple, cleared-land is pink, and mines is magenta *|
+
+
+
+
 
 ## DIY
 
