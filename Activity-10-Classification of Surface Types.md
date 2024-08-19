@@ -205,6 +205,11 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 
 
+#### Areal coverage of surface type
+
+
+
+
 #### Export the classification image to Google Drive
 
 ```JavaScript
