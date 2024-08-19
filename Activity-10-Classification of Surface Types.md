@@ -89,7 +89,7 @@ The classification image may be as shown in the figure below.
 |:--:|
 | *Fig. 1. K-mean clustering, including ten clusters.*|
 
-
+What colour is water in? Yes, you are right it is indigo.
 
 
 
