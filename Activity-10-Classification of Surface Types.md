@@ -52,7 +52,7 @@ var samplePixels = s2.sample({
 //region:s2.geometry(),
 scale: 20,
 numPixels:50000,
-tileScale: 4
+tileScale: 4 //a scale factor to enable computations that may otherwise run out of memory
 })
 
 print(samplePixels.size())
