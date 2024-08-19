@@ -36,3 +36,16 @@ e, F1-score
 2, Compute the spatial coverage of cleared land
 
 
+
+
+
+
+## DIY
+
+
+
+
+
+## Conclusion
+
+
