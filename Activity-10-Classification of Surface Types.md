@@ -210,6 +210,10 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 ## DIY
 
 
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20220516T012721_20220516T013105_T52LGK**. A client interested in identifying cleared lands would like to understand the distribution of the dominant land cover classes. Classify the image into five land cover classes, includingg cleared-land, burnt-land, forest, farm-land, and water, exploring k-means clustering and CART algorithms. 
+
 
 
 ## Conclusion
+
+In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the areal coverage of the surface types will be computed.
