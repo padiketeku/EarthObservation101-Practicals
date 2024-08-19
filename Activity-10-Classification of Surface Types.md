@@ -245,7 +245,7 @@ Click **RUN** and a window (shown below) to initiate export pops up. Again click
 
 
 
-It takes a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you  have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
+It may take a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you  have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
 
 ## DIY
 
