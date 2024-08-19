@@ -35,7 +35,7 @@ e, F1-score <br>
 ```JavaScript
 
 var testCARTclassifier = testSample
-      .classify(s2Classified)
+      .classify(cartClassifier)
       .errorMatrix('class', 'classification')
 
 //print the variable to the Console
