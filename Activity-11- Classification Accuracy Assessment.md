@@ -42,6 +42,7 @@ e, F1-score <br>
 
 ## DIY
 
+Assess the performance of the CART classification model in Activity 10. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, overall accuracy, kappa, and F1-score.
 
 
 
