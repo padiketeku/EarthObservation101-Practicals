@@ -209,7 +209,7 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 ```JavaScript
 
-// create a visualisation parameter, where colours represent the different surafce types
+// create a visualisation parameter, where colours represent the six surface types
 var vizParam = {min: 0, max: 5, palette: ['lightgreen', 'darkgreen', 'blue', 'purple','pink', 'magenta']};
 
 // Export the CART classification image to Google Drive
