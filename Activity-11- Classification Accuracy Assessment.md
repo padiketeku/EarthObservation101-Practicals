@@ -51,6 +51,12 @@ print('Validation fscore: ', testCARTclassifier.fscore(1))
 ```
 
 
+Error Matrix below:
+
+
+![image](https://github.com/user-attachments/assets/24c25a5b-aed8-442a-ba48-32db334a40e0)
+
+
 ## DIY
 
 Assess the performance of the CART classification model in Activity 10. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, overall accuracy, kappa, and F1-score.
