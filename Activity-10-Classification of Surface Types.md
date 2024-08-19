@@ -12,8 +12,9 @@ At the end of this activity, you should be able to: <br>
 
 - collect point features
 - perform k-means clustering (unsupervised classification)
-- perform minimum distance classification (supervised technique)
+- perform CART classification (supervised technique)
 - visualisation classification map
+- qualitatively assess the classification
 - export the classification map to google drive
 
 
@@ -23,10 +24,9 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands in a project area wants to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, includingg cleared-land, burnt-land, forest, farm-land, water, and mines. 
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, includingg cleared-land, burnt-land, forest, farm-land, water, and mines, using k-means clustering and CART algorithms. 
 
-|:--:|
-| *Fig. 2. A histogram for an NDVI layer.*|
+
 
 ### Prepare the imagery for the task
 
@@ -49,7 +49,6 @@ The pixels sampled would be used to train the classifier.
 ```JavaScript
 
 var samplePixels = s2.sample({
-//region:s2.geometry(),
 scale: 20,
 numPixels:50000,
 tileScale: 4 //a scale factor to enable computations that may otherwise run out of memory
@@ -82,7 +81,21 @@ Map.setCenter(131.3815, -12.9111, 10);
 Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']})
 ```
 
-### Supervised classification: minimum distance classifier
+The classification image may be as shown in the figure below.
+
+
+
+![image](https://github.com/user-attachments/assets/07c5eb36-6ece-4cd1-ad88-366bc1da057d) |
+|:--:|
+| *Fig. 1. K-mean clustering, including ten clusters.*|
+
+
+
+
+
+
+
+### Supervised classification: Classification and Regression Tree (CART)
 
 #### Sample surface types using point feature collections create
 
@@ -115,8 +128,7 @@ print(coverTypes, 'Cover Types')
 
 ```
 
-#### Sample the image using the feature collection (i.e., regions of interest)
-
+#### Sample the image using the feature collection (i.e., regions of interest) 
 
 ```JavaScript
 var sample = s2.sampleRegions({
@@ -140,13 +152,13 @@ var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model tes
 
 #### Create the minimum distance classification model
 
-Go to the `ee.Classifier` toolboox under **Docs** and select the **ee.Classifier.minimumDistance(metric, kNearest)**
-This classifier requires two input parameters: the distance metric, which you have four different types to select from. The default is the euclidean distance and this is used. The other parameter is the kNearest to specify the moving window size to use. The window size should be an odd number (e.g., 3, 5, 7, etc), the pixel size and degree of variability in the image should inform the window size. In this case, the kNearest was set to 5.
+Go to the `ee.Classifier` toolboox under **Docs** and select the **ee.Classifier.smileCart(maxNodes, minLeafPopulation)**
+This classifier requires two input parameters.
 
 
 ```JavaScript
 
-var minDistanceClassifier = ee.Classifier.minimumDistance("euclidean", 5) //sets up the classifier
+var cartClassifier = ee.Classifier.smileCart() //sets up the classifier
 
 //trains the classifier 
 .train({
@@ -163,7 +175,7 @@ var minDistanceClassifier = ee.Classifier.minimumDistance("euclidean", 5) //sets
 ```JavaScript
 
 //apply the classifier to the image
-var s2Classified = s2.classify(minDistanceClassifier);
+var s2Classified = s2.classify(cartClassifier);
 ```
 
 #### Visualise the classified imagery
@@ -174,7 +186,7 @@ var s2Classified = s2.classify(minDistanceClassifier);
 var classColours = {
   min: 0,
   max: 5,
-  palette: ['006400' ,'ffbb22', 'ffff4c', 'f096ff', 'fa0000', 'b4b4b4']
+  palette: ['lightgreen', 'darkgreen', 'blue', 'purple','pink', 'magenta']
 };
 
 //display the original imagery in true colour combination
@@ -182,7 +194,7 @@ Map.setCenter(131.3815, -12.9111, 10);
 Map.addLayer(s2, {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000}, 'Original S2 imagery');
 
 //display the classified image
-Map.addLayer(s2Classified, classColours, 'Classified');
+Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 ```
 
