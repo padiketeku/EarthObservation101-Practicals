@@ -53,7 +53,7 @@ var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 var sen2sr = sen2sr
 
 //filter by the study peeriod
-.filterDate("2022-01-01", "2023-12-31")
+.filterDate('2022-01-01', '2023-12-31')
 
 //filter by region of interest
 .filterBounds(roiDarwin)
