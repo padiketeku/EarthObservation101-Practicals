@@ -70,9 +70,10 @@ print(sen2sr_mean);
 
 Run the code and explore the result in the Console, take note of the bands and the range of pixel values. The figure below highlights the range of pixel values for the standard bands.
 
-![image](https://github.com/user-attachments/assets/dc908a03-bf3a-4f1b-9671-47f5885ddf7f)
+![image](https://github.com/user-attachments/assets/31a3f015-0c72-45ab-974c-7401e739f2c5)
+
 |:--:|
-| *Fig. 1. TThe range of pixel values for a mean Sentinel-2 Level-2A image.*|
+| *Fig. 1. The range of pixel values for a mean Sentinel-2 Level-2A image.*|
 
 
 ### Visualise the image
