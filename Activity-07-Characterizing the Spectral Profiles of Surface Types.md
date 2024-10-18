@@ -223,7 +223,7 @@ var wavelengths = [490,560,665,705,740,783, 842,1610];
 
 //create a variable that edits the x-and-y-axes labels, title, and the colour of the curves
 var editChart = {
-title: 'A spectral response cuve from a Sentinel-2 image' //this is the title of the chart
+title: 'A spectral response cuve from a Sentinel-2 image', //this is the title of the chart
 hAxis: {title:'Wavelength (nanometer)'},//the horizontal axis title
 vAxis: {title:'Reflectance'},//the vertical axis title
 lineWidth: 1,//width or thicknes of the curves
