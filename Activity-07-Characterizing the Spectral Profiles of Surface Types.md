@@ -91,11 +91,11 @@ The `Map.setCenter` (Fig. 2) is used to centre the map view.
 | *Fig. 2. The method to centre the map view.*|
 
 
-Three number arguments are required to run this method: longitude, latitude, and zoom. The zoom level ranges from 0 to 24. To visualise a true colour composite of the image the code should be as shown below. 
+Three numeric arguments are required to run this method: longitude, latitude, and zoom. The zoom level ranges from 0 to 24. To visualise a true colour composite of the image the code should be as shown below. 
 
 ```JavaScript
 //first, centre the map to the coodinates of the region of interest
-Map.setCenter(130.955, -12.240, 9); //the first tow inputs are the coordinates and the third is zoom level
+Map.setCenter(130.955, -12.240, 9); //the first two inputs are the coordinates and the third is zoom level
 
 //visualise a true colour composite of the average image
 Map.addLayer(sen2sr_mean, {
@@ -105,12 +105,12 @@ bands:['B4','B3','B2'],
 });
 ```
 
-When you display your layer over the base map, make sure you turn off the ROI polygon for improved image visualisation. You turn off the ROI polygon by hovering your mouse over the **Geometry Imports** and untick the box to the geometry name.
+When you display your layer over the base map, make sure you turn off the ROI polygon for improved visualisation. You turn off the ROI polygon by hovering your mouse over the **Geometry Imports** and untick the box to the geometry name.
 
 
 ### Clip an image to a region of interest (ROI)
 
-Through the visualisation, you can see that your ROI is just a fraction of the image. To confine your analysis to your ROI, you must clip the image to the ROI. In the **Docs** tab, locate the image object and the clip method under this object, as shown below.
+Through the visualisation, you can see that your ROI is just a fraction of the image. To confine your analysis to your ROI, you must clip the image to the ROI. Go to **Docs**, locate the image object (i.e., **ee.Image**)and the **clip** method under this object, as shown below.
 
 
 ![image](https://github.com/user-attachments/assets/07d91ff6-a8a6-49be-9311-bb464a5afeb5)
