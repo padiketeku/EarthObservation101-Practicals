@@ -44,7 +44,7 @@ var sen2sr = sen2sr
 print(sen2sr);
 ```
 
-This code returns a single image with 23 bands. The downside of this approach is that the information in the other images would not be assessed. To leverage the information of the entire collection then you might want to compute the average image using all the images. The code would then be as the following. 
+This code returns a single image with 26 bands. The downside of this approach is that the information in the other images would not be assessed. To leverage the information of the entire collection then you might want to compute the average image using all the images. The code would then be as the following. 
 
 ```JavaScript
 var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
