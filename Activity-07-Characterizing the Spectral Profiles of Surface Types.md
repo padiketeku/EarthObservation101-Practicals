@@ -77,7 +77,7 @@ Run the code and explore the result in the Console, take note of the bands and t
 
 ### Visualise the image
 You now have a single image to produce spectral response curves, but before you start, you would want to visualise this image to identify the major surface types in the image.
-Ideally, you would prefer to display the image to your study area. Thus, you must first set the centre of the map to the coordinates of your study area (i.e., ROI). When you expand the coordinates of the ROI under Imports , as shown below, you might be able to select one of these coordinates to use. An example is highlighted in red. We would use this coordinate.
+Ideally, you would prefer to display the image to your study area. Thus, you must first set the centre of the map to the coordinates of your study area (i.e., ROI). When you expand the coordinates of the ROI under **Imports**, as shown below, you might be able to select one of these coordinates to use. An example is highlighted in red. We would use this coordinate.
 
 
 ![image](https://github.com/user-attachments/assets/aa047ec8-25c3-4fa2-adcc-be869b8c5698)
