@@ -28,7 +28,7 @@ var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 //call the image collection and keep the same variable name; you may rename the variable if you want
 var sen2sr = sen2sr
 
-//filter by the study peeriod
+//filter by the study period
 .filterDate('2022-01-01', '2023-12-31')
 
 //filter by region of interest
@@ -52,7 +52,7 @@ var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 //call the image collection and keep the same variable name; you may rename the variable if you want
 var sen2sr = sen2sr
 
-//filter by the study peeriod
+//filter by the study period
 .filterDate('2022-01-01', '2023-12-31')
 
 //filter by region of interest
