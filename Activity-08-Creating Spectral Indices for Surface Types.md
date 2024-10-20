@@ -162,7 +162,7 @@ The figures below show the result for greyscale and pseudocolour, respectively:
 #### Make NBR layer
 
 First, create and visualise a false colour combination (FCC) that accentuates fire scars in the image. You do this to justify the need for NBR.
-The bands required for this FCC are SWIR, NIR, Red, in which they are assigned to RGB, respectively. Given fire scars are sensitive to the SWIR and RED, the output image is expected to represent fire scars as reddish pixels while healthy vegetation would be in shades of green. Note, bare soils can be confused with burnt fields.
+The bands required for this FCC are SWIR, NIR, Red, and are assigned to RGB, respectively. Given fire scars are sensitive to the SWIR and RED, the output image is expected to represent fire scars as reddish pixels while healthy vegetation would be in shades of green. Note, bare soils can be spectrally similar to burnt fields.
 
 ```Javascript
 Map.addLayer(s2, {bands:["B12","B8", "B4"], min:0, max:3000}, 'False Colour Composite for fire scars')
