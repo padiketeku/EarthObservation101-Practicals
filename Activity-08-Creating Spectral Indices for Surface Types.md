@@ -232,7 +232,7 @@ return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
 
 ```
 
-//apply/call the function to create additional bands (vegetation indices) to the imagery
+//apply the function to create additional bands (vegetation indices) to the imagery
 
 ```JavaScript
 var veg_indices = vegIndices(s2)
