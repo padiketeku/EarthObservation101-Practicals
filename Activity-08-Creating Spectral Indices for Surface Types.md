@@ -1,4 +1,4 @@
-# Activity 8: Creating Spectral Indices 
+![image](https://github.com/user-attachments/assets/85956d50-3b99-4976-967c-301ec4eed1aa)# Activity 8: Creating Spectral Indices 
 In this activity, you will explore Landsat 8 and Sentinel-2 imagey to consolidate your knowledge on spectral indices. A range of spectral indices can be computed from the imagery, but in this activity the frequently used indices, such as the normalised difference vegetation index (NDVI), normalised difference water index (NDWI), normalized difference moisture index (NDMI), enhanced vegetation index (ENVI), soil adjusted vegetation index (SAVI), and normalised burn ratio (NBR) were explored. 
 
 **NDVI** = (NIR – RED) / (NIR + RED) <br>
@@ -198,7 +198,14 @@ Map.addLayer(nbr, {min:-1, max:1, palette:[ 'red', 'magenta', 'purple', 'yellow'
 The figures below show the NBR in greyscale and pseudocolour. Theoretically, the NBR values range between -1 and 1,  with values close to 1 indicating healthy vegetation and values near or sub 0 representing burnt or unproductive vegetation.
 
 
-![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)    ![image](https://github.com/user-attachments/assets/50e1c6b5-f880-4685-ac35-4274807d37cb)
+![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)    ![image](https://github.com/user-attachments/assets/1dfcdae7-a64a-4533-89e7-90795b79346c)
+
+
+
+The figure to you right is the pseudocolour NBR image with the pixels in shades of red potentially burnt vegetation.
+
+
+
 
 
 ### Compute vegetation indices using a user-defined function
