@@ -221,14 +221,13 @@ var green = s2.select(["B3"])
 var red = s2.select(["B4"])
 var nir = s2.select(["B8"])
 var swir = s2.select(["B12"])
-//2.5 * ((NIR – RED) / ((NIR) + (C1 * RED) – (C2 * BLUE) + L))  C1=6, C2=7.5, and L=1
+
 //user-defined function
 var vegIndices = function(image){
 var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
 var ndmi = green.subtract(nir).divide(green.add(nir)).rename('NDMI')
 var nbr = nir.subtract(swir).divide(nir.add(swir)).rename('NBR')
-var evi = ((nir.subtract(red)).divide((nir.add(C1.multiply(red)).subtract(C2.multiply(blue)).add(L)).multiply(2.5)
-return image.addBands(ndvi).addBands(ndmi).addBands(nbr).addBands(evi)
+return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
 }
 
 ```
