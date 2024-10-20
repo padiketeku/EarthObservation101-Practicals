@@ -198,11 +198,12 @@ Map.addLayer(nbr, {min:-1, max:1, palette:[ 'red', 'magenta', 'purple', 'yellow'
 The figures below show the NBR in greyscale and pseudocolour. Theoretically, the NBR values range between -1 and 1,  with values close to 1 indicating healthy vegetation and values near or sub 0 representing burnt or unproductive vegetation.
 
 
-![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)    ![image](https://github.com/user-attachments/assets/1dfcdae7-a64a-4533-89e7-90795b79346c)
+![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)  ![image](https://github.com/user-attachments/assets/42c4e29f-1773-434e-9bf7-c0f2ec6f19d5)
+  
 
 
 
-The figure to you right is the pseudocolour NBR image with the pixels in shades of red potentially burnt vegetation.
+The figure to your right is the pseudocolour NBR image with the pixels in shades of red potentially burnt vegetation.
 
 
 
