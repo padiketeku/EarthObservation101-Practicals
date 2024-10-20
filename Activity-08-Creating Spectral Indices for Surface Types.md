@@ -191,10 +191,11 @@ Visualise the output
 
 ```JavaScript
 Map.addLayer(nbr, {min:-1, max:1}, 'NBR layer in greyscale')
-Map.addLayer(nbr, {min:-1, max:1, palette:[ 'red', 'green', 'yellow', 'purple', 'black']}, 'NBR layer in pseudocolour')
+Map.addLayer(nbr, {min:-1, max:1, palette:[ 'red', 'magenta', 'purple', 'yellow', 'green', 'darkgreen']}, 'NBR layer in pseudocolour')
+
 ```
 
-The figures below show the NBR in greyscale and pseudocolour.
+The figures below show the NBR in greyscale and pseudocolour. Theoretically, the NBR values range between -1 and 1,  with values close to 1 indicating healthy vegetation and values near or sub 0 representing burnt or unproductive vegetation.
 
 
 ![image](https://github.com/user-attachments/assets/8f4b2a2b-d59b-4465-8839-062ce2472d7a)    ![image](https://github.com/user-attachments/assets/50e1c6b5-f880-4685-ac35-4274807d37cb)
