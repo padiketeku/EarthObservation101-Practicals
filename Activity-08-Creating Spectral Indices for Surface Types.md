@@ -237,7 +237,7 @@ return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
 ```JavaScript
 var veg_indices = vegIndices(s2)
 
-//print the result to the Console
+//print the result to the Console. note that the layer name is set to "Vegetation Indices"
 print(veg_indices, 'Vegetation Indices')
 
 ```
@@ -245,17 +245,22 @@ print(veg_indices, 'Vegetation Indices')
 Your result in the Console may look like this:
 
 
-![image](https://github.com/user-attachments/assets/6ceefd10-3176-4061-a879-2f86bb397630)
+![image](https://github.com/user-attachments/assets/6e5bdd10-bb05-40aa-8b68-d4d56656d55c)
+
+
+
+
+The vegetation indices, the additional spectral bands, are identified using the red polygon.
 
 
 
 ## DIY
 
-Using the same image as the used in the demo above, write a function that adds the following spectral indices as new bands to the original image
+Using the same image as the one used in the demo above, write a function that adds the following spectral indices as new bands to the original image. You must look up (google search) for the equations for the indices below. Note that you are using Sentinel-2 data.
 
-NDWI <br>
-SAVI <br>
-EVI 
+Normalised Difference Water Index (NDWI) [Gao, 1996](https://www.sciencedirect.com/science/article/pii/S0034425796000673) <br>
+Soil Adjusted Vegetation Index (SAVI) [Huete, 1988](https://www.sciencedirect.com/science/article/abs/pii/003442578890106X) <br>
+Enhanced Vegetation Index (EVI) [Huete et al., 2002](https://www.sciencedirect.com/science/article/pii/S0034425702000962?via%3Dihub) 
 
 
 
