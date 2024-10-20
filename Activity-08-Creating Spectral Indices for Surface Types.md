@@ -168,6 +168,15 @@ The bands required for this FCC are SWIR, NIR, Red, and are assigned to RGB, res
 Map.addLayer(s2, {bands:["B12","B8", "B4"], min:0, max:3000}, 'False Colour Composite for fire scars')
 ```
 
+
+
+![image](https://github.com/user-attachments/assets/1c0a1e3e-6bc9-4e01-86d3-4789d300ff8f)
+
+
+A Sentinel-2 false colour band combination (B12, B8, B4) to display fire scars. Examples of fire scar pixels are highlighted with a red circle.
+
+
+
 ```JavaScript
 var nbr = s2 
 .normalizedDifference(["B8", "B12"]) //nbr is computed
