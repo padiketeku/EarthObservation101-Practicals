@@ -59,11 +59,6 @@ Using this image,
 
 
 
-
-|:--:|
-
-| *Fig. 1. The range of pixel values for a mean Sentinel-2 Level-2A image.*|
-
  ### Define a variable for the imagery and print this to the Console
 
  ```Javascript
@@ -91,9 +86,9 @@ print(s2, 'Sentinel-2 with selected bands')
 ### Compute vegetation indices using built-in function
 
 The function, **normalizedDifference(bandNames)**, would be used. This function can be found under **ee.Image** in Docs.
-The function requires a lists of band names as the input. Two bands, at a time, are required in that the second band is subtracted or added to the first as shown below:
+The function requires a lists of band names as the input. Two bands, at a time, are required. The second band is subtracted or added to the first as shown below:
  (first − second) / (first + second) <br>
- The output image band is given the name is **'nd'** by default.
+ The output image band is given the name **'nd'** by default.
 
 #### Make NDVI layer
 
@@ -109,7 +104,7 @@ Expand the result in the Console, revealing the band name; this should be as the
 ![image](https://github.com/user-attachments/assets/8d89f376-304d-4776-9c22-01b6ef61525c)
 
 
-The band name is "nd". The band can be renamed to a more meaningful name. In this case rename the band as "NDVI". To do this, re-write the code as:
+The band name is "nd". The band can be renamed to a more meaningful name. Rename the "nd" as "NDVI". To do this, re-write the code as:
 
 ```JavaScript
 var ndvi = s2 //this is the multiband image to create the ndvi layer from
