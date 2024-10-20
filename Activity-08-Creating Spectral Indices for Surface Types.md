@@ -62,7 +62,7 @@ Using this image,
 
 |:--:|
 
-| *Fig. 1. TThe range of pixel values for a mean Sentinel-2 Level-2A image.*|
+| *Fig. 1. The range of pixel values for a mean Sentinel-2 Level-2A image.*|
 
  ### Define a variable for the imagery and print this to the Console
 
