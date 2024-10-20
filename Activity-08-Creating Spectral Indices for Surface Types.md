@@ -176,6 +176,8 @@ Map.addLayer(s2, {bands:["B12","B8", "B4"], min:0, max:3000}, 'False Colour Comp
 A Sentinel-2 false colour band combination (B12, B8, B4) to display fire scars. Examples of fire scar pixels are highlighted with a red circle.
 
 
+Given we can see fire scars in the image above, using a more robust technique to delineate burnt areas has been applied below. The normalised burn ratio is computed and visualised for fire scar analysis. 
+
 
 ```JavaScript
 var nbr = s2 
