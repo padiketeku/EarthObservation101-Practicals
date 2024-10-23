@@ -99,7 +99,7 @@ What colour is water in? Yes, you are right it is indigo.
 
 #### Sample surface types using point feature collections create
 
-   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. The **geometry tool** was used to creat point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. 
+   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. The **geometry tool** was used to create point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. 
 
    - Sample farmland, forest, water
      Visualise the image as true  colour composite. Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. This is the tear-drop icon in the geometry tool. Hint, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork.
@@ -109,7 +109,7 @@ What colour is water in? Yes, you are right it is indigo.
 
      Visualise the image as a false colour by combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types by creating point feature collection for each class. 
 
-     After the edits, the **Geometry Imports** and base map you should be similar to the one in the figure below.
+     After the edits, the **Geometry Imports** and base map should be similar to the one in the figure below.
 
 
      ![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
