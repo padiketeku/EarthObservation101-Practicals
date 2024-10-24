@@ -128,7 +128,8 @@ Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool
 
 
 
-![image](https://github.com/user-attachments/assets/802d77c2-fafe-4607-b392-5ba1899f8cd2)
+
+![image](https://github.com/user-attachments/assets/a0856ba1-6fa9-4e68-9c1d-8cfcb43bbe91)
 
 
 
@@ -140,7 +141,8 @@ Select the "Add a marker" (see figure below). This is the tear-drop icon in the 
 
 
 
-![image](https://github.com/user-attachments/assets/eff155ee-2009-4f45-be27-940b272b9893)
+![image](https://github.com/user-attachments/assets/2d8345a0-4bb5-4f9b-82df-623279de0050)
+
 
     
 
