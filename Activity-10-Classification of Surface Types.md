@@ -159,7 +159,30 @@ Select the "Add a marker" (see figure below). This is the tear-drop icon in the 
      
      
      
-Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Edit the layer properties by clicking the cog icon (see figure below)
+Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Your result may be similar to the figure below.
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/fe0fce6f-ce45-40ce-ba4f-57e50ab82be2)
+
+
+
+
+
+
+The layer (see the figure below) is named as "geometry". 
+
+
+
+
+![image](https://github.com/user-attachments/assets/9d0a97c7-bfd5-40de-a81e-04c4a7389345)
+
+
+
+
+You would like to edit this to name the layer appropriately. The layer name should be water, so let's edit the layer properties by clicking the cog icon (see figure below)
 
 
 
