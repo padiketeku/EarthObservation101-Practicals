@@ -123,11 +123,26 @@ What colour is water? Yes, you are right it is indigo.
 
 
 
-Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
+Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. 
 
 
 
-     ![image](https://github.com/user-attachments/assets/fb12fa59-4618-4e4d-b877-fb1a75663dd9)
+
+![image](https://github.com/user-attachments/assets/802d77c2-fafe-4607-b392-5ba1899f8cd2)
+
+
+
+
+
+
+Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
+
+
+
+
+![image](https://github.com/user-attachments/assets/eff155ee-2009-4f45-be27-940b272b9893)
+
+    
 
 
 
