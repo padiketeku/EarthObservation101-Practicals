@@ -99,9 +99,6 @@ What colour is water? Yes, you are right it is indigo.
 ### Supervised classification: Classification and Regression Tree (CART)
 
 
-
-
-
 #### Sample surface types using point feature collections create
 
    In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. 
@@ -233,20 +230,27 @@ Repeat the steps to collect reference sample for the other cover types.  Hint, i
 
 
 
+
+
+
+
+Once you have collected samples for all the cover types, your r
+
+
+
+After the edits, the **Geometry Imports** and base map should be similar to the one in the figure below.
+
+
 ![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
 
 
-Explore this false colour image to collect the reference samples for clearedland, burntland, and mines 
-
-     
-   - Sample clear-land, burnt-land, mines
-
-     Visualise the image as a false colour by combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Sample surface types by creating point feature collection for each class. 
-
-     After the edits, the **Geometry Imports** and base map should be similar to the one in the figure below.
 
 
-     
+
+
+
+
+
 
      
 #### Merge feature collection
