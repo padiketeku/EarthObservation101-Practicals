@@ -193,7 +193,7 @@ You would like to edit this to name the layer appropriately. The layer name shou
      
      
 
-The "Configure geometry import" tool appears, see the figure below.
+The "Configure geometry import" window appears, see the figure below.
 
 
 
@@ -205,7 +205,7 @@ The "Configure geometry import" tool appears, see the figure below.
 
 
 
-Make the layer name "water"; import as "FeatureCollection"; click the "+Property" to specify the "Property" as label and for "Value" assign 0 as this is the first feature collection. The next cover type (e.g., urban), you would assign 1 for "Value", and 2 for next cover type, and so forth.
+Make the layer name "water"; import as "FeatureCollection"; click the "+Property" and type "label" into "Property"; and for "Value" assign 0 as this is the first feature collection. The next cover type (e.g., urban), you would assign 1 for "Value", and 2 for the next cover type, and so forth.
 
 
 
