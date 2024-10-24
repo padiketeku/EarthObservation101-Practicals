@@ -89,7 +89,8 @@ The classification image may be as shown in the figure below.
 |:--:|
 | *Fig. 1. K-mean clustering, including ten clusters.*|
 
-What colour is water in? Yes, you are right it is indigo.
+
+What colour is water? Yes, you are right it is indigo.
 
 
 
@@ -103,7 +104,9 @@ What colour is water in? Yes, you are right it is indigo.
 
 #### Sample surface types using point feature collections create
 
-   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. ***The **geometry tool** was used to create point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. ****
+   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. 
+
+   
 
    - Sample farmland, forest, water <br>
    
