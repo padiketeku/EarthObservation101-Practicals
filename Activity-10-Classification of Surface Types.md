@@ -137,7 +137,7 @@ Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool
 
 
 
-     ![image](https://github.com/user-attachments/assets/025839dd-bde1-4ea6-abb8-374a66234ed9)
+   
 
      
      
