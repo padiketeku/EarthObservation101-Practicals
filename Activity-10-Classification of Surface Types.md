@@ -218,11 +218,25 @@ Edit the "Configure geometry import" for each cover type. The one for water is g
 To achieve the above figure, edit the "Configure geometry import" this way:
 Make the layer name "water"; import as "FeatureCollection"; click the "+Property" and type "label" into "Property"; and for "Value" assign 0 as this is the first feature collection. If you are repeating this step for the next cover type (e.g., urban), you would assign 1 for "Value", 2 for the third cover type, and so forth.
 
+Once you are happy with the details in the geometry, click OK (see figure below) to save the results.
+
+
+
+![image](https://github.com/user-attachments/assets/c90d6715-ca16-44f3-bac6-246cdf065cbd)
 
 
 
 
-     Hint, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork.
+
+
+Repeat the steps to collect reference sample for the other cover types.  Hint, in the true colour image, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork. The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour, combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. The false colour image is shown below.
+
+
+
+![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
+
+
+Explore this false colour image to collect the reference samples for clearedland, burntland, and mines 
 
      
    - Sample clear-land, burnt-land, mines
@@ -232,7 +246,7 @@ Make the layer name "water"; import as "FeatureCollection"; click the "+Property
      After the edits, the **Geometry Imports** and base map should be similar to the one in the figure below.
 
 
-     ![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
+     
 
      
 #### Merge feature collection
