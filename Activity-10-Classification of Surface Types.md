@@ -140,8 +140,63 @@ var featureCollection = water.merge(urban).merge(field).merge(forest);
 
    In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. The **geometry tool** was used to create point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. 
 
-   - Sample farmland, forest, water
-     Visualise the image as true  colour composite. Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. This is the tear-drop icon in the geometry tool. Hint, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork.
+   - Sample farmland, forest, water <br>
+   
+     We would collect sample points for water. First, visualise the image as true  colour composite.
+
+
+![image](https://github.com/user-attachments/assets/28164b46-97c2-4b21-bbbd-f6dc8783314c)
+
+
+
+     Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you get the "Add a marker", under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
+
+
+     ![image](https://github.com/user-attachments/assets/fb12fa59-4618-4e4d-b877-fb1a75663dd9)
+
+
+
+
+
+
+
+
+
+     ![image](https://github.com/user-attachments/assets/025839dd-bde1-4ea6-abb8-374a66234ed9)
+
+     
+     
+     
+     Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Edit the layer properties by clicking the cog icon (see figure below)
+
+
+
+
+![image](https://github.com/user-attachments/assets/928e2219-117a-4fc4-8c8d-93cc82b4cba5)
+
+     
+     
+The "Configure geometry import" tool appears, see the figure below.
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/c1ce9c77-9cc5-4a93-a764-7ecb3711b469)
+
+
+
+
+Make the layer name "water"; import as "FeatureCollection"; click the "+Property" to specify the "Property" as label and for "Value" assign 0 as this is the first feature collection. The next cover type (e.g., urban), you would assign 1 for "Value", and 2 for next cover type, and so forth.
+
+
+
+![image](https://github.com/user-attachments/assets/0b26cabb-4373-4106-a593-8b908e235f20)
+
+
+
+     Hint, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork.
 
      
    - Sample clear-land, burnt-land, mines
