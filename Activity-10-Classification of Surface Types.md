@@ -205,11 +205,20 @@ The "Configure geometry import" window appears, see the figure below.
 
 
 
-Make the layer name "water"; import as "FeatureCollection"; click the "+Property" and type "label" into "Property"; and for "Value" assign 0 as this is the first feature collection. The next cover type (e.g., urban), you would assign 1 for "Value", and 2 for the next cover type, and so forth.
+Edit the "Configure geometry import" for each cover type. The one for water is given here (see the figure below).
+
+
 
 
 
 ![image](https://github.com/user-attachments/assets/0b26cabb-4373-4106-a593-8b908e235f20)
+
+
+
+To achieve the above figure, edit the "Configure geometry import" this way:
+Make the layer name "water"; import as "FeatureCollection"; click the "+Property" and type "label" into "Property"; and for "Value" assign 0 as this is the first feature collection. If you are repeating this step for the next cover type (e.g., urban), you would assign 1 for "Value", 2 for the third cover type, and so forth.
+
+
 
 
 
