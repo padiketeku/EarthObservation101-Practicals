@@ -98,47 +98,12 @@ What colour is water in? Yes, you are right it is indigo.
 ### Supervised classification: Classification and Regression Tree (CART)
 
 
-### Feature collection- create polygons for surface types
-
-
-In exploring the image, you can see many features including trees interspersed with bare soils. We would limit the analysis to these surface types: water, urban, crop field, and riparian forest. We must create a polygon for each surface type. Again, we used the geometry tools. Hover your mouse over the **Geometry Imports**, click ‘new layer’, select the polygon geometry (aka “draw a shape”) and define a polygon over water pixels. In the Code Editor rename the "geometry" to "water". For spectral response curves, a feature is required. Thus, change the geometry you have created to a feature by clicking on the cog icon (![image](https://github.com/user-attachments/assets/806efca7-d1f5-4357-9a8e-42311a18e139)) next to **water** under **Geometry Imports**. A **Configure geometry import** window immediately pops up (Fig. 4), similar to the figure below.
-
-
-
-![image](https://github.com/user-attachments/assets/7532515a-5465-4d1d-8816-9d088fb11090)
-|:--:|
-| *Fig. 4. Edit layer properties window.*|
-
-
-
-Note that the colour assigned to your surface type might be different to the one used here. But you can change the colour using colour editor (Fig. 4). A feature collection, stacking features together, is required for the spectral response curve. Thus, change the **'Import as'** from **'Geometry'** to **'FeatureCollection'** using the dropdown triangle. This makes it possible to edit the properties. Click the '+ property' and define Property as 'label' and ‘value’ as the name of the class (e.g. water, urban, forest). Be consistent in the use of upper and lower cases, while typing into ‘value’. When done the **Configure geometry import** is updated as follows. 
-
-
-![image](https://github.com/user-attachments/assets/d2afd36b-83fa-4afd-8dd9-099b80b6d994)
-
-
-
-You can use the colour palette to edit the colour for a surface type. Finally, click OK to save the changes. Repeat the steps to creating a feature collection using the geometry tool to create feature collection for the remaining surface types. Remember you create a new geometry by clicking the **“+new layer”** in **Geometry Imports**. Also, make sure you save your changes. At the end, you should have the features for the surface types defined as follows (Fig. 5). Water is blue, urban is cyan, crop field is green, and riparian forest is red.
-
-![image](https://github.com/user-attachments/assets/ebba018e-6323-41a5-95d9-e03b1fb3e884)
-|:--:|
-| *Fig. 5. Features created for surface types using the geometry tool.*|
-
-## Merge the feature collections
-We have four feature collection items; we would merge them into a single feature collection. This gives us a feature collection of feature collections. A line of code for this feature collection was then added to the existing code.
-
-```JavaScript
-//merge the feature collections
-var featureCollection = water.merge(urban).merge(field).merge(forest);
-```
-
-
 
 
 
 #### Sample surface types using point feature collections create
 
-   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. The **geometry tool** was used to create point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. 
+   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. ***The **geometry tool** was used to create point feature collections for the surface type. The more samples the better, but in the interest of time and for demonstration purposes 20 pixels were sampled for each surface types. Possibly, spread out the samples across the image. Do not concentrate the points to a region. ****
 
    - Sample farmland, forest, water <br>
    
@@ -149,7 +114,7 @@ var featureCollection = water.merge(urban).merge(field).merge(forest);
 
 
 
-     Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you get the "Add a marker", under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
+     Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
 
 
      ![image](https://github.com/user-attachments/assets/fb12fa59-4618-4e4d-b877-fb1a75663dd9)
