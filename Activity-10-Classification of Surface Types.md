@@ -187,10 +187,12 @@ You would like to edit this to name the layer appropriately. The layer name shou
 
 
 
-![image](https://github.com/user-attachments/assets/928e2219-117a-4fc4-8c8d-93cc82b4cba5)
+![image](https://github.com/user-attachments/assets/b9efd590-4ecb-4a0f-a22d-623402f7ee06)
+
 
      
      
+
 The "Configure geometry import" tool appears, see the figure below.
 
 
