@@ -109,8 +109,14 @@ What colour is water in? Yes, you are right it is indigo.
    
      We would collect sample points for water. First, visualise the image as true  colour composite.
 
+     
+
 
 ![image](https://github.com/user-attachments/assets/28164b46-97c2-4b21-bbbd-f6dc8783314c)
+
+
+
+
 
 
 
