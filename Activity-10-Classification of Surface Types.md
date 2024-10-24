@@ -99,7 +99,7 @@ What colour is water? Yes, you are right it is indigo.
 ### Supervised classification: Classification and Regression Tree (CART)
 
 
-#### Sample surface types using point feature collections create
+#### Sample surface types using point feature collections 
 
    In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, a higher resolution image can be used for desktop sampling of the land cover types. The latter approach was used in this activity. 
 
