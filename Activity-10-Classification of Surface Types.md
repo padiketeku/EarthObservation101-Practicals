@@ -231,7 +231,7 @@ Repeat the steps to collect reference samples for the other cover types.  Hint, 
 The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour, combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. 
 
 
-Once you have collected samples for all the cover types, your **Geometry Imports** and base map may be similar to the figure below.
+Once you have collected samples for all the cover types, the **Geometry Imports** and base map may look similar to the figure below.
 
 
 
