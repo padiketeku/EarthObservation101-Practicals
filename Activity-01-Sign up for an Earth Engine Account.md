@@ -26,24 +26,55 @@ Use this [link](https://code.earthengine.google.com/register) to sign up for Ear
 
 ![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1) <br>
 
-Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click Next 
+Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click **Next** <br>
+
+
 ![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
 
+
+
 Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
-You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below.
+You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below. <br>
+
+
 
 ![Fig-3B-GettingStartedUsingGEE](https://github.com/user-attachments/assets/07b8c14c-49fb-42df-ba43-2bb67e97993d)
 
-Click **Continue to Summary** and confirm the account as shown below.
+
+
+
+
+Click **Continue to Summary** and confirm the account as shown below. <br>
+
+
 
 ![Fig-4-GettingStartedUsingGEE](https://github.com/user-attachments/assets/ac004e61-de9b-41be-8fbe-467597913ab8)
 
-After the confirmation (note, this may take about 30sec or more/less to complete so please exercise patience), you will see the Code Editor as shown below. 
+
+
+
+
+
+
+After the confirmation (note, this may take about 30sec or more/less to complete so please exercise patience), you will see the Code Editor as shown below. <br>
+
+
+
 
 ![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)
 
 
+
+
+
+
+
 This means that your registration is successful and you can now start exploring the Code Editor. 
+
+
+
+
+
 
 **End of Activity 1**
 
