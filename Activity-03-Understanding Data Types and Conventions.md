@@ -49,7 +49,8 @@ print (age);
 ### Strings
 A string variable is created once a text value is assigned. The text is locked up either in single ' or double " quotes. Never mix them up; just select one (preferably a single quote) and be consistent. A native JavaScript string variable for an African country will be declared, as shown below.
 
-```var country = 'Ghana';
+```Javascript
+var country = 'Ghana';
 print (country);
 ```
 
