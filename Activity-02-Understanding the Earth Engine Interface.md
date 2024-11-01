@@ -18,7 +18,7 @@ Fig.1 shows the Earth Engine User Interface; familiarise yourself with the vario
 
 
 ### The Code Editor
-The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to type, debug, run, and manage code. Once you have followed Google’s documentation on registering for an Earth Engine account, you should follow the documentation to open the Code Editor. The Code Editor allows you to type JavaScript code and execute it. When first learning a new language and getting used to a new programming environment, it is customary to make a program to display the words “Hello World.” This is a fun way to start coding that shows you how to give input to the program and how to execute it. The Code Editor also shows where the program displays the output. Doing this in JavaScript is quite simple. 
+The Code Editor is an Integrated Development Environment for the Earth Engine JavaScript API. It offers an easy way to type, debug, run, and manage code. Once you have followed Google’s documentation on registering for an Earth Engine account, you should follow the documentation to open the Code Editor. The Code Editor allows you to type JavaScript code and execute it. When first learning a new language and getting used to a new programming environment, it is customary to make a program to display the words “Hello World.” This is a fun way to start coding that shows you how to give input to the program and how to execute it. The Code Editor also shows where the program displays the output. Doing this in JavaScript is quite simple. 
 Copy the following code snippet into the Code Editor. 
 
 ```JavaScript
