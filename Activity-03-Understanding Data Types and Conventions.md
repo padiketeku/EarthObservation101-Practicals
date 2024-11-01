@@ -55,7 +55,7 @@ print (country);
 ```
 
 ### Lists
-Lists are defined using square brackets [ ] and are useful for holding multiple values which can be of dissimilar data types. A list variable of 5 countries in Europe will be declared as:
+Lists are defined using square brackets [ ] and are useful for holding multiple values, which can be of dissimilar data types. A list variable of 5 countries in Europe will be declared as:
 
 ```JavaScript
 var europe = ['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia'];
