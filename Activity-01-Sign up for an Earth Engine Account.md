@@ -1,14 +1,14 @@
 # Activity 1: Sign up for an Earth Engine Account
 
 ## What is Google Earth Engine
-Google Earth Engine is a cloud-based platform for scientific spatial and non-spatial data analysis. It provides ready-to-use, cloud-hosted datasets and a large pool of servers. <br>
-One feature that makes Earth Engine particularly attractive is the ability to run large computations very fast by distributing them across a large pool of servers.<br>
-The ability to efficiently use cloud-hosted datasets and computation is enabled by the Earth Engine API. An API is a way to communicate with Earth Engine servers. <br>
-It allows you to specify what computation you would like to do and then to receive the results. The API is designed so that users do not need to worry about how <br>
-the computation is distributed across a cluster of machines, and the results are assembled. Users of the API simply specify what needs to be done. <br>
+Google Earth Engine is a cloud-based platform for scientific spatial and non-spatial data analysis. It provides ready-to-use, cloud-hosted datasets and a large pool of servers. 
+One feature that makes Earth Engine particularly attractive is the ability to run large computations very fast by distributing them across a large pool of servers.
+The ability to efficiently use cloud-hosted datasets and computation is enabled by the Earth Engine API. An API is a way to communicate with Earth Engine servers. 
+It allows you to specify what computation you would like to do and then to receive the results. The API is designed so that users do not need to worry about how 
+the computation is distributed across a cluster of machines, and the results are assembled. Users of the API simply specify what needs to be done. 
 This greatly simplifies the code by hiding the implementation detail from the users. It also makes Earth Engine very approachable for users who are not familiar with writing code.
-Earth Engine API is designed to be language agnostic. Google provides official client libraries to use the API from both JavaScript and Python. <br>
-The API remains largely the same regardless of the programming language you use. The main difference is the syntax used to call the API functions. <br>
+Earth Engine API is designed to be language agnostic. Google provides official client libraries to use the API from both JavaScript and Python. 
+The API remains largely the same regardless of the programming language you use. The main difference is the syntax used to call the API functions. 
 Once you learn the syntax for programming languages, your code can be adapted easily because they all use the same API functions.
 
 
