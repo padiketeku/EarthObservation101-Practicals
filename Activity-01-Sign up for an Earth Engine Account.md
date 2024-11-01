@@ -61,7 +61,9 @@ After the confirmation (note, this may take about 30sec or more/less to complete
 
 
 
-![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)
+
+
+![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)  <br>
 
 
 
@@ -69,7 +71,9 @@ After the confirmation (note, this may take about 30sec or more/less to complete
 
 
 
-This means that your registration is successful and you can now start exploring the Code Editor. 
+This means that your registration is successful and you can now start exploring the Code Editor. <br>
+
+
 
 
 
