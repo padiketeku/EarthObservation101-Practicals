@@ -148,7 +148,7 @@ var asian_country = ee.String('China');
 print(asian_country);
 ```
 
-How do you know that the input variable is a string? You are right, China is in single quote If you run the code, a string object namely `China` is printed to the **`Console`**.
+How do you know that the input variable is a string? You are right, China is in single quote. If you run the code, a string object namely `China` is printed to the **`Console`**.
 The `ee.String` has many methods, including `aside (func, var_args)`, `slice (start, end)`, `toLowerCase ()`, etc. The methods have either blank or fill parenthesis. The methods with blank parenthesis (e.g., `length ( )` ) require no input values whereas the other methods require input values to be passed into them. In this first example, we would apply length () to determine the number of letters in the name China (Fig. 7). If you click `length ()`, what is the data type of the return variable? That is correct, an integer is given as the return variable.
 
 ![image](https://github.com/user-attachments/assets/ff96f802-0e62-4aec-a49a-46e72a6a4f22)
@@ -171,14 +171,20 @@ print(num_of_letters); //this prints the result to the Console
 ```
 
 The number of letters in ‘China’ is 5, so you should see 5 printed to the Console if you run the print command. Note that the first print command is not required to be executed, so this command is preceded with a forward slash. 
+
 In this example, we would use `slice(start, end)` to demonstrate methods that require input values to run. To use a function or method you need to firstly read the given `Doc` to understand what the function does, and the arguments required to run the function or method. You can access the `Doc` if you click the function or method. In this example, click `slice(start, end)` and review the notes on this method, as shown below (Fig. 8).
+
+
 
 ![image](https://github.com/user-attachments/assets/294ddea9-ab08-48c2-929c-afe7510a8af0)
 |:--:|
 | *Fig. 8.ee.String.slice. This method requires input values.*|
 
+
+
 This method is used if you require a substring from a string object. You may have observed that the method requires three arguments: a string object, a beginning index, and an ending index. 
 To apply this method, first, create a string variable (let’s use Australia). Then, apply the method to the string object to select the first three letters in ‘Australia.’ This is shown below.
+
 
 ```JavaScript
 var countryAustralia = ee.String("Australia");
@@ -193,16 +199,24 @@ print(slice_countryAustralia);
 The print command should return `Aus` to the **`Console`**.
 To conclude the session, make sure you save your scripts before exiting Earth Engine. The save icon must turn grey, as shown below, to confirm that you are good to exit the software.
 
+
+
 ![image](https://github.com/user-attachments/assets/e1242f58-ea67-48d6-868f-b41160477986)
 
 
+
+
 ### DIY
+
+
 Landsat 8 is a satellite mission that has been providing data every 16 days since 2013. If you are working on a project that requires a list of years that Landsat 8 has been in operation since 2016.
 1, Which of the functions in the `ee.List` module might be the most logical one to use in a code?
 2, Use the function in question 1 to create a list variable that prints the required Landsat 8 acquisition dates at two-year intervals. Let the name of the variable be **landsat8Years**. 
 The result should be as shown below.
 
 ![image](https://github.com/user-attachments/assets/6ed49e2e-88fe-4abe-a308-5b20b7e80419)
+
+
 
 **End of Activity**
 
