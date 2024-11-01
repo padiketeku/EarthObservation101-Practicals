@@ -131,7 +131,7 @@ Through the **`ee`** objects, which is also the application programming interfac
 |:--:|
 | *Fig. 5. Earth Engine API functions. This can be found under the Docs tab.*|
 
-Each Earth Engine object contains methods and functions, which can be viewed once you click the expander arrow (Fig. 6). The details on argument (i.e., a value passed into a function) required to complete a function are also given for easy use of Earth Engine. In this example, expand **`ee.String`** and select the `ee.String(string)`. 
+Each Earth Engine object contains methods and functions, which can be viewed once you click the expander arrow (Fig. 6). The details on argument (i.e., a value passed into a function) required to complete a function are also given for an easy use of Earth Engine. In this example, expand **`ee.String`** and select the `ee.String(string)`. 
 
 ![image](https://github.com/user-attachments/assets/ebdeb2d1-ec4c-48b7-8e1b-cb9b6848aec0)
 |:--:|
