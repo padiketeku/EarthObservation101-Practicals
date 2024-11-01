@@ -18,10 +18,10 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 ## Get Earth Engine Account
-The Google Earth Engine can be used by both non-commercial and commercial users once they sign up for an account. <br>
-This section provides a step-by-step guide to creating an account for non-commercial users only. The Earth Engine User Guide contains detailed instructions for creating an Earth Engine account. <br> Review the instructions [<u>**here**</u>](https://developers.google.com/earth-engine/guides/access) and follow the below instructions <br>
-to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. <br>
-The non-commercial users include non-profit organisations, educators, academic institutions, and government researchers. <br>
+The Google Earth Engine can be used by both non-commercial and commercial users once they sign up for an account. 
+This section provides a step-by-step guide to creating an account for non-commercial users only. The Earth Engine User Guide contains detailed instructions for creating an Earth Engine account.  Review the instructions [<u>**here**</u>](https://developers.google.com/earth-engine/guides/access) and follow the below instructions 
+to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. 
+The non-commercial users include non-profit organisations, educators, academic institutions, and government researchers. 
 Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud.
 
 ![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1)
@@ -43,7 +43,7 @@ After the confirmation (note, this may take about 30sec or more/less to complete
 ![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)
 
 
-This means that your registration is successful and you can now start exploring the Code Editor. <br>
+This means that your registration is successful and you can now start exploring the Code Editor. 
 
 **End of Activity 1**
 
