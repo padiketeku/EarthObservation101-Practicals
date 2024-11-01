@@ -87,7 +87,7 @@ var darwinCity ={
 
 print(darwinCity);
 ```
-The object will be printed in the Console. Make sure you expand the output. The object has four properties, and you can see that instead of a numeric index, each item has a label. This is known as the key and can be used to retrieve the value of an item
+The object will be printed in the Console. Make sure you expand the output. The object has four properties, and you can see that instead of a numeric index, each item has a label. This is known as the key and can be used to retrieve the value of an item.
 
 ![image](https://github.com/user-attachments/assets/9e8284fe-9527-4199-902b-863203f4d47d)
 |:--:|
