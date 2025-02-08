@@ -133,10 +133,10 @@ The code, if run, produces the following image with predominant shades of red su
 
 ## DIY 
 A Landsat 8 image file is given as: 
-`LANDSAT/LC08/C02/T1_TOA/LC08_094074_20220611`. 
-1, Load the image and select the first seven bands. 
-2, Print your variable to the Console and explore the image properties. What is the image acquisition date and the percentage of cloud cover?
-3, If the range of reflectance is 0 and 0.5, produce a true colour composite (TCC) image and a standard false colour (FCC) image. 
+`LANDSAT/LC08/C02/T1_TOA/LC08_094074_20220611`. <br>
+1, Load the image and select the first seven bands. <br>
+2, Print your variable to the Console and explore the image properties. What is the image acquisition date and the percentage of cloud cover? <br>
+3, If the range of reflectance is 0 and 0.5, produce a true colour composite (TCC) image and a standard false colour (FCC) image. <br>
 4, Explain why the colour of the ocean water in TCC and FCC appear similar or different.
 
 
