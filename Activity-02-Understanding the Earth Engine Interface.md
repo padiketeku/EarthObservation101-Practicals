@@ -29,7 +29,7 @@ The Code Editor is an Integrated Development Environment for the Earth Engine Ja
 Copy the following code snippet into the Code Editor. 
 
 ```JavaScript
-print ('Hello World')
+print ("Hello World")
 ```
 The above line of code uses the JavaScript print function to command the computer to print “Hello World”. Once you enter the code, click `Run`. The output will be displayed to the upper right-hand pane under the **`Console`** tab (Fig. 2). Throughout this unit, a code will appear distinctively, as shown above. Feel free to copy, paste, and run a code in the Code Editor.
 
@@ -54,7 +54,7 @@ Once you click “Continue” to create your home folder, you are prompted to cr
 |:--:|
 | *Fig. 5. Creating a new repository, a container of script files* |
 
-Now that you have a repository created, you can save your first JavaScript code i.e., print (‘Hello World’) to the repository “IRS_class”. Enter the name “print_hello_world” and click OK (Fig. 6).
+Now that you have a repository created, you can save your first JavaScript code i.e., print ("Hello World") to the repository “IRS_class”. Enter the name “print_hello_world” and click OK (Fig. 6).
 ![image](https://github.com/user-attachments/assets/1f315591-0995-47f3-b6c1-f1f78a66e85f) |
 |:--:|
 | *Fig. 6.Saving a file.* |
