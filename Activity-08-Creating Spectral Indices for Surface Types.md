@@ -21,7 +21,7 @@ The activity assumes knowledge of previous actvities and that you can create spe
 
 ## Introduction
 
-Spectral indices are explored to improve our understanding of the spectral characteristics of environmental surface types. The environment comprises a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surafce types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to one surface than another. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
+Spectral indices are explored to improve our understanding of the spectral characteristics of environmental surface types. The environment comprises a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surface types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to one surface than another. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
 
 
 
@@ -68,7 +68,7 @@ var s2 = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T
 //print variable to the Console
 print(s2, 'Sentinel-2 data') //the second argument is an idenitifier of the variable in the Console
 ```
-Run and click the expander to reveal the number of bands in the image. Your Console should be appear as shown in the figure below.
+Run and click the expander to reveal the number of bands in the image. Your Console should appear as the figure below.
 
 
 ![image](https://github.com/user-attachments/assets/932324de-74e4-4a81-98d1-fec6264b1970)
@@ -86,7 +86,7 @@ print(s2, 'Sentinel-2 with selected bands')
 
 ### Compute vegetation indices using built-in function
 
-The function, **normalizedDifference(bandNames)**, would be used. This function can be found under **ee.Image** in Docs.
+The function, **normalizedDifference(bandNames)**, would be used. This function can be found under **ee.Image** in `Docs`.
 The function requires a lists of band names as the input. Two bands, at a time, are required. The second band is subtracted or added to the first as shown below:
  (first − second) / (first + second) <br>
  The output image band is given the name **'nd'** by default.
@@ -196,7 +196,7 @@ Map.addLayer(nbr, {min:-1, max:1, palette:[ 'red', 'magenta', 'purple', 'yellow'
 
 ```
 
-The figures below show the NBR in greyscale and pseudocolour. Theoretically, the NBR values range between -1 and 1,  with values close to 1 indicating healthy vegetation and values near or sub 0 representing burnt or unproductive vegetation.
+The figures below show the NBR in greyscale and pseudocolour. Theoretically, the NBR values range between -1 and 1,  with values close to 1 indicating healthy vegetation and values near -1 or sub 0 representing burnt or unproductive vegetation.
 
 
 ![image](https://github.com/user-attachments/assets/fe70a91f-edd0-4e00-9713-4a397569d4cd) ![image](https://github.com/user-attachments/assets/42c4e29f-1773-434e-9bf7-c0f2ec6f19d5)
@@ -256,7 +256,7 @@ The vegetation indices, the additional spectral bands, are identified using the 
 
 ## DIY
 
-Using the same image as the one used in the demo above, write a function that adds the following spectral indices as new bands to the original image. You must look up (google search) for the equations for the indices below. Note that you are using Sentinel-2 data.
+Using the same image as the one used in the demo above, write a function that adds the following spectral indices as new bands to the original image. You may look up (google search) for the equations for the indices below. Note that you are using Sentinel-2 data.
 
 Normalised Difference Water Index (NDWI) [Gao, 1996](https://www.sciencedirect.com/science/article/pii/S0034425796000673) <br>
 Soil Adjusted Vegetation Index (SAVI) [Huete, 1988](https://www.sciencedirect.com/science/article/abs/pii/003442578890106X) <br>
