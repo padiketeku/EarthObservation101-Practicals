@@ -14,7 +14,7 @@ Fig.1 shows the Earth Engine User Interface; familiarise yourself with the vario
 
 ![Features of the Earthh Engine Code Editor](https://github.com/user-attachments/assets/3f465845-47dd-47c5-8d22-cb32a2304801) |
 |:--:|
-| *Fig.1. The Earth Engine User Interface* | [GEE Guide, accessed 8/2/2025](https://developers.google.com/earth-engine/guides/playground)
+| *Fig.1. The Earth Engine User Interface [GEE Guide, accessed 8/2/2025](https://developers.google.com/earth-engine/guides/playground)* | 
 
 
 
@@ -24,19 +24,20 @@ Further details on the features are covered [here](https://developers.google.com
 
 
 ### The Code Editor
-The Code Editor is an Integrated Development Environment for the Earth Engine JavaScript API. It offers an easy way to type, debug, run, and manage code. Once you have followed Google’s documentation on registering for an Earth Engine account, you should follow the documentation to open the Code Editor. The Code Editor allows you to type JavaScript code and execute it. When first learning a new language and getting used to a new programming environment, it is customary to make a program to display the words “Hello World.” This is a fun way to start coding that shows you how to give input to the program and how to execute it. The Code Editor also shows where the program displays the output. Doing this in JavaScript is quite simple. 
+The Code Editor is an Integrated Development Environment for the Earth Engine JavaScript API. It offers an easy way to type, debug, run, and manage code. Once you have followed Google’s documentation on registering for an Earth Engine account, you may be able to see or open the Code Editor. The Code Editor allows you to type JavaScript code and execute it. When first learning a new language and getting used to a new programming environment, it is customary to make a program to display the words “Hello World.” This is a fun way to start coding that shows you how to give input to the program and how to execute it. The Code Editor also shows where the program displays the output. Doing this in JavaScript is quite simple. 
+
 Copy the following code snippet into the Code Editor. 
 
 ```JavaScript
 print ('Hello World')
 ```
-The above line of code uses the JavaScript print function to command the computer to print “Hello World”. Once you enter the code, click `Run`. The output will be displayed to the upper right-hand pane under the **`Console`** tab (Fig. 2). Throughout this book, a code will appear distinctively, as shown above. Feel free to copy, paste, and run a code in the Code Editor.
+The above line of code uses the JavaScript print function to command the computer to print “Hello World”. Once you enter the code, click `Run`. The output will be displayed to the upper right-hand pane under the **`Console`** tab (Fig. 2). Throughout this unit, a code will appear distinctively, as shown above. Feel free to copy, paste, and run a code in the Code Editor.
 
 ![image](https://github.com/user-attachments/assets/d53dff09-fed1-4cbe-b6ce-24baab0cc7ed) |
 |:--:|
 | *Fig. 2. Use Run to run a script. The Run runs all the code in the Code Editor.* |
 
-Once you are satisfied with your code, you may want to save it. To do this, click the Save button (Fig. 3). It is always important to save your script to be sure you have it on the cloud.
+Once you are satisfied with your code, you may want to save it. To do this, click the Save button (Fig. 3). It is always important to save your script to be sure you have it stored on the cloud.
 
 ![image](https://github.com/user-attachments/assets/42a1c1eb-c153-4427-849c-663e05afeaee) |
 |:--:|
@@ -58,7 +59,7 @@ Now that you have a repository created, you can save your first JavaScript code 
 |:--:|
 | *Fig. 6.Saving a file.* |
 
-The script then becomes available in the script manager panel. Given the script is saved in the cloud, you can always access this online regardless of your geographic location. This is the end of the activity 2, you should now be confident to create, run and save scripts in the Code Editor. <br>
+The script then becomes available in the script manager panel. Given the script is saved to Google servers, you can always access this online regardless of your geographic location. This is the end of the activity 2, you should now be confident to create, run and save scripts in the Code Editor. <br>
 
 **The End**
 
