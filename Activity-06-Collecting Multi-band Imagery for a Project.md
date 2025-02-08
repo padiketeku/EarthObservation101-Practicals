@@ -32,7 +32,7 @@ You can type a random name into the search bar to see what data is available, bu
 
 Type ‘Sentinel-2’ into the **Search place and datasets…** bar. Immediately, a window pops up with a list of rasters related to Sentinel-2. We would use the Sentinel-2 surface reflectance product (aka bottom of atmosphere) as this data has been corrected for atmopsheric effects and usually preferred for serious studies, but firstly let’s explore the Sentinel-2 Level-1C whose reflectance values might include reflectance from atmospheric constituents. This Sentinel-2 product is known as the Top of Atmosphere or Level-1C in Sentinel-2 parlance.
 
-Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C and click the BANDS tab to explore the band description. Your result should be as shown below. You must slide down the slider, highlighted with a red polygon in Figure 4.2, to view all the bands, including the quality assessment layers.
+Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C and click the BANDS tab to explore the band description. Your result should be as shown below. You must slide down the slider, highlighted with a red polygon in Figure 2, to view all the bands, including the quality assessment layers.
 
 
 
