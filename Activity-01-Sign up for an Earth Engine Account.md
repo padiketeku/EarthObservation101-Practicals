@@ -35,7 +35,7 @@ This section provides a step-by-step guide to creating an account for non-commer
 to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. 
 The non-commercial users include non-profit organisations, educators, academic institutions, and government researchers. 
 
-1, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. The link may bring up a window with details shown in the figure below.
+1, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. You may have to choose or sign in to your GMAIL account for the link to bring up a window with details shown in the figure below.
 
 ![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1) <br>
 
