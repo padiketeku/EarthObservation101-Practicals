@@ -47,7 +47,7 @@ The non-commercial users include non-profit organisations, educators, academic i
 
 
 
-3, When done, click **Next** <br>
+3, When done filling out the form, click **Next** <br>
 
 Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below. <br>
