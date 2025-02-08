@@ -14,7 +14,17 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 ## Learning Outcome
+
 - Sign up for an Earth Engine account, if you do not already have this.
+
+
+
+## Assumptions
+
+- Participants already have a GMAIL aacount.
+
+- Participant have acces to stable internet.
+
 
 
 ## Get Earth Engine Account
