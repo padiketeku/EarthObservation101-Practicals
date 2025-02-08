@@ -71,7 +71,7 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-4, Click **CONTINUE WITH REGISTRATION** and wait for the confirmation window. The window may be similar to the figure below.
+4, Click **CONTINUE WITH REGISTRATION** and wait for the confirmation window, requiring you review you cloud project information. The window may be similar to the figure below.
 
 
 
