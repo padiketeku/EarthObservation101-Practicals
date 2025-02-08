@@ -23,7 +23,7 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 - Participants already have a GMAIL aacount.
 
-- Participant have acces to stable internet.
+- Participants have acces to stable internet.
 
 
 
