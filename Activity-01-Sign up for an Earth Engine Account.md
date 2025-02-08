@@ -34,17 +34,20 @@ The Google Earth Engine can be used by both non-commercial and commercial users 
 This section provides a step-by-step guide to creating an account for non-commercial users only. The Earth Engine User Guide contains detailed instructions for creating an Earth Engine account.  Review the instructions [<u>**here**</u>](https://developers.google.com/earth-engine/guides/access) and follow the below instructions 
 to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. 
 The non-commercial users include non-profit organisations, educators, academic institutions, and government researchers. 
-Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud.
+
+1, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. The link may bring up a window with details shown in the figure below.
 
 ![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1) <br>
 
 
-2, Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. When done, click **Next** <br>
+2, Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. 
 
 
 ![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
 
 
+
+3, When done, click **Next** <br>
 
 Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
 You can specify the **Project Name** to your choice but for the sake of this tutorial keep this same as shown below. <br>
@@ -57,7 +60,7 @@ You can specify the **Project Name** to your choice but for the sake of this tut
 
 
 
-3, Click **Continue to Summary** and confirm the account as shown below. <br>
+4, Click **Continue to Summary** and confirm the account as shown below. <br>
 
 
 
@@ -69,7 +72,7 @@ You can specify the **Project Name** to your choice but for the sake of this tut
 
 
 
-After the confirmation (note, this may take about 30sec or more/less to complete so please exercise patience), you will see the Code Editor as shown below. <br>
+After the confirmation (please exercise patience if the confirmation is taking long complete), you may see the **Code Editor** (a pane for writing code) as shown below. <br>
 
 
 
