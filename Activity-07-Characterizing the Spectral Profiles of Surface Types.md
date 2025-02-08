@@ -110,13 +110,13 @@ When you display your layer over the base map, make sure you turn off the ROI po
 
 ### Clip an image to a region of interest (ROI)
 
-Through the visualisation, you can see that your ROI is just a fraction of the image. To confine your analysis to your ROI, you must clip the image to the ROI. Go to **Docs**, locate the image object (i.e., **ee.Image**)and the **clip** method under this object, as shown below.
+Through the visualisation, you can see that your ROI is just a fraction of the image. To confine your analysis to your ROI, you must clip the image to the ROI. Go to `Docs`, locate the image object (i.e., **ee.Image**) and the **clip** method under this object, as shown below.
 
 
 ![image](https://github.com/user-attachments/assets/07d91ff6-a8a6-49be-9311-bb464a5afeb5)
 
 
-The clip method requires a geometry as an input argument. The ROI polygon is the input Additionally, the image comprises 23 bands, so you would like to select the relevant bands to investigate the surface types. In this activity, we explored B2, B3, B4, B5, B6, B7, B8, and B11. The code thus becomes:
+The clip method requires a geometry as an input argument. The ROI polygon is the input. Additionally, the image comprises 23 bands, so you would like to select the relevant bands to investigate the surface types. In this activity, we explored B2, B3, B4, B5, B6, B7, B8, and B11. The code thus becomes:
 
 ```JavaScript
 
@@ -147,7 +147,7 @@ If you run the code your result might be similar to Fig. 3 below.
 ### Feature collection- create polygons for surface types
 
 
-In exploring the image, you can see many features including trees interspersed with bare soils. We would limit the analysis to these surface types: water, urban, crop field, and riparian forest. We must create a polygon for each surface type. Again, we used the geometry tools. Hover your mouse over the **Geometry Imports**, click ‘new layer’, select the polygon geometry (aka “draw a shape”) and define a polygon over water pixels. In the Code Editor rename the "geometry" to "water". For spectral response curves, a feature is required. Thus, change the geometry you have created to a feature by clicking on the cog icon (![image](https://github.com/user-attachments/assets/806efca7-d1f5-4357-9a8e-42311a18e139)) next to **water** under **Geometry Imports**. A **Configure geometry import** window immediately pops up (Fig. 4), similar to the figure below.
+In exploring the image, you can see many features including trees interspersed with bare soils. We would limit the analysis to these surface types: water, urban, crop field, and riparian forest. We must create a polygon for each surface type. Again, we used the geometry tools. Hover your mouse over the **Geometry Imports**, click ‘new layer’, select the polygon geometry (*aka* “draw a shape”) and define a polygon over water pixels. In the Code Editor rename the "geometry" to "water". For spectral response curves, a feature is required. Thus, change the geometry you have created to a feature by clicking on the cog icon (![image](https://github.com/user-attachments/assets/806efca7-d1f5-4357-9a8e-42311a18e139)) next to **water** under **Geometry Imports**. A **Configure geometry import** window immediately pops up (Fig. 4), similar to the figure below.
 
 
 
