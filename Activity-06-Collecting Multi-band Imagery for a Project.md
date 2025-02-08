@@ -32,7 +32,7 @@ You can type a random name into the search bar to see what data is available, bu
 
 Type ‘Sentinel-2’ into the **Search place and datasets…** bar. Immediately, a window pops up with a list of rasters related to Sentinel-2. We would use the Sentinel-2 surface reflectance product (aka bottom of atmosphere) as this data has been corrected for atmopsheric effects and usually preferred for serious studies, but firstly let’s explore the Sentinel-2 Level-1C whose reflectance values might include reflectance from atmospheric constituents. This Sentinel-2 product is known as the Top of Atmosphere or Level-1C in Sentinel-2 parlance.
 
-Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C and click the BANDS tab to explore the band description. Your result should be as shown below. You must slide down the slider, highlighted with a red polygon in Figure 2, to view all the bands, including the quality assessment layers.
+Under **RASTERS** click Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C and click the BANDS tab to explore the band description. Your result should be as shown below. You must slide down the slider, highlighted with a red polygon in Fig. 2, to view all the bands, including the quality assessment layers.
 
 
 
@@ -57,7 +57,7 @@ In this activity, we copied the snippet and assigned to a variable sen2sr as sho
 var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
 ```
 
-The `ee.ImageCollection`, as the name suggests, creates a collection of all the Sentinel-2 bottom-of-atmosphere images, including both satellite 1A and 1B observations. Given Sentinel-2 data has been available since 2015 and the sensor has a repeat cycle of 5-10 days, you should be keen to know the total number of Sentinel-2A images available with the Earth Engine repository. You can do this by exploring the metadata using the `print` command, as shown below.
+The `ee.ImageCollection`, as the name suggests, creates a collection of all the Sentinel-2 bottom-of-atmosphere images, including both satellite 2A and 2B observations. Given Sentinel-2 data has been available since 2015 and the sensor has a repeat cycle of 5-10 days, you should be keen to know the total number of Sentinel-2A images available with the Earth Engine repository. You can do this by exploring the metadata using the `print` command, as shown below.
 
 ```JavaScript
 //print the collection to the Console
@@ -79,7 +79,7 @@ Well, in many cases, you do not need all of the images in the image collection f
 
 
 
-The first icon from the left is not for drawing but for panning. Also, useful when you want to stop drawing or delete a geometry. The second icon is required for creating a point ROI, the third icon is required for a line ROI, the fourth icon is for creating polygons, and the fifth icon is for creating a square/rectangular ROI. We used the fourth icon to create a polygon ROI. Assuming Darwin, which is at the top end of Northern Australia is the study area you would navigate to the map of Australia and identify Darwin (at the top end of Northern Australia). Once you find Darwin, click on the polygon icon. Immediately, the **geometry** and **Polygon drawing** widgets become active; this is shown below.
+The first icon from the left is not for drawing but for panning. Also, useful when you want to stop drawing or delete a geometry. The second icon is required for creating a point ROI, the third icon is required for a line ROI, the fourth icon is for creating polygons, and the fifth icon is for creating a square/rectangular ROI. We used the fourth icon to create a polygon ROI. Assuming Darwin, which is at the top end of Northern Australia, is the study area you would navigate to the map of Australia and identify Darwin (at the top end of Northern Australia). Once you find Darwin, click on the polygon icon. Immediately, the **geometry** and **Polygon drawing** widgets become active; this is shown below.
 
 
 ![image](https://github.com/user-attachments/assets/eade8550-b0fe-477e-8fa6-e8d41146d4f2)
@@ -101,7 +101,7 @@ If you are not happy with a geometry you created you can delete this by selectin
 
 Now click **Delete** to remove the geometry as you do not need it. 
 Once you have defined an ROI for your study area and know the period you want to investigate, you can go back to the code and filter the collection. This might be a solution to the error message regarding printing all the elements in the image collection to the **`Console`**.
-To filter a collection by date, varied methods can be used. In this activity we used `filterDate()`. Remember, you can find this method and the arguments required in the Docs tab as shown below. The `filterDate()` is highlighted with a red polygon.
+To filter a collection by date, varied methods can be used. In this activity we used `filterDate()`. Remember, you can find this method and the arguments required in the `Docs` tab as shown below. The `filterDate()` is highlighted with a red polygon.
 
 
 
