@@ -21,7 +21,7 @@ The activity assumes knowledge of previous actvities and that you can create spe
 
 ## Introduction
 
-Spectral indices are explored to improve our understanding of the spectral characteristics of environmental surface types. The environment comprise a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surafce types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to one surface than another. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
+Spectral indices are explored to improve our understanding of the spectral characteristics of environmental surface types. The environment comprises a range of different surface types, usually represented in remotely sensed imagery. A satellite imagery may contain several surafce types, such as water, vegetation, background soils, and artificial surfaces. However, usually, the user may be interested in only one of the surface types, say vegetation. Spectral indices is obtained to discriminate the surface types with an objective of detecting the surface type of interest.  Spectral indices can be more sensitive to one surface than another. While there are numerous spectral indices, the ones more sensitive to vegetation condition are referred to as vegetation indices. 
 
 
 
