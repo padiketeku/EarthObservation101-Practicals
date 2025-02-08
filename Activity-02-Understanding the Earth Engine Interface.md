@@ -14,7 +14,7 @@ Fig.1 shows the Earth Engine User Interface; familiarise yourself with the vario
 
 ![Features of the Earthh Engine Code Editor](https://github.com/user-attachments/assets/3f465845-47dd-47c5-8d22-cb32a2304801) |
 |:--:|
-| *Fig.1. The Earth Engine User Interface [GEE Guide, accessed 8/2/2025](https://developers.google.com/earth-engine/guides/playground)* | 
+| *Fig.1. The Earth Engine User Interface. ([GEE Guide, accessed 8/2/2025](https://developers.google.com/earth-engine/guides/playground))* | 
 
 
 
