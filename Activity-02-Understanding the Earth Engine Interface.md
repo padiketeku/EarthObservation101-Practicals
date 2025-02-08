@@ -10,11 +10,17 @@ The Code Editor, through the JavaScript Application Programming Inteface (API), 
 - Ability to use the Earth Engine API functions from the Code Editor
 
 ## The Earth Engine Interface
-Fig.1 shows the Earth Engine User Interface; familiarise yourself with the various panes and widgets. The features are thoroughly covered in the book.
+Fig.1 shows the Earth Engine User Interface; familiarise yourself with the various panes and widgets. 
 
 ![Features of the Earthh Engine Code Editor](https://github.com/user-attachments/assets/3f465845-47dd-47c5-8d22-cb32a2304801) |
 |:--:|
-| *Fig.1. The Earth Engine User Interface* |
+| *Fig.1. The Earth Engine User Interface* | [GEE Guide, accessed 8/2/2025](https://developers.google.com/earth-engine/guides/playground)
+
+
+
+
+Further details on the features are covered [here](https://developers.google.com/earth-engine/guides/playground).
+
 
 
 ### The Code Editor
