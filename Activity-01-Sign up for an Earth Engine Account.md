@@ -25,6 +25,8 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 - Participants have acces to stable internet.
 
+- This is participants first attaempt at creating a GEE account.
+
 
 
 ## Get Earth Engine Account
