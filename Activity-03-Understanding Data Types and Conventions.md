@@ -178,7 +178,7 @@ print(num_of_letters); //this prints the result to the Console
 
 The number of letters in ‘China’ is 5, so you should see 5 printed to the Console if you run the print command. Note that the first print command is not required to be executed, so this command is preceded with a forward slash. 
 
-In this example, we would use `slice(start, end)` to demonstrate methods that require input values to run. To use a function or method you need to firstly read the given `Docs` to understand what the function does, and the arguments required to run the function or method. You can access the `Doc` if you click the function or method. In this example, click `slice(start, end)` and review the notes on this method, as shown below (Fig. 8).
+In this example, we would use `slice(start, end)` to demonstrate methods that require input values to run. To use a function or method you need to firstly read the given `Docs` to understand what the function does, and the arguments required to run the function or method. You can access the `Docs` if you click the function or method. In this example, click `slice(start, end)` and review the notes on this method, as shown below (Fig. 8).
 
 
 
@@ -215,8 +215,8 @@ To conclude the session, make sure you save your scripts before exiting Earth En
 ### DIY
 
 
-Landsat 8 is a satellite mission that has been providing data every 16 days since 2013. If you are working on a project that requires a list of years that Landsat 8 has been in operation since 2016.
-1, Which of the functions in the `ee.List` module might be the most logical one to use in a code?
+Landsat 8 is a satellite mission that has been providing data every 16 days since 2013. If you are working on a project that requires a list of years that Landsat 8 has been in operation since 2016. <br>
+1, Which of the functions in the `ee.List` module might be the most logical one to use in a code? <br>
 2, Use the function in question 1 to create a list variable that prints the required Landsat 8 acquisition dates at two-year intervals. Let the name of the variable be **landsat8Years**. 
 The result should be as shown below.
 
