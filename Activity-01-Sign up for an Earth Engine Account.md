@@ -65,7 +65,7 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-![Fig-3B-GettingStartedUsingGEE](https://github.com/user-attachments/assets/07b8c14c-49fb-42df-ba43-2bb67e97993d)
+
 
 
 
