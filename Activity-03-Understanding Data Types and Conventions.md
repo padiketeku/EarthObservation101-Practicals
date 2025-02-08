@@ -47,15 +47,19 @@ var age = 55;
 print (age);
 ``` 
 ### Strings
-A string variable is created once a text value is assigned. The text is locked up either in single ' or double " quotes. Never mix them up; just select one (preferably a single quote) and be consistent. A native JavaScript string variable for an African country will be declared, as shown below.
+A string variable is created once a text value is assigned. The text is locked up either in single (') or double (") quotes. Never mix them up; just select one (preferably a double quote) and be consistent. For example, a client-side JavaScript code showing a string variable for a country may be written as:
 
 ```Javascript
 var country = 'Ghana';
 print (country);
 ```
 
+The variable is **country** and **Ghana** is assigned to this variable. This is a string variable (as a single quote is wrapped around **Ghana**). You may verify this by printing the variable to the Console.
+
+
+
 ### Lists
-Lists are defined using square brackets [ ] and are useful for holding multiple values, which can be of dissimilar data types. A list variable of 5 countries in Europe will be declared as:
+Lists are defined using square brackets [ ] and are useful for holding multiple values, which can be of dissimilar data types. A list variable of 5 countries in Europe may be declared as:
 
 ```JavaScript
 var europe = ['Sweden', 'Latvia', 'Portugal', 'France', 'Slovakia'];
@@ -75,7 +79,7 @@ Click the expander to reveal further information about the list. The list has fi
 ### Objects
 Objects in JavaScript are dictionaries of `key:value` pairs. An object (or dictionary) is declared using curly brackets { }. A value can be referenced using its key. The code below creates an object called darwinCity with some information about Darwin City in Australia. 
 
-Note a few important things about the JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put in the semicolon (;) is the command considered complete. This helps format the code to make it more readable. Also note the choice of the variable name **darwinCity**. The variable contains two words (darwin and City). The first word is in lowercase, and the first letter of the second word is capitalized. This type of naming scheme of joining multiple words into a single variable name is called “camel case.” While it is not mandatory to name your variables using this scheme, it is considered a good practice. 
+Note a few important things about the JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put in the semicolon (;) is the command considered complete. This helps format the code to make it more readable. Also note the choice of the variable name **darwinCity**. The variable contains two words (darwin and City). The first word is in lowercase, and the first letter of the second word is capitalised. This type of naming scheme of joining multiple words into a single variable name is called “camel case.” While it is not mandatory to name your variables using this scheme, it is considered a good practice. 
 
 ```JavaScript
 var darwinCity ={
@@ -87,7 +91,7 @@ var darwinCity ={
 
 print(darwinCity);
 ```
-The object will be printed in the Console. Make sure you expand the output. The object has four properties, and you can see that instead of a numeric index, each item has a label. This is known as the key and can be used to retrieve the value of an item.
+The object would be printed in the Console. Make sure you expand the output. The object has four properties, and you can see that instead of a numeric index, each item has a label. This is known as the key and can be used to retrieve the value of an item.
 
 ![image](https://github.com/user-attachments/assets/9e8284fe-9527-4199-902b-863203f4d47d)
 |:--:|
@@ -96,7 +100,7 @@ The object will be printed in the Console. Make sure you expand the output. The 
 The result above will be replicated if the container object is used to declare the object, as shown below.
 
 ```JavaScript
-var darwinCity =ee.Dictionary({
+var darwinCity = ee.Dictionary({
 'city': 'Darwin',
 'size': 3164,
 'coordinates': [130.841782, -12.462827],
@@ -105,6 +109,8 @@ var darwinCity =ee.Dictionary({
 
 print(darwinCity);
 ```
+
+What is a container object?
 
 
 #### Container object
