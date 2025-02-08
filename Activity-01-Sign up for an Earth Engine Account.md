@@ -83,19 +83,9 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-5, Click **Continue to Summary** and confirm the account as shown below. <br>
 
 
-
-![Fig-4-GettingStartedUsingGEE](https://github.com/user-attachments/assets/ac004e61-de9b-41be-8fbe-467597913ab8)
-
-
-
-
-
-
-
-After the confirmation (please exercise patience if the confirmation is taking long complete), you may see the **Code Editor** (a pane for writing code) as shown below. <br>
+After the confirmation, you may see the **Code Editor** (a pane for writing code) as shown below. <br>
 
 
 
