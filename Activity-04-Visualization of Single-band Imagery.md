@@ -74,7 +74,7 @@ Assign the snippet to a variable; and call this strm_elevation, as shown below.
 ```JavaScript
 var srtm_elevation = ee.Image("USGS/SRTMGL1_003");
 ```
-Click **Run** to run the code, but nothing will be available in the **`Console`**. Print the variable.
+Click **Run** to run the code, but nothing might be available in the **`Console`** just yet. Print the variable to change this.
 
 ```JavaScript
 print(srtm_elevation);
@@ -109,7 +109,7 @@ In this activity, we will continue to work through the NASA elevation data by di
 | *Fig. 7. The Map.addLayer API.*|
 
 
-The `Map.addLayer` is the work horse for data visualisation and requires an Earth Engine object as an argument. The other arguments are optional, and the function returns a new map layer. In this example, for the optional arguments we specified the **visParams** and **name** to the achieve the code below. Through the **visParams** the range of pixel value is specified, so the computer can display the image features in a range of black and white (i.e., grayscale).
+The `Map.addLayer` is the work horse for data visualisation and requires an Earth Engine object as an argument. The other arguments are optional, and the function returns a new map layer. In this example, for the optional arguments we specified the **visParams** and **name** to achieve the code below. Through the **visParams** the range of pixel value is specified, so the computer can display the image features in a range of black and white (i.e., grayscale).
 
 ```JavaScript
 
@@ -127,7 +127,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 );
 ```
 Click **Run** to run the script; you may need to zoom out the base map to see the grayscale image of the elevation data. Darker pixels connote low elevation while lighter pixels mean high elevation areas. In the base map panel find the layer name under the widget **Layers**. This is a global data but zoom in on Australia and identify the high elevation areas. 
-It is possible to have an image with low contrast, so you might need to manipulate a grayscale image for visual enhancement. You can do this by changing the transparency or contrast of the image or applying a colour palette (aka look up table) to groups of pixels. The transparency of the image can be modified manually or programmatically. For the manual approach, hover the mouse over the **Layers** widget and you will see a slider by the layer name. Slide the slider to see how the transparency of the map layer changes in the base map. Programmatically, you can alter the layer transparency, as shown below. The code is similar to the one above, but the ‘shown’ and ‘opacity’ arguments are now specified. Also, a new layer name is specified (i.e., ‘SRTM Elevation 2’).
+It is possible to have an image with low contrast, so you might need to manipulate a grayscale image for visual enhancement. You can do this by changing the transparency or contrast of the image or applying a colour palette (*a.k.a* look up table) to groups of pixels. The transparency of the image can be modified manually or programmatically. For the manual approach, hover the mouse over the **Layers** widget and you may see a slider by the layer name. Slide the slider to see how the transparency of the map layer changes in the base map. Programmatically, you can alter the layer transparency, as shown below. The code is similar to the one above, but the ‘shown’ and ‘opacity’ arguments are now specified. Also, a new layer name is specified (i.e., ‘SRTM Elevation 2’).
 
 ```JavaScript
 
@@ -146,7 +146,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 0.7 //opacity value; this ranges between 0 (transparent) and 1(opaque)
 );
 ```
-The opacity value is set to 0.7. You will have two map layers in the **Layers** manager, uncheck the bottom layer to evaluate the impact of the new opacity value. 
+The opacity value is set to 0.7. You may have two map layers in the **Layers** manager, uncheck the bottom layer to evaluate the impact of the new opacity value. 
 Contrast enhancement. We will focus on Australia to explain min-max contrast enhancement. The data shows that in Australia the highlands are concentrated in south-east. However, the contrast is low for west Australia. This is possible if the data is naturally skewed to a range. To improve image contrast, you must specify the min-max values to this natural range capturing the more useful information while leveraging the dynamic range of the computer. Specifying the natural range of the data so is stretched to align with the dynamic range of the computer is referred to as *min-max contrast enhancement*. To do this, change the min-max values to 0 and 1000, respectively, as Australia is generally flat. Label the layer ‘SRTM Elevation 3’. The code snippet is shown below.
 
 ```JavaScript
@@ -208,7 +208,7 @@ Run the above code to produce the pseudocolour image below. Note that we have zo
 Zoom in on Australia, you may notice that high-elevation areas are in red while low-elevation areas are in blue.
 
 ****The Inspector Tool
-You can further explore the displayed map layer using the `Inspector` tool, the tab left to the **`Console`** tab. When you are in the `Inspector` tab, click anywhere of the map or a region of interest to view information on the selected location: Point, Pixels and Objects (Figure 2.14). Note that your selected location may be different to the one used in this book, so it is OK if your result is not same as reported here. 
+You can further explore the displayed map layer using the `Inspector` tool, the tab left to the **`Console`** tab. When you are in the `Inspector` tab, click anywhere of the map or a region of interest to view information on the selected location, e.g., Point, Pixels or Objects (Figure 2.14). Note that your selected location may be different to the one used in this unit, so it is OK if your result is not same as reported here. 
 
 ![image](https://github.com/user-attachments/assets/398c5b33-4dfe-48e7-ba4e-16fd1367b830) |
 |:--:|
