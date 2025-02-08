@@ -188,7 +188,7 @@ To do this, we used the `ui.Chart.image.regions` (Fig. 6). To explain this algor
 | *Fig. 6. Details on the method useful for creating spectral response curves.*|
 
 
-The lines of code to produce the spectral response curves have been added to the existing, which is now as shown below.
+The lines of code to produce the spectral response curves have been added to the existing one, which is now as shown below.
 
 
 ```JavaScript
