@@ -16,7 +16,7 @@ A mechanical remote sensing detector replicates human vision in that solar radia
 - Create a new script file
 - Search through the Earth Engine repository for data
 - Load an image into the Code Editor
-- Visualisation of images
+- Visualise the imagery
 - Use the Inspector tool to understand data
 - Differentiate between pseudo-colour image, true colour image, and false colour image
   
