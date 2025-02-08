@@ -79,7 +79,7 @@ Click the expander to reveal further information about the list. The list has fi
 ### Objects
 Objects in JavaScript are dictionaries of `key:value` pairs. An object (or dictionary) is declared using curly brackets { }. A value can be referenced using its key. The code below creates an object called darwinCity with some information about Darwin City in Australia. 
 
-Note a few important things about the JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put in the semicolon (;) is the command considered complete. This helps format the code to make it more readable. Also note the choice of the variable name **darwinCity**. The variable contains two words (darwin and City). The first word is in lowercase, and the first letter of the second word is capitalised. This type of naming scheme of joining multiple words into a single variable name is called “camel case.” While it is not mandatory to name your variables using this scheme, it is considered a good practice. 
+Note a few important things about the JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put in the semicolon (;) is the command considered complete. This helps format the code to make it more readable. Also note the choice of the variable name **darwinCity**. The variable contains two words (darwin and City). The first word is in lowercase, and the first letter of the second word is capitalised. This type of naming scheme of joining multiple words into a single variable name is called **camel case**. While it is not mandatory to name your variables using this scheme, it is considered a good practice. 
 
 ```JavaScript
 var darwinCity ={
@@ -155,7 +155,7 @@ print(asian_country);
 ```
 
 How do you know that the input variable is a string? You are right, China is in single quote. If you run the code, a string object namely `China` is printed to the **`Console`**.
-The `ee.String` has many methods, including `aside (func, var_args)`, `slice (start, end)`, `toLowerCase ()`, etc. The methods have either blank or fill parenthesis. The methods with blank parenthesis (e.g., `length ( )` ) require no input values whereas the other methods require input values to be passed into them. In this first example, we would apply length () to determine the number of letters in the name China (Fig. 7). If you click `length ()`, what is the data type of the return variable? That is correct, an integer is given as the return variable.
+The `ee.String` has many methods, including `aside (func, var_args)`, `slice (start, end)`, `toLowerCase ()`, etc. The methods have either blank or filled parenthesis. The methods with blank parenthesis (e.g., `length ( )` ) require no input values whereas the other methods require input values to be passed into them. In this first example, we would apply length () to determine the number of letters in the name China (Fig. 7). If you click `length ()`, what is the data type of the return variable? That is correct, an integer is given as the return variable.
 
 ![image](https://github.com/user-attachments/assets/ff96f802-0e62-4aec-a49a-46e72a6a4f22)
 |:--:|
