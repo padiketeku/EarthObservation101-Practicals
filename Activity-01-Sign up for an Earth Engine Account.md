@@ -50,7 +50,8 @@ The non-commercial users include non-profit organisations, educators, academic i
 3, When done filling out the form, click **Next** <br>
 
 Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
-You can specify the **Project Name** to your choice but I recommend you keep it to default. for the sake of this tutorial keep this same as shown below. <br>
+You can specify the **Project Name** to your choice but I recommend you keep this to default.  <br>
+
 
 
 
@@ -64,14 +65,7 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-
-
-
-
-
-
-
-4, Click **CONTINUE WITH REGISTRATION** and wait for the confirmation window, requiring you review you cloud project information. The window may be similar to the figure below.
+4, Click **CONTINUE WITH REGISTRATION** and wait for the confirmation window, requiring you review your cloud project information. The window may look like the figure below.
 
 
 
@@ -79,7 +73,7 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-5, Click **CONFIRM** to confirm your registration of Earth Engine account. When you click **CONFIRM** Google may request (via another page) you agree to [Terms of Service}](https://explorer.earthengine.google.com/terms). This must be completed for your Earth Engine account to be active and valid.
+5, Click **CONFIRM** to confirm your registration of Earth Engine account. When you click **CONFIRM** Google may request (via another page) you agree to [Terms of Service](https://explorer.earthengine.google.com/terms). This must be completed for your Earth Engine account to be active and valid.
 
 
 
