@@ -79,7 +79,7 @@ You can specify the **Project Name** to your choice but I recommend you keep it 
 
 
 
-5, Click **CONFIRM** to confirm your registration of Earth Engine account. When you click CONFIRM Google may request (via another page) to agree to [Terms of Service}](https://explorer.earthengine.google.com/terms). This must be completed for your Earth Engine account to be active and valid.
+5, Click **CONFIRM** to confirm your registration of Earth Engine account. When you click **CONFIRM** Google may request (via another page) you agree to [Terms of Service}](https://explorer.earthengine.google.com/terms). This must be completed for your Earth Engine account to be active and valid.
 
 
 
