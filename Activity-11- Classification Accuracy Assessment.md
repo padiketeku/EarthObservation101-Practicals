@@ -124,7 +124,7 @@ print(landArea_km2)
 
 ```
 
-What is the extent of cleared land? It was 1563km<sup>2, which might be different to your observation.
+What is the extent of cleared land? It was 1563km<sup>2, <br> which might be different to your observation.
 
 
 ## DIY
