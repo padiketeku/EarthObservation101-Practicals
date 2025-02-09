@@ -15,7 +15,7 @@ At the end of this activity, you should be able to: <br>
 - perform CART classification (supervised technique)
 - visualisation classification map
 - qualitatively assess the classification
-- export the classification map to google drive
+- export imagery (the classified iimagery) to google drive
 
 
 
@@ -156,7 +156,7 @@ Select the "Add a marker" (see figure below). This is the tear-drop icon in the 
      
      
      
-Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Your result may be similar to the figure below.
+Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Your result may be like the figure below.
 
 
 
@@ -226,7 +226,7 @@ Once you are happy with the details in the geometry, click OK (see figure below)
 
 
 
-Repeat the steps to collect reference samples for the other cover types.  Hint, in the true colour image, forest pixels are usually dark green with rough texture, while farmlands are bright/smooth green patchwork. 
+Repeat the steps to collect reference samples for the other cover types.  Hint, in the true colour image, forest pixels are usually dark green with rough texture, while farmlands are bright, smooth green patchwork. 
 
 The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour, combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. 
 
