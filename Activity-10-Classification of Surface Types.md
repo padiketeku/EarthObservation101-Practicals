@@ -251,7 +251,7 @@ Once you have collected samples for all the cover types, the **Geometry Imports*
      
 #### Merge feature collection
 
-Next, merge the six feature collections into one big featuure collection.
+Next, merge the six feature collections into one big feature collection.
 
 ```JavaScript
 var coverTypes = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
@@ -339,7 +339,7 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 
 
-#### Areal coverage of surface type
+#### Spatial extent of a surface type
 
 
 
@@ -379,7 +379,7 @@ Click **RUN** and a window (shown below) to initiate export pops up. Again click
 
 
 
-It may take a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you  have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
+It may take a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
 
 ## DIY
 
@@ -390,4 +390,5 @@ A Sentinel-2 image surface reflectance product obtained from the Earth Engine ca
 
 ## Conclusion
 
-In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the areal coverage of the surface types will be computed.
+In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the spatiale extent of the surface types will be computed.
+
