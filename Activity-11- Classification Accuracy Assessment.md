@@ -27,11 +27,17 @@ At the end of this activity, you should be able to:
 ### Tasks
 1, Validate the CART classification in Activity 10, producing the following metrics to describe the accuracy of the model:
 
-a, producer's accuracy <br>
-b, consumer's accuracy <br>
-c, overall accuracy <br>
-d, kappa <br>
-e, F1-score <br>
+- producer's accuracy <br>
+
+- consumer's accuracy <br>
+
+- overall accuracy <br>
+
+- kappa <br>
+
+- F1-score <br>
+
+
 
 2, Compute the spatial extent of cleared land in square kilometers
 
