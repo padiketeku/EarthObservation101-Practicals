@@ -74,6 +74,9 @@ Validation accuracies below:
 
 
 
+Using your lecture notes on accuracy metrics, interpret the performance of the classifier. How can the performance of the model be improved or made more believable by users?
+
+
 #### Spatial extent of a surface type
 
 The spatial extent of a cover class can be computed by:
@@ -121,6 +124,7 @@ print(landArea_km2)
 
 ```
 
+What is the extent of cleared land? It was 1563km<sub>2, which might be different to your observation.
 
 
 ## DIY
