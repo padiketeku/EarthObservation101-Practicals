@@ -123,7 +123,7 @@ var total_areaLand = areaLand.reduceRegion({
 print(total_areaLand, 'total area of cleared land')  
 
 
-//convert the area in m<sup>2 to km<sup>2  
+//convert the area in m2 to km2  
 var landArea_km2 = ee.Number(
   total_areaLand.get('classification')).divide(1e6).round()
 print(landArea_km2)
