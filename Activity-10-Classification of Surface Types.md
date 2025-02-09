@@ -333,7 +333,7 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 ```
 
-Turn off all the feature collections under **Geometry Imports** and compare the classified image against the original image as shown by the figure below.
+Turn off all the feature collections under **Geometry Imports** and compare the classified image against the original image. Your result may be like the figure below. Don't fret if your result seems to be different to the one below. This is expected as your training pixels may not be the same as what was used to prepare this manual. 
 
 
 ![image](https://github.com/user-attachments/assets/6cc80708-9082-4632-bd67-5f0946d9a39e)  ![image](https://github.com/user-attachments/assets/efd45ab6-918f-45bb-ab9e-96e28e5f7d57)
