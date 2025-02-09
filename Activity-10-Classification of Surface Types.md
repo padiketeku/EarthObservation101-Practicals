@@ -120,7 +120,7 @@ What colour is water? Yes, you are right it is indigo.
 
 
 
-Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Note, "+new layer" may not be readily available if you have not completed Activity 7 or Activity 8. 
+Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Import** click "+new layer" (see the figure below) to create a new geometry. Note, "+new layer" may not be readily available if you did not complete Activity 7. 
 
 
 
