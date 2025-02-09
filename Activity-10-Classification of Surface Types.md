@@ -13,7 +13,7 @@ At the end of this activity, you should be able to: <br>
 - collect point features
 - perform k-means clustering (unsupervised classification)
 - perform CART classification (supervised technique)
-- visualisation classification map
+- visualise classification map
 - qualitatively assess the classification
 - export imagery (the classified iimagery) to google drive
 
@@ -338,8 +338,6 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 | *Fig. 2. Left: unclassified Sentinel-2 imagery and Right: CART classificed image. Farmland is light-green; forest is dark-green, water is blue, burnt-land is purple, cleared-land is pink, and mines is magenta *|
 
 
-
-#### Spatial extent of a surface type
 
 
 
