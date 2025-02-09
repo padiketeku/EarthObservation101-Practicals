@@ -26,7 +26,7 @@ At the end of this activity, you should be able to: <br>
 
 A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, including cleared-land, burnt-land, forest, farm-land, water, and mines, using k-means clustering the CART algorithms. 
 
-Although the task requires a supervised classification be used, prior to the supervised classification, we would explore an unsupervised classifier in k-means clustering for additional experience. In real practice, sometimes pixels clustering may be conducted prior to a supervised classification. The clustering algorithms show the number of distinct spectral classes in the data. 
+Although the task requires a supervised classification be used, prior to the supervised classification, we would explore an unsupervised classifier in k-means clustering for additional experience. In real practice, sometimes, pixels clustering may be conducted prior to a supervised classification. The clustering algorithms show the number of distinct spectral classes in the data. 
 
 
 ### Prepare the imagery for the task
@@ -60,7 +60,7 @@ print(samplePixels.size())
 
 #### Train the k-means clustering
 
-The algorithms takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default.
+The algorithm takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default. The number of clusters is an important parameter as this shows the number of distinct spectral classes and this can be objectively or subjectively specified. It is us
 
 ```JavaScript
 var kmeanClusters = ee.Clusterer.wekaKMeans({
