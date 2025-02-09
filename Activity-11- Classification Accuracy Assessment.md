@@ -70,12 +70,47 @@ Validation accuracies below:
 
 #### Spatial extent of a surface type
 
-You mau have to recall the variable for the classified image, which is this: **s2Classified**
+The spatial extent of a cover class can be computed by:
+
+1, selecting the class of interest
+
+2, create an image with a pixel value equal to the pixel of the image used for the classification. The function `ee.Image.pixelArea()` is used to achieve this 
+
+3, compute the total area using `reduceRegion()` method
 
 
 
-1, Compute the spatial coverage of cleared land
 
+##### Compute the spatial coverage of cleared land in square kilometers 
+
+```JavaScript
+
+//select the cover class of interest; in this case, water.
+var clearedLand = s2Classified.select('classification').eq(4)
+
+
+// the area of a pixel
+var pixelArea = ee.Image.pixelArea()
+
+//multiply the class layer by pixel area
+var areaLand = clearedLand.multiply(pixelArea)
+
+//compute the total area covered by water
+var total_areaLand = areaLand.reduceRegion({
+  reducer: ee.Reducer.sum(),
+  scale: 20,
+  maxPixels: 1e13
+  })
+  
+print(total_areaLand, 'total area of cleared land')  
+
+
+//convert the area in m2 to km2  
+var landArea_km2 = ee.Number(
+  total_areaLand.get('classification')).divide(1e6).round()
+print(landArea_km2)
+
+```
 
 
 
