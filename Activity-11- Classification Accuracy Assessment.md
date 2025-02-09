@@ -24,7 +24,7 @@ At the end of this activity, you should be able to:
 ## Activity Begins
 
 
-### Task
+### Tasks
 1, Validate the CART classification in Activity 10, producing the following metrics to describe the accuracy of the model:
 
 a, producer's accuracy <br>
@@ -33,6 +33,12 @@ c, overall accuracy <br>
 d, kappa <br>
 e, F1-score <br>
 
+2, Compute the spatial extent of cleared land in square kilometers
+
+
+#### Classification accuracy assessment
+
+The below script tests the CART classifier printing out the overall accuracy, consumer accuracy, producer accuracy, kappa and F1-score values for the evaluation of the performance of the model.
 
 
 ```JavaScript
@@ -82,6 +88,9 @@ The spatial extent of a cover class can be computed by:
 
 
 ##### Compute the spatial coverage of cleared land in square kilometers 
+
+The script below computes the spatial extent for the cleared land.
+
 
 ```JavaScript
 
