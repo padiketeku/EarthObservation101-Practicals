@@ -38,7 +38,7 @@ e, F1-score <br>
 
 #### Classification accuracy assessment
 
-The below script tests the CART classifier printing out the overall accuracy, consumer accuracy, producer accuracy, kappa and F1-score values for the evaluation of the performance of the model.
+The below script tests the CART classifier printing out the overall accuracy, consumer accuracy, producer accuracy, kappa and F1-score values for the evaluation of the performance of the model. Note, given the randomness associated with data partitioning, etc., the results you would see may not be the same as the one presented in this manual.
 
 
 ```JavaScript
@@ -47,10 +47,10 @@ var testCARTclassifier = testSample
       .classify(cartClassifier)
       .errorMatrix('label', 'classification')
 
-//print the variable to the Console
+//print the error matrix to the Console
 print(testCARTclassifier, "testCARTclassifier")
 
-//Print the user's accuracy to the console
+//print the accuracy metrics to the console
 print('Validation Overall accuracy: ', testCARTclassifier.accuracy())
 print('Validation Consumer accuracy: ', testCARTclassifier.consumersAccuracy())
 print('Validation Producer accuracy: ', testCARTclassifier.producersAccuracy())
