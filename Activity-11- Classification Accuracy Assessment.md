@@ -70,6 +70,9 @@ Validation accuracies below:
 
 #### Spatial extent of a surface type
 
+You mau have to recall the variable for the classified image, which is this: **s2Classified**
+
+
 
 1, Compute the spatial coverage of cleared land
 
