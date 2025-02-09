@@ -358,7 +358,7 @@ var exportClassifiedImage= ee.Image(s2Classified);
 Export.image.toDrive({
     image: s2Classified.visualize(vizParam), //keep colours for the cover classes
     description: 'CART_Classification', //file name, so you can readily identify this in your Google Drive
-    scale: 20, //pixel size
+    scale: 20, //pixel size; this maybe increased if the file size is large 
     maxPixels: 1e13 //to increase the number of pixels allowed by default
 });
 
