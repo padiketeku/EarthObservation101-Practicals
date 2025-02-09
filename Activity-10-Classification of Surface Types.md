@@ -71,7 +71,7 @@ maxIterations: 10
 var kmeanClusters =kmeanClusters.train(samplePixels)
 ```
 
-#### Apply the kmeans algorithm to the image and visualise this
+#### Apply the k-means algorithm to the image and visualise this
 
 ```JavaScript
 var clusters = s2.cluster(kmeanClusters)
@@ -87,7 +87,7 @@ The classification image may be as shown in the figure below.
 
 ![image](https://github.com/user-attachments/assets/07c5eb36-6ece-4cd1-ad88-366bc1da057d) |
 |:--:|
-| *Fig. 1. K-mean clustering, including ten clusters.*|
+| *Fig. 1. k-means clustering, including ten clusters.*|
 
 
 What colour is water? Yes, you are right it is indigo.
