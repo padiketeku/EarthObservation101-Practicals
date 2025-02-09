@@ -333,7 +333,7 @@ Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 ```
 
-Turn off all the feature collections under **Geometrt imports** and compare the classified image against the original image as shown by the figure below.
+Turn off all the feature collections under **Geometry Imports** and compare the classified image against the original image as shown by the figure below.
 
 
 ![image](https://github.com/user-attachments/assets/6cc80708-9082-4632-bd67-5f0946d9a39e)  ![image](https://github.com/user-attachments/assets/efd45ab6-918f-45bb-ab9e-96e28e5f7d57)
@@ -341,7 +341,8 @@ Turn off all the feature collections under **Geometrt imports** and compare the 
 | *Fig. 2. Left: unclassified Sentinel-2 imagery and Right: CART classificed image. Farmland is light-green; forest is dark-green, water is blue, burnt-land is purple, cleared-land is pink, and mines is magenta *|
 
 
-
+ 
+ This is a subjective assessment of the performance of the model, so it is not expected that the intrepretations of results would be the same for every participant.
 
 
 
