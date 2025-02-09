@@ -45,7 +45,7 @@ The below script tests the CART classifier printing out the overall accuracy, co
 
 var testCARTclassifier = testSample
       .classify(cartClassifier)
-      .errorMatrix('class', 'classification')
+      .errorMatrix('label', 'classification')
 
 //print the variable to the Console
 print(testCARTclassifier, "testCARTclassifier")
