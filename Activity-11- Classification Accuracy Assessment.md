@@ -96,7 +96,7 @@ The spatial extent of a cover class can be computed by:
 
 
 
-**Compute the spatial coverage of cleared land in square kilometers 
+Compute the spatial coverage of cleared land in square kilometers. <br> 
 
 The script below computes the spatial extent for the cleared land.
 
