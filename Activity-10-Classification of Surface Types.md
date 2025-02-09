@@ -13,8 +13,7 @@ At the end of this activity, you should be able to: <br>
 - collect point features
 - perform k-means clustering (unsupervised classification)
 - perform CART classification (supervised technique)
-- visualise classification map
-- qualitatively assess the classification
+- qualitatively assess a classified image (via image visualisation)
 - export imagery (the classified iimagery) to google drive
 
 
@@ -311,7 +310,10 @@ var cartClassifier = ee.Classifier.smileCart() //sets up the classifier
 var s2Classified = s2.classify(cartClassifier);
 ```
 
-#### Visualise the classified imagery
+#### Qualitatively assess a classification 
+
+
+This would be achieved throughh the visualisation of imagery in that the classified imagery was compared against the pre-classified imagery.
 
 ```JavaScript
 
@@ -330,6 +332,8 @@ Map.addLayer(s2, {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000}, 'Original S2 im
 Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
 
 ```
+
+Turn off all the feature collections under **Geometrt imports** and compare the classified image against the original image as shown by the figure below.
 
 
 ![image](https://github.com/user-attachments/assets/6cc80708-9082-4632-bd67-5f0946d9a39e)  ![image](https://github.com/user-attachments/assets/efd45ab6-918f-45bb-ab9e-96e28e5f7d57)
