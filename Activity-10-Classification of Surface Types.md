@@ -266,7 +266,7 @@ print(coverTypes, 'Cover Types')
 ```JavaScript
 var sample = s2.sampleRegions({
   collection: coverTypes, //the feature collection
-  properties: ['class'],
+  properties: ['label'],
   scale: 20 //pixel size for the output image
 });
 ```
@@ -296,7 +296,7 @@ var cartClassifier = ee.Classifier.smileCart() //sets up the classifier
 //trains the classifier 
 .train({
   features: trainingSample,
-  classProperty: 'class',
+  classProperty: 'label',
   inputProperties: s2.bandNames() //this is the predictor variables
 });
 
