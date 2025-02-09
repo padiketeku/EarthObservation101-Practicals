@@ -117,14 +117,15 @@ var total_areaLand = areaLand.reduceRegion({
 print(total_areaLand, 'total area of cleared land')  
 
 
-//convert the area in m2 to km2  
+//convert the area in m<sup>2 to km<sup>2  
 var landArea_km2 = ee.Number(
   total_areaLand.get('classification')).divide(1e6).round()
 print(landArea_km2)
 
 ```
 
-What is the extent of cleared land? It was 1563km<sup>2, <br> which might be different to your observation.
+What is the extent of cleared land? It was 1563 km<sup>2, <br> 
+It is not surprising if your observation is different. 
 
 
 ## DIY
