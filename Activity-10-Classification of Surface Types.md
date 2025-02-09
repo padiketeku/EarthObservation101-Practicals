@@ -227,7 +227,7 @@ Once you are happy with the details in the geometry, click OK (see figure below)
 
 Repeat the steps to collect reference samples for the other cover types.  Hint, in the true colour image, forest pixels are usually dark green with rough texture, while farmlands are bright, smooth green patchwork. 
 
-The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour, combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. 
+The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour composite, combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. 
 
 
 Once you have collected samples for all the cover types, the **Geometry Imports** and base map may look similar to the figure below.
