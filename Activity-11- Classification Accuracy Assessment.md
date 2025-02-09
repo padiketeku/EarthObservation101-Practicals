@@ -16,6 +16,8 @@ At the end of this activity, you should be able to:
 
 - Validate a classification model using error matrix
 - Interpret accuracy metrics
+- Determine the spatial extent of cover class 
+
 
 
 
@@ -31,7 +33,6 @@ c, overall accuracy <br>
 d, kappa <br>
 e, F1-score <br>
 
-2, Compute the spatial coverage of cleared land
 
 
 ```JavaScript
@@ -64,6 +65,13 @@ Validation accuracies below:
 
 
 ![image](https://github.com/user-attachments/assets/1bc4eb7a-c587-46da-8557-daec9bd8fe26)
+
+
+
+#### Spatial extent of a surface type
+
+
+1, Compute the spatial coverage of cleared land
 
 
 
