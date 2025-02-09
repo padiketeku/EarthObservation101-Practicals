@@ -102,9 +102,11 @@ What colour is water? Yes, you are right it is indigo.
 
 #### Sample surface types using point feature collections 
 
-   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. 
+   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. <br>
+   
+   We would collect sample points for water. First, visualise the image as true  colour composite.
 
-     We would collect sample points for water. First, visualise the image as true  colour composite.
+    
 
      
 
