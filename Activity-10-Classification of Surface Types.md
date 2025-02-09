@@ -60,7 +60,7 @@ print(samplePixels.size())
 
 #### Train the k-means clustering
 
-The algorithm takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default. The number of clusters is an important parameter as this shows the number of distinct spectral classes and this can be objectively or subjectively specified. It is us
+The algorithm takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default. The number of clusters (nCluster) is an important parameter as this shows the number of distinct spectral classes based upon statistics and this can be objectively or subjectively pre-determined. In this activity it would make more sense to specify 6 for the nClusters, however, in the interest of variability we would specify 10 for the nCluster. 
 
 ```JavaScript
 var kmeanClusters = ee.Clusterer.wekaKMeans({
@@ -106,7 +106,7 @@ What colour is water? Yes, you are right it is indigo.
 
    
 
-   - Sample farmland, forest, water <br>
+   - Sample cleared-land, burnt-land, forest, farm-land, water, and mines <br>
    
      We would collect sample points for water. First, visualise the image as true  colour composite.
 
@@ -383,11 +383,10 @@ It may take a few minutes (depends on file size) for this file to be available i
 ## DIY
 
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20220516T012721_20220516T013105_T52LGK**. A client interested in identifying cleared lands would like to understand the distribution of the dominant land cover classes. Classify the image into five land cover classes, includingg cleared-land, burnt-land, forest, farm-land, and water, exploring k-means clustering and CART algorithms. 
-
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, including cleared-land, burnt-land, forest, farm-land, water, and mines, using k-means clustering the CART algorithms. 
 
 
 ## Conclusion
 
-In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the spatiale extent of the surface types will be computed.
+In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the spatial extent of the surface types will be computed.
 
