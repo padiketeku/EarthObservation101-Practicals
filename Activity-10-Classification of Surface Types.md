@@ -366,6 +366,7 @@ Export.image.toDrive({
 ```
 
 
+Go too the **Tasks** tab and you may find the task under **UNSUBMITTED TASKS**. It is described as **CART_Classification**. The figure below shows this.
 
 
 
