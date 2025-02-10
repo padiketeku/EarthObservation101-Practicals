@@ -1,4 +1,4 @@
-# Activity 7: Characterizing the Spectral Profiles of Surface Types
+# Activity 7: Characterising the Spectral Profiles of Surface Types
 
 
 ## Introduction
