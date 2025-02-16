@@ -348,7 +348,7 @@ Produce a scatter plot explaining the relationship between temperature and NDVI 
 150.998,-33.692,150.765,-33.693,
 150.765,-33.889]
 
-Given the correlation test and scatter plot, explain your results in plain English. Post this to the discussion forum.
+Given the correlation test and scatter plot, explain your results in plain English. 
 
 
 ## Conclusion
