@@ -143,7 +143,7 @@ Map.addLayer (chm, {}, 'CHM')
 
 
 
-##### Identify vertical surface types uing pseudocolour visualisation
+##### Identify vertical surface types using pseudocolour visualisation
 
 13,  pseudocolour display is done to identify or discriminate vertical surface types
 
@@ -152,7 +152,7 @@ Map.addLayer(chm, {min:0, max:12, palette:['black','cyan', 'yellow', 'purple']},
 ```
 
 
-The result image is shown below. Discern between tall and flat objects.
+The result image is shown below. 
 
 
 
@@ -164,7 +164,10 @@ The result image is shown below. Discern between tall and flat objects.
 
 
 
+## DIY
 
+
+Given the result, shown in the figure above, discern between tall and flat objects.
 
 
 
