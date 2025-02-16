@@ -34,7 +34,18 @@ At the end of this acitivity you should be able
 ## Activity Begins
 
 
-Because SAR is a single-band system, the images are grayscale with brighter and darker pixels showing high and low backscatter values, respectively. In this task you would visualise Sentinel-1 SAR image of Darwin city and your result is expected to be similar to the one below. Note, there might be variation in results as your region of interest geometry might not be the same as the one used to make this practical. Nevertheless, make sure Darwin city can be found in the SAR image you choose.
+Because SAR is a single-band system, the images are grayscale with brighter and darker pixels showing high and low backscatter values, respectively. In this task you would visualise Sentinel-1 SAR image of Darwin city and your result is expected to be similar to the one below. 
+
+
+
+
+![image](https://github.com/user-attachments/assets/bdf4748e-6d4d-4a98-9ed7-7eec95fb15b0)
+
+
+
+
+
+Note, variation in results is expected as your region of interest geometry might not be the same as the one used to make this practical. Nevertheless, make sure Darwin city can be found in the SAR image you choose.
 
 
 ### Define a region of interest
