@@ -1,4 +1,4 @@
-# Activity 11 Classification Accuracy Assessment
+# Activity 13 Classification Accuracy Assessment
 
 Activity 11 expands on the Activity 10, Image Classification. This activity evaluates the performance of the classifier for an 'unseen' data using error matrix.
 Accuracy metrics, such as producer's accuracy, consumer's accuracy, overall accuracy, kappa, and F1-score are computed and explained.
