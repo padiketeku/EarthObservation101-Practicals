@@ -1,6 +1,6 @@
 # Activity 10: Working with SAR Data
 
-Synthetic Aperture Radar (SAR) is the manipulation of the movement of the remote sensing platform to prodice high resolution imagery. In this practical, you will search for and visualise Sentinel-1 SAR imagery. You will validate the Sentinel-1 SAR imagery using optical imagery. 
+Synthetic Aperture Radar (SAR) is the manipulation of the movement of the remote sensing platform to produce high resolution imagery. In this practical, you will search for, visualise and interpret Sentinel-1 SAR imagery. You will validate the Sentinel-1 SAR imagery using optical imagery. 
 
 
 ## Introduction
