@@ -1,4 +1,4 @@
-# Activity 10: Classification of Surface Types
+# Activity 12: Classification of Surface Types
 
 Usually, there are many surface types within a remotely sensed imagery: water, vegetation, baresoil, built-up areas, roadss, etc. Despite the varied surface types, users may not be be interested in all of these surface types. In fact, a map user would be more interested in just one surface type and would like to know where in the image this surface type is located. Because of this, making a thematic map out of the imagery would be more helpful for the user. In this activity thematic map was created using image classification methods, including k-means clustering and CART. The activity assumes you have covered all the activities preceding this one, especially activities 7 and 8, and thus participants can create feature collections.
 
