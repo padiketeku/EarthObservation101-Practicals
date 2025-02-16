@@ -48,6 +48,9 @@ Because SAR is a single-band system, the images are grayscale with brighter and 
 Note, variation in results is expected as your region of interest geometry might not be the same as the one used to make this practical. Nevertheless, make sure Darwin city can be found in the SAR image you choose.
 
 
+The work flow to arrive at the result is demonstrated through the following code snippets and questions.
+
+
 ### Define a region of interest
 
 1, Use the geometry tool, *Draw a rectangle*, to define a region of interest including Darwin city
