@@ -25,7 +25,7 @@ At the end of this acitivity you should be able
 
 - Collect Sentinel-1 SAR imagery
 
-- Visualise Sentinel-1 SAR imahery
+- Visualise Sentinel-1 SAR imagery
 
 - Validate/interppret Sentinel-1 SAR imagery
 
@@ -35,5 +35,32 @@ At the end of this acitivity you should be able
 
 
 Because SAR is a single-band system, the images are grayscale with brighter and darker pixels showing high and low backscatter values, respectively. In this task you would visualise Sentinel-1 SAR image of Darwin city and your result is expected to be similar to the one below. Note, there might be variation in results as your region of interest geometry might not be the same as the one used to make this practical. Nevertheless, make sure Darwin city can be found in the SAR image you choose.
+
+
+### Define a region of interest
+
+1, Use the geometry tool, *Draw a rectangle*, to define a region of interest including Darwin city
+
+2, Rename the geometry "darwin"
+
+
+### Search, explore and import data
+
+3, Search the data catalog using "Sentinel-1" to find the **Sentinel-1 SAR GRD** collection. The first data item in the pack. Click this data file to see the metadata as shown below.
+
+
+
+
+![image](https://github.com/user-attachments/assets/580d8b2d-cb72-4661-990e-4e30bdfebdc3)
+
+
+
+
+
+
+
+
+
+
 
 
