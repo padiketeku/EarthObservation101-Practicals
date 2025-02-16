@@ -1,4 +1,4 @@
-# Activity 8: Creating Spectral Indices 
+# Activity 8: Deriving Spectral Indices 
 
 In this activity, you will explore Landsat 8 and Sentinel-2 imagey to consolidate your knowledge on spectral indices. A range of spectral indices can be computed from the imagery, but in this activity the frequently used indices, such as the normalised difference vegetation index (NDVI), normalised difference water index (NDWI), normalized difference moisture index (NDMI), enhanced vegetation index (ENVI), soil adjusted vegetation index (SAVI), and normalised burn ratio (NBR) were explored. 
 
