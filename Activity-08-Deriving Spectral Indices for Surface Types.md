@@ -256,7 +256,7 @@ The vegetation indices, the additional spectral bands, are identified using the 
 
 ## DIY
 
-Using the same image as the one used in the demo above, write a function that adds the following spectral indices as new bands to the original image. You may look up (google search) for the equations for the indices below. Note that you are using Sentinel-2 data.
+Using the same image as the one used in the demo above, produce the following spectral indices as new bands to the original image. You may look up (google search) for the equations for the indices below. Note that you are using Sentinel-2 data.
 
 Normalised Difference Water Index (NDWI) [Gao, 1996](https://www.sciencedirect.com/science/article/pii/S0034425796000673) <br>
 Soil Adjusted Vegetation Index (SAVI) [Huete, 1988](https://www.sciencedirect.com/science/article/abs/pii/003442578890106X) <br>
