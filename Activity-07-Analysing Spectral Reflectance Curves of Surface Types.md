@@ -1,4 +1,4 @@
-# Activity 7: Characterising the Spectral Profiles of Surface Types
+# Activity 7: Analysing Spectral Reflectance Curves of Surface Types
 
 
 ## Introduction
