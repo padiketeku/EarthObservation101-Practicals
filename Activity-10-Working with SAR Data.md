@@ -19,8 +19,19 @@ For instance, a VH polarisation record means the system transmitted the microwav
 
 
 
+## Learning Outcomes
 
-## Activity
+At the end of this acitivity you should be able
+
+- Collect Sentinel-1 SAR imagery
+
+- Visualise Sentinel-1 SAR imahery
+
+- Validate/interppret Sentinel-1 SAR imagery
+
+
+
+## Activity Begins
 
 
 Because SAR is a single-band system, the images are grayscale with brighter and darker pixels showing high and low backscatter values, respectively. In this task you would visualise Sentinel-1 SAR image of Darwin city and your result is expected to be similar to the one below. Note, there might be variation in results as your region of interest geometry might not be the same as the one used to make this practical. Nevertheless, make sure Darwin city can be found in the SAR image you choose.
