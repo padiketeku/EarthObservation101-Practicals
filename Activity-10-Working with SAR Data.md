@@ -57,6 +57,153 @@ Because SAR is a single-band system, the images are grayscale with brighter and 
 
 
 
+4, Explore the description, bands and image properties. Make notes on the bands, and image properties: "orbitProperties_pass", "instrumentMode"
+
+
+5,  Import the collection into the Code Editor and rename the collection as "sent1"
+
+
+### Filter the image collection
+
+
+6, Filter the collection to retrieve wet season images only. The code below achieves this task.
+
+```JavaScript
+var sentinel_1= sent1
+
+//filter by ascending orbit mode
+.filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'))
+
+//filter by instrument mode; best to use IW = interferometric wide
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+
+//filter by a date range- wet season images only
+.filterDate("2015-01-01", "2021-12-31")
+
+//restrict the image acquisition date to specific months
+.filter(ee.Filter.calendarRange(12, 3, 'month'))
+
+//filter by study area; this means select scenes that overlap the study area
+.filterBounds(darwin)
+
+//select the VV and VH polarisation bands
+.select(['VV', 'VH']);
+```
+
+Print the collection to the Console.
+
+```JavaScript
+print (sentinel_1);
+```
+
+
+7, How many images for the ascending pass?
+
+
+8, Modify the code to explore the descending pass images, including the number of images available
+
+
+### Select an image
+
+
+9, Select the first descending pass image in the pack. The below code performs this task.
+
+```JavaScript
+var sentinel_1= sent1
+
+//filter by descending orbit mode
+.filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING'))
+
+//filter by instrument mode; best to use IW = interferometric wide
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+
+//filter by a date range- wet season images only
+.filterDate("2015-01-01", "2021-12-31")
+
+//restrict the image acquisition date to specific months
+.filter(ee.Filter.calendarRange(12, 3, 'month'))
+
+//filter by study area; this means select scenes that overlap the study area
+.filterBounds(darwin)
+
+//select the VV and VH polarisation bands
+.select(['VV', 'VH'])
+
+//select an image---in this case the first image in the pack
+.first();
+```
+
+Print the image metadata to the Console.
+
+```JavaScript
+print(sentinel_2, 'A descending pass image')
+```
+
+
+
+### Visualisation of Sentinel-1 SAR imagery
+
+
+10,  Visualise the VV polarisation. The below code tackles this.
+
+```JavaScript
+Map.addLayer(sentinel_2.select('VV'), {min:-20, max:1}, 'Sentinel SAR')
+```
+
+11, Turn off the study area geometry and zoom in on Darwin city centre
+
+
+### Validating the SAR using Google optical imagery
+
+12, Turn on the 'Satellite' base map (see icon below) to interpret the SAR image
+
+
+
+![image](https://github.com/user-attachments/assets/48acf018-ea8a-43f5-b296-cd8acc0ed4b3)
+
+
+
+
+
+
+
+
+
+## DIY
+
+
+Answer the following questions. Make sure you explain your observations for all questions <br>
+
+
+13, What is the difference in brightness between water and land features? And why this difference? <br>
+
+
+14,  Which of the land features show the highest brightness values? <br>
+
+
+15, Does the SAR image information align with the Google satellite optical imagery? 
+
+
+
+
+## Conclusion
+
+
+In this practical we collected a Sentinel-1 SAR imagery, visualised and validated this using the Earth Engine’s optical satellite imagery. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
