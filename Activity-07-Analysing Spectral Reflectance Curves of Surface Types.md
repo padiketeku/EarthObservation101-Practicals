@@ -20,7 +20,7 @@ At the end of this activity, you should be able to:
 
 ### Task
 
-You are required to retrieve an image from a collection to produce and interpret the spectral response curves of the following surface types in the image.
+You are required to retrieve a Sentinel-2 imagery from a collection to produce and interpret the spectral response curves of the following surface types in the image.
 
 - Water
 
