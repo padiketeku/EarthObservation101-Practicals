@@ -18,6 +18,19 @@ At the end of this activity, you should be able to:
 
 ## Activity Begins
 
+### Task
+
+You are required to retrieve an image from a collection to produce and interpret the spectral response curves of the following surface types in the image.
+
+- Water
+
+- Urban
+
+- Crop field
+
+- Riparian forest
+
+  
 
 ### Get image for the project 
 
