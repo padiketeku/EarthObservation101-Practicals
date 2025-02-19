@@ -4,7 +4,7 @@ In this practical, you will explore MODIS land surface temperature (LST) to unde
 Assumes knowledge of previous actvities and that you can create spectral indices, including NDVI.
 
 ## Introduction
-Temperature is an environmental parameter useful for the monitoring of the biosphere, hydrosphere, atmosphere, and lithosphere. In-field measurement of temperature can be expensive and time-consuming, while thermal remote sensing provides a more cost-efficient method for a rapid collection of temperature data. Passive remote sensing systems utilising visible, near-infrared, and microwave sensors record reflected energy. In contrast, thermal sensors detect the temperature of materials by recording the emitted energy. The energy emitted is a product of the incident radiation the materials absorbed. Ideally, the more energy the materials absorb (hotter materials) the more energy they can emit.
+Temperature is an environmental parameter useful for the monitoring of the biosphere, hydrosphere, atmosphere, and lithosphere. In-field measurement of temperature can be expensive and time-consuming, while thermal remote sensing provides a more cost-efficient method for a rapid collection of temperature data. Passive remote sensing systems utilising visible, near-infrared, and microwave sensors record reflected energy. In contrast, thermal sensors detect the temperature of materials by recording the emitted energy (see the figure below). The energy emitted is a product of the incident radiation the materials absorbed. Ideally, the more energy the materials absorb (hotter materials) the more energy they can emit.
 
 
 ![image](https://github.com/user-attachments/assets/c808f19c-dca0-4ab1-b787-62d953088403)
