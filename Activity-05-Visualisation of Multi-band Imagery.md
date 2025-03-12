@@ -42,7 +42,7 @@ It is not always that all the image bands are required for a project. Thus, the 
 var lsat9 = lsat9.select('B2', 'B3', 'B4', 'B5', 'B6', 'B7');
 
 //print the variable to the Console to confirm that the image now has 6 bands
-print(lsat);
+print(lsat9);
 ```
 
 
