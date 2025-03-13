@@ -31,13 +31,20 @@ Although the task requires a supervised classification be used, prior to the sup
 
 ### Prepare the imagery for the task
 
-```
+```JavaScript
 var s2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL')
 
 //select the required bands
-var s2 = s2.select(['B2','B3','B4','B5','B6','B7','B8','B11', 'B12'])
+var s2 = s2.select(["B2","B3","B4","B5","B6","B7","B8","B11", "B12"])
 
 ```
+
+Display a true colour of the imagery.
+
+```JavaScript
+Map.addLayer(s2, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 True Colour Composite")
+```
+
 ### Unsupervised classification: kmean clustering
 
 Unsupervisied classification is usually referred to as clustering as the computer is left alone to identify pixels with similar spectral characteristics and group them into one *homogeneous* cluster.  The analyst has two major roles to play: (1) specify the initial parameters and (2) label the output spectral clusters with meaningful themes. In Earth Engine, the unsupervised classification is under the **ee.Clusterer**. The **ee.Clusterer.wekaKMeans** is suited for the k-means clustering.
@@ -79,7 +86,7 @@ var clusters = s2.cluster(kmeanClusters)
 
 //visualise the clusters within the classified image
 Map.setCenter(131.3815, -12.9111, 10);
-Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']})
+Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']}, "K-means Classified Image")
 ```
 
 The classification image may be as shown in the figure below.
@@ -93,6 +100,7 @@ The classification image may be as shown in the figure below.
 
 What colour is water? Yes, you are right it is indigo.
 
+Visually compare the classified image against the true colour imagery that was classified to qualitatively assess the performance of the classifier.
 
 
 
@@ -102,9 +110,9 @@ What colour is water? Yes, you are right it is indigo.
 
 #### Sample surface types using point feature collections 
 
-   In real-world practice the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. <br>
+   In many real-world applications, the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. <br>
    
-   We would collect sample points for water. First, visualise the image as true  colour composite.
+   We would collect sample points for water. First, visualise the image as a true colour composite.
 
     
 
@@ -119,7 +127,7 @@ What colour is water? Yes, you are right it is indigo.
 
 
 
-Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Imports** click "+new layer" (see the figure below) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete Activity 7. 
+Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete Activity 7. 
 
 
 
