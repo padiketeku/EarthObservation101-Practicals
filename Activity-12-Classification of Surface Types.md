@@ -322,7 +322,7 @@ var s2Classified = s2.classify(cartClassifier);
 #### Qualitatively assess a classification 
 
 
-This would be achieved throughh the visualisation of imagery in that the classified imagery was compared against the pre-classified imagery.
+This would be achieved by visually comparing the classified imagery against the pre-classified imagery.
 
 ```JavaScript
 
