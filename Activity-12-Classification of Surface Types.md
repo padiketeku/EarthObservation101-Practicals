@@ -291,7 +291,7 @@ var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model tes
 ```
 
 
-#### Create the minimum distance classification model
+#### Create the CART classification model
 
 Go to the `ee.Classifier` toolboox under **Docs** and select the **ee.Classifier.smileCart(maxNodes, minLeafPopulation)**
 This classifier requires two input parameters.
