@@ -144,13 +144,14 @@ var sentinel_1= sent1
 
 //select the VV and VH polarisation bands
 .select(['VV', 'VH']);
+*/
 ```
 
 Print the collection to the Console.
 
 ```JavaScript
+/*
 print (sentinel_1);
-
 */
 ```
 
