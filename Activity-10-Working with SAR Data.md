@@ -123,7 +123,7 @@ print (sentinel_1);
 9, Select the first descending pass image in the pack. The below code performs this task.
 
 ```JavaScript
-var sentinel_1= sent1
+var sentinel_1b= sent1
 
 //filter by descending orbit mode
 .filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING'))
@@ -150,7 +150,7 @@ var sentinel_1= sent1
 Print the image metadata to the Console.
 
 ```JavaScript
-print(sentinel_2, 'A descending pass image')
+print(sentinel_1b, 'A descending pass image')
 ```
 
 
