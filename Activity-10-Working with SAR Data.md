@@ -119,7 +119,7 @@ print (sentinel_1);
 
 ### Select an image
 
-Before you select an image mute the above lines of code by using /* ... */, shown below.
+Before you select an image mute the above lines of code by using /* ... */, shown below. We mute the lines of code to avoid duplication of syntax, which may not let the new lines of code run correctly.
 
 
 ```JavaScript
