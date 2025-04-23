@@ -119,6 +119,37 @@ print (sentinel_1);
 
 ### Select an image
 
+Before you select an image mute the above lines of code by using /* ... */, shown below.
+
+/*
+```JavaScript
+var sentinel_1= sent1
+
+//filter by ascending orbit mode
+.filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'))
+
+//filter by instrument mode; best to use IW = interferometric wide
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+
+//filter by a date range- wet season images only
+.filterDate("2015-01-01", "2021-12-31")
+
+//restrict the image acquisition date to specific months
+.filter(ee.Filter.calendarRange(12, 3, 'month'))
+
+//filter by study area; this means select scenes that overlap the study area
+.filterBounds(darwin)
+
+//select the VV and VH polarisation bands
+.select(['VV', 'VH']);
+```
+
+Print the collection to the Console.
+
+```JavaScript
+print (sentinel_1);
+```
+*/
 
 9, Select the first descending pass image in the pack. The below code performs this task.
 
