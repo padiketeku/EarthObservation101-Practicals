@@ -161,7 +161,7 @@ print(sentinel_1b, 'A descending pass image')
 10,  Visualise the VV polarisation. The below code tackles this.
 
 ```JavaScript
-Map.addLayer(sentinel_2.select('VV'), {min:-20, max:1}, 'Sentinel SAR')
+Map.addLayer(sentinel_1b.select('VV'), {min:-20, max:1}, 'Sentinel SAR')
 ```
 
 11, Turn off the study area geometry and zoom in on Darwin city centre
