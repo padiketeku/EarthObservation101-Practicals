@@ -121,8 +121,10 @@ print (sentinel_1);
 
 Before you select an image mute the above lines of code by using /* ... */, shown below.
 
-/*
+
 ```JavaScript
+
+/*
 var sentinel_1= sent1
 
 //filter by ascending orbit mode
@@ -148,8 +150,10 @@ Print the collection to the Console.
 
 ```JavaScript
 print (sentinel_1);
-```
+
 */
+```
+
 
 9, Select the first descending pass image in the pack. The below code performs this task.
 
