@@ -24,7 +24,7 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below.
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below.
 
 
 | Category      | Description |
@@ -37,6 +37,10 @@ A Sentinel-2 image surface reflectance product obtained from the Earth Engine ca
 | B16 (Bare Areas)   | This class describes areas that do not have an artificial cover as a result of human activities. These areas include areas with less than 4% vegetative cover. Included are bare rock areas, sands and deserts.        |
 | B27 (Artificial Waterbodies, Snow and Ice)   | This class applies to areas that are covered by water due to the construction of artefacts such as reservoirs, canals, artificial lakes, etc. Without these the area would not be covered by water, snow or ice.        |
 | B28 (Natural Waterbodies, Snow and Ice)   | This class refers to areas that are naturally covered by water, such as lakes, rivers, snow or ice. In the case of rivers, the lack of vegetation cover is often due to high flow rates and/or steep banks. In the case of lakes, their geological origin affects the life conditions for aquatic vegetation. The following circumstances might cause water surfaces to be without vegetation cover: depth, rocky basins, rocky and/or steep shorelines, infertile washed-in material, hard and coarse substrates.       |
+
+
+The LCCS standardises land cover/land use and change mapping, and it is a good practice to follow.
+
 
 
 Although the task requires a supervised classification be used, prior to the supervised classification, we would explore an unsupervised classifier in k-means clustering for additional experience. In real practice, sometimes, pixels clustering may be conducted prior to a supervised classification. The clustering algorithms show the number of distinct spectral classes in the data. 
