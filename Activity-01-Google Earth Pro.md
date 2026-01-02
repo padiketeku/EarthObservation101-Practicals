@@ -27,15 +27,27 @@ Scroll to the bottom of this page and click “Download Earth Pro on Desktop” 
 <img width="1540" height="640" alt="image" src="https://github.com/user-attachments/assets/4974e9f8-c8fe-4932-b2e0-81f1a97f4ee6" />
 
 
+<br>
+
+The 3D viewing
+
+Once you have the GEP installed, open it to see the Earth in 3-dimensions. Your result may be like this:
 
 
-The software is easy to use with rapid and intuitive navigation. Explore its functionality by navigating to different locations of the Earth, zooming in and out and changing the aspect. Add some different spatial data layers and experiment with the tools.
 
 
-Take particular note of the following features:
 
-Google Earth’s 3D viewing system
-This is an unprojected viewing system which mimics what you would see if you were actually in air or space above the ground yourself. At a very small scale when you can see the whole Earth, for example, the curvature of the Earth is clear. At larger scales, when you are zoomed into an area with some significant topographical features (hills or mountains), the terrain clearly exhibits a 3D effect, especially if you move the image around with the mouse.
+<img width="1939" height="1041" alt="image" src="https://github.com/user-attachments/assets/d1e60e26-08d0-4550-878a-97350ac21f8d" />
+
+
+
+
+
+
+
+
+The software is easy to use with rapid and intuitive navigation. Explore its functionality by navigating to different locations of the Earth, zooming in and out and changing the aspect.
+The 3-D view is is an unprojected viewing system which mimics what you would see if you were actually in air or space above the ground yourself. At a very small scale when you can see the whole Earth, for example, the curvature of the Earth is clear. At larger scales, when you are zoomed into an area with some significant topographical features (hills or mountains), the terrain clearly exhibits a 3D effect, especially if you move the image around with the mouse.
 
 A flat map, on the other hand, usually uses a projected viewing system that flattens out the curvature of the Earth. This leads to spatial distortion; the smaller the scale of the map, the larger the level of distortion. Flat maps will use contour lines to represent topography.
 
