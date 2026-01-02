@@ -1,4 +1,4 @@
-# Activity 9: Working with Temperature Data
+# Activity 10: Working with Temperature Data
 
 In this practical, you will explore MODIS land surface temperature (LST) to understand temperature of surface types. Also, you will explore the relationship between temperature and vegetation by plotting MODIS NDVI against MODIS LST. The MODIS NDVI will be derived from the surface reflectance product. The hypothesis behind this activity is that high vegetation areas can be shady and would have lower temperatures compared to deserts or low vegetation areas. 
 Assumes knowledge of previous actvities and that you can create spectral indices, including NDVI.
