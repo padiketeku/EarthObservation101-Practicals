@@ -89,7 +89,18 @@ The temporal aspect of the data is limited to what has been historically made av
 
 Visualisation of landscapes over time is possible in GEP through the historical imagery. Click <img width="41" height="38" alt="image" src="https://github.com/user-attachments/assets/e25f99ad-0894-4001-b935-ad859c927c56" /> to bring up a time slider, which may look like this: <img width="338" height="63" alt="image" src="https://github.com/user-attachments/assets/fec9e0b5-7391-4de2-9187-1b45fa7eace7" />
 
-Use the slider (slide back and forth) that to view older imagery. Note the generally lower spatial resolution of older imagery.
+Locate Katherine and use the slider (slide back and forth) to view older imagery. Note the generally lower spatial resolution of older imagery. You can also view changes in the landscape of Palmerston city liding through the various images. Below is the images of Palmerston city in 2006 (left image) and 2025 (right image). Spot the differences in the land cover or use.
+
+
+
+<img width="1929" height="625" alt="image" src="https://github.com/user-attachments/assets/0b78f98f-dad2-444a-aeeb-a2aac6b6a90a" />
+
+
+
+
+
+
+
 
 <br> No image processing functions are available in Google Earth. Many of the manipulations of remote sensing imagery that are necessary for remote sensing image processing and analysis are not present. We will utilise Google Earth Engine for the image processsing and analysis. 
 
