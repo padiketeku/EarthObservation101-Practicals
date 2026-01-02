@@ -13,6 +13,7 @@ At the end of this activity you should be able to:
 - Download and install Google Earth Pro if you do not have this already
 - Google Earth’s 3D viewing system
 - Change image coordinates
+- Explore historical imagery
 
 
 
@@ -78,6 +79,9 @@ Google Earth only displays “true colour” imagery, i.e., imagery that is equi
 The spatial resolution of the imagery varies depending on the data that has been made available. Where you can see fine detail, the imagery has a high spatial resolution. You can see individual trees, cars, and even people. Most populated areas now have high-resolution imagery. For example, Sydney (type Sydney into the Search box), is covered by imagery with a very high spatial resolution.
 
 The temporal aspect of the data is limited to what has been historically made available by Google. Generally, the older the dataset, the lower the spatial resolution. This historical data availability remains a valuable feature for tracking changes over time; however, the user has limited control over which time periods can be viewed. To view historical data in Google Earth, click the icon in the toolbar that has a clock with a green arrow above it.
+
+
+### Explore historical imagery
 
 Use the slider that appears to view older imagery. (Note the generally lower spatial resolution of older imagery.)
 No image processing functions are available in Google Earth. Many of the manipulations of remote sensing imagery that are necessary for remote sensing image processing and analysis are not present. In this subject, we will use specialised image processing software to introduce several common remote sensing image processing tasks.
