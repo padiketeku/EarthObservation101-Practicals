@@ -1,4 +1,4 @@
-# Activity 1: Sign up for an Earth Engine Account
+# Activity 2: Sign up for an Earth Engine Account
 
 ## What is Google Earth Engine
 Google Earth Engine is a cloud-based platform for scientific spatial and non-spatial data analysis. It provides ready-to-use, cloud-hosted datasets and a large pool of servers. 
