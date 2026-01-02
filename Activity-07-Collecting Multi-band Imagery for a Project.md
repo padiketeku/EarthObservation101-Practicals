@@ -1,4 +1,4 @@
-# Actvity 6: Collecting Multi-band Imagery for a Project
+# Actvity 7: Collecting Multi-band Imagery for a Project
 
 ## Introduction
 
