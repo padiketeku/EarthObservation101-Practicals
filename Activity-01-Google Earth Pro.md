@@ -44,7 +44,7 @@ Once you have the GEP installed, open it to see the Earth in 3-dimensions. Your 
 <img width="1939" height="1041" alt="image" src="https://github.com/user-attachments/assets/d1e60e26-08d0-4550-878a-97350ac21f8d" />
 
 
-
+<br>
 
 
 
