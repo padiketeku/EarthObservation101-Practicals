@@ -1,4 +1,4 @@
-# Activity 2: Understanding the Earth Engine User Interface
+# Activity 3: Understanding the Earth Engine User Interface
 ## Introduction
 This activity assumes that you have a Google Earth Engine account that is running OK. 
 The Google Earth Engine User Interface is supported by JavaScript programming language, making it possible to explore a web-based Code Editor without any installation.
