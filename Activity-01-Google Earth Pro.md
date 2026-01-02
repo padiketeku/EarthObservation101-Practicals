@@ -27,10 +27,7 @@ Scroll to the bottom of this page and click “Download Earth Pro on Desktop” 
 
 
 
-<img width="1540" height="640" alt="image" src="https://github.com/user-attachments/assets/4974e9f8-c8fe-4932-b2e0-81f1a97f4ee6" />
-
-
-<br>
+<img width="1540" height="640" alt="image" src="https://github.com/user-attachments/assets/4974e9f8-c8fe-4932-b2e0-81f1a97f4ee6" /> <br>
 
 
 ### The 3D viewing <br>
@@ -41,10 +38,7 @@ Once you have the GEP installed, open it to see the Earth in 3-dimensions. Your 
 
 
 
-<img width="1939" height="1041" alt="image" src="https://github.com/user-attachments/assets/d1e60e26-08d0-4550-878a-97350ac21f8d" />
-
-
-<br>
+<img width="1939" height="1041" alt="image" src="https://github.com/user-attachments/assets/d1e60e26-08d0-4550-878a-97350ac21f8d" /> <br>
 
 
 
