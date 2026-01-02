@@ -18,6 +18,8 @@ At the end of this activity you should be able to:
 
 ## Activity
 
+### Install GEP
+
 1. Open your web browser and go to https://www.google.com/earth/versions/. <br>
 
 Scroll to the bottom of this page and click “Download Earth Pro on Desktop” (see the figure below for a guide), and install the latest version of Google Earth Pro on your computer. 
@@ -29,7 +31,8 @@ Scroll to the bottom of this page and click “Download Earth Pro on Desktop” 
 
 <br>
 
-The 3D viewing
+
+### The 3D viewing <br>
 
 Once you have the GEP installed, open it to see the Earth in 3-dimensions. Your result may be like this:
 
@@ -52,7 +55,10 @@ The 3-D view is is an unprojected viewing system which mimics what you would see
 A flat map, on the other hand, usually uses a projected viewing system that flattens out the curvature of the Earth. This leads to spatial distortion; the smaller the scale of the map, the larger the level of distortion. Flat maps will use contour lines to represent topography.
 
 
-Change image coordinates
+
+
+### Change image coordinates <br>
+
 The image coordinates are at the foot of the Google Earth application window. For unprojected imagery, it is best to use geographic coordinates, i.e., longitude and latitude. From the menu, select Tools -> Options... In the 3D View tab there is an option box that allows you to switch between coordinate systems. We will be using Decimal Degrees. You can change to Minutes and Seconds or Decimal Minutes options; these are similar to Decimal Degrees, but which split each degree up into 60 minute intervals, and, in the case of the Minutes and Seconds option, further split each minute into 60 seconds. You may still see coordinates given in these systems, but the decimal degrees system is becoming the standard.
 
 
