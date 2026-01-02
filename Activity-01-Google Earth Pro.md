@@ -12,10 +12,36 @@ Google Earth Pro (GEP) is a free desktop software that enables the viewing of a 
 At the end of this activity you should be able to:
 - Download and install Google Earth Pro if you do not have this already
 - Google Earth’s 3D viewing system
+- Change image coordinates
 
 
 
 ## Activity
 
-1. Open your web browser and go to https://www.google.com/earth/versions/.
-Scroll to the bottom of this page and click “Download Earth Pro on Desktop”, and install the latest version of Google Earth Pro on your computer. The software is easy to use with rapid and intuitive navigation. Explore its functionality by navigating to different locations of the Earth, zooming in and out and changing the aspect. Add some different spatial data layers and experiment with the tools.
+1. Open your web browser and go to https://www.google.com/earth/versions/. <br>
+
+Scroll to the bottom of this page and click “Download Earth Pro on Desktop” (see the figure below for a guide), and install the latest version of Google Earth Pro on your computer. 
+
+
+
+<img width="1540" height="640" alt="image" src="https://github.com/user-attachments/assets/4974e9f8-c8fe-4932-b2e0-81f1a97f4ee6" />
+
+
+
+
+The software is easy to use with rapid and intuitive navigation. Explore its functionality by navigating to different locations of the Earth, zooming in and out and changing the aspect. Add some different spatial data layers and experiment with the tools.
+
+
+Take particular note of the following features:
+
+Google Earth’s 3D viewing system
+This is an unprojected viewing system which mimics what you would see if you were actually in air or space above the ground yourself. At a very small scale when you can see the whole Earth, for example, the curvature of the Earth is clear. At larger scales, when you are zoomed into an area with some significant topographical features (hills or mountains), the terrain clearly exhibits a 3D effect, especially if you move the image around with the mouse.
+
+A flat map, on the other hand, usually uses a projected viewing system that flattens out the curvature of the Earth. This leads to spatial distortion; the smaller the scale of the map, the larger the level of distortion. Flat maps will use contour lines to represent topography.
+
+
+Change image coordinates
+The image coordinates are at the foot of the Google Earth application window. For unprojected imagery, it is best to use geographic coordinates, i.e., longitude and latitude. From the menu, select Tools -> Options... In the 3D View tab there is an option box that allows you to switch between coordinate systems. We will be using Decimal Degrees. You can change to Minutes and Seconds or Decimal Minutes options; these are similar to Decimal Degrees, but which split each degree up into 60 minute intervals, and, in the case of the Minutes and Seconds option, further split each minute into 60 seconds. You may still see coordinates given in these systems, but the decimal degrees system is becoming the standard.
+
+
+
