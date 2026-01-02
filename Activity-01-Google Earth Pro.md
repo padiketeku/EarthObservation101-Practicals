@@ -17,4 +17,5 @@ At the end of this activity you should be able to:
 
 ## Activity
 
-Open your web browser and go to https://www.google.com/earth/versions/.
+1. Open your web browser and go to https://www.google.com/earth/versions/.
+Scroll to the bottom of this page and click “Download Earth Pro on Desktop”, and install the latest version of Google Earth Pro on your computer. The software is easy to use with rapid and intuitive navigation. Explore its functionality by navigating to different locations of the Earth, zooming in and out and changing the aspect. Add some different spatial data layers and experiment with the tools.
