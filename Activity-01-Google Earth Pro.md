@@ -11,8 +11,9 @@ Additionally, GEP offers users the opportunity to explore historical imagery of 
 
 At the end of this activity you should be able to:
 - Download and install Google Earth Pro if you do not have this already
-- Google Earth’s 3D viewing system
+- Explore the 3D viewing system
 - Change image coordinates
+- Import KML/KMZ file into the app
 - Explore historical imagery
 
 
