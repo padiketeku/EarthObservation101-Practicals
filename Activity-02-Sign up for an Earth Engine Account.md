@@ -13,7 +13,6 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 
-**CAVEAT! The sign-up steps are recent but may not be the latest, as Google frequently updates the registration process. So do not fret if you observe variation of the sign-up process from what you have in this guide**
 
 
 ## Learning Outcome
@@ -33,7 +32,7 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 ## Get Earth Engine Account
-The Google Earth Engine can be used by both non-commercial and commercial users once they sign up for an account. 
+The Google Earth Engine can be used by both non-commercial and commercial users once they sign up for an account. **CAVEAT! The sign-up steps are recent but may not be the latest, as Google frequently updates the registration process. So do not fret if you observe variation of the sign-up process from what you have in this guide**
 This section provides a step-by-step guide to creating an account for non-commercial users only. The Earth Engine User Guide contains detailed instructions for creating an Earth Engine account.  Review the instructions [<u>**here**</u>](https://developers.google.com/earth-engine/guides/access) and follow the below instructions 
 to create a non-commercial user account. The non-commercial user account is free of charge for non-commercial use and research projects. 
 The non-commercial users include non-profit organisations, educators, academic institutions, and government researchers. 
