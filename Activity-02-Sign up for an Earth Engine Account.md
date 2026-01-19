@@ -13,6 +13,9 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 
 
+**CAVEAT! The sign-up steps are recent but may not be the latest, as Google frequently updates the registration process. So do not fret if you observe variation of the sign-up process from what you have in this guide**
+
+
 ## Learning Outcome
 
 - Sign up for an Earth Engine account, if you do not already have this.
