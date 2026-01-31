@@ -298,7 +298,10 @@ Using this image, <br>
 - urban
 - forest <br>
 
-2, explain the variations in spectral characteristics between the surface types
+
+2, describe the spectral response curve for each surface type, including all the bands used
+
+3, explain the variations in spectral characteristics between the surface types
 
 
 **The End**
