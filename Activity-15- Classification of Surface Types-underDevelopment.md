@@ -10,12 +10,12 @@ Image classification involves grouping similar pixels into a theme or category, 
 
 At the end of this activity, you should be able to: <br>
 
-- collect point features
-- perform k-means clustering (unsupervised classification)
+- understand the land cover classification systems
+- manually sample and label pixels
 - perform CART classification (supervised technique)
 - perform Random Forest classification (supervised technique)
 - qualitatively assess a classified image (via image visualisation)
-- export imagery (the classified iimagery) to google drive
+- export classified iimagery to Google drive
 
 
 
@@ -24,14 +24,13 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below.
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia.
 
 
 
 ### Understanding standard cover classes
 
-Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually difffer between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the (Land Cover Classification Systems (LCCS))[https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage] for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites. Countries are allowed to vary the LCCS to make it more suitable for their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. 
-
+Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually difffer between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)) for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites.
 
 
 
@@ -50,8 +49,9 @@ Reference data obtained through field surveys or higher resolution imagery are c
 The LCCS standardises land cover/land use and change mapping, and it is a good practice to follow.
 
 
+Countries can modify the LCCS to align with their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. For instance the Digital Earth Australia Land Cover product used the Australian-specific LCCS. See the details in this link: (https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=description). Read through the descriptions under "Classifications of Level 3" in the link, as we will apply these cover classes in the given task.
+ 
 
-Although the task requires a supervised classification be used, prior to the supervised classification, we would explore an unsupervised classifier in k-means clustering for additional experience. In real practice, sometimes, pixels clustering may be conducted prior to a supervised classification. The clustering algorithms show the number of distinct spectral classes in the data. 
 
 
 ### Prepare the imagery for the task
@@ -72,8 +72,6 @@ Map.addLayer(s2, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 True Colour 
 
 
 
-
-### Supervised classification: Classification and Regression Tree (CART)
 
 
 #### Sample surface types using point feature collections 
