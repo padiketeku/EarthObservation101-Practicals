@@ -27,6 +27,14 @@ At the end of this activity, you should be able to: <br>
 A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below.
 
 
+
+### Understanding standard cover classes
+
+Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually difffer between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the (Land Cover Classification Systems (LCCS))[https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage] for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites. Countries are allowed to vary the LCCS to make it more suitable for their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. 
+
+
+
+
 | Class      | Description |
 | ----------- | ----------- |
 | A11 (Cultivated and Managed Terrestrial Areas)      | This class refers to areas where the natural vegetation has been removed or modified and replaced by other types of vegetative cover of anthropogenic origin. This vegetation is artificial and requires human activities to maintain it in the long term. In between the human activities, or before starting crop cultivation, the surface can be temporarily without vegetative cover. Its seasonal phenological appearance can be regularly modified by humans (e.g., tillage, harvest, and irrigation). All vegetation that is planted or cultivated with an intent to harvest is included in this class (e.g., wheat fields, orchards, rubber and teak plantations).      |
@@ -61,63 +69,6 @@ Display a true colour of the imagery.
 ```JavaScript
 Map.addLayer(s2, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 True Colour Composite")
 ```
-
-### Unsupervised classification: kmean clustering
-
-Unsupervisied classification is usually referred to as clustering as the computer is left alone to identify pixels with similar spectral characteristics and group them into one *homogeneous* cluster.  The analyst has two major roles to play: (1) specify the initial parameters and (2) label the output spectral clusters with meaningful themes. In Earth Engine, the unsupervised classification is under the **ee.Clusterer**. The **ee.Clusterer.wekaKMeans** is suited for the k-means clustering.
-
-#### Random sampling of pixels
-
-The pixels sampled would be used to train the classifier.
-
-
-```JavaScript
-
-var samplePixels = s2.sample({
-scale: 20,
-numPixels:50000,
-tileScale: 4 //a scale factor to enable computations that may otherwise run out of memory
-})
-
-print(samplePixels.size())
-```
-
-#### Train the k-means clustering
-
-The algorithm takes many input paramters, but here only two input parameters (i.e., nClusters and maxIterations) would be specified leaving the others to default. The number of clusters (nCluster) is an important parameter as this shows the number of distinct spectral classes based upon statistics and this can be objectively or subjectively pre-determined. In this activity it would make more sense to specify 6 for the nClusters, however, in the interest of variability we would specify 10 for the nCluster. 
-
-```JavaScript
-var kmeanClusters = ee.Clusterer.wekaKMeans({
-nClusters: 10,
-maxIterations: 10
-})
-
-//train the cluster using the sampled pixels
-var kmeanClusters =kmeanClusters.train(samplePixels)
-```
-
-#### Apply the k-means algorithm to the image and visualise this
-
-```JavaScript
-var clusters = s2.cluster(kmeanClusters)
-
-//visualise the clusters within the classified image
-Map.setCenter(131.3815, -12.9111, 10);
-Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']}, "K-means Classified Image")
-```
-
-The classification image may be as shown in the figure below.
-
-
-
-![image](https://github.com/user-attachments/assets/07c5eb36-6ece-4cd1-ad88-366bc1da057d) |
-|:--:|
-| *Fig. 1. k-means clustering, including ten clusters.*|
-
-
-What colour is water? Yes, you are right it is indigo.
-
-Visually compare the classified image against the true colour imagery that was classified to qualitatively assess the performance of the classifier.
 
 
 
