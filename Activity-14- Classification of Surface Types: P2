@@ -51,7 +51,7 @@ The LCCS standardises land cover and land use and change mapping, and it is a go
 Countries can modify the LCCS to align with their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. For instance the Digital Earth Australia Land Cover used the Australian-specific LCCS. See the details in this [link](https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=description). Read through the descriptions under "Classifications of Level 3", as we will apply this Australian-specific LCCS in the given task.
  
 
-**Cultivated Terrestrial Vegetation (CTV)**
+*Cultivated Terrestrial Vegetation (CTV)*
 
 Cultivated Terrestrial Vegetation (CTV) is associated with agricultural areas where active cultivation has been observed. In version 2.0, only herbaceous cultivation is shown and describes vegetation of strongly varying cover, ranging from bare (e.g. ploughed) areas to fully developed crops. Whilst the continental product describes land cover, interpretation is complicated as the same terminology is used to report on land use.
 
