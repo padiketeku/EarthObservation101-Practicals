@@ -46,10 +46,10 @@ Reference data obtained through field surveys or higher resolution imagery are c
 | B28 (Natural Waterbodies, Snow and Ice)   | This class refers to areas that are naturally covered by water, such as lakes, rivers, snow or ice. In the case of rivers, the lack of vegetation cover is often due to high flow rates and/or steep banks. In the case of lakes, their geological origin affects the life conditions for aquatic vegetation. The following circumstances might cause water surfaces to be without vegetation cover: depth, rocky basins, rocky and/or steep shorelines, infertile washed-in material, hard and coarse substrates.       |
 
 
-The LCCS standardises land cover/land use and change mapping, and it is a good practice to follow.
+The LCCS standardises land cover and land use and change mapping, and it is a good practice to follow.
 
 
-Countries can modify the LCCS to align with their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. For instance the Digital Earth Australia Land Cover product used the Australian-specific LCCS. See the details in this link: (https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=description). Read through the descriptions under "Classifications of Level 3" in the link, as we will apply these cover classes in the given task.
+Countries can modify the LCCS to align with their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. For instance the Digital Earth Australia Land Cover used the Australian-specific LCCS. See the details in this [link](https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=description). Read through the descriptions under "Classifications of Level 3", as we will apply this Australian-specific LCCS in the given task.
  
 
 
