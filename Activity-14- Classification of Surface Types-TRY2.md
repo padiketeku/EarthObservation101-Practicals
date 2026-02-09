@@ -235,7 +235,7 @@ Once you completed labelling the samples for one cover class, e.g., NTV, you wil
 
 
 
-In **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Click the cog icon and edit the **Configure geometry import**, repeating the steps for the NTV. Make sure you choose a different colour to represent this cover class. Keep creating feature collections through the "new layer" and editing the **Configure geometry import** until all the six cover classes are covered. Your final label layer for the cover classes may be like the figure below. Each cover class is represented with a unique colour.
+In **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Click the cog icon and edit the **Configure geometry import**, repeating the steps for the NTV. Make sure you choose a different colour to represent this cover class. Keep creating feature collections through the "new layer" and editing the **Configure geometry import** until all the six cover classes are covered. Your final label layer for the cover classes may be like the figure below. Each cover class is represented with a unique colour. Dark green for NTV, light green for CTV, blue for water, magenta for AS, orange for NS, and blue-green for NAV. 
 
 
 
@@ -246,7 +246,10 @@ In **Geometry Imports** click "+new layer" (see the figure below for help) to cr
 
 Note that you may need to use Google satellite imagery to support the labelling process. In fact, Google satellite imagery was used as much as possible to assign labels to the points.
 
-     
+It is worth flagging that you may see that majority of the 120 pixels or points sampled were NTV. When this was experience purposive sampling of additional pixels or points was performed for the rare classes, resulting in 183 samples: 63 more than the original. ([Olofsson et al. (2014)](https://doi.org/10.1016/j.rse.2014.02.015)) recommended a minimum of 50 samples for rare classes. We did not apply this recommendation in this demonstration, but you may want to follow this guide in future work.
+
+
+  
 #### Merge feature collection
 
 Next, merge the six feature collections into one big feature collection.
