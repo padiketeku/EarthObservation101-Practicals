@@ -168,7 +168,7 @@ The randomly selected 120 sampling points or pixels are shown in the figure belo
 
 We have 120 pixels or points to label as NTV, NAV, CTV, AS, NS, and water. First, let's find and label the selected pixels for NTV. Click the "Add a marker" tool: <img width="36" height="45" alt="image" src="https://github.com/user-attachments/assets/f9480963-4367-4f13-b6cd-77feeaced155" />
 You may notice that a **geometry** checked box pops up: <img width="319" height="53" alt="image" src="https://github.com/user-attachments/assets/559d61fc-e020-4767-abc9-a7236e6d6986" />
-If you hover over the "**geometry** you may see **Geometry Imports** click the cog icon for the **Configure geometry import** window. Edit this window by changing the Name from "geometry" to "ntv", click "Geometry" under "Import as" to select "FeatureCollection"from the dropdown menu, and under "Properties" click  the "+Property" and type "label" and "0" for the "Property" and "Value" respectively. Note, you can start a text with a lower or upper case, but you must be consistent to avoid running into issues down the line. Your **Configure geometry import** window once completed for a sample may look like the figure below.
+If you hover over the "**geometry** you may see **Geometry Imports** , click the cog icon for the **Configure geometry import** window to appear. Edit this window by changing the Name from "geometry" to "ntv", click "Geometry" under "Import as" to select "FeatureCollection" from the dropdown menu, and under "Properties" click  the "+Property" and type "label" and "0" for the "Property" and "Value" respectively. Note, you can start a text with a lower or upper case, but you must be consistent to avoid running into issues down the line. You may modify the colour assigned to the sample in the **Configure geometry import** by moving the ring icon on the colour palette to any colour of your choice and this will chnage the colour code for the sample. Your **Configure geometry import** window once completed for a sample may look like the figure below.
 
 
 
@@ -181,13 +181,19 @@ If you hover over the "**geometry** you may see **Geometry Imports** click the c
 
 
 
-Click "OK" to have your first NTV sample appear in the code editor as this: ![Uploading image.png…]()
+Click "OK" to have your first NTV sample appear in the code editor as this:
+
+
+
+<img width="699" height="98" alt="image" src="https://github.com/user-attachments/assets/b0b01cbe-de7b-4abd-8f21-233b4bb2be45" />
+
+
 
 
 You may notice that you have zero (0) elements in your feature collection, and this is because you are yet to drop markers to the NTV samples.
 
 
-Now zoom in to a sampling point for water and add a marker: <img width="32" height="37" alt="image" src="https://github.com/user-attachments/assets/d6208536-809a-4cf6-952e-861999325be5" />
+Now zoom in to a sampling point for NTV and add a marker: <img width="32" height="37" alt="image" src="https://github.com/user-attachments/assets/d6208536-809a-4cf6-952e-861999325be5" />
 
 To do this, go to the Darwin River dam and drop a marker to the selected point. Your result may look like the figure below.
 
