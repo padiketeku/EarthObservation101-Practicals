@@ -102,8 +102,6 @@ var s2 = s2.select(["B2","B3","B4","B5","B6","B7","B8","B11", "B12"])
 
 ```JavaScript
 var s2ProjectArea = s2.clip(projectArea)
-print(s2ProjectArea, "s2ProjectArea")
-Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 TCC Project Area")
 ```
 
 #### Sample surface types using point feature collections 
@@ -112,12 +110,18 @@ Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 T
    
    We would collect sample points for water. First, visualise the image as a true colour composite.
 
+##### Visualise the true colour composite of S2 imagery
+
+   ```Javascript
+Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 TCC Project Area")
+```
+
     
 
      
 
 
-![image](https://github.com/user-attachments/assets/28164b46-97c2-4b21-bbbd-f6dc8783314c)
+<img width="483" height="486" alt="image" src="https://github.com/user-attachments/assets/fb6cda25-916f-4dd9-93f1-a3bb6215bb46" />
 
 
 
