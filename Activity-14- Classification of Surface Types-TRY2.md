@@ -367,7 +367,8 @@ Map.addLayer(s2ClassifiedRF, classColours, 'Classified S2 imagery-RF');
 
 
 
-The original (top left), CART classified (top right) and RF classified (bottom left) images are provided below for qualitative assessment of the models.
+The original (top left), CART classified (top right) and RF classified (bottom left) images are provided below for qualitative assessment of the models. Turn off all the feature collections under **Geometry Imports** and compare the classified images against the original image. Your result may be like the figure below. Don't worry if your result seems to be different to the one below. This is expected as your training pixels may not be the same as what was used to prepare this manual. 
+
 
 
 
@@ -382,113 +383,23 @@ The original (top left), CART classified (top right) and RF classified (bottom l
 
 
 
+The CART and RF performed quite averagely, suggesting the result can be improved with more training data and predictor variables. Compared to RF, the CART image is more pixelated and noisier. This is a subjective assessment of the performance of the model, so it is not expected that the intrepretations of results would be the same for every participant. An objective approach will be investigated in the next activity. 
 
 
 
 
+##### Export the classification image to Google Drive
 
-
-
-
-
-#### Sample the image using the feature collection (i.e., regions of interest) 
-
-```JavaScript
-var sample = s2.sampleRegions({
-  collection: coverTypes, //the feature collection
-  properties: ['label'],
-  scale: 20 //pixel size for the output image
-});
-```
-
-
-#### Partition the sample into training and test sets
-
-Given the classification model must be assessed, the sampling pixels would be partitioned into training sample and test sample. Conventionally, more of the samples is required to teach the model. In this activity, 80% of the sample pixels was used for model training and the remaining 20% used for the testing of the model.
-
-```JavaScript
-var coverTypes2 = sample.randomColumn() //adds a random value field to the sample and is used for the partitioning 
-var trainingSample = coverTypes2.filter('random <= 0.8') //80% of the data for model training
-var testSample = coverTypes2.filter('random > 0.8')  //20% of data for model testing
-```
-
-
-#### Create the CART classification model
-
-Go to the `ee.Classifier` toolboox under **Docs** and select the **ee.Classifier.smileCart(maxNodes, minLeafPopulation)**
-This classifier requires two input parameters.
+Once you are happy with your classified image, you may want to export this to your own local computer for further use. The script below explains how to export image to Google Drive and then onto your local computer.
 
 
 ```JavaScript
 
-var cartClassifier = ee.Classifier.smileCart() //sets up the classifier
-
-//trains the classifier 
-.train({
-  features: trainingSample,
-  classProperty: 'label',
-  inputProperties: s2.bandNames() //this is the predictor variables
-});
-
-```
-
-
-#### Classify the imagery
-
-```JavaScript
-
-//apply the classifier to the image
-var s2Classified = s2.classify(cartClassifier);
-```
-
-#### Qualitatively assess a classification 
-
-
-This would be achieved by visually comparing the classified imagery against the pre-classified imagery.
-
-```JavaScript
-
-//define the palettes for the cover classes
-var classColours = {
-  min: 0,
-  max: 5,
-  palette: ['lightgreen', 'darkgreen', 'blue', 'purple','pink', 'magenta']
-};
-
-//display the original imagery in true colour combination
-Map.setCenter(131.3815, -12.9111, 10);
-Map.addLayer(s2, {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000}, 'Original S2 imagery');
-
-//display the classified image
-Map.addLayer(s2Classified, classColours, 'Classified S2 imagery');
-
-```
-
-Turn off all the feature collections under **Geometry Imports** and compare the classified image against the original image. Your result may be like the figure below. Don't fret if your result seems to be different to the one below. This is expected as your training pixels may not be the same as what was used to prepare this manual. 
-
-
-![image](https://github.com/user-attachments/assets/6cc80708-9082-4632-bd67-5f0946d9a39e)  ![image](https://github.com/user-attachments/assets/efd45ab6-918f-45bb-ab9e-96e28e5f7d57)
-|:--:|
-| *Fig. 2. Left: unclassified Sentinel-2 imagery and Right: CART classificed image. Farmland is light-green; forest is dark-green, water is blue, burnt-land is purple, cleared-land is pink, and mines is magenta *|
-
-
- 
- This is a subjective assessment of the performance of the model, so it is not expected that the intrepretations of results would be the same for every participant.
-
-
-
-#### Export the classification image to Google Drive
-
-```JavaScript
-
-// create a visualisation parameter, where colours represent the six surface types
-var vizParam = {min: 0, max: 5, palette: ['lightgreen', 'darkgreen', 'blue', 'purple','pink', 'magenta']};
-
-// Export the CART classification image to Google Drive
-var exportClassifiedImage= ee.Image(s2Classified);
+// Export the RF classification image to Google Drive
+var exportClassifiedImage= ee.Image(s2ClassifiedRF);
 Export.image.toDrive({
-    image: s2Classified.visualize(vizParam), //keep colours for the cover classes
-    description: 'CART_Classification', //file name, so you can readily identify this in your Google Drive
+    image: s2Classified.visualize(classColours), //keep colours for the cover classes
+    description: 'RF_Classification', //file name, so you can readily identify this in your Google Drive
     scale: 20, //pixel size; this maybe increased if the file size is large 
     maxPixels: 1e13 //to increase the number of pixels allowed by default
 });
@@ -497,7 +408,7 @@ Export.image.toDrive({
 ```
 
 
-Go too the **Tasks** tab and you may find the task under **UNSUBMITTED TASKS**. It is described as **CART_Classification**. The figure below shows this.
+Go to the **Tasks** tab and you may find the task under **UNSUBMITTED TASKS**. It is described as **RF_Classification**. The figure below shows this.
 
 
 
@@ -514,6 +425,7 @@ Click **RUN** and a window (shown below) to initiate export pops up. Again click
 
 
 It may take a few minutes (depends on file size) for this file to be available in your Google Drive. Always make sure you have sufficient space to host your exports. Go to your Google Drive to download the file to your local computer.
+
 
 ## DIY
 
