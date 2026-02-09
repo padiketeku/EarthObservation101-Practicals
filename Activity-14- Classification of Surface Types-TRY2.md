@@ -133,9 +133,11 @@ Zoom in and out, explore the image to identify the different surface types. You 
 
 ##### Randomly select reference points for the classes
 
-Given the size and heterogeneity of the study area, I would recommend 500 pixels be randomly sampled. However, in the interest of time, only 120 pixels were selected to complete the demonstration. Feel to sample more than 120 pixels if you want to improve the accuracy of the model. and the heterogeneity of
+Given the size and heterogeneity of the study area, I would recommend 500 pixels be randomly sampled. However, in the interest of time, only 120 pixels were selected to complete the demonstration. Feel to sample more than 120 pixels if you want to improve the accuracy of the model. 
 
 ```JavaScript
+//note, the s2ProjectArea is the imag
+
 var samp1 =s2ProjectArea.sample({
   region:projectArea, // this is your study area or region of interest
   scale:20, //this is the spatial resolution of the S2
