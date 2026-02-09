@@ -128,7 +128,7 @@ Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 T
 
 ##### Explore the image to determine the dominant land cover classes
 
-Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the eight major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, you may collect reference features and label them.
+Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the eight major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, collect reference features and label them.
 
 
 ##### Randomly select reference points for the classes
@@ -136,13 +136,13 @@ Zoom in and out, explore the image to identify the different surface types. You 
 Given the size and heterogeneity of the study area, I would recommend 500 pixels be randomly sampled. However, in the interest of time, only 120 pixels were selected to complete the demonstration. Feel to sample more than 120 pixels if you want to improve the accuracy of the model. 
 
 ```JavaScript
-//note, the s2ProjectArea is the imag
+//note, the s2ProjectArea is the image
 
 var samp1 =s2ProjectArea.sample({
   region:projectArea, // this is your study area or region of interest
   scale:20, //this is the spatial resolution of the S2
-  numPixels:120, // total number of pixels you want sampled, change this to 500 if that's what you want to do
-  seed: 111, //randomisation seed to ensure the results are consistent regardless of the many times you run the script.
+  numPixels:120, // total number of pixels to sample, change this to 500 if that's what you want to do
+  seed: 111, //randomisation seed to ensure the results are consistent regardless of the many times you run the script. The 111 can be changed to any number at all of your choice. Only make sure you keep to this number for this line of the script 
   geometries: true}) //set this to have the lat/lon of the selected points
 
 //print the result
@@ -151,6 +151,16 @@ print(samp1, 'samples 1') //the result is a feature collection of points
 //visualise the selected points/pixels
 Map.addLayer(samp1, {color: ' red'}, 'samp1')
 ```
+
+
+The randomly selected 120 sampling points or pixels are shown in the figure below. Note, it is possible that your selected points are not exactly same as the ones below, as the sampling is random. So, please do not fret if your result is different to the one reported below.
+
+
+
+
+<img width="456" height="489" alt="image" src="https://github.com/user-attachments/assets/adb5e7ed-32c3-41a9-8abf-3ea5fe6a6047" />
+
+
 
 
 
