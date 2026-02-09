@@ -166,10 +166,11 @@ The randomly selected 120 sampling points or pixels are shown in the figure belo
 
 ##### Label the sample points or pixels
 
-We have 120 pixels or points to label as NTV, NAV, CTV, AS, NS, and water. First, let's find and label the selected water pixel. Waterbodies appear dark, so they are easy to identfiy and label. Using the "Add a marker" tool. Before you use the "Add a marker" tool: <img width="36" height="45" alt="image" src="https://github.com/user-attachments/assets/f9480963-4367-4f13-b6cd-77feeaced155" />
-, under **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
+We have 120 pixels or points to label as NTV, NAV, CTV, AS, NS, and water. First, let's find and label the selected water pixel. Waterbodies appear dark, so they are easy to identfiy and label. Click the "Add a marker" tool: <img width="36" height="45" alt="image" src="https://github.com/user-attachments/assets/f9480963-4367-4f13-b6cd-77feeaced155" />
+You may notice that **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
 
 
+<img width="259" height="55" alt="image" src="https://github.com/user-attachments/assets/d411a503-646d-4646-9de1-f7f5db77da13" />
 
 
 
