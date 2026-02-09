@@ -231,6 +231,8 @@ Repeat this step (i.e., adding markers) until you have dropped markers to all th
 
 
 
+**Sampling for the other classes**
+
 Once you completed labelling the samples for one cover class, e.g., NTV, you will move to the next class until you have labelled the samples for all classes. Our next class is the AS. 
 
 
@@ -246,22 +248,134 @@ In **Geometry Imports** click "+new layer" (see the figure below for help) to cr
 
 Note that you may need to use Google satellite imagery to support the labelling process. In fact, Google satellite imagery was used as much as possible to assign labels to the points.
 
-It is worth flagging that you may see that majority of the 120 pixels or points sampled were NTV. When this was experience purposive sampling of additional pixels or points was performed for the rare classes, resulting in 183 samples: 63 more than the original. ([Olofsson et al. (2014)](https://doi.org/10.1016/j.rse.2014.02.015)) recommended a minimum of 50 samples for rare classes. We did not apply this recommendation in this demonstration, but you may want to follow this guide in future work.
+It is worth flagging that you may see that majority of the 120 pixels or points sampled were NTV. When this was experience purposive sampling of additional pixels or points was performed for the rare classes, resulting in 183 samples: 63 more than the original. NTV was 105, AS 24, NS 17, CTV 18, NAV 10, and water 9 sampling points.  [Olofsson et al. (2014)](https://doi.org/10.1016/j.rse.2014.02.015) recommended a minimum of 50 samples for rare classes. We did not apply this recommendation in this demonstration, you may want to follow this recommendation in future work.
 
 
   
-#### Merge feature collection
+##### Merge feature collection
 
-Next, merge the six feature collections into one big feature collection.
+You may have a feature collection for each cover class. Merge the six feature collections into one big feature collection.
 
 ```JavaScript
-var coverTypes = farmland.merge(forest).merge(water).merge(burntland).merge(clearland).merge(mines)
+var coverTypes = ntv.merge(as).merge(ns).merge(ctv).merge(nav).merge(water)
 
 //print the sampleClass to the Console
 
 print(coverTypes, 'Cover Types')
 
 ```
+
+
+
+##### Re-label the cover classes
+
+We have observed that the study area has rare classes, and to optimise the sampling points, the rare classes could be merged. To this end, spectrally similar classes were merged into a single class. NTV and NAV were merged into a single class, and AS and NS were merged as well, resulting in four land cover classes for further analysis. Assuming the original labels for water = 0, NTV = 1, AS = 2, NS = 3, NAV = 4 and CTV = 5, we can merge and re-label using the script below.
+
+```JavaScript
+//merge and relabel classes, as some classes are spectrally similar and rare in the image
+var coverTypes2 = coverTypes.remap([0, 1,2,3,4,5],[0,1,2,2,1,3], 'label')
+```
+
+
+##### Create reference areas, assigning the spectral values to sample points
+
+We know our sample points, and these are lat and lon coordinates of the pixels, but not yet integrated with the Sentinel-2 imagery. The spectral observations for the pixel or point in the feature collection must be provided to create reference areas with known spectral characteristics.
+
+```JavaScript
+var referencePoints = s2ProjectArea.sampleRegions({
+  collection: coverTypes2, //the feature collection
+  properties: ['label'],
+  scale: 20 //pixel size for the output image
+});
+
+//print result to console
+print(referencePoints, 'referencePoints')
+```
+
+This produces reference data that can be used to teach supervised machine learning algorithms. We would explore Classification and Regression Tree (CART) and Random Forest (RF), as they belong to the same family and are easy to train. 
+
+##### Train CART and classify the pixels 
+
+```JavaScript
+//create a CART model
+var cartClassifier = ee.Classifier.smileCart() //sets up the classifier
+
+//trains the classifier 
+.train({
+  features: referencePoints,
+  classProperty: 'label',
+  inputProperties: s2ProjectArea.bandNames() //this is the predictor variables
+});
+```
+
+
+```JavaScript
+//apply the trained CART classifier to the image
+var s2ClassifiedCART = s2ProjectArea.classify(cartClassifier);
+
+```
+
+##### Visualise the original and classified images for qualitative assessment of the CART
+
+```JavaScript
+//define the palettes for the cover classes
+var classColours = {
+  min: 0,
+  max: 3,
+  palette: ['blue', 'green', 'purple', 'lightgreen'] //BLUE = water, greeen = NTV, purple = bareland (AS+NS), lightgreen = CTV
+};
+
+//display the original imagery in true colour combination
+Map.setCenter(131.3815, -12.9111, 10);
+Map.addLayer(s2ProjectArea, {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000}, 'Original S2 imagery');
+
+//display the classified image
+Map.addLayer(s2ClassifiedCART, classColours, 'Classified S2 CART imagery');
+```
+
+
+##### Train RF and classify the pixels 
+
+```JavaScript
+var rfClassification = ee.Classifier.smileRandomForest({
+  numberOfTrees: 500, //number of trees to grow 
+  bagFraction: 0.6 // proportion of training data to use per iteration
+}).train({
+  features: referencePoints,  
+  classProperty: 'label',
+  inputProperties: s2ProjectArea.bandNames()
+});
+```
+Default values were used for alll other hyperparameters. The best approach to ensure the optimal hyperparameter values are used is through tuning, but this can be computer intensive to achieve within GEE without issues. We have kep it simple here, but you may want to explore hyperparameter tuning to obtain best values in future work.
+
+
+```JavaScript
+
+//apply the RF classifier to the image
+var s2ClassifiedRF = s2ProjectArea.classify(rfClassification);
+print(s2ClassifiedRF, "s2Classified Using RF")
+
+```
+
+```JavaScript
+//display the RF classified image to compare with the CART
+Map.addLayer(s2ClassifiedRF, classColours, 'Classified S2 imagery-RF');
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### Sample the image using the feature collection (i.e., regions of interest) 
 
