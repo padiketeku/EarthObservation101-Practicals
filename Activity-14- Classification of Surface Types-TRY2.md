@@ -366,7 +366,9 @@ Map.addLayer(s2ClassifiedRF, classColours, 'Classified S2 imagery-RF');
 
 
 
-The original, CART classified and RF classified images are provided below for qualitative assessment of the models.
+
+The original (top left), CART classified (top right) and RF classified (bottom left) images are provided below for qualitative assessment of the models.
+
 
 
 
