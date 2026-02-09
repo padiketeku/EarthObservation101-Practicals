@@ -23,7 +23,7 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia. The polygon delimiting the study area is given by this list of coordinates: [[[130.85, -13.39],[131.29, -13.40],[131.31, -12.76],[130.86, -12.77]]]
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the six (6) major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia. The polygon delimiting the study area is given by this list of coordinates: [[[130.85, -13.39],[131.29, -13.40],[131.31, -12.76],[130.86, -12.77]]]
 
 
 
@@ -128,7 +128,7 @@ Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 T
 
 ##### Explore the image to determine the dominant land cover classes
 
-Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the eight major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, collect reference features and label them.
+Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the six major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, collect reference features and label them.
 
 
 ##### Randomly select reference points for the classes
@@ -149,7 +149,7 @@ var samp1 =s2ProjectArea.sample({
 print(samp1, 'samples 1') //the result is a feature collection of points
 
 //visualise the selected points/pixels
-Map.addLayer(samp1, {color: ' red'}, 'samp1')
+Map.addLayer(samp1, {color: ' red'}, 'samp1') //the sampling points will be painted red.
 ```
 
 
@@ -164,8 +164,10 @@ The randomly selected 120 sampling points or pixels are shown in the figure belo
 
 
 
+##### Label the sample points or pixels
 
-Waterbodies appear dark, randomly sample 20 pixels using the "Add a marker" tool. Before you use the "Add a marker" tool, under **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete Activity 7. 
+We have 120 pixels or points to label as NTV, NAV, CTV, AS, NS, and water. First, let's find and label the selected water pixel. Waterbodies appear dark, so they are easy to identfiy and label. Using the "Add a marker" tool. Before you use the "Add a marker" tool: <img width="36" height="45" alt="image" src="https://github.com/user-attachments/assets/f9480963-4367-4f13-b6cd-77feeaced155" />
+, under **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
 
 
 
