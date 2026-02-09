@@ -23,13 +23,13 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the six (6) major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia. The polygon delimiting the study area is given by this list of coordinates: [[[130.85, -13.39],[131.29, -13.40],[131.31, -12.76],[130.86, -12.77]]]
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image pixels into major land cover classes according to the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)). Make sure your class labels align with the one adapted by Australia (see below for the descriptions). The polygon delimiting the study area is given by this list of coordinates: [[[130.85, -13.39],[131.29, -13.40],[131.31, -12.76],[130.86, -12.77]]]
 
 
 
 ### Standard cover classes
 
-Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually difffer between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)) for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites. The LCCS standardises land cover and land use and change mapping, and it is a good practice to follow.
+Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually differ between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)) for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites. The LCCS standardises land cover and land use and change mapping, and it is a good practice to follow.
 
 Countries can modify the LCCS to align with their environments, but the variation should be minor. In Australia, the LCCS is modified to reflect their physical conditions. For instance the Digital Earth Australia Land Cover used the Australian-specific LCCS. See the details in this [link](https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=description), also available below. Read through the descriptions under "Classifications of Level 3", as we will apply this Australian-specific LCCS in the given task.
  
@@ -128,7 +128,7 @@ Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 T
 
 ##### Explore the image to determine the dominant land cover classes
 
-Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the six major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, collect reference features and label them.
+Zoom in and out, explore the image to identify the different surface types. You may see water, forests, roads, mines, croplands, burnt land, and bare ground. Let us categorise these surface types into the six major land cover classes. You may notice that NTV dominates the study area. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, collect reference features and label them.
 
 
 ##### Randomly select reference points for the classes
@@ -396,7 +396,6 @@ Once you are happy with your classified image, you may want to export this to yo
 ```JavaScript
 
 // Export the RF classification image to Google Drive
-var exportClassifiedImage= ee.Image(s2ClassifiedRF);
 Export.image.toDrive({
     image: s2ClassifiedCART.visualize(classColours), //keep colours for the cover classes
     description: 'CART_Classification', //file name, so you can readily identify this in your Google Drive
@@ -430,7 +429,7 @@ It may take a few minutes (depends on file size) for this file to be available i
 ## DIY
 
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, including cleared-land, burnt-land, forest, farm-land, water, and mines, using k-means clustering and the k-nearest neighbor algorithm (k-NN) algorithms. 
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into four land cover classes, NTV, water, bareland, CTV using k-means clustering and the k-nearest neighbor algorithm (k-NN) algorithms. 
 
 
 ## Conclusion and next activity
