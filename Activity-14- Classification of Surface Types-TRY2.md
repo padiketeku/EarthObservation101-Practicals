@@ -23,11 +23,11 @@ At the end of this activity, you should be able to: <br>
 
 ### Task
 
-A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia.
+A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into the eight major land cover classes from the FAO Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)), described by the table below. Make sure your class labels align with the one adapted by Australia. The polygon delimiting the study area is given by this list of coordinates: [[[130.85, -13.39],[131.29, -13.40],[131.31, -12.76],[130.86, -12.77]]]
 
 
 
-### Understanding standard cover classes
+### Standard cover classes
 
 Reference data obtained through field surveys or higher resolution imagery are critically important for image classification tasks. The reference data Labelling surface types can be easy, especially if you are familiar with the study area or relying on existing data from experts. Nevertheless, the labeling process can highly subjective and usually difffer between places and persons, potentially causing vagueness and ambiguity. To remove or minimise issues related to the subjectiveness of labelling, the FAO proposed the Land Cover Classification Systems (LCCS) ([Gregorio and Jansen, 2000](https://www.fao.org/4/x0596e/X0596e01f.htm#TopOfPage)) for country to follow as much as practicable. This is meant to standardise the labels we assign to surface types and hence creating land cover classes that are observable by satellites. The LCCS standardises land cover and land use and change mapping, and it is a good practice to follow.
 
@@ -63,7 +63,24 @@ Natural Bare Surfaces (NS) are comprised primarily of unconsolidated (often perv
 The Water class captures terrestrial and coastal open water such as dams, lakes, large rivers, and the coastal and near-shore zone.
 
 
-### Prepare the imagery for the task
+
+
+### Workflows
+
+#### Define the bounds for the study aarea
+
+```JavaScript
+var projectArea = 
+    ee.Geometry.Polygon(
+        [[[130.85, -13.39],
+          [131.29, -13.40],
+          [131.31, -12.76],
+          [130.86, -12.77]]]);
+```
+
+
+
+#### Prepare the imagery for the task
 
 ```JavaScript
 var s2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL')
@@ -73,15 +90,21 @@ var s2 = s2.select(["B2","B3","B4","B5","B6","B7","B8","B11", "B12"])
 
 ```
 
-Display a true colour of the imagery.
+
+#### Select the required bands
 
 ```JavaScript
-Map.addLayer(s2, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 True Colour Composite")
+var s2 = s2.select(["B2","B3","B4","B5","B6","B7","B8","B11", "B12"])
 ```
 
 
+#### Trim the S2 image to the study area and display it as a true colour composite
 
-
+```JavaScript
+var s2ProjectArea = s2.clip(projectArea)
+print(s2ProjectArea, "s2ProjectArea")
+Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 TCC Project Area")
+```
 
 #### Sample surface types using point feature collections 
 
