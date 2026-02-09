@@ -207,7 +207,11 @@ You may notice that you have zero (0) elements in your feature collection, and t
 
 Now zoom in to a sampling point for NTV and add a marker: <img width="32" height="37" alt="image" src="https://github.com/user-attachments/assets/d6208536-809a-4cf6-952e-861999325be5" />
 
-To do this, go to the Darwin River dam and drop a marker to the selected point. Your result may look like the figure below.
+
+ 
+ 
+ 
+ Your result may look like the figure below.
 
 
 
