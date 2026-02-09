@@ -168,12 +168,24 @@ The randomly selected 120 sampling points or pixels are shown in the figure belo
 
 We have 120 pixels or points to label as NTV, NAV, CTV, AS, NS, and water. First, let's find and label the selected pixels for NTV. Click the "Add a marker" tool: <img width="36" height="45" alt="image" src="https://github.com/user-attachments/assets/f9480963-4367-4f13-b6cd-77feeaced155" />
 You may notice that a **geometry** checked box pops up: <img width="319" height="53" alt="image" src="https://github.com/user-attachments/assets/559d61fc-e020-4767-abc9-a7236e6d6986" />
-If you hover over the "**geometry** you may see **Geometry Imports** , click the cog icon for the **Configure geometry import** window to appear. Edit this window by changing the Name from "geometry" to "ntv", click "Geometry" under "Import as" to select "FeatureCollection" from the dropdown menu, and under "Properties" click  the "+Property" and type "label" and "0" for the "Property" and "Value" respectively. Note, you can start a text with a lower or upper case, but you must be consistent to avoid running into issues down the line. You may modify the colour assigned to the sample in the **Configure geometry import** by moving the ring icon on the colour palette to any colour of your choice and this will chnage the colour code for the sample. Your **Configure geometry import** window once completed for a sample may look like the figure below.
+If you hover over the "**geometry** you may see **Geometry Imports** , click the cog icon for the **Configure geometry import** window to appear. Edit this window by changing the Name from "geometry" to "ntv", click "Geometry" under "Import as" to select "FeatureCollection" from the dropdown menu, and under "Properties" click  the "+Property" and type "label" and "0" for the "Property" and "Value" respectively. Note, you can start a text with a lower or upper case, but you must be consistent to avoid running into issues down the line. You may modify the colour assigned to the sample in the **Configure geometry import** by moving the ring icon on the colour palette to any colour of your choice and this will change the colour code for the sample. See the ring icon (identified with an arrow) in the colour palette below.  
+
+
+
+<img width="1286" height="933" alt="image" src="https://github.com/user-attachments/assets/b5f7944f-8545-425b-a652-941ce60a82cd" />
 
 
 
 
-<img width="699" height="98" alt="image" src="https://github.com/user-attachments/assets/7fcd0aa1-bb4c-4636-9d8b-a284888a79df" />
+
+The ring is on red with a colour code of #d63000. Click and drag the ring to green and slide down the intensity slider that pops up (right to the palette) to dark green so the NTV is identifed with dark green markers.
+
+Your **Configure geometry import** window once completed for this sample may look like the figure below.
+
+
+
+
+<img width="843" height="604" alt="image" src="https://github.com/user-attachments/assets/b64e6c48-2d33-405f-8c7a-e5e3cb9e9f2c" />
 
 
 
