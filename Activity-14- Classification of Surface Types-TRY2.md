@@ -383,14 +383,14 @@ The original (top left), CART classified (top right) and RF classified (bottom l
 
 
 
-The CART and RF performed quite averagely, suggesting the result can be improved with more training data and predictor variables. Compared to RF, the CART image is more pixelated and noisier. This is a subjective assessment of the performance of the model, so it is not expected that the intrepretations of results would be the same for every participant. An objective approach will be investigated in the next activity. 
+The CART and RF performed quite averagely, suggesting the result can be improved with more training data and predictor variables. Compared to RF, the CART image is more pixelated and noisier. This is a subjective assessment of the performance of the models, so it is not expected that the intrepretations of results would be the same for every participant. An objective approach will be investigated in the next activity. 
 
 
 
 
 ##### Export the classification image to Google Drive
 
-Once you are happy with your classified image, you may want to export this to your own local computer for further use. The script below explains how to export image to Google Drive and then onto your local computer.
+Once you are happy with your classified image, you may want to export this to your own local computer for further use. The script below explains how to export an image to Google Drive so you can download the image onto your local computer.
 
 
 ```JavaScript
@@ -433,4 +433,6 @@ It may take a few minutes (depends on file size) for this file to be available i
 A Sentinel-2 image surface reflectance product obtained from the Earth Engine catalog is given as: **COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL**. A client interested in identifying cleared lands would like to understand the dsitribution of the dominant land cover classes. Classify the image into six land cover classes, including cleared-land, burnt-land, forest, farm-land, water, and mines, using k-means clustering and the k-nearest neighbor algorithm (k-NN) algorithms. 
 
 
-## Conclusion
+## Conclusion and next activity
+
+We have covered supervised classification of image pixels into land cover themes using CART and Random Forest. The classified images were qualitatively appraised using the original imagery. The next activity will cover the quantitative assessment of the RF model using a set of label data obtained through stratified random sampling and not used to train the RF model. Accuracy assessment metrics, including overall accuracy, user's accuracy, and producer's accuracy, will be computed from an error matrix.
