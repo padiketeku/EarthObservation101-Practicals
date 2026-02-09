@@ -106,9 +106,9 @@ var s2ProjectArea = s2.clip(projectArea)
 
 #### Sample surface types using point feature collections 
 
-   In many real-world applications, the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. <br>
+   In many real-world applications, the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity, combining the Sentinel-2 imagery and high resolution Google satellite base imagery obtained from Airbus and other sources . <br>
    
-   We would collect sample points for water. First, visualise the image as a true colour composite.
+   We would collect sample pixels or points for the cover classes in the imagery using randomisation approach. This is to ensure every pixel has equal chance of selection, and once the pixels are selected the analysts or experts (in this case you) will manually label them. However, before we start the random sampling of reference pixels or points, let's first visualise the image as a true colour composite.  Your results may be similar to the one below. The Google base layer is not part of the image; it's just a background map. 
 
 ##### Visualise the true colour composite of S2 imagery
 
@@ -116,15 +116,39 @@ var s2ProjectArea = s2.clip(projectArea)
 Map.addLayer(s2ProjectArea, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 TCC Project Area")
 ```
 
+
+
     
-
      
-
 
 <img width="483" height="486" alt="image" src="https://github.com/user-attachments/assets/fb6cda25-916f-4dd9-93f1-a3bb6215bb46" />
 
 
 
+
+##### Explore the image to determine the dominant land cover classes
+
+Zoom in and out, explore the image to identify the different surface types. You may see water, forest, roads, mines, cropping lands, burnt land, and bare ground. Let's categorise these surface types into the eight major land cover classes. You may notice that the study area is dominated by NTV. However, you may also see CTV in the top north, scattered waterbodies, NS, and AS. Once you understand the surface types and cover classes in your study area, you may collect reference features and label them.
+
+
+##### Randomly select reference points for the classes
+
+Given the size and heterogeneity of the study area, I would recommend 500 pixels be randomly sampled. However, in the interest of time, only 120 pixels were selected to complete the demonstration. Feel to sample more than 120 pixels if you want to improve the accuracy of the model. and the heterogeneity of
+
+```JavaScript
+var samp1 =s2ProjectArea.sample({
+  region:projectArea, // this is your study area or region of interest
+  scale:20, //this is the spatial resolution of the S2
+  numPixels:120, // total number of pixels you want sampled, change this to 500 if that's what you want to do
+  seed: 111, //randomisation seed to ensure the results are consistent regardless of the many times you run the script.
+  geometries: true}) //set this to have the lat/lon of the selected points
+
+//print the result
+print(samp1, 'samples 1') //the result is a feature collection of points
+
+//visualise the selected points/pixels
+Map.addLayer(samp1, {color: ' red'}, 'samp1')
+```
 
 
 
