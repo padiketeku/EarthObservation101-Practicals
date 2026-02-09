@@ -208,10 +208,16 @@ You may notice that you have zero (0) elements in your feature collection, and t
 Now zoom in to a sampling point for NTV and add a marker: <img width="32" height="37" alt="image" src="https://github.com/user-attachments/assets/d6208536-809a-4cf6-952e-861999325be5" />
 
 
- 
- 
- 
- Your result may look like the figure below.
+
+
+
+Repeat this step (i.e., adding markers) until you have dropped markers to all the NTV samples. Your result may look like the figure below.
+
+
+
+
+
+<img width="457" height="507" alt="image" src="https://github.com/user-attachments/assets/7a9659ea-19e9-4f6f-ac2d-4dc148cbbb70" />
 
 
 
@@ -221,7 +227,22 @@ Now zoom in to a sampling point for NTV and add a marker: <img width="32" height
 
 
 
-+new layer" (see the figure below for help) to create a new geometry. Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
+
+
+
+
+Once you completed labelling the samples for one cover class, e.g., NTV, you will move to the next class until you have labelled the samples for all classes. Our next class is the AS. 
+
+
+
+In **Geometry Imports** click +new layer" (see the figure below for help) to create a new geometry. Click the cog icon: <img width="376" height="369" alt="image" src="https://github.com/user-attachments/assets/539ab2a8-44b3-4ae5-b668-d6493cb98101" />
+
+and modify this, repeating the steps for the NTV. 
+
+
+
+
+Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
 
 
 
