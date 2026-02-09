@@ -346,7 +346,8 @@ var rfClassification = ee.Classifier.smileRandomForest({
   inputProperties: s2ProjectArea.bandNames()
 });
 ```
-Default values were used for alll other hyperparameters. The best approach to ensure the optimal hyperparameter values are used is through tuning, but this can be computer intensive to achieve within GEE without issues. We have kep it simple here, but you may want to explore hyperparameter tuning to obtain best values in future work.
+
+Default values were used for all other hyperparameters. The best approach to ensure the optimal hyperparameter values are used is through tuning, but this can be computer intensive to achieve within GEE without issues. We have kep it simple here, but you may want to explore hyperparameter tuning to obtain best values in future work.
 
 
 ```JavaScript
@@ -361,6 +362,17 @@ print(s2ClassifiedRF, "s2Classified Using RF")
 //display the RF classified image to compare with the CART
 Map.addLayer(s2ClassifiedRF, classColours, 'Classified S2 imagery-RF');
 ```
+
+
+
+
+The original, CART classified and RF classified images are provided below for qualitative assessment of the models.
+
+
+
+
+<img width="371" height="442" alt="image" src="https://github.com/user-attachments/assets/93e07c22-e19b-40ad-811b-22c315af983e" />   <img width="331" height="449" alt="image" src="https://github.com/user-attachments/assets/17f080f8-f32d-471e-82ad-254bc434872b" />  <img width="315" height="444" alt="image" src="https://github.com/user-attachments/assets/45ba0722-2918-44b7-bbbe-2535ffd24945" />
+
 
 
 
