@@ -398,8 +398,8 @@ Once you are happy with your classified image, you may want to export this to yo
 // Export the RF classification image to Google Drive
 var exportClassifiedImage= ee.Image(s2ClassifiedRF);
 Export.image.toDrive({
-    image: s2Classified.visualize(classColours), //keep colours for the cover classes
-    description: 'RF_Classification', //file name, so you can readily identify this in your Google Drive
+    image: s2ClassifiedCART.visualize(classColours), //keep colours for the cover classes
+    description: 'CART_Classification', //file name, so you can readily identify this in your Google Drive
     scale: 20, //pixel size; this maybe increased if the file size is large 
     maxPixels: 1e13 //to increase the number of pixels allowed by default
 });
@@ -408,7 +408,7 @@ Export.image.toDrive({
 ```
 
 
-Go to the **Tasks** tab and you may find the task under **UNSUBMITTED TASKS**. It is described as **RF_Classification**. The figure below shows this.
+Go to the **Tasks** tab and you may find the task under **UNSUBMITTED TASKS**. It is described as **CART_Classification**. The figure below shows this.
 
 
 
