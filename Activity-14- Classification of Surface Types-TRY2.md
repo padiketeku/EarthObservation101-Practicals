@@ -235,140 +235,16 @@ Once you completed labelling the samples for one cover class, e.g., NTV, you wil
 
 
 
-In **Geometry Imports** click +new layer" (see the figure below for help) to create a new geometry. Click the cog icon: <img width="376" height="369" alt="image" src="https://github.com/user-attachments/assets/539ab2a8-44b3-4ae5-b668-d6493cb98101" />
+In **Geometry Imports** click "+new layer" (see the figure below for help) to create a new geometry. Click the cog icon and edit the **Configure geometry import**, repeating the steps for the NTV. Make sure you choose a different colour to represent this cover class. Keep creating feature collections through the "new layer" and editing the **Configure geometry import** until all the six cover classes are covered. Your final label layer for the cover classes may be like the figure below. Each cover class is represented with a unique colour.
 
-and modify this, repeating the steps for the NTV. 
 
 
+<img width="484" height="517" alt="image" src="https://github.com/user-attachments/assets/35e2af51-e55c-4a3d-b29a-9d35cae71709" />
 
 
-Note, the **Geometry Imports** may not be readily available if you did not complete THE Activity 7. 
 
 
-
-
-
-![image](https://github.com/user-attachments/assets/a0856ba1-6fa9-4e68-9c1d-8cfcb43bbe91)
-
-
-
-
-
-
-Select the "Add a marker" (see figure below). This is the tear-drop icon in the geometry tool. 
-
-
-
-
-![image](https://github.com/user-attachments/assets/2d8345a0-4bb5-4f9b-82df-623279de0050)
-
-
-    
-
-
-
-
-
-
-
-
-
-   
-
-     
-     
-     
-Once you click the icon the tool becomes active, go to the image and select 20 pixels that represent water. Your result may be like the figure below.
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/fe0fce6f-ce45-40ce-ba4f-57e50ab82be2)
-
-
-
-
-
-
-The layer (see the figure below) is named as "geometry". 
-
-
-
-
-![image](https://github.com/user-attachments/assets/9d0a97c7-bfd5-40de-a81e-04c4a7389345)
-
-
-
-
-You would like to edit this to name the layer appropriately. The layer name should be water, so let's edit the layer properties by clicking the cog icon (see figure below)
-
-
-
-
-![image](https://github.com/user-attachments/assets/b9efd590-4ecb-4a0f-a22d-623402f7ee06)
-
-
-     
-     
-
-The "Configure geometry import" window appears, see the figure below.
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/c1ce9c77-9cc5-4a93-a764-7ecb3711b469)
-
-
-
-
-Edit the "Configure geometry import" for each cover type. The one for water is given here (see the figure below).
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/0b26cabb-4373-4106-a593-8b908e235f20)
-
-
-
-To achieve the above figure, edit the "Configure geometry import" this way:
-Make the layer name "water"; import as "FeatureCollection"; click the "+Property" and type "label" into "Property"; and for "Value" assign 0 as this is the first feature collection. If you are repeating this step for the next cover type (e.g., urban), you would assign 1 for "Value", 2 for the third cover type, and so forth.
-
-Once you are happy with the details in the geometry, click OK (see figure below) to save the results.
-
-
-
-![image](https://github.com/user-attachments/assets/c90d6715-ca16-44f3-bac6-246cdf065cbd)
-
-
-
-
-
-
-Repeat the steps to collect reference samples for the other cover types.  Hint, in the true colour image, forest pixels are usually dark green with rough texture, while farmlands are bright, smooth green patchwork. 
-
-The clearedland, burntland, and mines can be spectrally similar if using true colour images. Thus, it is advisable to display the image as a false colour composite (FCC), combining band 12 (SWIR), band 8 (NIR) and band 4 (Red) to accentuate burnt-land and bare-land. Use this FCC image to select the pixels for burntland. After that, you may revert to the true colour composite display to select pixels for mines and bareland.
-
-
-Once you have collected samples for all the cover types, the **Geometry Imports** and base map may look similar to the figure below.
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/62d3f3a4-d0d1-4731-ae93-308f91bea2c6)
-
-
-
-
-
-
-
-
-
+Note that you may need to use Google satellite imagery to support the labelling process. In fact, Google satellite imagery was used as much as possible to assign labels to the points.
 
      
 #### Merge feature collection
