@@ -11,7 +11,7 @@ Image classification is conducted by using training data point to teach the mode
 
 ***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. Producer's accuracy is the complement of the probability of omission error.* The producer's accuracy is the correctness of the map in the perspective of the map maker, and is normally referred to data scientists as the precision.
 
-The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody G. (2020), and Pontius and Millones, 2011](https://doi.org/10.1016/S0034-4257(01)00295-4)(https://doi.org/10.1080/01431161.2011.552923)  have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
+The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody G. (2020)](https://doi.org/10.1016/S0034-4257(01)00295-4) and [Pontius and Millones, 2011](https://doi.org/10.1080/01431161.2011.552923) have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
 
 Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-100%).
 
