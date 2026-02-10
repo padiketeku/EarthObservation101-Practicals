@@ -1,17 +1,18 @@
 # Activity 15 Classification Accuracy Assessment
 
-Activity 15 is a continuation of Activity 14, Supervised Image Classification. So, make sure you have completed the last activity before this one. This activity evaluates the performance of the Random Forest classifier using an 'unseen' stratified random sampling data via an error matrix. Accuracy metrics, such as producer's accuracy, user's accuracy, and overall accuracy, are computed and explained.
+Activity 15 is a continuation of Activity 14, Supervised Image Classification. So, make sure you have completed the last activity before this one, and you may need to continue from where you left off rather than starting a new script. This activity evaluates the performance of the Random Forest classifier using an 'unseen' stratified random sampling data via an error matrix. Accuracy metrics, such as producer's accuracy, user's accuracy, and overall accuracy, are computed and explained.
+
 
 ## Introduction
 
 Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted labels can then be compared in a 2D matrix, referred to as error matrix, to determine the performance of the model. The definitions for overall accuracy, user's accuracy and producer's accuracy are given below by [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191)
 
 ***Overall accuracy (OA)** is the proportion of the area mapped correctly. It provides the user of the map with the probability that a randomly selected location on the map is correctly classified.* <br>
-***User's accuracy (UA)** is the proportion of the area mapped as a particular category that is actually that category “on the ground” where the reference classification is the best assessment of ground condition.User's accuracy is the complement of the probability of commission error* The user's accuracy is the correctness of the map in the perspective of the map user, and is often referred to data scientists as the recall.
+***User's accuracy (UA)** is the proportion of the area mapped as a particular category that is actually that category “on the ground” where the reference classification is the best assessment of ground condition. UA is the complement of the probability of commission error* The UA is the correctness of the map in the perspective of the map user, and is often referred to data scientists as the recall.
 
-***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. Producer's accuracy is the complement of the probability of omission error.* The producer's accuracy is the correctness of the map in the perspective of the map maker, and is normally referred to data scientists as the precision.
+***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. PA is the complement of the probability of omission error.* The PA is the correctness of the map in the perspective of the map maker, and is normally referred to data scientists as the precision.
 
-The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody G. (2020)](https://doi.org/10.1016/S0034-4257(01)00295-4) and [Pontius and Millones, 2011](https://doi.org/10.1080/01431161.2011.552923) have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
+The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody (2020)](https://doi.org/10.1016/S0034-4257(01)00295-4) and [Pontius and Millones, 2011](https://doi.org/10.1080/01431161.2011.552923) have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
 
 Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-100%).
 
@@ -33,26 +34,144 @@ At the end of this activity, you should be able to:
 
 
 ### Tasks
-1, Validate the CART classification in Activity 10, producing the following metrics to describe the accuracy of the model:
+
+1, Validate the Random Forest classification in Activity 14, proudce an error matrix and use this to compute the following metrics. 
 
 - producer's accuracy <br>
 
-- consumer's accuracy <br>
+- user's accuracy <br>
 
 - overall accuracy <br>
 
-- kappa <br>
-
-- F1-score <br>
+2, Compute the spatial extent of the cover classes in hectares 
 
 
 
-2, Compute the spatial extent of cleared land in square kilometers
+
+#### Perform stratified random sampling using the classified image 
+
+Stratified random sampling is recommended for collecting validation data points/pixels for land cover and land use mapping or change detection tasks [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015). Here, we used the RF classified image to perform the sampling. The cover classes served as strata, with 10 pixels sampled from each. The script below performs the stratified random sampling.
+
+```JavaScript
+//perform stratified sampling
+var randomStratifiedPoints = s2ClassifiedRF.stratifiedSample({
+  numPoints: 10, // number of points per stratum
+  classBand: 'classification',
+  region: projectArea,
+  scale: 20,
+  seed: 000,
+  geometries: true
+});
+
+```
+
+
+The sampling points/pixels are called validation points and were displayed alongside the ones used to build the model (i.e., calibration) to ensure that the validation and calibration points/pixels were not the same or spatially close to each other. This must be done to avoid or minimise spatial autocorrelation, which can make the model over-optimistic. Thus, purposive sampling was applied after stratified sampling, carefully selecting or adding validation points/pixels that were neither identical to nor spatially close to the calibration points. The entire sampling approach can be implemented programmatically, but this is beyond the scope of the unit. So, the purposive sampling was done manually, and through this, the validation points/pixels for NTV were 31, AS = 15, CTV = 10, and water = 3. More samples could indeed have been collected, but time did not allow it. Feel free to collect more 'good' validation points/pixels if you have the time.
+
+The script below visualises the calibration and validation points/pixels.
+
+```JavaScript
+
+//visualise the validation points that have been corrected for spatial dependence
+Map.addLayer(randomStratifiedPoints, {color: 'yellow'}, 'Validation Points');
+
+//visualise the calibration points. remember, this was created in the last activity. if you are not continuing from the last activity this line of the script may not work
+Map.addLayer(coverTypes, {color: 'red'}, 'Calibration Sites')
+
+```
+
+The result from the visualisation script is below.
+
+
+
+
+
+
+
+<img width="472" height="484" alt="image" src="https://github.com/user-attachments/assets/b3a412ec-c584-4c6e-96c7-40e845d0313c" />
+
+
+
+
+
+
+
+
+
+
+The red and yellow points/pixels are the calibration and validation samples, respectively, displayed over the RF classified imagery. The points may appear overlapping or close to each other. You may need to zoom in to appreciate the effect of the purposive sampling in tackling spatial dependence between the data points.
+
+
+
+#### Label the validation points/pixels and merge them
+
+Once the validation points/pixels have been sampled, that analysts or experts would have to label these. Follow the labelling approach discussed or demonstrated in the last activity to complete this section. Different feature collections will be created through the labelling process, merge the feature collections into one. Again, you must follow the approach used in the last activity.
+
+
+#### Assign spectral values to the validation points
+
+At the moment, the validation data consists only of latitude and longitude points with no spectral data. You must assign the spectral values of the pixels to the points that match the pixels to create reference areas. The line of script below sample the reference areas using the validation data.
+
+
+```JavaScript
+var validationPoints = s2ProjectArea.sampleRegions({
+  collection: validationSet, // a feature collection
+  properties: ['label'],
+  scale: 20 //pixel size for the output image
+});
+
+```
+
+
+#### Create an error matrix
+
+Compare the validation data (i.e., observed) against the mapped data (predicted), creating a 2D error matrix table. To do this, run the line of script below. 
+
+```JavaScript
+var validation = validationPoints
+      .classify(rfClassification)
+      .errorMatrix('label', 'classification')
+
+//print the error matrix to the Console
+print(validation, "error matrix")
+```
+
+The 2D error matrix should be printed to the console and when you click the expander your result may be like this below.
+
+
+
+<img width="737" height="252" alt="image" src="https://github.com/user-attachments/assets/d1447bd7-7eb1-4a36-b01a-b41da317c838" />
+
+
+
+
+
+
+The cover classes are 0, 1, 2, 3, 4 representing water, vegetation, bareland and agriculture, respectively. The columns are the predicted class and the rows are the observed clas. But, I swapped this in consistence with [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) to create a 2D table as shown below. You will get the same result if you keep to the original format of the error matrix by GEE.
+
+
+
+
+
+<img width="1256" height="385" alt="image" src="https://github.com/user-attachments/assets/de77dbc0-e4b5-4fbe-99e1-8ad6cb2676a3" />
+
+
+
+
+
+
+
+#### Adjusting the error matrix to account for the different spatial extents of class covers
+
+
+
+
 
 
 #### Classification accuracy assessment
 
-The below script tests the CART classifier printing out the overall accuracy, consumer accuracy, producer accuracy, kappa and F1-score values for the evaluation of the performance of the model. Note, given the randomness associated with data partitioning, etc., the results you would see may not be the same as the one presented in this manual.
+The script below tests the Random Forest classifier, printing the overall accuracy, user's accuracy, and producer's accuracy to evaluate the model's performance. Note, given the randomness associated with sampling design, etc., the results you would see may not be the same as the ones presented in this manual.
+
 
 
 ```JavaScript
