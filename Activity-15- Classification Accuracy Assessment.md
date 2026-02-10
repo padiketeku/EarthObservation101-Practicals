@@ -181,11 +181,60 @@ The error matrix table is simple but powerful, as it provides insights into the 
 #### Compute the extent of cover classes
 
 
+We know that cover classes are not equal, some have more pixels than others. We would compute the spatial coverage of the cover class using the following scripts. 
+
+
+
+```JavaScript
+//area estimates
+var areaImage = ee.Image.pixelArea().addBands(s2ClassifiedRF);
+// Calculate sum of area per class
+var classAreas = areaImage.reduceRegion({
+  reducer: ee.Reducer.sum().group({
+    groupField: 1, // The class band
+    groupName: 'label',
+  }),
+  geometry: projectArea,
+  scale: 20, // Adjust to your image resolution
+  maxPixels: 1e10,
+  bestEffort: true
+});
+print(classAreas, 'classAreas')
+
+
+```
+
+The results would be in square metre but we want this to be in hectare. The line of scripts would convert from square metres to hectare.
+
+```JavaScript
+//convert the area in m2 to hectare  
+//in other words divide the current values by 10,000
+var areasList = ee.List(classAreas.get('groups'));
+var area_in_ha = areasList.map(function(item) {
+  var areaDict = ee.Dictionary(item);
+  var label_ID = areaDict.get('label');
+  var areaHa = ee.Number(areaDict.get('sum')).divide(1e4);
+  return ee.Dictionary({
+    'Label': label_ID,
+    'Area_km2': areaHa
+  });
+});
+
+```
+
+The line of script below prints the results to the console.
+
+```JavaScript
+print('Areas per class (sq km):', area_in_ha)
+```
+
+When you click the expanders in the console you may see the areal coverage for each cover class. Your result may be as shown below. 
 
 
 
 
 
+<img width="790" height="670" alt="image" src="https://github.com/user-attachments/assets/93161e59-e1b6-40b8-a1ef-e11982de5aa1" />
 
 
 
