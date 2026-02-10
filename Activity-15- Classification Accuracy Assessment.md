@@ -1,11 +1,17 @@
 # Activity 15 Classification Accuracy Assessment
 
-Activity 11 expands on the Activity 10, Image Classification. This activity evaluates the performance of the classifier for an 'unseen' data using error matrix.
-Accuracy metrics, such as producer's accuracy, consumer's accuracy, overall accuracy, kappa, and F1-score are computed and explained.
+Activity 15 is a continuation of Activity 14, Supervised Image Classification. So, make sure you have completed the last activity before this one. This activity evaluates the performance of the Random Forest classifier using an 'unseen' stratified random sampling data via an error matrix. Accuracy metrics, such as producer's accuracy, user's accuracy, and overall accuracy, are computed and explained.
 
 ## Introduction
 
-Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted labels can then be compared in a 2D matrix, referred to as confusion matrix, to determine the performance of the model. The accuracy metrics are probability measures. Producer's accuracy is referenced to predicted cases in that this measures the proportion of the predicted cases that are true. Thus, the producer's accuracy is the correctness of the map in the perspective of the map maker. In contrast, user's/consumer's accuracy is referenced to the osberved class in that this is the probability that the observed pixels are correctly assigned to the true class.  The harmonic average of the user and producer accuracies produces the F1-score. The overall accuracy represents the proportion of correcly classified pixels, while Kappa is used to measure the agreement between the observed and expected samples based on a random data. Foody G. (2020) has challenged the validity of Kappa statistics for image classification accuracy. <br>
+Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted labels can then be compared in a 2D matrix, referred to as error matrix, to determine the performance of the model. The definitions for overall accuracy, user's accuracy and producer's accuracy are given below by [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191)
+
+***Overall accuracy (OA)** is the proportion of the area mapped correctly. It provides the user of the map with the probability that a randomly selected location on the map is correctly classified.* <br>
+***User's accuracy (UA)** is the proportion of the area mapped as a particular category that is actually that category “on the ground” where the reference classification is the best assessment of ground condition.User's accuracy is the complement of the probability of commission error* The user's accuracy is the correctness of the map in the perspective of the map user, and is often referred to data scientists as the recall.
+
+***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. Producer's accuracy is the complement of the probability of omission error.* The producer's accuracy is the correctness of the map in the perspective of the map maker, and is normally referred to data scientists as the precision.
+
+The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody G. (2020), and Pontius and Millones, 2011](https://doi.org/10.1016/S0034-4257(01)00295-4)(https://doi.org/10.1080/01431161.2011.552923)  have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
 
 Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-100%).
 
@@ -14,9 +20,11 @@ Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-1
 
 At the end of this activity, you should be able to:
 
+- Perform stratified random sampling of points or pixels
 - Validate a classification model using error matrix
+- Adjust error matrix table
+- Determine the spatial extent of cover classes using adjusted error matrix
 - Interpret accuracy metrics
-- Determine the spatial extent of cover class 
 
 
 
