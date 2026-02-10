@@ -153,7 +153,37 @@ The cover classes are 0, 1, 2, 3, 4 representing water, vegetation, bareland and
 
 
 
-<img width="1256" height="385" alt="image" src="https://github.com/user-attachments/assets/de77dbc0-e4b5-4fbe-99e1-8ad6cb2676a3" />
+<img width="1256" height="385" alt="image" src="https://github.com/user-attachments/assets/28131449-7a3e-4ab0-b4ad-77010f1c03bf" />
+
+
+
+
+
+The error matrix table is simple but powerful, as it provides insights into the model's performance class-wise and overall. The columns are the observed, and the rows are the predicted classes. We would express the accuracy metrics as percentages for easy interpretation. The entries in the cells of the error matrix represent the pixel counts for the classes, so reading along the columns lets you assess the observed pixels, appreciate the number omitted, and obtain an estimate of the producer's accuracy (PA). Similarly, reading the error matrix row-wise provides counts of predicted pixels and the number of pixels wrongly assigned to a class, and is used to compute the user's accuracy (UA). Going down the columns, all three water pixels were water; none were omitted, hence the PA is 100%. For vegetation, 18 of the 31 observed pixels were identified as 'vegetation,' yielding a PA of 58.1%. Compute the PA for bareland and agriculture. Going row-wise, all 3 water pixels were correctly mapped, yielding a UA of 100%. Vegetation 18 pixels out of 22 were correctly mapped, so the UA is 81.8%. The UA is not 100% because a bareland pixel was incorrectly mapped as vegetation, and 3 agriculture pixels were incorrectly mapped as vegetation. Compute the UA for bareland and agriculture, taking note of the error of commission. The overall accuracy (OA) is estimated by summing the correctly classified pixels and dividing by the total number of validation samples. In the error matrix, the correctly classified samples are the diagonal entries, highlighted in green. The total validation samples are 59. Hence, OA = 40/59, which is 67.8%. The error matrix table below includes estimates for the UA, PA, and OA.
+
+
+
+
+
+
+
+
+<img width="1612" height="563" alt="image" src="https://github.com/user-attachments/assets/d515569f-fc71-4623-9b86-48ebad979e14" />
+
+
+
+
+
+
+
+
+
+#### Compute the extent of cover classes
+
+
+
+
+
 
 
 
