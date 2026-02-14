@@ -256,15 +256,26 @@ We would use the mapped area for a class cover as their respective wieghts to st
 
 
 
-Now, the weights would be used to create proportional estimates  (i.e., a new error matrix table) using the sample count error matrix table above. The formula to produce the proportional estimate error matrix table is given in [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) and [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191). 
+Now, the weights would be used to create proportional estimates  (i.e., a new error matrix table) using the sample count error matrix table above. The formula to produce the proportional estimate error matrix table is given in [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) and [Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191). 
 
 
-You must do this going row-wise until you complete all cell entries. Take the value in the cell and divide this by the row total and then multiply by the weight for the class. Worked example for vegetation: 0 ÷ 22 times 0.890 (i.e., weight for vegetation) and the result for the first cell would be 0. Next cell. Remember we are going across the row. (18 ÷ 22) × 0.890 and the result is 0.728. Cell three, (1 ÷ 22) × 0.890 = 0.041. Cell four, (3 ÷ 22) × 0.890 = 0.121. Repeat these steps to complete the table and your proportional estimate error matrix table may look like the table below.
+To compute the propotional estimate using the sample count table, you must go row-wise until you complete all cell entries. Take the value in the cell and divide this by the row total and then multiply the result by the weight for the class. Worked example for vegetation: (0 ÷ 22) × 0.890 (i.e., weight for vegetation) and the result for the first cell would be 0. Next cell. Remember we are going across the row. (18 ÷ 22) × 0.890 and the result is 0.728. Cell three, (1 ÷ 22) × 0.890 = 0.041. Cell four, (3 ÷ 22) × 0.890 = 0.121. Repeat these steps to complete the entries for the other land cover classes, bearing in mind that you are going across the rows. Once you are done your proportional estimate error matrix table may look like the table below.
 
 
 
 
 <img width="822" height="279" alt="image" src="https://github.com/user-attachments/assets/d9a12fb0-3e56-453e-acc4-7fafe800390c" />
+
+
+
+You would use the proportion estimates to adjust the mapped total area. These are 0.012, 0.765, 0.085, and 0.139 for water, vegetation, bareland, and agriculture, respectively. Thus, the stratified estimator of the area of water would be 337,337 × 0.012 = 4,048 ha. Vegetation would be 337,337 × 0.765 = 258,063 ha; bareland is 337,337 × 0.085 = 28,674 ha ha; and agriculture is 337,337 × 0.139 = 46,890 ha.
+
+The proportional estimates explain the changes in the total land cover. For instance, the mapped area of vegetation is 300,251 ha whereas the stratified error-adjusted area estimate of vegetation is 258,063 ha. This suggests that the area estimates are sensitive to errors of omission, and thus it is prudent to report the confidence intervals. The formula for the confidence interval is given in [Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191).
+
+Worked example of the confidence interval for vegetation. 0.012x<sup>2</sup> × 0/3(1-0/3)
+
+
+
 
 
 
