@@ -181,7 +181,7 @@ The error matrix table is simple yet powerful, providing insights into the model
 #### Compute the extent of cover classes
 
 
-We know that cover classes are not equal, some have more pixels than others. We would compute the spatial coverage of the cover class using the following scripts. 
+ The cover classes are not created equally, as some have more pixels than others. We would compute the spatial coverage of the cover class using the following scripts. 
 
 
 
@@ -204,10 +204,12 @@ print(classAreas, 'classAreas')
 
 ```
 
-The results would be in square metre but we want this to be in hectare. The line of scripts would convert from square metres to hectare.
+
+The results would be in square metres, but we want them in hectares. The line of scripts would convert from square metres to hectares. 
+
 
 ```JavaScript
-//convert the area in m2 to hectare  
+//convert the area in square metres to hectares  
 //in other words divide the current values by 10,000
 var areasList = ee.List(classAreas.get('groups'));
 var area_in_ha = areasList.map(function(item) {
@@ -216,7 +218,7 @@ var area_in_ha = areasList.map(function(item) {
   var areaHa = ee.Number(areaDict.get('sum')).divide(1e4);
   return ee.Dictionary({
     'Label': label_ID,
-    'Area_km2': areaHa
+    'Area_ha': areaHa
   });
 });
 
@@ -228,8 +230,7 @@ The line of script below prints the results to the console.
 print('Areas per class (sq km):', area_in_ha)
 ```
 
-When you click the expanders in the console you may see the areal coverage for each cover class. Your result may be as shown below. 
-
+ When you click the expanders in the console, you may see the areal coverage for each cover class. Your result may look like the one shown below.
 
 
 
@@ -242,9 +243,10 @@ When you click the expanders in the console you may see the areal coverage for e
 
 #### Adjusting the error matrix to account for the different spatial extents of class covers
 
+ In many land cover mapping studies, computing land cover area is done by simple pixel counts after the classification image is produced. This is a naive approach to computing the spatial extent of the land cover class, given that the classification model is not perfect. The model is affected by errors of omission and commission, so it is not accurate to use the mapped area as the actual area. It is recommended that validation data obtained through stratified random sampling be used to adjust errors in the mapped land cover areas [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015). This ensures a more accurate area estimate.
 
-
-
+We would use the mapped area for a class cover as their respective wieghts to start the adjustment process. The area for water was 3993, vegetation was 300251, bareland was 21099, and agriculture was 11994. Note that the mapped areas were rounded off to the nearest whole number. The total estimate is 337,337 hectares, representing the extent of the study area.
+Weight for water = 300251 ÷ 337337 = 0.0123; weight for vegetation = 300251 ÷ 337337 = 0.890, and so forth. 
 
 
 
