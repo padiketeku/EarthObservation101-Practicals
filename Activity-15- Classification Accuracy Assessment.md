@@ -270,12 +270,43 @@ To compute the propotional estimate using the sample count table, you must go ro
 
 You would use the proportion estimates to adjust the mapped total area. These are 0.012, 0.765, 0.085, and 0.139 for water, vegetation, bareland, and agriculture, respectively. Thus, the stratified estimator of the area of water would be 337,337 × 0.012 = 4,048 ha. Vegetation would be 337,337 × 0.765 = 258,063 ha; bareland is 337,337 × 0.085 = 28,674 ha ha; and agriculture is 337,337 × 0.139 = 46,890 ha.
 
-The proportional estimates explain the changes in the total land cover. For instance, the mapped area of vegetation is 300,251 ha whereas the stratified error-adjusted area estimate of vegetation is 258,063 ha. This suggests that the area estimates are sensitive to errors of omission, and thus it is prudent to report the confidence intervals. The formula for the confidence interval is given in [Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191).
-
-Worked example of the confidence interval for vegetation. 0.012x<sup>2</sup> × 0/3(1-0/3)
+The proportional estimates explain the changes in the total land cover. For instance, the mapped area of vegetation is 300,251 ha whereas the stratified error-adjusted area estimate of vegetation is 258,063 ha. This suggests that the area estimates are sensitive to errors of omission, and thus it is prudent to report the confidence intervals. The formula for computing confidence interval is given in [Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191), and is shown below. Refer to the cited reference for further details about the formula.
 
 
 
+
+<img width="432" height="164" alt="image" src="https://github.com/user-attachments/assets/b68fe914-65c3-45f1-9516-b902869822a2" />
+
+
+
+
+
+Worked example of the confidence interval for vegetation. 
+
+First compute the standard error as estimated proportion of the area, as shown below.
+
+
+
+
+
+<img width="1103" height="184" alt="image" src="https://github.com/user-attachments/assets/67af3d7d-09f8-44d4-a93c-06d5f62a71c6" />
+
+
+
+The standard error estimated proportion is:  <img width="265" height="81" alt="image" src="https://github.com/user-attachments/assets/9a294637-b548-4050-a6df-caa52cf80ec3" />
+
+
+
+Multiply the total mapped area by this proportion and your result would be: <br>
+
+337,337 × 0.075 = 25,401 ha. <br>
+
+
+A final vegetation area estimate with a margin of error (at approximate 95% confidence interval) of <br>
+
+
+
+<img width="497" height="65" alt="image" src="https://github.com/user-attachments/assets/76cedd8a-c5a6-46d4-9406-969b5da97a0b" />
 
 
 
