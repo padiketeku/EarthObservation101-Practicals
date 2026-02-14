@@ -338,4 +338,4 @@ Assess the performance of the CART classification model in Activity 10. Interpre
 
 ## Conclusion
 
-In this activity, we explored image classification accuracy metrics, including producer's and user's accuracies. Also, overall accuracy, kappa and F1-score were computed. The accuracy estimates showed that the classification model requires improvement.
+In this activity, we explored image classification accuracy metrics, including producer's and user's accuracies. Also, overall accuracy, kappa and F1-score were computed. The accuracy estimates showed that the classification model requires improvement. This activity marks the end of the unit. Thank you for your participation and contributions. If you like the unit, please use the end-of-semester survey to leave positive comments. Also, constructive comments are welcome to improve the unit. 
