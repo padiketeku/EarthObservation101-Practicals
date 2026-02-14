@@ -245,16 +245,33 @@ print('Areas per class (sq km):', area_in_ha)
 
  In many land cover mapping studies, computing land cover area is done by simple pixel counts after the classification image is produced. This is a naive approach to computing the spatial extent of the land cover class, given that the classification model is not perfect. The model is affected by errors of omission and commission, so it is not accurate to use the mapped area as the actual area. It is recommended that validation data obtained through stratified random sampling be used to adjust errors in the mapped land cover areas [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015). This ensures a more accurate area estimate.
 
-We would use the mapped area for a class cover as their respective wieghts to start the adjustment process. The area for water was 3993, vegetation was 300251, bareland was 21099, and agriculture was 11994. Note that the mapped areas were rounded off to the nearest whole number. The total estimate is 337,337 hectares, representing the extent of the study area.
-Weight for water = 300251 ÷ 337337 = 0.0123; weight for vegetation = 300251 ÷ 337337 = 0.890, and so forth. 
+We would use the mapped area for a class cover as their respective wieghts to start the adjustment process. The area for water was 3993, vegetation was 300251, bareland was 21099, and agriculture was 11994. Note that the mapped areas were rounded off to the nearest whole number. The total estimate is 337,337 hectares, representing the extent of the study area. Weight for water = 300251 ÷ 337337 = 0.0123; weight for vegetation = 300251 ÷ 337337 = 0.890; weight for bareland = 0.063; and weight for agriculture = 0.036. The error matrix,including the map area and weights, is shown below.
 
+
+
+
+<img width="1049" height="435" alt="image" src="https://github.com/user-attachments/assets/b5491746-5f68-4f79-8dab-9de4ddfa9d73" />
+
+
+
+
+
+Now, the weights would be used to create proportional estimates  (i.e., a new error matrix table) using the sample count error matrix table above. The formula to produce the proportional estimate error matrix table is given in [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) and [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191). 
+
+
+You must do this going row-wise until you complete all cell entries. Take the value in the cell and divide this by the row total and then multiply by the weight for the class. Worked example for vegetation: 0 ÷ 22 times 0.890 (i.e., weight for vegetation) and the result for the first cell would be 0. Next cell. Remember we are going across the row. (18 ÷ 22) × 0.890 and the result is 0.728. Cell three, (1 ÷ 22) × 0.890 = 0.041. Cell four, (3 ÷ 22) × 0.890 = 0.121. Repeat these steps to complete the table and your proportional estimate error matrix table may look like the table below.
+
+
+
+
+<img width="822" height="279" alt="image" src="https://github.com/user-attachments/assets/d9a12fb0-3e56-453e-acc4-7fafe800390c" />
 
 
 
 
 ## DIY
 
-Assess the performance of the CART classification model in Activity 10. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, overall accuracy, kappa, and F1-score.
+Assess the performance of the CART classification model in Activity 10. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, overall accuracy, kappa, and F1-score. 
 
 
 
