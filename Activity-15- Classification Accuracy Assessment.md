@@ -5,14 +5,14 @@ Activity 15 is a continuation of Activity 14, Supervised Image Classification. S
 
 ## Introduction
 
-Image classification is conducted by using training data point to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data that is unknown to the model. The observed labels and the predicted labels can then be compared in a 2D matrix, referred to as error matrix, to determine the performance of the model. The definitions for overall accuracy, user's accuracy and producer's accuracy are given below by [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191)
+Image classification is performed using training data to teach the model. However, the performance of the model must be measured to assess its usability. This is done by allowing the model to predict a set of data it has not seen before. The observed and predicted labels can then be compared in a 2D matrix, known as an error matrix, to assess the model's performance. The definitions for overall accuracy, user's accuracy, and producer's accuracy are given below by [Olofsson et al. 2013](https://www.sciencedirect.com/science/article/pii/S0034425712004191)
 
 ***Overall accuracy (OA)** is the proportion of the area mapped correctly. It provides the user of the map with the probability that a randomly selected location on the map is correctly classified.* <br>
-***User's accuracy (UA)** is the proportion of the area mapped as a particular category that is actually that category “on the ground” where the reference classification is the best assessment of ground condition. UA is the complement of the probability of commission error* The UA is the correctness of the map in the perspective of the map user, and is often referred to data scientists as the recall.
+***User's accuracy (UA)** is the proportion of the area mapped as a particular category that is actually that category “on the ground” where the reference classification is the best assessment of ground condition. UA is the complement of the probability of commission error* The UA is the correctness of the map from the perspective of the map user, and is often referred to by data scientists as recall.
 
-***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. PA is the complement of the probability of omission error.* The PA is the correctness of the map in the perspective of the map maker, and is normally referred to data scientists as the precision.
+***Producer's accuracy (PA)** is the proportion of the area that is a particular category on the ground that is also mapped as that category. PA is the complement of the probability of omission error.* The PA is the correctness of the map in the perspective of the map maker, and is usually referred to by data scientists as precision.
 
-The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on a random data. However, we will not consider this as [Foody (2020)](https://doi.org/10.1016/S0034-4257(01)00295-4) and [Pontius and Millones, 2011](https://doi.org/10.1080/01431161.2011.552923) have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
+The UA and PA are for class-wise assessment of the model. The harmonic average of the UA and PA produces the F1-score. Kappa is used to measure the agreement between the observed and expected samples based on random data. However, we will not consider this as [Foody (2020)](https://doi.org/10.1016/S0034-4257(01)00295-4) and [Pontius and Millones, 2011](https://doi.org/10.1080/01431161.2011.552923) have challenged the validity of Kappa statistics for image classification accuracy. We will only compute and report the UA, PA, and OA from an error matrix table. <br>
 
 Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-100%).
 
@@ -22,9 +22,9 @@ Ideally, the values of the accuracy assessment metrics range between 0-1 (or 0-1
 At the end of this activity, you should be able to:
 
 - Perform stratified random sampling of points or pixels
-- Validate a classification model using error matrix
-- Adjust error matrix table
-- Determine the spatial extent of cover classes using adjusted error matrix
+- Validate a classification model using an error matrix
+- Adjust an error matrix table
+- Determine the spatial extent of cover classes using an adjusted error matrix
 - Interpret accuracy metrics
 
 
@@ -35,7 +35,7 @@ At the end of this activity, you should be able to:
 
 ### Tasks
 
-1, Validate the Random Forest classification in Activity 14, proudce an error matrix and use this to compute the following metrics. 
+1, Validate the Random Forest classification in Activity 14, produce an error matrix and use this to compute the following metrics. 
 
 - producer's accuracy <br>
 
@@ -66,7 +66,7 @@ var randomStratifiedPoints = s2ClassifiedRF.stratifiedSample({
 ```
 
 
-The sampling points/pixels are called validation points and were displayed alongside the ones used to build the model (i.e., calibration) to ensure that the validation and calibration points/pixels were not the same or spatially close to each other. This must be done to avoid or minimise spatial autocorrelation, which can make the model over-optimistic. Thus, purposive sampling was applied after stratified sampling, carefully selecting or adding validation points/pixels that were neither identical to nor spatially close to the calibration points. The entire sampling approach can be implemented programmatically, but this is beyond the scope of the unit. So, the purposive sampling was done manually, and through this, the validation points/pixels for NTV were 31, AS = 15, CTV = 10, and water = 3. More samples could indeed have been collected, but time did not allow it. Feel free to collect more 'good' validation points/pixels if you have the time.
+The sampling points/pixels are called validation points and were displayed alongside the ones used to build the model (i.e., calibration) to ensure that the validation and calibration points/pixels were not the same or spatially close to each other. This must be done to avoid or minimise spatial autocorrelation, which can make the model over-optimistic. Thus, purposive sampling was applied after stratified sampling, carefully selecting or adding validation points/pixels that were neither identical to nor spatially close to the calibration points. The entire sampling approach can be implemented programmatically, but this is beyond the scope of the unit. So, purposive sampling was done manually, and as a result, the validation points/pixels for NTV were 31, AS = 15, CTV = 10, and water = 3. More samples could indeed have been collected, but time did not allow it. Feel free to collect more 'good' validation points/pixels if you have the time.
 
 The script below visualises the calibration and validation points/pixels.
 
@@ -99,18 +99,18 @@ The result from the visualisation script is below.
 
 
 
-The red and yellow points/pixels are the calibration and validation samples, respectively, displayed over the RF classified imagery. The points may appear overlapping or close to each other. You may need to zoom in to appreciate the effect of the purposive sampling in tackling spatial dependence between the data points.
+The red and yellow points/pixels represent the calibration and validation samples, respectively, overlaid on the RF-classified imagery. The points may appear to overlap or be close to each other. You may need to zoom in to appreciate the effect of the purposive sampling in tackling spatial dependence between the data points.
 
 
 
 #### Label the validation points/pixels and merge them
 
-Once the validation points/pixels have been sampled, that analysts or experts would have to label these. Follow the labelling approach discussed or demonstrated in the last activity to complete this section. Different feature collections will be created through the labelling process, merge the feature collections into one. Again, you must follow the approach used in the last activity.
+Once the validation points/pixels have been sampled, analysts or experts must label them. Follow the labelling approach discussed or demonstrated in the last activity to complete this section. Different feature collections will be created during the labelling process and then merged into a single collection. Follow the approach used in the last activity.
 
 
 #### Assign spectral values to the validation points
 
-At the moment, the validation data consists only of latitude and longitude points with no spectral data. You must assign the spectral values of the pixels to the points that match the pixels to create reference areas. The line of script below sample the reference areas using the validation data.
+At the moment, the validation data consists only of latitude and longitude points with no spectral data. You must assign the spectral values of the pixels to the points that match the pixels to create reference areas. The line of script below samples the reference areas using the validation data.
 
 
 ```JavaScript
@@ -125,7 +125,8 @@ var validationPoints = s2ProjectArea.sampleRegions({
 
 #### Create an error matrix
 
-Compare the validation data (i.e., observed) against the mapped data (predicted), creating a 2D error matrix table. To do this, run the line of script below. 
+Compare the validation data (i.e., observed) with the mapped data (predicted) to create a 2D error matrix. To do this, run the line of script below. 
+
 
 ```JavaScript
 var validation = validationPoints
@@ -147,7 +148,7 @@ The 2D error matrix should be printed to the console and when you click the expa
 
 
 
-The cover classes are 0, 1, 2, 3, 4 representing water, vegetation, bareland and agriculture, respectively. The columns are the predicted class and the rows are the observed clas. But, I swapped this in consistence with [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) to create a 2D table as shown below. You will get the same result if you keep to the original format of the error matrix by GEE.
+The cover classes are 0, 1, 2, 3, 4 representing water, vegetation, bareland, and agriculture, respectively. The columns are the predicted class, and the rows are the observed class. However, I have swapped this in accordance with [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) to create a 2D table as shown below. You will get the same result even if you keep to the original format of the error matrix produced by GEE. 
 
 
 
@@ -159,8 +160,7 @@ The cover classes are 0, 1, 2, 3, 4 representing water, vegetation, bareland and
 
 
 
-The error matrix table is simple but powerful, as it provides insights into the model's performance class-wise and overall. The columns are the observed, and the rows are the predicted classes. We would express the accuracy metrics as percentages for easy interpretation. The entries in the cells of the error matrix represent the pixel counts for the classes, so reading along the columns lets you assess the observed pixels, appreciate the number omitted, and obtain an estimate of the producer's accuracy (PA). Similarly, reading the error matrix row-wise provides counts of predicted pixels and the number of pixels wrongly assigned to a class, and is used to compute the user's accuracy (UA). Going down the columns, all three water pixels were water; none were omitted, hence the PA is 100%. For vegetation, 18 of the 31 observed pixels were identified as 'vegetation,' yielding a PA of 58.1%. Compute the PA for bareland and agriculture. Going row-wise, all 3 water pixels were correctly mapped, yielding a UA of 100%. Vegetation 18 pixels out of 22 were correctly mapped, so the UA is 81.8%. The UA is not 100% because a bareland pixel was incorrectly mapped as vegetation, and 3 agriculture pixels were incorrectly mapped as vegetation. Compute the UA for bareland and agriculture, taking note of the error of commission. The overall accuracy (OA) is estimated by summing the correctly classified pixels and dividing by the total number of validation samples. In the error matrix, the correctly classified samples are the diagonal entries, highlighted in green. The total validation samples are 59. Hence, OA = 40/59, which is 67.8%. The error matrix table below includes estimates for the UA, PA, and OA.
-
+The error matrix table is simple yet powerful, providing insights into the model's performance class-wise and overall. The columns are the observed, and the rows are the predicted classes. We would express the accuracy metrics as percentages for easy interpretation. The entries in the cells of the error matrix represent the pixel counts for the classes, so reading along the columns lets you assess the observed pixels, appreciate the number omitted, and obtain an estimate of the producer's accuracy (PA). Similarly, reading the error matrix row-wise provides counts of predicted pixels and the number of pixels wrongly assigned to a class, and is used to compute the user's accuracy (UA). Going down the columns, all three water pixels were water; none were omitted, hence the PA is 100%. For vegetation, 18 of the 31 observed pixels were identified as 'vegetation,' yielding a PA of 58.1%. Compute the PA for bareland and agriculture. Going row-wise, all 3 water pixels were correctly mapped, yielding a UA of 100%. Vegetation 18 pixels out of 22 were correctly mapped, so the UA is 81.8%. The UA is not 100% because a bareland pixel was incorrectly mapped as vegetation, and 3 agriculture pixels were incorrectly mapped as vegetation. Compute the UA for bareland and agriculture, taking note of the error of commission. The overall accuracy (OA) is estimated by summing the correctly classified pixels and dividing by the total number of validation samples. In the error matrix, the correctly classified samples are the diagonal entries, highlighted in green. The total validation samples are 59. Hence, OA = 40/59, which is 67.8%. The error matrix table below includes estimates for the UA, PA, and OA.
 
 
 
