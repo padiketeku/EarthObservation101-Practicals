@@ -434,4 +434,4 @@ A Sentinel-2 image surface reflectance product obtained from the Earth Engine ca
 
 ## Conclusion and next activity
 
-We have covered supervised classification of image pixels into land cover themes using CART and Random Forest. The classified images were qualitatively appraised using the original imagery. The next activity will cover the quantitative assessment of the RF model using a set of label data obtained through stratified random sampling and not used to train the RF model. Accuracy assessment metrics, including overall accuracy, user's accuracy, and producer's accuracy, will be computed from an error matrix.
+We have covered supervised classification of image pixels into land cover themes using CART and Random Forest. The classified images were qualitatively appraised using the original imagery. The next activity will cover the quantitative assessment of the RF model using a set of label data obtained through stratified random sampling. Accuracy assessment metrics, including overall accuracy, user's accuracy, and producer's accuracy, will be manually computed from an error matrix.
