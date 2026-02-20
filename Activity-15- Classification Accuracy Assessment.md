@@ -331,11 +331,11 @@ Use the given equations here ([Olofsson et al. (2013)](https://www.sciencedirect
 
 ## DIY
 
-Assess the performance of the CART classification model in Activity 10. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, overall accuracy, kappa, and F1-score. 
+Assess the performance of the RF classification model in Activity 14. Interpret all the accuracy metrics, including producer's accuracy, user's accuracy, and overall accuracy. 
 
 
 
 
 ## Conclusion
 
-In this activity, we explored image classification accuracy metrics, including producer's and user's accuracies. Also, overall accuracy, kappa and F1-score were computed. The accuracy estimates showed that the classification model requires improvement. This activity marks the end of the unit. Thank you for your participation and contributions. If you like the unit, please use the end-of-semester survey to leave positive comments. Also, constructive comments are welcome to improve the unit. 
+In this activity, we explored image classification accuracy metrics, including producer's accuracy, user's accuracy, and overall accuracy. Also, the spatial extent of the cover classes was computed and error-adjusted in accordance with good practices outlined by Olofsson et al. (2013). This activity marks the end of the unit. Thank you for your participation and contributions. If you like the unit, please use the end-of-semester survey to leave positive comments. Also, constructive comments are welcome to improve the unit
