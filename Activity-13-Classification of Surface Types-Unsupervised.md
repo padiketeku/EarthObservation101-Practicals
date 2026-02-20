@@ -406,5 +406,5 @@ A Sentinel-2 image surface reflectance product obtained from the Earth Engine ca
 
 ## Conclusion
 
-In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment evaluation of the classifer will be carried out. Also, the spatial extent of the surface types will be computed.
+In this activity, unsupervised and supervised classification algorithms, k-means clustering and the classification and regression decision tree algorithms, were explored. A Sentinel-2 surface reflectance product was analysed, while visually assessing the performance of the classifiers. Next, quantitative assessment of a classifer will be carried out. Also, the spatial extent of the land cover classes will be computed.
 
