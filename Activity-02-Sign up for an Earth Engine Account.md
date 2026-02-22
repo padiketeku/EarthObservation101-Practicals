@@ -62,7 +62,7 @@ The non-commercial users include non-profit organisations, educators, academic i
  
 
 
-2, Click **Create Project** . The below window may pop up. I have changed the default project name to "earth-observation-1000". You can also specify a different project name.
+2, Click **Create project** . The below window may pop up. I have changed the default project name to "earth-observation-1000". You can also specify a different project name.
 
 
 
@@ -72,16 +72,12 @@ The non-commercial users include non-profit organisations, educators, academic i
 
 
 
-3, When done filling out the form, click **Next** <br>
-
-Another window for the registration process pops up, complete this as shown below. Keep the Project-ID to default, this may not be the same as you see in the below figure.
-You can specify the **Project Name** to your choice but I recommend you keep this to default.  <br>
+3, Once you cliick "create" the Configuration window may pop, as shown below.
 
 
 
 
-
-![image](https://github.com/user-attachments/assets/0f5b5217-7299-431f-9331-d16e5d9eee27)
+<img width="863" height="533" alt="image" src="https://github.com/user-attachments/assets/095d4a31-47dd-4df7-b065-3840d7697a36" />
 
 
 
@@ -90,36 +86,12 @@ You can specify the **Project Name** to your choice but I recommend you keep thi
 
 
 
-4, Click **CONTINUE WITH REGISTRATION** and wait for the confirmation window, requiring you review your cloud project information. The window may look like the figure below.
-
-
-
-![image](https://github.com/user-attachments/assets/5860972a-e13c-4dbc-977a-9b2b374913a5)
-
-
-
-5, Click **CONFIRM** to confirm your registration of Earth Engine account. When you click **CONFIRM** Google may request (via another page) you agree to [Terms of Service](https://explorer.earthengine.google.com/terms). This must be completed for your Earth Engine account to be active and valid.
-
-
-
-
-
-After the confirmation, you may see the **Code Editor** (a pane for writing code) as shown below. <br>
 
 
 
 
 
 
-![Fig-5-GettingStartedUsingGEE](https://github.com/user-attachments/assets/2bb366e4-8494-4e65-8cab-453fe14e83e9)  <br>
-
-
-
-
-
-
-
-This means that your registration is successful and you can now start exploring the Code Editor. <br>
 
 
 
