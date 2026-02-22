@@ -62,10 +62,13 @@ The non-commercial users include non-profit organisations, educators, academic i
  
 
 
-2, Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. 
+2, Click **Create Project** . The below window may pop up. I have changed the default project name to "earth-observation-1000". You can also specify a different project name.
 
 
-![Fig-2-GettingStartedUsingGEE](https://github.com/user-attachments/assets/8a61ef30-e78a-46ce-ab55-5bc274783a52)
+
+
+<img width="1194" height="411" alt="image" src="https://github.com/user-attachments/assets/80baf04a-bca2-4777-bdcd-9c16d74ce8da" />
+
 
 
 
