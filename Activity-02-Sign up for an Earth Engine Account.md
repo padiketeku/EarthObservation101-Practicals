@@ -41,7 +41,7 @@ The Google Earth Engine can be used by both non-commercial and commercial users 
 
 1, Sign in to your GMAIL account. Make sure it is the GMAIL account you would like associated with Google Earth Engine.  
 
-2, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. The link may bring up a window with details shown in the figure below.
+2, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. The link may bring up a window with details shown in the figure below. **caveat:** The green ring you see on the figure is just the mouse icon, please disregard.
 
 
 
@@ -111,6 +111,7 @@ We would sign up for the non-commercial account. Let see if we are eligible.
 
 
 
+<img width="897" height="732" alt="image" src="https://github.com/user-attachments/assets/8c6fff35-3e35-4061-8a70-cdd09b074521" />
 
 
 
