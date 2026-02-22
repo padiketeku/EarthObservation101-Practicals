@@ -136,7 +136,7 @@ We would sign up for the non-commercial account. Let see if we are eligible.
 
 
 
-**End of Activity 2**
+**End of Activity**
 
 
 
