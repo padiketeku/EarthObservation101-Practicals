@@ -83,6 +83,14 @@ The non-commercial users include non-profit organisations, educators, academic i
 
 
 
+We would sign up for the non-commercial account. Let see if we are eligible. Click "Get started" and this may birng up the **Register** window, as shown below.
+
+
+
+
+
+<img width="810" height="540" alt="image" src="https://github.com/user-attachments/assets/1ef4dcce-dd42-417a-875f-7d4435754075" />
+
 
 
 
