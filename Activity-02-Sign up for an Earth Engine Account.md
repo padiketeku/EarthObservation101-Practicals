@@ -117,7 +117,18 @@ We would sign up for the non-commercial account. Let see if we are eligible.
 
 
 
+9, Click "Continue" and you may be taken to the Welcome page. See below for an example.
 
+
+
+
+<img width="1178" height="744" alt="image" src="https://github.com/user-attachments/assets/b60e6fde-15ee-4c92-b88a-26dcaab90e16" />
+
+
+
+
+
+10, In the **Expand your experience**, click "Code Editor" to go to the GEE JavaScript Interface. This is where all the practical activities will take place. 
 
 
 
