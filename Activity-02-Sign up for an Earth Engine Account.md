@@ -46,7 +46,20 @@ The non-commercial users include non-profit organisations, educators, academic i
 
 2, Use this [link](https://code.earthengine.google.com/register) to sign up for Earth Engine using the Google Cloud. The link may bring up a window with details shown in the figure below.
 
-![Fig.1 Get started using Earth Engine](https://github.com/user-attachments/assets/14ebe612-cf99-4771-8c98-2185058d0cc1) <br>
+
+
+
+
+
+
+
+<img width="1827" height="250" alt="image" src="https://github.com/user-attachments/assets/849f9da5-6273-4b55-bafe-f87f0f0f30df" />
+
+
+
+
+
+ 
 
 
 2, Click **Register Noncommercial or Commercial Cloud project** and fill out the form as shown below. 
