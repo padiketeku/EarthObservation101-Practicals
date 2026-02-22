@@ -83,7 +83,10 @@ The non-commercial users include non-profit organisations, educators, academic i
 
 
 
-We would sign up for the non-commercial account. Let see if we are eligible. Click "Get started" and this may birng up the **Register** window, as shown below.
+We would sign up for the non-commercial account. Let see if we are eligible. 
+
+
+4, Click "Get started" and this may birng up the **Register** window, as shown below.
 
 
 
@@ -94,6 +97,22 @@ We would sign up for the non-commercial account. Let see if we are eligible. Cli
 
 
 
+**Select your organization type** . In the drop down menu, you may select "public or private academic institution ..."  Type "Charles Darwin University" for the name of institution. **How would you describe your use of Earth Engine?** You may select "Scientific research". **What is your research question?** I suggest you type in "land cover mapping". Obviously you are going to do more activities in this unit than just mapping. **What is the geographic scope of your study?** Choose "Global" but the other option may also work.**Have you previously published work on this topic that used Earth Engine?** Maybe choose "No" for simplicity. Check your eligibility. If you are successful, you may see this:  **Based on your answers, you are eligible for noncommercial Earth Engine use.** <br>
+
+
+
+5, Click next to choose a plan. Choose "Community" and "Next". Other options are for high computation users, but may come with charges.
+
+6, **Describe your work**. Select "Protection and conservation". Feel free to choose other options, it wouldn't break anything. **Will you use Earth Engine for any of the following?** I selected "classroom or education". You may go for a different option. All good!.
+
+
+7, Click "Next" to see the **Review summary**. 
+
+
+8, Finally, click **Register** and you may see the "Enable required APIs" requesting you to enable Google Earth Engine API. Click "Enable" to complete the registration. Your "Confuguation" would be updated letting you know that a new project is created.
+
+
+<img width="871" height="747" alt="image" src="https://github.com/user-attachments/assets/ad21c4c4-3d58-45a5-9e3e-868405c47757" />
 
 
 
