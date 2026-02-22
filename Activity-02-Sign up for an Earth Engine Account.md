@@ -23,7 +23,7 @@ Once you learn the syntax for programming languages, your code can be adapted ea
 
 ## Assumptions
 
-- Participants already have a GMAIL aacount.
+- Participants already have a GMAIL account.
 
 - Participants have acces to stable internet.
 
