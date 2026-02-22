@@ -128,7 +128,7 @@ We would sign up for the non-commercial account. Let see if we are eligible.
 
 
 
-10, In the **Expand your experience**, click "Code Editor" to go to the GEE JavaScript Interface. This is where all the practical activities will take place. 
+10, In the **Expand your experience**, click "Code Editor" to go to the GEE JavaScript Interface. This is where all the practical activities will take place. I recommend bookmarking the link to your code editor, as I expect you will use this software frequently.
 
 
 
@@ -136,7 +136,7 @@ We would sign up for the non-commercial account. Let see if we are eligible.
 
 
 
-**End of Activity 1**
+**End of Activity 2**
 
 
 
