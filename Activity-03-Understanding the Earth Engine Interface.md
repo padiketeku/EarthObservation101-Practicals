@@ -1,8 +1,8 @@
 # Activity 3: Understanding the Earth Engine User Interface
 ## Introduction
-This activity assumes that you have a Google Earth Engine account that is running OK. 
-The Google Earth Engine User Interface is supported by JavaScript programming language, making it possible to explore a web-based Code Editor without any installation.
-The Code Editor, through the JavaScript Application Programming Inteface (API), provide additional functionality to display results on a map, manage scripts, access reference documentation, manage tasks, and more. The Code Editor also makes it possible to share your code with other users, making it easy for others to replicate your methods while promoting collaboration and communication of project results. 
+
+This activity assumes you have a Google Earth Engine account that is working correctly. The Google Earth Engine User Interface is built on JavaScript, allowing you to explore a web-based Code Editor without installation. The Code Editor, through the JavaScript Application Programming Interface (API), provides additional functionality for displaying results on a map, managing scripts, accessing reference documentation, managing tasks, and more. The Code Editor also lets you share your code with other users, making it easy for others to replicate your methods while promoting collaboration and communication about project results.
+
 
 ## Learning Outcomes
 - Familiarity with the Earth Engine Code Editor
