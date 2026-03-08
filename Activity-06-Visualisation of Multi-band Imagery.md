@@ -1,4 +1,4 @@
-# Activity 6: Visualisation of Multi-band Imagery
+# Visualisation of Multi-band Imagery
 
 ## Introduction
 
