@@ -217,6 +217,84 @@ You can further explore the displayed map layer using the `Inspector` tool, the 
 **Point** provides the longitude and latitude of the cursor location (i.e., your ROI) plus the zoom level and scale of the displayed map layer. **Pixels** gives attributes about the pixel, and in this example, if you expand the arrow, the layer name (including the data type and number of bands) and the elevation of the selected location are displayed. **Objects** provides data about the source dataset.
 
 
+
+### Complete Script
+
+```JavaScript
+
+//retrieve the elevation data
+var srtm_elevation = ee.Image("USGS/SRTMGL1_003");
+
+//print to Console
+print(srtm_elevation);
+
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: -10,
+max: 6500 //the min-max gives the data range: values were sourced from the image properties
+},
+
+//name of the layer
+'STRM Elevation 1'
+);
+```
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: -10,
+max: 6500 //the min-max gives the data range: values were sourced from the image properties
+},
+
+//name of the layer
+'STRM Elevation 2',
+1, //it is a boolean: 1=show map layer, and specify 0 if you do not want to dsiplay the map layer
+0.7 //opacity value; this ranges between 0 (transparent) and 1(opaque)
+);
+```
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: 0,
+max: 1000 //range specified to suit a region of interest (Australia in this case)
+},
+
+//name of the layer
+'STRM Elevation 3'
+);
+```
+
+
+```JavaScript
+
+//Add the layer to the base map
+Map.addLayer(srtm_elevation, //this is the eeObject
+
+{//visParams
+bands:['elevation'], //the band to display; we used [] to show that the band is from a list
+min: 0,
+max: 1000, //range specified to suit a region of interest (Australia in this case)
+palette:['blue','green', 'red']// assigning a palette; low elevation areas would be blue while high elevation would be red
+},
+
+//name of the layer
+'STRM Elevation 4'
+);
+```
+
 ### DIY
 Using the NASA SRTM data, produce a pseudocolour image with a rainbow palette: violet, indigo, blue, green, yellow, orange, and red. Compare your result with the one in Fig. 10 and share your observation on the discussion forum.
 
