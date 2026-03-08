@@ -123,7 +123,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 },
 
 //name of the layer
-'STRM Elevation 1'
+'SRTM Elevation 1'
 );
 ```
 Click **Run** to run the script; you may need to zoom out the base map to see the grayscale image of the elevation data. Darker pixels connote low elevation while lighter pixels mean high elevation areas. In the base map panel find the layer name under the widget **Layers**. This is a global data but zoom in on Australia and identify the high elevation areas. 
@@ -141,7 +141,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 },
 
 //name of the layer
-'STRM Elevation 2',
+'SRTM Elevation 2',
 1, //it is a boolean: 1=show map layer, and specify 0 if you do not want to dsiplay the map layer
 0.7 //opacity value; this ranges between 0 (transparent) and 1(opaque)
 );
@@ -161,7 +161,7 @@ max: 1000 //range specified to suit a region of interest (Australia in this case
 },
 
 //name of the layer
-'STRM Elevation 3'
+'SRTM Elevation 3'
 );
 ```
 
@@ -196,7 +196,7 @@ palette:['blue','green', 'red']// assigning a palette; low elevation areas would
 },
 
 //name of the layer
-'STRM Elevation 4'
+'SRTM Elevation 4'
 );
 ```
 Run the above code to produce the pseudocolour image below. Note that we have zoomed in on Australia for emphasis. You can zoom in on any continent or country of your preference.
@@ -239,7 +239,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 },
 
 //name of the layer
-'STRM Elevation 1'
+'SRTM Elevation 1'
 );
 ```
 
@@ -255,7 +255,7 @@ max: 6500 //the min-max gives the data range: values were sourced from the image
 },
 
 //name of the layer
-'STRM Elevation 2',
+'SRTM Elevation 2',
 1, //it is a boolean: 1=show map layer, and specify 0 if you do not want to dsiplay the map layer
 0.7 //opacity value; this ranges between 0 (transparent) and 1(opaque)
 );
@@ -273,7 +273,7 @@ max: 1000 //range specified to suit a region of interest (Australia in this case
 },
 
 //name of the layer
-'STRM Elevation 3'
+'SRTM Elevation 3'
 );
 ```
 
@@ -291,7 +291,7 @@ palette:['blue','green', 'red']// assigning a palette; low elevation areas would
 },
 
 //name of the layer
-'STRM Elevation 4'
+'SRTM Elevation 4'
 );
 ```
 
