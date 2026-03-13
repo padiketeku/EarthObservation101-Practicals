@@ -181,6 +181,34 @@ You should see in the **`Console`** that the number of elements is now lower (Fi
 Now that we have the right images in the collection, in the next activity, we will create the spectral reflectance curves for the major surface types. 
 
 
+## Complete Script
+
+```
+//define study area, e.g., Darwin
+var roiDarwin = ee.Geometry.Polygon(
+        [[[130.8804013153287, -12.641711504668407],
+          [131.0836483856412, -12.636351451342694],
+          [131.0781552215787, -12.427222124161041],
+          [130.8858944793912, -12.427222124161041]]]);
+
+//create a variable
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+
+//print
+print(sen2sr)//this may produce error message in the Console, the error is fixed by the filtering below
+
+//filter collection
+var sen2sr = sen2sr
+//filter by study area
+.filterBounds(roiDarwin)
+//filter by date
+.filterDate("2022-01-01", "2023-12-31")
+//filter by cloud cover percentage
+.filter(ee.Filter.lte('CLOUD_COVERAGE_ASSESSMENT', 10));
+
+//print result to Console
+print(sen2sr)
+```
 
 ## DIY
 
