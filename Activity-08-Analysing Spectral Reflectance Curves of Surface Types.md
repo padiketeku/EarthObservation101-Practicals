@@ -282,6 +282,158 @@ In the top right corner, you have the options to download the chart as a CSV, SV
 It is important to interpret your result. The urban cover shows the highest reflectance for all light. This makes sense as built-up areas comprise a mixture of materials. Water generally has low reflectance with the highest reflectance observed for green light. The green reflectance for water is even higher than green reflectance for crop field and riparian forest. This is not surprising as it was evident in the imagery. Could this be that the water pixels selected had significant amount of photosynthetic materials? Crop fields and forest showed similar spectral profile, which matches textbook example of a healthy vegetation, in that NIR is the peak reflectance while the reflectance decreases with increasing wavelengths. The crop field shows higher reflectance across all bands. 
 
 
+### Complete Scripts
+
+```JavaScript
+//1. the study area
+var roiDarwin = 
+    ee.Geometry.Polygon(
+        [[[130.13068256223357, -12.883780403744343],
+          [131.18537006223357, -12.80880102414205],
+          [130.95465717160857, -12.240384592879826],
+          [130.32843646848357, -12.336996025741477]]])
+
+//2. get Sentinel-2 data and filter this
+var sen2sr = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED");
+
+//call the image collection and keep the same variable name; you may rename the variable if you want
+var sen2sr = sen2sr
+
+//filter by the study period
+.filterDate('2022-01-01', '2023-12-31')
+
+//filter by region of interest
+.filterBounds(roiDarwin)
+
+//filter by cloud cover percentage
+.filter(ee.Filter.lte('CLOUD_COVERAGE_ASSESSMENT', 10));
+
+//average image using all the images in the collection
+var sen2sr_mean =sen2sr.mean();
+
+//print the collection to the Console
+print(sen2sr_mean);
+
+
+//select the required bands and clip image to study area
+var sen2sr_mean= sen2sr_mean.select('B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8','B11' ).clip(roiDarwin); 
+
+//first, centre the map to the coordinates of the stud y area
+Map.setCenter(130.955, -12.240, 9); //the first two inputs are the coordinates and the third is zoom level
+
+//visualise a true colour composite of the average image
+Map.addLayer(sen2sr_mean, {
+min:0,
+max:3000,
+bands:['B4','B3','B2'],
+});
+
+
+//3. create and merge feature collection for the surface types: water, field, urban, forest
+var water = 
+    ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Polygon(
+                [[[130.78784891036824, -12.50494243042739],
+                  [130.8184046354659, -12.501255443671932],
+                  [130.81445642379597, -12.46941109789082],
+                  [130.78664728072957, -12.470751991451799]]]),
+            {
+              "label": "water",
+              "system:index": "0"
+            })])
+
+var    urban = 
+    ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Polygon(
+                [[[130.98312625454818, -12.51864592931538],
+                  [130.9880187020528, -12.51454012133525],
+                  [130.98355543839168, -12.5096382025901],
+                  [130.97879176094716, -12.514372549635969]]]),
+            {
+              "label": "urban",
+              "system:index": "0"
+            })])
+            
+  var field = 
+    ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Polygon(
+                [[[130.98761264801593, -12.730030167276288],
+                  [130.99310581207843, -12.730030167276288],
+                  [130.99310581207843, -12.722076557088352],
+                  [130.98754827499957, -12.721888179087804]]]),
+            {
+              "label": "field",
+              "system:index": "0"
+            })])
+            
+  var  forest = 
+    ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Polygon(
+                [[[130.82306464776934, -12.584932708327676],
+                  [130.82327922162642, -12.586299164231615],
+                  [130.82424482306163, -12.587440492470927],
+                  [130.828579210098, -12.586644722223074],
+                  [130.82529620888815, -12.582058420028671],
+                  [130.82218489163412, -12.583377768335223]]]),
+            {
+              "label": "forest",
+              "system:index": "0"
+            })])
+
+// creating a feature collection to hold all the features
+var featureCollection = water.merge(urban).merge(field).merge(forest);
+
+
+//4. produce the spectral response curve using ui.Chart.image.regions
+// Create the reflectance chart
+var spectralCurve = ui.Chart.image.regions({
+    image:sen2sr_mean, // the image to provide the reflectance data
+    regions:featureCollection, // the regions within the image to sample from
+    reducer:ee.Reducer.mean(), // this computes mean reflectance for the y-axis
+    scale: 10, // the pixel size in metres
+    seriesProperty: 'label'}); // use the label property we defined while using the geometry tool
+
+// print the chart to the Console
+print(spectralCurve, "Spectral Curve 1");
+
+
+// edit the spectral response curve
+
+// ccreate a  list of wavelengths (in nanometer), which corresponds to the Sentinel-2 bands used
+var wavelengths = [490, 560, 665,705,740,783,842,1610]; 
+
+// create a variable that edits the x-and-y axes labels, title, and the colours of the curves
+var editChart = {
+  title: 'A spectral response curve from a Sentinel-2 image', // title of the chart
+  hAxis: {title: 'Wavelength (nanometers)'}, // horizontal axis title
+  vAxis: {title: 'Reflectance'}, // vertical axis title
+  lineWidth: 1, // width or thickness of the curve
+  pointSize: 4, // display the reflectance values using a point, and the size = 4
+  series: { // edits the colour of the curves
+    0: {color: 'blue'}, // blue trace for water
+    1: {color: 'magenta'}, // red trace for urban
+    2: {color: 'green'}, // green for crop fields
+    3: {color: 'purple'}, // purple curve for riparian forest
+    
+}};
+
+// re-produce the spectral response curves
+var spectralCurve2 = ui.Chart.image.regions({
+    image:sen2sr_mean, // the image to provide the reflectance data
+    regions:featureCollection, // the regions within the image to sample from
+    reducer:ee.Reducer.mean(), // computes mean reflectance for the y-axis
+    scale: 10, // the pixel size in metres
+    seriesProperty: "label", // uses the "label" property defined in task 3
+  xLabels: wavelengths}) // defines the wavelengths on the x-axis
+    .setOptions(editChart); // a method to apply the edit chart object created earlier
+
+// print the chart to the Console
+print(spectralCurve2, "Spectral Curve 2");
+```
 
 ## DIY
 
