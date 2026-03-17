@@ -268,56 +268,6 @@ The visualisation for SAVI and EVI is given below. Top layer is SAVI and the bot
 
 
 
-
-
-
-
-
-
-
-### Compute vegetation indices using a user-defined function
-
-
-```JavaScript
-
-//select bands to be used for the computation
-var blue = s2.select(["B2"])
-var green = s2.select(["B3"])
-var red = s2.select(["B4"])
-var nir = s2.select(["B8"])
-var swir = s2.select(["B12"])
-
-//user-defined function
-var vegIndices = function(image){
-var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
-var ndmi = green.subtract(nir).divide(green.add(nir)).rename('NDMI')
-var nbr = nir.subtract(swir).divide(nir.add(swir)).rename('NBR')
-return image.addBands(ndvi).addBands(ndmi).addBands(nbr)
-}
-
-```
-
-//apply the function to create additional bands (vegetation indices) to the imagery
-
-```JavaScript
-var veg_indices = vegIndices(s2)
-
-//print the result to the Console. note that the layer name is set to "Vegetation Indices"
-print(veg_indices, 'Vegetation Indices')
-
-```
-
-Your result in the Console may look like this:
-
-
-![image](https://github.com/user-attachments/assets/6e5bdd10-bb05-40aa-8b68-d4d56656d55c)
-
-
-
-
-The vegetation indices, the additional spectral bands, are identified using the red polygon.
-
-
 ## Complete Scripts
 
 ```JavaScript
