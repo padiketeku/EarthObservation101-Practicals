@@ -253,6 +253,86 @@ Your result in the Console may look like this:
 The vegetation indices, the additional spectral bands, are identified using the red polygon.
 
 
+## Complete Scripts
+
+```JavaScript
+//Computing spectral indices and visualising the layers
+var s2 = ee.Image("COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL")
+
+//print variable to the Console
+print(s2, 'Sentinel-2 data') //the second argument is an idenitifier of the variable in the Console
+
+var s2 = s2.select(["B2", "B3", "B4", "B8","B11", "B12"])
+print(s2, 'Sentinel-2 with selected bands') 
+
+
+var ndvi = s2 //this is the multiband image to create the ndvi layer from
+.normalizedDifference(["B8", "B4"]) //ndvi is computed
+.rename("NDVI") //renames the band
+
+print(ndvi)
+
+Map.addLayer(ndvi, {min:-1, max:1}, "NDVI layer in greyscale")
+Map.addLayer(ndvi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, 'NDVI layer in pseudocolour')
+
+// make NDWI layer
+var ndwi = s2 //this is the multiband image to create the ndvi layer from
+.normalizedDifference(["B3", "B8"]) //ndwi is computed
+.rename("NDWI") //renames the band
+
+print(ndwi)
+
+//visualise the NDWI layer in greyscale and pseudocolour
+Map.addLayer(ndwi, {min:-1, max:1}, "NDWI layer in greyscale")
+Map.addLayer(ndwi, {min:-1, max:1, palette:[ "red", "green", "yellow", "blue", "darkblue"]}, "NDWI layer in pseudocolour")
+
+//make NBR layer
+
+//false colour for fire scars
+Map.addLayer(s2, {bands:["B12","B8", "B4"], min:0, max:3000}, "False Colour Composite for fire scars")
+
+//computer NBR layer
+var nbr = s2 
+.normalizedDifference(["B8", "B12"]) //nbr is computed
+.rename("NBR") //renames the band
+
+print(nbr)
+
+//visualise in greyscale and pseudocolour
+Map.addLayer(nbr, {min:-1, max:1}, "NBR layer in greyscale")
+Map.addLayer(nbr, {min:-1, max:1, palette:[ "red", "magenta", "purple", "yellow", "green", "darkgreen"]}, "NBR layer in pseudocolour")
+
+//computing spectral indices using expression
+var ndvi = s2.expression(
+    '(NIR - RED) / (NIR + RED)', {
+      'NIR': s2.select("B8"), // NIR band
+      'RED': s2.select("B4") // Red band 
+}).rename('NDVI')
+
+Map.addLayer(ndvi, {min:-1, max:1}, "NDVI layer in greyscale 2")
+Map.addLayer(ndvi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, "NDVI layer in pseudocolour 2")
+
+//make and visualise SAVI layer
+var savi = s2.expression(
+    '((NIR - RED) / (NIR + RED + 0.5)) * (1 + 0.5)', {
+      'NIR': s2.select("B8"), // NIR band
+      'RED': s2.select("B4"), // Red band 
+    }).rename('SAVI');
+
+Map.addLayer(savi, {min:-1, max:1}, "SAVI layer in greyscale ")
+Map.addLayer(savi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, "SAVI layer in pseudocolour" )
+
+//make and visualise EVI layer
+
+var evi = s2.expression(
+    '2.5 * ((NIR - RED) / (NIR + 6 * RED - 7.5 * BLUE + 1))', {
+      'NIR': s2.select('B8'), // NIR band
+      'RED': s2.select('B4'), // Red band
+      'BLUE': s2.select('B2'), // Blue band
+}).rename('EVI');
+Map.addLayer(evi, {min:-1, max:1}, "EVI layer in greyscale ")
+Map.addLayer(evi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, 'EVI layer in pseudocolour')
+```
 
 ## DIY
 
