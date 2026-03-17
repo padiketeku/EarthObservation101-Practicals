@@ -209,6 +209,44 @@ The figure to your right is the pseudocolour NBR image with the pixels in shades
 
 
 
+### Compute spectral indices using expression
+
+In GEE, we can perform arithmetic over the bands using the `expression` method under `ee.Image`. This means that the `expression` applies to an image data. The arguments of `expression` are two: (1) expression and (2) map. The expression may require the analyst to write down the equation for the spectral index and once the bands are defined the method appliied the bands to evaluate the expression. Students are encourage to read the `Docs` for further details about the method. The below scripts show the use of `expression` to compute NDVI, SAVI and EVI.
+
+```JavaScript
+//computing spectral indices using expression
+var ndvi = s2.expression(
+    '(NIR - RED) / (NIR + RED)', {
+      'NIR': s2.select("B8"), // NIR band
+      'RED': s2.select("B4") // Red band 
+}).rename('NDVI')
+
+Map.addLayer(ndvi, {min:-1, max:1}, "NDVI layer in greyscale 2")
+Map.addLayer(ndvi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, "NDVI layer in pseudocolour 2")
+
+//make and visualise SAVI layer
+var savi = s2.expression(
+    '((NIR - RED) / (NIR + RED + 0.5)) * (1 + 0.5)', {
+      'NIR': s2.select("B8"), // NIR band
+      'RED': s2.select("B4"), // Red band 
+    }).rename('SAVI');
+
+Map.addLayer(savi, {min:-1, max:1}, "SAVI layer in greyscale ")
+Map.addLayer(savi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, "SAVI layer in pseudocolour" )
+
+//make and visualise EVI layer
+
+var evi = s2.expression(
+    '2.5 * ((NIR - RED) / (NIR + 6 * RED - 7.5 * BLUE + 1))', {
+      'NIR': s2.select('B8'), // NIR band
+      'RED': s2.select('B4'), // Red band
+      'BLUE': s2.select('B2'), // Blue band
+}).rename('EVI');
+Map.addLayer(evi, {min:-1, max:1}, "EVI layer in greyscale ")
+Map.addLayer(evi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, 'EVI layer in pseudocolour')
+
+```
+
 
 ### Compute vegetation indices using a user-defined function
 
