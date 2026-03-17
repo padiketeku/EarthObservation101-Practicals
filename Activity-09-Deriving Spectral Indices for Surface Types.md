@@ -211,7 +211,7 @@ The figure to your right is the pseudocolour NBR image with the pixels in shades
 
 ### Compute spectral indices using expression
 
-In GEE, we can perform arithmetic over the bands using the `expression` method under `ee.Image`. This means that the `expression` applies to an image data. The arguments of `expression` are two: (1) expression and (2) map. The expression may require the analyst to write down the equation for the spectral index and once the bands are defined the method appliied the bands to evaluate the expression. Students are encourage to read the `Docs` for further details about the method. The below scripts show the use of `expression` to compute NDVI, SAVI and EVI.
+In GEE, we can perform arithmetic over the bands using `expression` under `ee.Image`. This means that `expression` applies to an image data. The arguments of `expression` are two: (1) expression and (2) map. The expression may require the analyst to write down the equation for the spectral index and once the bands are defined the method applies the bands to evaluate the expression. Read the `Docs` for further details about the method. The below scripts show the use of `expression` to compute NDVI, SAVI and EVI.
 
 ```JavaScript
 //computing spectral indices using expression
@@ -246,6 +246,33 @@ Map.addLayer(evi, {min:-1, max:1}, "EVI layer in greyscale ")
 Map.addLayer(evi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", "green"]}, 'EVI layer in pseudocolour')
 
 ```
+
+
+The visualisation for SAVI and EVI is given below.
+
+
+
+
+
+
+
+<img width="617" height="689" alt="image" src="https://github.com/user-attachments/assets/83bd8a68-b63e-492f-a97b-c93a256f7e40" />     <img width="628" height="690" alt="image" src="https://github.com/user-attachments/assets/73c0d2ad-a6e4-4689-be3b-a681c7879278" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Compute vegetation indices using a user-defined function
