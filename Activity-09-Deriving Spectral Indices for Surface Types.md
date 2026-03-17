@@ -248,7 +248,7 @@ Map.addLayer(evi, {min:-1, max:1, palette:[ "purple", "red", "black", "yellow", 
 ```
 
 
-The visualisation for SAVI and EVI is given below.
+The visualisation for SAVI and EVI is given below. Top layer is SAVI and the bottom is EVI. You may use the `Inspector` to explore the range of values.
 
 
 
@@ -256,7 +256,7 @@ The visualisation for SAVI and EVI is given below.
 
 
 
-<img width="617" height="689" alt="image" src="https://github.com/user-attachments/assets/83bd8a68-b63e-492f-a97b-c93a256f7e40" />     <img width="628" height="690" alt="image" src="https://github.com/user-attachments/assets/73c0d2ad-a6e4-4689-be3b-a681c7879278" />
+<img width="617" height="689" alt="image" src="https://github.com/user-attachments/assets/83bd8a68-b63e-492f-a97b-c93a256f7e40" />       <img width="628" height="690" alt="image" src="https://github.com/user-attachments/assets/73c0d2ad-a6e4-4689-be3b-a681c7879278" />
 
 
 
