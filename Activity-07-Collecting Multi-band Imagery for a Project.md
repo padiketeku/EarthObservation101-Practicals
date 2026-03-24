@@ -98,8 +98,9 @@ If you are not happy with a geometry you created you can delete this by selectin
 ![image](https://github.com/user-attachments/assets/a4b3ce69-5329-46cb-b591-1c0a11e26b1f)
 
 
+!CAVEAT before the next step. If you didn't carry along the ROI from the previous activity into this activity then disregard the step below. 
 
-Now click **Delete** to remove the geometry as you do not need it. 
+Now click **Delete** to remove the geometry. 
 Once you have defined an ROI for your study area and know the period you want to investigate, you can go back to the code and filter the collection. This might be a solution to the error message regarding printing all the elements in the image collection to the **`Console`**.
 To filter a collection by date, varied methods can be used. In this activity we used `filterDate()`. Remember, you can find this method and the arguments required in the `Docs` tab as shown below. The `filterDate()` is highlighted with a red polygon.
 
