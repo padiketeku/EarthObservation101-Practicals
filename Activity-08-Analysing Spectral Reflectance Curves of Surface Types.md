@@ -403,7 +403,7 @@ print(spectralCurve, "Spectral Curve 1");
 
 // edit the spectral response curve
 
-// ccreate a  list of wavelengths (in nanometer), which corresponds to the Sentinel-2 bands used
+// create a  list of wavelengths (in nanometer), which corresponds to the Sentinel-2 bands used
 var wavelengths = [490, 560, 665,705,740,783,842,1610]; 
 
 // create a variable that edits the x-and-y axes labels, title, and the colours of the curves
