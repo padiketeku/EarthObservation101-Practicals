@@ -1,4 +1,4 @@
-# Activity 8: Analysing Spectral Reflectance Curves of Surface Types
+# Analysing Spectral Reflectance Curves of Surface Types
 
 
 ## Introduction
