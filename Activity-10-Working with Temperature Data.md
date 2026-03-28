@@ -236,7 +236,7 @@ You may like to visualise the NDVI layer, but the problem is that this is global
 ```JavaScript
 
 //plot a histogram for the NDVI layer. region is the region of interest, so specify the geometry
-var chartNDVI =ui.Chart.image.histogram({image:ndvi, region: roi})
+var chartNDVI =ui.Chart.image.histogram({image:ndvi, region: roi, scale: 500})
 print (chartNDVI, ' HistogramNDVI')
 
 ```
@@ -248,7 +248,7 @@ print (chartNDVI, ' HistogramNDVI')
 ```JavaScript
 
 //display NDVI layer of the study area for visualisation
-Map.addLayer(ndvi.clip(roi), {min:0, max:0.5, palette:['darkred', 'peachpuff','yellow', 'green']}, " NDVI")
+Map.addLayer(ndvi.clip(roi), {min:0, max:0.5, palette:["darkred", "peachpuff","yellow", "green"]}, " NDVI")
 ```
 
 Your result should be similar to the one below.
@@ -278,11 +278,13 @@ print(temp_ndvi)
 
 ```JavaScript
 
-//sample data for the correlation test, in this case we are sampling no more than 5000 features to avoid breaching the Earth Engine limit.  
-var sample = temp_ndvi.sample({region:roi, numPixels: 5000})
+//sample data for the correlation test, 
+//sample no more than 5000 features to avoid breaching the Earth Engine limit. 
+//set the scale to 1000 to equalise the pixel size of both images
+var sample = temp_ndvi.sample({region:roi, scale: 1000, numPixels: 4500, seed:111})
 
-//print the variable to the Console and identify the number of features available for the correlation test
-print(sample, 'sample')
+//print the total number of pixels sampled for the correlation test
+print(sample.size(), 'sample size')
 
 ```
 
@@ -322,7 +324,7 @@ We can graphically support this result through a scatter plot.
 //plot a scatterplot of NDVI against temperature and print the result to the Console
 var scatterPlot = ui.Chart.feature.byFeature(sample, 'NDVI', 'daytimeLST')
   .setChartType('ScatterChart')
-  .setOptions({ pointSize: 2, pointColor: 'blue', width: 300, height: 300, titleX: 'NDVI', titleY: 'Temperature (C)' })
+  .setOptions({ pointSize: 2, width: 400, height: 400, titleX: 'NDVI', titleY: 'Temperature (C)' })
    
 print(scatterPlot) 
 
@@ -330,7 +332,7 @@ print(scatterPlot)
 
 The scatter plot is shown below.
 
-![image](https://github.com/user-attachments/assets/744866a9-a8c0-48f9-a5af-6d03a2be87dc) |
+<img width="1764" height="651" alt="image" src="https://github.com/user-attachments/assets/ea038e3e-69c0-412c-9db9-8f37f04c641b" />|
 |:--:|
 | *Fig. 4. A scatter plot showing the relationship between temperature and NDVI.*|
 
