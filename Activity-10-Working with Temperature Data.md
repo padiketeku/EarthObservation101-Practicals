@@ -152,10 +152,10 @@ var daytimeTemp_rescaled = daytimeTemp.multiply(0.02).subtract(273.15)
 After re-scaling the image, the temperature values may show high precision, but we would round the values up or down to minimise precision. To be sure this transformation does not alter the spatial reference of the output data you must specify the coordinate reference system and scale. In this case, we have maintained the spatial resolution of the LST product as the scale.
 
 
-### Round the temperature values and keep the projection
+### Round off the temperature values
 
 ```JavaScript
-var daytimeTemp = daytimeTemp_rescaled.round().reproject({crs:'EPSG:4326', scale:1000.0})
+var daytimeTemp = daytimeTemp_rescaled.round()
 print(daytimeTemp, "daytimeTemp_rescaled")
 ```
 
@@ -163,7 +163,7 @@ print(daytimeTemp, "daytimeTemp_rescaled")
 ### Display the rescaled LST as a pseudocolour image
 
 ```JavaScript
-Map.addLayer( daytimeTemp,{min:10, max:45, palette:['blue', 'peachpuff', 'yellow', 'orange', 'red']}, 'daytimeLST')
+Map.addLayer( daytimeTemp,{min:10, max:45, palette:["blue", "peachpuff", "yellow", "orange","red"}, "daytimeLST")
 ```
 
 ![image](https://github.com/user-attachments/assets/2f384da7-7111-4f1d-8808-e0cd646284a6) |
@@ -201,30 +201,26 @@ var sr = sr.filterDate('2021-09-01', '2021-09-30') // filter by date
 .mean()
 
 //print the variable to the Console
-print(sr, 'SR1')
-```
-
-### Match the scale and projection to the LST data
-
-The pixel size for the reflectance data is 0.5km, so to compare this data with the temperature we would have to make the pixel size 1km.
-
-```JavaScript
-var sr = sr.reproject({crs:'EPSG:4326', scale:1000.0})
 print(sr, 'SR')
 ```
+
+
 
 ### Selecting bands and compute NDVI
 
 There are more bands than we need to compute the NDVI, so let’s select the required bands for NDVI.
 
 ```JavaScript
-//select the red and nir bands to compute NDVI
-var red = sr.select("sur_refl_b01")
-var nir = sr.select("sur_refl_b02")
-print(red, ' red')
+var expression = "(NIR - RED) / (NIR + RED)" //defines argument 1
 
-//compute NDVI. take note of this method of computing NDVI
-var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI')
+//defines argument 2
+var map = {
+  'NIR': sr.select("sur_refl_b02"), //this selects the NIR band
+  'RED': sr.select("sur_refl_b01"), //this selects the RED band
+}
+
+//apply the arguments to compute NDVI and rename the band accordingly
+var ndvi = sr.expression(expression, map).rename("NDVI")
 
 ```
 
@@ -245,7 +241,7 @@ print (chartNDVI, ' HistogramNDVI')
 
 ```
 
-![image](https://github.com/user-attachments/assets/4ae3c699-ba1c-43ba-b74e-bc71824e1d4d) |
+![image]<img width="1522" height="672" alt="image" src="https://github.com/user-attachments/assets/664da4cb-2bcf-4b9a-8814-787d5b2332c0" />|
 |:--:|
 | *Fig. 2. A histogram for an NDVI layer.*|
 
