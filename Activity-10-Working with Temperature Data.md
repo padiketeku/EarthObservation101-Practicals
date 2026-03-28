@@ -473,6 +473,8 @@ print(scatterPlot)
 
 //visualise the study area
 Map.addLayer(roi, {}, "ROI")
+
+//end of scripts
 ```
 
 
