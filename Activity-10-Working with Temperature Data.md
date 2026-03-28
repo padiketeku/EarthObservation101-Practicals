@@ -337,6 +337,146 @@ The scatter plot is shown below.
 | *Fig. 4. A scatter plot showing the relationship between temperature and NDVI.*|
 
 
+
+
+### Complete Scripts
+
+```JavaScript
+//**Dataset
+//MODIS temperature data
+var lst = ee.ImageCollection("MODIS/061/MOD11A2")
+print(lst, "temp")
+//MODIS surface reflectance data
+var sr = ee.ImageCollection("MODIS/061/MOD09A1")
+print(sr, "surface reflectance")
+
+//**study area
+var listCoords = [142.06594410835254,-17.94898241151206,
+145.38930836616504,-17.94898241151206,
+145.38930836616504,-16.005194143426337,
+142.06594410835254,-16.005194143426337,
+142.06594410835254,-17.94898241151206]
+
+//convert the list of coordinates into a geometry 
+var roi = ee.Geometry.Polygon(listCoords)
+
+//Data processing
+//1. MODIS Land Surface Temperature
+
+var daytimeTemp = 
+
+//call the MODIS LST data
+lst
+
+//filter by date
+.filterDate("2021-09-01","2021-09-30")
+
+//select the required band
+.select("LST_Day_1km")
+
+//compute the average of the collection
+.mean()
+
+//print the result to Console
+print(daytimeTemp)
+
+//rename the band as "daytimeLST"
+
+var daytimeTemp = daytimeTemp.rename('daytimeLST')
+print(daytimeTemp, ' daytimeLST')
+
+//visualise the daytime temperature
+//Map.addLayer( daytimeTemp,{}, "daytimeLST")
+
+//re-scale pixel and convert from Kelvin to Celsius
+var daytimeTemp_rescaled = daytimeTemp.multiply(0.02).subtract(273.15)
+
+//round the temperature values while keeping the projection
+var daytimeTemp = daytimeTemp_rescaled.round()
+print(daytimeTemp, "daytimeTemp_rescaled")
+
+//visualise the rescaled daytime temperature as a pseudocolour image
+Map.addLayer( daytimeTemp,{min:10, max:45, palette:["blue", "peachpuff", "yellow", "orange","red"]}, "daytimeLST")
+
+
+//2. MODIS Surface Reflectance
+var sr = sr
+
+//filter by date 
+.filterDate("2021-09-01","2021-09-30")
+
+//select bands required for the computation of NDVI
+.select(["sur_refl_b01", "sur_refl_b02"])
+
+//computes mean image 
+.mean()
+
+//print the variable to the Console
+print(sr, 'SR')
+
+
+//compute NDVI using the SR data
+var expression = "(NIR - RED) / (NIR + RED)" //defines argument 1
+
+//defines argument 2
+var map = {
+  'NIR': sr.select("sur_refl_b02"), //this selects the NIR band
+  'RED': sr.select("sur_refl_b01"), //this selects the RED band
+}
+
+//apply the arguments to compute NDVI and rename the band accordingly
+var ndvi = sr.expression(expression, map).rename("NDVI")
+//print(ndvi, 'ndvi')
+
+//produce a histogram of the NDVI
+var chartNDVI =ui.Chart.image.histogram({image:ndvi, region: roi, scale:500})
+print (chartNDVI, "HistogramNDVI")
+
+//visualise the NDVI layer
+//display NDVI layer of the study area for visualisation
+//the layer was trimmed to the study area using the "roi" 
+Map.addLayer(ndvi.clip(roi), {min:0, max:0.5, palette:["darkred", "peachpuff","yellow", "green"]}, "NDVI")
+
+//Correlation analysis
+//examine the relationship between temperature and vegetation cover
+//1. merge the temeperature and NDVI data
+var temp_ndvi = daytimeTemp.addBands(ndvi)
+print(temp_ndvi,"temp_ndvi")
+Map.addLayer(temp_ndvi, {}, "temp_ndvi")
+//2.sample data for the correlation test, 
+//sample no more than 5000 features to avoid breaching the Earth Engine limit. 
+//set the scale to 1000 to equalise the pixel size of both images
+var sample = temp_ndvi.sample({region:roi, scale: 1000, numPixels: 4500, seed:111})
+
+//print the total number of pixels sampled for the correlation test
+print(sample.size(), 'sample size')
+
+//3.correlation test
+var correl = ee.Reducer.pearsonsCorrelation(); //method for Pearson's correlation test
+
+//Correlation test- choose the two properties for the analysis 
+var correlation = sample.reduceColumns(correl, ['daytimeLST', 'NDVI'])
+
+//print the correlation results to the Console
+print(correlation, 'Correlation Results')
+
+//4. plot the relationship using scatter plots
+//plot a scatterplot of NDVI against temperature and print the result to the Console
+var scatterPlot = ui.Chart.feature.byFeature(sample, 'NDVI', 'daytimeLST')
+//type of plot to use
+  .setChartType('ScatterChart')
+  //specify the aesthetics
+  .setOptions({ pointSize: 2, width: 400, height: 400, titleX: 'NDVI', titleY: 'Temperature (C)' })
+
+//plots the scatter plot   
+print(scatterPlot) 
+
+//visualise the study area
+Map.addLayer(roi, {}, "ROI")
+```
+
+
+
 ## DIY
 
 
