@@ -241,7 +241,7 @@ print (chartNDVI, ' HistogramNDVI')
 
 ```
 
-<img width="1522" height="672" alt="image" src="https://github.com/user-attachments/assets/1a734176-4abc-427f-a52b-b01594609491" />|
+<img width="1540" height="703" alt="image" src="https://github.com/user-attachments/assets/4d6ac7e6-0f1c-4394-b7e7-517ae3582c16" />|
 |:--:|
 | *Fig. 2. A histogram for an NDVI layer.*|
 
