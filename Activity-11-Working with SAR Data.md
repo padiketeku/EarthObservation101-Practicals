@@ -216,7 +216,76 @@ Map.addLayer(sentinel_1b.select('VV'), {min:-20, max:1}, 'Sentinel SAR')
 
 
 
+## Complete Script
 
+```JavaScript
+//define region of interest
+var darwin = 
+    ee.Geometry.Polygon(
+        [[[131.05381656345884, -12.606979414658984],
+          [131.05381656345884, -12.864164160772756],
+          [131.36143375095884, -12.864164160772756],
+          [131.36143375095884, -12.606979414658984]]]);
+          
+//collect the Sentinel-1 imagery
+var sent1 = ee.ImageCollection("COPERNICUS/S1_GRD")
+
+
+//filter the image collection
+var sentinel_1= sent1
+
+//filter by ascending orbit mode
+.filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'))
+
+//filter by instrument mode; best to use IW = interferometric wide
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+
+//filter by a date range- wet season images only
+.filterDate("2015-01-01", "2021-12-31")
+
+//restrict the image acquisition date to specific months
+.filter(ee.Filter.calendarRange(12, 3, 'month'))
+
+//filter by study area; this means select scenes that overlap the study area
+.filterBounds(darwin)
+
+//select the VV and VH polarisation bands
+.select(['VV', 'VH']);
+
+//print result to Console
+print (sentinel_1);
+
+
+
+//Select the first descending pass image in the pack. The below code performs this task.
+var sentinel_1b= sent1
+
+//filter by descending orbit mode
+.filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING'))
+
+//filter by instrument mode; best to use IW = interferometric wide
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+
+//filter by a date range- wet season images only
+.filterDate("2015-01-01", "2021-12-31")
+
+//restrict the image acquisition date to specific months
+.filter(ee.Filter.calendarRange(12, 3, 'month'))
+
+//filter by study area; this means select scenes that overlap the study area
+.filterBounds(darwin)
+
+//select the VV and VH polarisation bands
+.select(['VV', 'VH'])
+
+//select an image---in this case the first image in the pack
+.first();
+
+print(sentinel_1b, 'A descending pass image')
+
+//Visualise the VV polarisation. The below code tackles this.
+Map.addLayer(sentinel_1b.select('VV'), {min:-20, max:1}, 'Sentinel SAR')
+```
 
 
 ## DIY
