@@ -164,6 +164,46 @@ The result image is shown below.
 
 
 
+## Complete Script
+
+```JavaScript
+//Retrieve the image for NT using ee.Image()
+var eleNT = ee.Image("AU/GA/AUSTRALIA_5M_DEM/NT")
+print (eleNT)
+Map.addLayer(eleNT, {}, 'elevation NT')
+Map.addLayer(eleNT, {min:5, max:20, palette:['red', 'yellow', 'brown']})
+
+//visualise NSW
+
+//retrieve the NSW layer
+var eleNSW = ee.Image("AU/GA/AUSTRALIA_5M_DEM/NSW")
+
+//visualise the NSW data
+Map.addLayer(eleNSW , {min:500, max:1000, palette:['red', 'yellow', 'brown']})
+
+//visualise England DEM data
+var uk = ee.Image("UK/EA/ENGLAND_1M_TERRAIN/2022")
+Map.addLayer(uk, {bands:['dtm', 'dsm_first', 'dsm_last'], min:100, max:700}, 'UK')
+
+//canopy height model
+
+//canopy height model = dsm minus dtm
+var dsm = uk.select('dsm_first')
+var dtm = uk.select('dtm')
+
+// thus CHM is
+var chm = dsm.subtract(dtm). rename('chm')
+
+//9, visualise chm. it's a greyscale with height objects being white
+
+Map.addLayer (chm, {}, 'CHM')
+
+//visualise the CHM using pseudocolours
+Map.addLayer(chm, {min:0, max:12, palette:['black','cyan', 'yellow', 'purple']}, 'CHM-Pseudo')
+```
+
+
+
 ## DIY
 
 
