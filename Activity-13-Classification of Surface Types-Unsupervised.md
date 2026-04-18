@@ -110,7 +110,40 @@ Visually compare the classified image against the true colour imagery that was c
 
 
 
+## Complete Script
 
+```JavaScript
+
+var s2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20240428T013701_20240428T013722_T52LGL')
+
+//select the required bands
+var s2 = s2.select(["B2","B3","B4","B5","B6","B7","B8","B11", "B12"])
+Map.addLayer(s2, {bands:["B4", "B3", "B2"], min:200, max:2000}, "S2 True Colour Composite")
+
+
+var samplePixels = s2.sample({
+scale: 20,
+numPixels:50000,
+tileScale: 4 //a scale factor to enable computations that may otherwise run out of memory
+})
+
+print(samplePixels.size())
+
+var kmeanClusters = ee.Clusterer.wekaKMeans({
+nClusters: 10,
+maxIterations: 10
+})
+
+//train the cluster using the sampled pixels
+var kmeanClusters =kmeanClusters.train(samplePixels)
+
+var clusters = s2.cluster(kmeanClusters)
+
+//visualise the clusters within the classified image
+Map.setCenter(131.3815, -12.9111, 10);
+Map.addLayer(clusters, {min:1, max:10, palette:['violet','purple', 'indigo', 'blue', 'cyan', ' green', 'yellow', 'orange', 'magenta', 'red']}, "K-means Classified Image")
+
+```
 
 ## DIY
 
