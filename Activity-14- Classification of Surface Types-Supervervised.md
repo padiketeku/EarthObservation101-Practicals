@@ -1683,37 +1683,6 @@ Export.image.toDrive({
     maxPixels: 1e13 //to increase the number of pixels allowed by default
 });
 
-
-
-//area estimates
-var areaImage = ee.Image.pixelArea().addBands(s2ClassifiedRF);
-// Calculate sum of area per class
-var classAreas = areaImage.reduceRegion({
-  reducer: ee.Reducer.sum().group({
-    groupField: 1, // The class band
-    groupName: 'label',
-  }),
-  geometry: projectArea,
-  scale: 20, // Adjust to your image resolution
-  maxPixels: 1e10,
-  bestEffort: true
-});
-print(classAreas, 'classAreas')
-
-//convert the area in m2 to hectares  
-//in other words divide the current values by 10,000
-var areasList = ee.List(classAreas.get('groups'));
-var area_in_ha = areasList.map(function(item) {
-  var areaDict = ee.Dictionary(item);
-  var label_ID = areaDict.get('label');
-  var areaHa = ee.Number(areaDict.get('sum')).divide(1e4);
-  return ee.Dictionary({
-    'Label': label_ID,
-    'Area_km2': areaHa
-  });
-});
-
-print('Areas per class (ha):', area_in_ha);
 ```
 
 
