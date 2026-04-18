@@ -113,6 +113,9 @@ Visually compare the classified image against the true colour imagery that was c
 ### Supervised classification: Classification and Regression Tree (CART)
 
 
+**CAVEAT!** YOUR RESULTS MAY NOT BE EXACTLY AS YOUR MATE'S OR IN THIS MANUAL FOR SEVERAL REASONS, INCLUDING DIFFERENCE IN TRAINING PIXELS. ENJOY THE WORKFLOW, THAT'S THE MOST IMPORTANT. YOU WILL BE ASSESSED BY THIS AND THE INTERPRETATION OF THE RESULTS.
+
+
 #### Sample surface types using point feature collections 
 
    In many real-world applications, the analyst conducts field surveys to identify the various dominant surface types in the study area. GPS is used to collect the locations of the sampled land cover or land use. In the absence of field data, an image (usually a higher resolution) can be used for desktop sampling of the land cover types. This approach was used in this activity. <br>
