@@ -105,7 +105,7 @@ The red and yellow points/pixels represent the calibration and validation sample
 
 #### Label the validation points/pixels and merge them
 
-Once the validation points/pixels have been sampled, analysts or experts must label them. Follow the labelling approach discussed or demonstrated in the last activity to complete this section. Different feature collections will be created during the labelling process and then merged into a single collection. Follow the approach used in the last activity. The cover classes: NTV, AS,CTV, and water  were re-labeled for specificity and interpretability.
+Once the validation points/pixels have been sampled, analysts or experts must label them. Follow the labelling approach discussed or demonstrated in the last activity to complete this section. Different feature collections will be created during the labelling process and then merged into a single collection. Follow the approach used in the last activity. The cover classes: NTV, AS,CTV, and water were re-labeled as **Vegetation**, **Bareland**, **Agriculture** and **Water**, respectively.
 
 
 #### Assign spectral values to the validation points
