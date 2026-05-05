@@ -1,6 +1,6 @@
 # Activity 15 Classification Accuracy Assessment
 
-This is the FINAL practice activity of the unit. It builds on Activity 14: Supervised Image Classification, so ensure you have completed the previous activity before proceeding. You may need to continue from where you left off rather than starting a new script. This activity evaluates the performance of a Random Forest classifier using ‘unseen’ stratified random sample data and an error (confusion) matrix. Accuracy metrics—including producer’s accuracy, user’s accuracy, and overall accuracy—are computed and interpreted.
+This is the FINAL practice activity of the unit. It builds on Activity 14: Supervised Image Classification, so ensure you have completed the previous activity before proceeding. You may need to continue from where you left off in Activity 14, rather than starting a new script. This activity evaluates the performance of a Random Forest classifier using ‘unseen’ stratified random sample data and an error (confusion) matrix. Accuracy metrics—including producer’s accuracy, user’s accuracy, and overall accuracy—are computed and interpreted.
 
 
 ## Introduction
