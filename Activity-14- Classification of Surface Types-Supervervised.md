@@ -248,7 +248,7 @@ In **Geometry Imports** click "+new layer" (see the figure below for help) to cr
 
 Note that you may need to use Google satellite imagery to support the labelling process. In fact, Google satellite imagery was used as much as possible to assign labels to the points.
 
-It is worth flagging that you may see that majority of the 120 pixels or points sampled were NTV. When this was experience purposive sampling of additional pixels or points was performed for the rare classes, resulting in 183 samples: 63 more than the original. NTV was 105, AS 24, NS 17, CTV 18, NAV 10, and water 9 sampling points.  [Olofsson et al. (2014)](https://doi.org/10.1016/j.rse.2014.02.015) recommended a minimum of 50 samples for rare classes. We did not apply this recommendation in this demonstration, you may want to follow this recommendation in future work.
+It is worth flagging that you may see that majority of the 120 pixels or points sampled were NTV. To minimise the dominance of one class, purposive sampling of additional pixels or points was performed for the rare classes, resulting in 183 samples: 63 more than the original. NTV was 105, AS 24, NS 17, CTV 18, NAV 10, and water 9 sampling points.  [Olofsson et al. (2014)](https://doi.org/10.1016/j.rse.2014.02.015) recommended a minimum of 50 samples for rare classes. We did not apply this recommendation in this demonstration, you may want to follow this recommendation in future work.
 
 
   
@@ -269,7 +269,7 @@ print(coverTypes, 'Cover Types')
 
 ##### Re-label the cover classes
 
-We have observed that the study area has rare classes, and to optimise the sampling points, the rare classes could be merged. To this end, spectrally similar classes were merged into a single class. NTV and NAV were merged into a single class, and AS and NS were merged as well, resulting in four land cover classes for further analysis. Assuming the original labels for water = 0, NTV = 1, AS = 2, NS = 3, NAV = 4 and CTV = 5, we can merge and re-label using the script below.
+We have observed that the study area has rare classes, and to optimise the sampling points, the rare classes could be merged. To this end, spectrally similar classes were merged into a single class. NTV and NAV were merged into a single class, and AS and NS were merged as well, resulting in four land cover classes for further analysis. Assuming the original labels were: water = 0, NTV = 1, AS = 2, NS = 3, NAV = 4 and CTV = 5, we would merge and re-label using the script below.
 
 ```JavaScript
 //merge and relabel classes, as some classes are spectrally similar and rare in the image
@@ -279,7 +279,7 @@ var coverTypes2 = coverTypes.remap([0, 1,2,3,4,5],[0,1,2,2,1,3], 'label')
 
 ##### Create reference areas, assigning the spectral values to sample points
 
-We know our sample points, and these are lat and lon coordinates of the pixels, but not yet integrated with the Sentinel-2 imagery. The spectral observations for the pixel or point in the feature collection must be provided to create reference areas with known spectral characteristics.
+We know our sample points, the lat and lon coordinates of the pixels, but not yet integrated with the Sentinel-2 imagery. The spectral observations for the pixel or point in the feature collection must be provided to create reference areas with known spectral characteristics.
 
 ```JavaScript
 var referencePoints = s2ProjectArea.sampleRegions({
