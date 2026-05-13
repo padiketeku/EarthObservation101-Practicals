@@ -304,7 +304,7 @@ Multiply the total mapped area by this proportion and your result would be: <br>
 
 
 
-  <img width="155" height="81" alt="image" src="https://github.com/user-attachments/assets/1d0f238c-5863-4f5d-b5af-072a178a8608" /> 337,337 × 0.075 = 25,401 ha. 
+  <img width="155" height="81" alt="image" src="https://github.com/user-attachments/assets/1d0f238c-5863-4f5d-b5af-072a178a8608" /> 337,337 × 0.075 = 25,300 ha. 
 
 
 
