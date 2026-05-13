@@ -316,7 +316,8 @@ A final vegetation area estimate with a margin of error (at approximate 95% conf
 
 
 
-<img width="497" height="65" alt="image" src="https://github.com/user-attachments/assets/76cedd8a-c5a6-46d4-9406-969b5da97a0b" />
+<img width="519" height="81" alt="image" src="https://github.com/user-attachments/assets/88e4c05e-bb4c-41db-a567-b6c423c850b7" />
+
 
 
 
