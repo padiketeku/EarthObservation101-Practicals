@@ -320,7 +320,7 @@ A final vegetation area estimate with a margin of error (at approximate 95% conf
 
 
 
-Use the given equations here ([Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191) for further details) to compute the standard errors for the stratified area estimators of the other land cover classes.
+Use the equations provided here ([Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191) for further details on computing the standard errors for the stratified area estimators of the other land cover classes.
 
 
 
