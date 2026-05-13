@@ -250,12 +250,6 @@ We would use the mapped area for a class cover as their respective wieghts to st
 
 
 
-<img width="1049" height="435" alt="image" src="https://github.com/user-attachments/assets/b5491746-5f68-4f79-8dab-9de4ddfa9d73" />
-
-
-
-
-
 
 <img width="977" height="306" alt="image" src="https://github.com/user-attachments/assets/76493868-0c9f-4d4c-9ecf-be2b64742770" />
 
