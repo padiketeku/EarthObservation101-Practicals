@@ -769,7 +769,7 @@ var area_in_ha = areasList.map(function(item) {
   var areaHa = ee.Number(areaDict.get('sum')).divide(1e4);
   return ee.Dictionary({
     'Label': label_ID,
-    'Area_km2': areaHa
+    'Area_ha': areaHa
   });
 });
 
