@@ -256,6 +256,12 @@ We would use the mapped area for a class cover as their respective wieghts to st
 
 
 
+
+<img width="977" height="306" alt="image" src="https://github.com/user-attachments/assets/76493868-0c9f-4d4c-9ecf-be2b64742770" />
+
+
+
+
 Now, the weights would be used to create proportional estimates  (i.e., a new error matrix table) using the sample count error matrix table above. The formula to produce the proportional estimate error matrix table is given in [Olofsson et al., (2014)](https://doi.org/10.1016/j.rse.2014.02.015) and [Olofsson et al. (2013)](https://www.sciencedirect.com/science/article/pii/S0034425712004191). 
 
 
