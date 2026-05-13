@@ -348,7 +348,7 @@ Map.addLayer(randomStratifiedPoints, {color: 'yellow'}, 'Validation Points');
 Map.addLayer(samp1, {color: ' red'}, 'samp1') //training samples
 Map.addLayer(coverTypes, {color: 'red'}, 'Calibration Sites')
 
-//validation data- a separate feature collections that uphold spatial independence were used
+//validation data- a separate feature collections that uphold spatial independence was conducted to create the validation sample 
 var water_v = 
     /* color: #d63000 */
     /* shown: false */
