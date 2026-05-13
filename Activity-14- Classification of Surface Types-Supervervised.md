@@ -344,7 +344,7 @@ var rfClassification = ee.Classifier.smileRandomForest({
 });
 ```
 
-Default values were used for all other hyperparameters. The best approach to ensure the optimal hyperparameter values are used is through tuning, but this can be computer intensive to achieve within GEE without issues. We have kep it simple here, but you may want to explore hyperparameter tuning to obtain best values in future work.
+Default values were used for all other hyperparameters. The best approach to ensure the optimal hyperparameter values are used is through tuning, but this can be computer intensive to achieve within GEE without issues. We have kept it simple here, but you may want to explore hyperparameter tuning to obtain best values in future work.
 
 
 ```JavaScript
@@ -364,7 +364,7 @@ Map.addLayer(s2ClassifiedRF, classColours, 'Classified S2 imagery-RF');
 
 
 
-The original (top left), CART classified (top right) and RF classified (bottom left) images are provided below for qualitative assessment of the models. Turn off all the feature collections under **Geometry Imports** and compare the classified images against the original image. Your result may be like the figure below. Don't worry if your result seems to be different to the one below. This is expected as your training pixels may not be the same as what was used to prepare this manual. 
+The original (top left), CART classified (top right) and RF classified (bottom left) images are provided below for qualitative assessment of the models. You may turn off all the feature collections under **Geometry Imports** and compare the classified images against the original image. Your result may be like the figure below. Don't worry if your result seems to be different to the one below. This is expected as your training pixels may not be the same as what was used to prepare this manual. 
 
 
 
