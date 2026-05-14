@@ -345,9 +345,9 @@ var randomStratifiedPoints = s2ClassifiedRF.stratifiedSample({
 });
 
 //print('Random Stratified Points:', randomStratifiedPoints);
-Map.addLayer(randomStratifiedPoints, {color: 'yellow'}, 'Validation Points');
-Map.addLayer(samp1, {color: ' red'}, 'samp1') //training samples
-Map.addLayer(coverTypes, {color: 'red'}, 'Calibration Sites')
+Map.addLayer(randomStratifiedPoints, {color: 'yellow'}, "randomStratifiedPoints");
+Map.addLayer(samp1, {color: ' red'}, "samp1") //training samples
+Map.addLayer(coverTypes, {color: 'red'}, "Calibration Sites")
 
 //validation data- a separate feature collections that uphold spatial independence was conducted to create the validation sample 
 var water_v = 
@@ -729,14 +729,14 @@ var validationSet = water_v.merge(ntv_v).merge(as_v).merge(ctv_v)
 
 var validationPoints = s2ProjectArea.sampleRegions({
   collection: validationSet, //the feature collection
-  properties: ['label'],
+  properties: ["label"],
   scale: 20 //pixel size for the output image
 });
 
 
 var validation = validationPoints
       .classify(rfClassification)
-      .errorMatrix('label', 'classification')
+      .errorMatrix("label", "classification")
 //print the error matrix to the Console
 print(validation, "error matrix")
 
@@ -752,21 +752,21 @@ var areaImage = ee.Image.pixelArea().addBands(s2ClassifiedRF);
 var classAreas = areaImage.reduceRegion({
   reducer: ee.Reducer.sum().group({
     groupField: 1, // The class band
-    groupName: 'label',
+    groupName: "label",
   }),
   geometry: projectArea,
   scale: 20, // Adjust to your image resolution
   maxPixels: 1e10,
   bestEffort: true
 });
-print(classAreas, 'classAreas')
+print(classAreas, "classAreas")
 
 //convert the area in m2 to hectares  
 //in other words divide the current values by 10,000
-var areasList = ee.List(classAreas.get('groups'));
+var areasList = ee.List(classAreas.get("groups"));
 var area_in_ha = areasList.map(function(item) {
   var areaDict = ee.Dictionary(item);
-  var label_ID = areaDict.get('label');
+  var label_ID = areaDict.get("label");
   var areaHa = ee.Number(areaDict.get('sum')).divide(1e4);
   return ee.Dictionary({
     'Label': label_ID,
